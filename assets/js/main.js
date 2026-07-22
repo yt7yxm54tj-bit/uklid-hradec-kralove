@@ -23,3 +23,13 @@ if (toggle) {
     document.querySelector('.mobile-nav').classList.toggle('open');
   });
 }
+
+// Transparentní navigace (homepage): po scrollu přejde do bílé
+var transparentHeader = document.querySelector('.site-header.transparent');
+if (transparentHeader) {
+  var onScroll = function () {
+    transparentHeader.classList.toggle('scrolled', window.scrollY > 30);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
