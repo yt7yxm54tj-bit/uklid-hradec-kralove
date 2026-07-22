@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Úklid Hradec Králové — Profesionální úklid vašich prostor</title>
+  <meta name="description" content="Profesionální úklid domácností, kanceláří i úklid po stavbě v Hradci Králové. Spolehlivý proškolený tým, transparentní ceny a nabídka do 24 hodin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ---------- Hero — video full-bleed ---------- */
+    .hero {
+      position: relative;
+      height: 596px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    .hero video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(11, 48, 73, .62);
+    }
+    .hero .container { position: relative; z-index: 2; width: 100%; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.16);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
+    }
+    .hero h1 {
+      margin-top: 22px;
+      font-size: 46px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -.02em;
+      max-width: 520px;
+    }
+    .hero .hero-sub {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: rgba(255,255,255,.92);
+      max-width: 470px;
+    }
+    .hero .hero-btns { margin-top: 32px; display: flex; gap: 18px; }
+
+    /* ---------- Trust bar ---------- */
+    .trust-bar { border-bottom: 1px solid var(--border); }
+    .trust-bar .container {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 72px;
+    }
+    .trust-bar span { font-size: 14px; color: var(--text-light); white-space: nowrap; }
+
+    /* ---------- Feature grid ---------- */
+    .features { padding: 96px 0; }
+    .features .grid-3 { margin-top: 44px; }
+    .feature-card h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 12px; }
+    .feature-card p { font-size: 13px; color: var(--text-muted); margin-top: 5px; }
+
+    /* ---------- Naše služby ---------- */
+    .services { padding: 0 0 96px; }
+    .services .grid-4 { margin-top: 44px; }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 20px;
+      transition: box-shadow .15s ease;
+    }
+    .service-card:hover { box-shadow: 0 6px 20px rgba(17,24,39,.07); }
+    .service-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
+    .service-card h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 14px; }
+    .service-card p { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+    .service-card .more { display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 600; color: var(--blue); }
+
+    /* ---------- Jak to funguje ---------- */
+    .how { background: var(--bg-light); padding: 80px 0; }
+    .how .grid-4 { margin-top: 44px; }
+    .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .step h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 12px; }
+    .step p { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+
+    /* ---------- Reference ---------- */
+    .testimonials { padding: 96px 0; }
+    .testimonials .grid-3 { margin-top: 44px; }
+    .testimonial { padding: 24px; }
+    .testimonial-head { display: flex; align-items: center; gap: 12px; }
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .testimonial-head .name { font-size: 14px; font-weight: 600; color: var(--text); }
+    .testimonial-head .meta { font-size: 12px; color: var(--text-light); margin-top: 2px; }
+    .testimonial .quote { font-size: 14px; color: var(--text-body); margin-top: 16px; }
+    .testimonial .price { font-size: 13px; font-weight: 600; color: var(--blue); margin-top: 14px; }
+
+    /* ---------- Srovnání ---------- */
+    .compare { padding: 96px 0; }
+
+    /* ---------- Responsive (mobil samostatně) ---------- */
+    @media (max-width: 820px) {
+      .hero { height: 520px; }
+      .hero h1 { font-size: 32px; }
+      .hero .hero-sub { font-size: 15px; }
+      .hero .hero-btns { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .hero .hero-btns .btn { min-height: 52px; padding: 16px 28px; }
+      .trust-bar .container { height: auto; flex-wrap: wrap; gap: 12px 28px; padding: 16px 24px; }
+      .features { padding: 64px 0; }
+      .services { padding: 0 0 64px; }
+      .how { padding: 56px 0; }
+      .testimonials { padding: 64px 0; }
+      .compare { padding: 64px 0; }
+      .faq-section { padding: 0 0 64px; }
+      .cta-final { padding: 56px 0 !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Úklid Hradec Králové</a>
+      <nav class="main-nav">
+        <a href="uklid-domacnosti.html">Domácnosti</a>
+        <a href="hloubkovy-uklid.html">Hloubkový úklid</a>
+        <a href="uklid-kancelari.html">Firmy</a>
+        <a href="uklid-po-stavbe.html">Po stavbě</a>
+        <a href="cenik.html">Ceník</a>
+        <a href="o-nas.html">O nás</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <div class="header-right">
+        <span class="header-phone">+420 xxx xxx xxx</span>
+        <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="mobile-nav">
+      <a href="uklid-domacnosti.html">Domácnosti</a>
+      <a href="hloubkovy-uklid.html">Hloubkový úklid</a>
+      <a href="uklid-kancelari.html">Firmy</a>
+      <a href="uklid-po-stavbe.html">Po stavbě</a>
+      <a href="cenik.html">Ceník</a>
+      <a href="o-nas.html">O nás</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <!-- ============ Hero — video full-bleed ============ -->
+  <section class="hero">
+    <video autoplay muted loop playsinline poster="assets/img/hero-poster.png">
+      <source src="assets/video/hero.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+      <span class="hero-badge">★ 4.8 · 500+ spokojených úklidů</span>
+      <h1>Profesionální úklid vašich prostor</h1>
+      <p class="hero-sub">Domácnosti, kanceláře i úklid po stavbě. Spolehlivý proškolený tým, transparentní ceny a nabídka do 24 hodin.</p>
+      <div class="hero-btns">
+        <a href="cenik.html" class="btn btn-primary">Spočítat cenu →</a>
+        <a href="kontakt.html" class="btn btn-outline-light">Zavolat nám</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Trust bar ============ -->
+  <div class="trust-bar">
+    <div class="container">
+      <span>★ 4.8 hodnocení Google</span>
+      <span>500+ dokončených úklidů</span>
+      <span>Pojištění do 5 mil. Kč</span>
+      <span>Proškolený vlastní tým</span>
+      <span>7 dní v týdnu</span>
+    </div>
+  </div>
+
+  <!-- ============ Feature grid ============ -->
+  <section class="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Co nabízíme</span>
+        <h2>Proč zvolit Hradecký Úklid</h2>
+        <p class="sub">Šest důvodů, proč nám zákazníci v Hradci Králové a okolí důvěřují.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card feature-card">
+          <div class="icon-chip">📋</div>
+          <h3>Nabídka na míru</h3>
+          <p>Cenu připravíme podle rozsahu a četnosti úklidu, včetně chemie.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="icon-chip">💳</div>
+          <h3>Platba po dokončení</h3>
+          <p>Platíte kartou nebo QR kódem až po odsouhlasení výsledku.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="icon-chip">🧴</div>
+          <h3>Vlastní úklidová chemie</h3>
+          <p>Standardně vozíme profesionální prostředky, na přání použijeme vaše.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="icon-chip">🤝</div>
+          <h3>Etický kodex</h3>
+          <p>Řídíme se veřejným etickým kodexem, který jsme si sami stanovili.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="icon-chip">🎓</div>
+          <h3>Proškolený personál</h3>
+          <p>Pracovníky vybíráme v několika kolech včetně praktické zkoušky.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="icon-chip">🛡️</div>
+          <h3>Pojištění</h3>
+          <p>Máme pojištění odpovědnosti za škodu do 5 mil. Kč.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Naše služby ============ -->
+  <section class="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>Naše služby</h2>
+        <p class="sub">Vyberte typ úklidu, který potřebujete — u každého najdete detailní popis a cenu.</p>
+      </div>
+      <div class="grid-4">
+        <a href="uklid-domacnosti.html" class="service-card">
+          <img src="assets/img/service-domacnosti.jpg" alt="Úklid domácností">
+          <h3>Úklid domácností</h3>
+          <p>Pravidelný i jednorázový úklid bytů a domů.</p>
+          <span class="more">Více o službě →</span>
+        </a>
+        <a href="hloubkovy-uklid.html" class="service-card">
+          <img src="assets/img/service-hloubkovy.jpg" alt="Hloubkový úklid">
+          <h3>Hloubkový úklid</h3>
+          <p>Okna, čalounění, spotřebiče — do posledního detailu.</p>
+          <span class="more">Více o službě →</span>
+        </a>
+        <a href="uklid-kancelari.html" class="service-card">
+          <img src="assets/img/service-kancelare.jpg" alt="Úklid kanceláří a firem">
+          <h3>Úklid kanceláří a firem</h3>
+          <p>Pravidelná péče o komerční prostory.</p>
+          <span class="more">Více o službě →</span>
+        </a>
+        <a href="uklid-po-stavbe.html" class="service-card">
+          <img src="assets/img/service-po-stavbe.jpg" alt="Úklid po stavbě">
+          <h3>Úklid po stavbě</h3>
+          <p>Odstranění stavebního prachu a nečistot.</p>
+          <span class="more">Více o službě →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Jak to funguje ============ -->
+  <section class="how">
+    <div class="container">
+      <div class="section-head">
+        <h2>Jak to funguje</h2>
+        <p class="sub">Od poptávky po čistý domov ve čtyřech krocích.</p>
+      </div>
+      <div class="grid-4">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Poptávka</h3>
+          <p>Vyplníte krátký formulář nebo zavoláte.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Nacenění</h3>
+          <p>Do 48 hodin vám pošleme přesnou cenu.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Termín</h3>
+          <p>Domluvíme termín, který vám vyhovuje.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Úklid</h3>
+          <p>Proškolený tým odvede práci — vy platíte až po dokončení.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Reference klientů ============ -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Reference</span>
+        <h2>Co říkají naši klienti</h2>
+        <p class="sub">Skutečné příběhy lidí, kterým jsme uklidili domov nebo kancelář.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card testimonial">
+          <div class="testimonial-head">
+            <div class="avatar">P</div>
+            <div>
+              <div class="name">Petra</div>
+              <div class="meta">Byt 75 m² · Hradec Králové</div>
+            </div>
+          </div>
+          <p class="quote">„Přijely na hodinu přesně, byt zářil a nic po nich nezůstalo. Objednávám pravidelně."</p>
+          <div class="price">Cena úklidu: 2 400 Kč</div>
+        </div>
+        <div class="card testimonial">
+          <div class="testimonial-head">
+            <div class="avatar">T</div>
+            <div>
+              <div class="name">Tomáš</div>
+              <div class="meta">Rodinný dům 180 m² · Malšovice</div>
+            </div>
+          </div>
+          <p class="quote">„Hloubkový úklid před stěhováním zvládly perfektně, i troubu a lednici."</p>
+          <div class="price">Cena úklidu: 4 900 Kč</div>
+        </div>
+        <div class="card testimonial">
+          <div class="testimonial-head">
+            <div class="avatar">K</div>
+            <div>
+              <div class="name">Kancelář Nova s.r.o.</div>
+              <div class="meta">Kanceláře 220 m² · centrum HK</div>
+            </div>
+          </div>
+          <p class="quote">„Spolehlivý pravidelný úklid, faktura vždy včas, komunikace bez problémů."</p>
+          <div class="price">Cena úklidu: 6 200 Kč / měsíc</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Čísla o firmě ============ -->
+  <section class="stats-section">
+    <div class="container">
+      <h2>Úklid Hradec Králové v číslech</h2>
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-num">500+</div>
+          <div class="stat-label">dokončených úklidů</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">18</div>
+          <div class="stat-label">proškolených hospodyň</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">4.8 ★</div>
+          <div class="stat-label">hodnocení klientů</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">7 let</div>
+          <div class="stat-label">zkušeností v oboru</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">7 dní</div>
+          <div class="stat-label">v týdnu k dispozici</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Srovnání s konkurencí ============ -->
+  <section class="compare">
+    <div class="container">
+      <div class="section-head">
+        <h2>Srovnání s konkurencí</h2>
+        <p class="sub">Proč zvolit místní tým místo velké platformy nebo práce „na doporučení".</p>
+      </div>
+      <div class="compare-table">
+        <div class="compare-row compare-head">
+          <div></div>
+          <div class="col-us">Úklid Hradec Králové</div>
+          <div>Velká platforma</div>
+          <div>Na doporučení</div>
+        </div>
+        <div class="compare-row">
+          <div>Pojištění odpovědnosti</div>
+          <div class="col-us">✓ 5 mil. Kč</div>
+          <div class="col-other"><span class="cross">✗</span> Neznámé</div>
+          <div class="col-other"><span class="cross">✗</span> Žádné</div>
+        </div>
+        <div class="compare-row">
+          <div>Proškolený tým</div>
+          <div class="col-us">✓ Ano, vlastní tým</div>
+          <div class="col-other">Různá kvalita</div>
+          <div class="col-other"><span class="cross">✗</span> Neznámá</div>
+        </div>
+        <div class="compare-row">
+          <div>Hodnocení</div>
+          <div class="col-us">★ 4.8 z 500+ hodnocení</div>
+          <div class="col-other">★ 4.3</div>
+          <div class="col-other"><span class="cross">✗</span> Nemá</div>
+        </div>
+        <div class="compare-row">
+          <div>Cena za hodinu</div>
+          <div class="col-us">✓ Transparentní</div>
+          <div class="col-other"><span class="cross">✗</span> Skryté poplatky</div>
+          <div class="col-other">Individuální</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Časté dotazy ============ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-head centered">
+        <h2>Časté dotazy</h2>
+        <p class="sub">Odpovědi na nejčastější otázky k objednávce, platbě a bezpečnosti.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Co je součástí běžného úklidu?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Vysávání a vytírání podlah, utření prachu, úklid kuchyně a koupelny, vynesení odpadků. Přesný rozsah vždy domluvíme předem podle vašich prostor.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Máte pojištění odpovědnosti za škody?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Ano, máme pojištění odpovědnosti za škodu do 5 mil. Kč. Případnou škodu řešíme rychle a bez průtahů.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Jsou v ceně nějaké skryté poplatky?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Ne. Cena, kterou dostanete v nabídce, je konečná — včetně chemie a dopravy po Hradci Králové a okolí.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Co když bude úklid delší nebo kratší?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Účtujeme podle skutečně odpracovaného času. Pokud úklid skončí dřív, platíte méně; případné prodloužení vždy předem odsouhlasíme.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Účtujete storno poplatky při zrušení?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Zrušení do 24 hodin před termínem je zdarma. Při pozdějším zrušení účtujeme poplatek 500 Kč na pokrytí nákladů.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Můžu použít vlastní čisticí prostředky?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Samozřejmě. Standardně vozíme vlastní profesionální chemii, ale na přání použijeme vaše prostředky — stačí to uvést v poptávce.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Závěrečná výzva ============ -->
+  <section class="cta-final" style="padding: 72px 0;">
+    <div class="container">
+      <h2>Poptejte úklid ještě dnes</h2>
+      <p>Nezávazná nabídka do 24 hodin, platba až po dokončení práce.</p>
+      <a href="cenik.html" class="btn btn-white">Spočítat cenu →</a>
+    </div>
+  </section>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">Úklid Hradec Králové</div>
+          <p>Profesionální úklidové služby pro domácnosti i firmy v Hradci Králové a okolí.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Služby</h4>
+          <ul>
+            <li><a href="uklid-domacnosti.html">Úklid domácností</a></li>
+            <li><a href="hloubkovy-uklid.html">Hloubkový úklid</a></li>
+            <li><a href="uklid-kancelari.html">Úklid firem</a></li>
+            <li><a href="uklid-po-stavbe.html">Úklid po stavbě</a></li>
+            <li><a href="cenik.html">Ceník</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Společnost</h4>
+          <ul>
+            <li><a href="o-nas.html">O nás</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="poukazy.html">Poukazy na úklid</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Podpora</h4>
+          <ul>
+            <li><a href="index.html#faq">Časté dotazy</a></li>
+            <li><a href="#">Obchodní podmínky</a></li>
+            <li><a href="#">Ochrana osobních údajů</a></li>
+            <li><a href="#">Reklamační řád</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© Úklid Hradec Králové 2026</span>
+        <div class="footer-social">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

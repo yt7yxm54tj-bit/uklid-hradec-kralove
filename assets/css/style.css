@@ -1,0 +1,328 @@
+/* ============================================================
+   Úklid Hradec Králové — design systém
+   Zdroj: Figma wireframe d4y6UkCkCYkGQ9QZXCECrP (1:1)
+   Brand systém 1 „Čistota a důvěra"
+   ============================================================ */
+
+:root {
+  /* Barvy — vzorkované 1:1 z wireframu */
+  --blue: #3B82F6;          /* CTA + akcenty */
+  --blue-hover: #2E6FDE;
+  --navy: #0B3049;          /* brand navy — tabulka, avatary, hero overlay */
+  --dark: #1F2937;          /* tmavé sekce (čísla, footer) */
+  --teal: #2F8FA6;          /* náš sloupec ve srovnání */
+  --text: #111827;          /* nadpisy */
+  --text-body: #374151;     /* běžný text */
+  --text-muted: #6B7280;    /* podtexty */
+  --text-light: #9CA3AF;    /* nejsvětlejší text */
+  --bg-light: #F8F9FA;      /* světlé sekce a karty */
+  --bg-zebra: #F4F7F9;      /* zebra řádky tabulky */
+  --border: #E5E7EB;
+  --chip: #EEF1FB;          /* pozadí ikonových koleček */
+  --white: #FFFFFF;
+
+  --radius-card: 12px;
+  --radius-btn: 10px;
+  --container: 1280px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-body);
+  background: var(--white);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+@media (min-width: 1440px) {
+  .container { padding: 0; }
+}
+
+/* ---------- Tlačítka ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 14px 24px;
+  border-radius: var(--radius-btn);
+  border: none;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--blue); color: var(--white); }
+.btn-primary:hover { background: var(--blue-hover); }
+.btn-white { background: var(--white); color: var(--text); }
+.btn-white:hover { background: #F3F4F6; }
+.btn-outline-light {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,.65);
+}
+.btn-outline-light:hover { border-color: var(--white); background: rgba(255,255,255,.08); }
+
+/* ---------- Header ---------- */
+.site-header {
+  height: 87px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: -.01em; }
+.main-nav { display: flex; gap: 26px; }
+.main-nav a { font-size: 14px; color: var(--text-body); transition: color .15s ease; }
+.main-nav a:hover { color: var(--blue); }
+.header-right { display: flex; align-items: center; gap: 18px; }
+.header-phone { font-size: 14px; font-weight: 600; color: var(--text); }
+.nav-toggle { display: none; }
+.mobile-nav { display: none; }
+
+/* ---------- Sekce – hlavičky ---------- */
+section { position: relative; }
+.section-head { max-width: 560px; }
+.section-head .eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+.section-head h1,
+.section-head h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -.02em;
+  line-height: 1.2;
+}
+.section-head .sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+.section-head.centered { margin: 0 auto; text-align: center; }
+
+/* ---------- Karty ---------- */
+.card {
+  background: var(--bg-light);
+  border-radius: var(--radius-card);
+  padding: 26px;
+}
+.icon-chip {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--chip);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--dark); color: var(--text-light); }
+.site-footer .footer-top {
+  display: grid;
+  grid-template-columns: 280px repeat(3, auto);
+  justify-content: space-between;
+  gap: 40px;
+  padding: 64px 0 56px;
+}
+.footer-brand .logo { color: var(--white); font-size: 16px; }
+.footer-brand p { font-size: 13px; margin-top: 12px; max-width: 260px; line-height: 1.55; }
+.footer-col h4 { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 14px; }
+.footer-col ul li { margin-bottom: 12px; }
+.footer-col ul a { font-size: 14px; color: var(--text-light); transition: color .15s ease; }
+.footer-col ul a:hover { color: var(--white); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding: 24px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+.footer-social { display: flex; gap: 14px; }
+.footer-social a { color: var(--text-light); font-size: 13px; }
+.footer-social a:hover { color: var(--white); }
+
+/* ---------- FAQ ---------- */
+/* FAQ nemá vlastní horní padding — mezeru dodává předchozí sekce (1:1 s wireframem) */
+.faq-section { padding: 0 0 96px; }
+.faq-list {
+  max-width: 900px;
+  margin: 36px auto 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.faq-item + .faq-item { border-top: 1px solid var(--border); }
+.faq-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 40px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+  text-align: left;
+  gap: 16px;
+}
+.faq-q .faq-icon {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-light);
+  line-height: 1;
+  transition: transform .2s ease;
+  flex-shrink: 0;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .25s ease;
+}
+.faq-a p {
+  padding: 0 24px 28px;
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 760px;
+}
+
+/* ---------- Závěrečná výzva (breather) ---------- */
+.cta-final { background: var(--blue); text-align: center; }
+.cta-final h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -.02em;
+}
+.cta-final p { font-size: 14px; color: rgba(255,255,255,.85); margin-top: 14px; }
+.cta-final .btn { margin-top: 26px; }
+
+/* ---------- Tmavá sekce s čísly ---------- */
+.stats-section { background: var(--dark); padding: 72px 0; }
+.stats-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -.02em;
+}
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+  gap: 32px;
+}
+.stat .stat-num { font-size: 34px; font-weight: 700; color: var(--white); letter-spacing: -.02em; }
+.stat .stat-label { font-size: 13px; color: var(--text-light); margin-top: 8px; }
+
+/* ---------- Srovnávací tabulka ---------- */
+.compare-table {
+  margin-top: 36px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+.compare-row {
+  display: grid;
+  grid-template-columns: 292px 292px 292px 1fr;
+  align-items: center;
+  min-height: 100px;
+  padding: 16px 0;
+}
+.compare-row > div { padding: 0 24px 0 0; font-size: 14px; }
+.compare-row > div:first-child { padding-left: 24px; font-weight: 600; color: var(--text); }
+.compare-head { background: var(--navy); }
+.compare-head > div { color: var(--white); font-weight: 400; }
+.compare-head > div.col-us, .compare-head .col-us { color: var(--white); font-weight: 700; }
+.compare-row:nth-child(odd):not(.compare-head) { background: var(--bg-zebra); }
+.compare-row:nth-child(even):not(.compare-head) { background: var(--white); }
+.compare-row .col-us { color: var(--teal); font-weight: 600; }
+.compare-row .col-other { color: var(--text-muted); }
+.compare-row .cross { color: var(--text-light); }
+
+/* ---------- Obecné gridy ---------- */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+/* ============================================================
+   Responsive — mobil navrhovaný samostatně (viz faze-4-mobile)
+   ============================================================ */
+@media (max-width: 1100px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .compare-row { grid-template-columns: 1.2fr 1fr 1fr 1fr; }
+}
+
+@media (max-width: 820px) {
+  .main-nav, .header-phone { display: none; }
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+  }
+  .nav-toggle span { width: 22px; height: 2px; background: var(--text); display: block; }
+  .mobile-nav {
+    display: none;
+    position: absolute;
+    top: 87px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 32px 24px;
+    z-index: 99;
+  }
+  .mobile-nav.open { display: block; }
+  .mobile-nav a { display: block; padding: 12px 0; font-size: 16px; color: var(--text-body); border-bottom: 1px solid var(--bg-light); }
+
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr; }
+  .section-head h1, .section-head h2 { font-size: 24px; }
+  .stats-row { flex-wrap: wrap; gap: 28px; }
+  .stat { flex: 1 1 40%; }
+  .site-footer .footer-top { grid-template-columns: 1fr; gap: 36px; }
+  .footer-bottom { flex-direction: column; gap: 12px; }
+  .faq-q { padding: 24px 20px; }
+  .compare-table { overflow-x: auto; }
+  .compare-row { grid-template-columns: 160px 160px 160px 160px; min-width: 640px; min-height: 72px; }
+}
