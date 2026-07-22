@@ -83,15 +83,14 @@
     .hero .hero-btns { margin-top: 32px; display: flex; gap: 18px; }
 
     /* ---------- Trust bar ---------- */
-    .trust-bar { border-bottom: 1px solid var(--border); }
     .trust-bar .container {
-      height: 72px;
+      height: 76px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 72px;
     }
-    .trust-bar span { font-size: 14px; font-weight: 700; color: var(--text); white-space: nowrap; }
+    .trust-bar span { font-size: 16px; font-weight: 700; color: var(--text); white-space: nowrap; }
 
     /* ---------- Feature grid ---------- */
     .features { padding: 96px 0; }
@@ -99,21 +98,68 @@
     .feature-card h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 12px; }
     .feature-card p { font-size: 13px; color: var(--text-muted); margin-top: 5px; }
 
-    /* ---------- Naše služby ---------- */
+    /* ---------- Naše služby — fotokarty à la rozcestník (Viktor), menší ---------- */
     .services { padding: 0 0 96px; }
     .services .grid-4 { margin-top: 44px; }
     .service-card {
-      background: var(--white);
-      border: 1px solid var(--border);
+      position: relative;
+      display: block;
+      height: 300px;
       border-radius: var(--radius-card);
-      padding: 20px;
-      transition: box-shadow .15s ease;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(17,24,39,.08);
     }
-    .service-card:hover { box-shadow: 0 6px 20px rgba(17,24,39,.07); }
-    .service-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
-    .service-card h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 14px; }
-    .service-card p { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
-    .service-card .more { display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 600; color: var(--blue); }
+    .service-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .service-card:hover img { transform: scale(1.08); }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(17,24,39,.85) 0%, rgba(17,24,39,.35) 40%, transparent 70%);
+      pointer-events: none;
+    }
+    .sc-content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      padding: 20px;
+      transform: translateY(58px);
+      transition: transform .35s ease;
+    }
+    .service-card:hover .sc-content { transform: translateY(0); }
+    .sc-content h3 { font-size: 17px; font-weight: 700; color: var(--white); }
+    .sc-content p {
+      font-size: 13px;
+      color: rgba(255,255,255,.85);
+      margin-top: 6px;
+      opacity: 0;
+      transition: opacity .3s ease .05s;
+    }
+    .sc-content .more {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+      opacity: 0;
+      transition: opacity .3s ease .1s;
+    }
+    .service-card:hover .sc-content p,
+    .service-card:hover .sc-content .more { opacity: 1; }
+    @media (hover: none) {
+      /* dotyková zařízení: obsah rovnou viditelný */
+      .sc-content { transform: none; }
+      .sc-content p, .sc-content .more { opacity: 1; }
+    }
 
     /* ---------- Jak to funguje ---------- */
     .how { background: var(--bg-light); padding: 80px 0; }
@@ -289,27 +335,35 @@
       <div class="grid-4">
         <a href="uklid-domacnosti.html" class="service-card">
           <img src="assets/img/service-domacnosti.jpg" alt="Úklid domácností">
-          <h3>Úklid domácností</h3>
-          <p>Pravidelný i jednorázový úklid bytů a domů.</p>
-          <span class="more">Více o službě →</span>
+          <div class="sc-content">
+            <h3>Úklid domácností</h3>
+            <p>Pravidelný i jednorázový úklid bytů a domů.</p>
+            <span class="more">Více o službě →</span>
+          </div>
         </a>
         <a href="hloubkovy-uklid.html" class="service-card">
           <img src="assets/img/service-hloubkovy.jpg" alt="Hloubkový úklid">
-          <h3>Hloubkový úklid</h3>
-          <p>Okna, čalounění, spotřebiče — do posledního detailu.</p>
-          <span class="more">Více o službě →</span>
+          <div class="sc-content">
+            <h3>Hloubkový úklid</h3>
+            <p>Okna, čalounění, spotřebiče — do posledního detailu.</p>
+            <span class="more">Více o službě →</span>
+          </div>
         </a>
         <a href="uklid-kancelari.html" class="service-card">
           <img src="assets/img/service-kancelare.jpg" alt="Úklid kanceláří a firem">
-          <h3>Úklid kanceláří a firem</h3>
-          <p>Pravidelná péče o komerční prostory.</p>
-          <span class="more">Více o službě →</span>
+          <div class="sc-content">
+            <h3>Úklid kanceláří a firem</h3>
+            <p>Pravidelná péče o komerční prostory.</p>
+            <span class="more">Více o službě →</span>
+          </div>
         </a>
         <a href="uklid-po-stavbe.html" class="service-card">
           <img src="assets/img/service-po-stavbe.jpg" alt="Úklid po stavbě">
-          <h3>Úklid po stavbě</h3>
-          <p>Odstranění stavebního prachu a nečistot.</p>
-          <span class="more">Více o službě →</span>
+          <div class="sc-content">
+            <h3>Úklid po stavbě</h3>
+            <p>Odstranění stavebního prachu a nečistot.</p>
+            <span class="more">Více o službě →</span>
+          </div>
         </a>
       </div>
     </div>
