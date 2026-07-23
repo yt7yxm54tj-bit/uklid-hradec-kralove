@@ -90,7 +90,9 @@
         autoAlpha: 1, y: 0, duration: 0.7, ease: "back.out(1.6)", stagger: 0.12,
         rotation: function (i) { return rots[i % 3]; },
         x: function (i) { return xs[i % 3]; },
-        scrollTrigger: { trigger: wrap, start: "top 85%", once: true }
+        scrollTrigger: { trigger: wrap, start: "top 85%", once: true },
+        // po doletu předat transform zpět CSS (nth-child rotace), ať funguje :hover
+        onComplete: function () { gsap.set(pills, { clearProps: "transform,visibility,opacity" }); }
       });
   });
 

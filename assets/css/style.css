@@ -675,11 +675,18 @@ section { position: relative; }
   padding: 15px 20px;
   border-radius: 14px;
   box-shadow: 0 12px 28px rgba(7,24,37,.32);
+  transition: transform .25s cubic-bezier(.22,.61,.36,1), box-shadow .25s ease;
 }
+.bpill:hover { box-shadow: 0 18px 38px rgba(7,24,37,.42); }
+.bpill:nth-child(1):hover { transform: rotate(0deg) translateY(-3px); }
+.bpill:nth-child(2):hover { transform: rotate(0deg) translateX(16px) translateY(-3px); }
+.bpill:nth-child(3):hover { transform: rotate(0deg) translateY(-3px); }
+.bpill:hover .bp-ico { transform: scale(1.18); }
 .bpill:nth-child(1) { transform: rotate(-1.6deg); }
 .bpill:nth-child(2) { transform: rotate(1.2deg) translateX(16px); }
 .bpill:nth-child(3) { transform: rotate(-.9deg); }
 .bp-ico {
+  transition: transform .25s cubic-bezier(.34,1.56,.64,1);
   width: 26px; height: 26px;
   border-radius: 50%;
   background: #E4F3EB;
@@ -696,6 +703,7 @@ section { position: relative; }
   .bento-hero h3 { font-size: 24px; }
   .bento .b-w3, .bento .b-w2 { grid-column: span 1; }
   .bpill:nth-child(2) { transform: rotate(1.2deg); }
+  .bpill:nth-child(2):hover { transform: rotate(0deg) translateY(-3px); }
 }
 
 /* ---------- Recenze — jedna velká citace + dvě menší ---------- */
