@@ -54,16 +54,41 @@
   }
 
   /* ---------- 3. Karty a grid položky — fade + slideUp se staggerem ---------- */
+  var isMobile = window.matchMedia("(max-width: 820px)").matches;
+  document.body.classList.add("anim-on");
   gsap.utils.toArray(".grid-2, .grid-3, .grid-4, .stats-row, .faq-list").forEach(function (grid) {
     if (grid.closest(".how")) return; // „Jak to funguje" má vlastní scroll-scrub animaci
     var items = Array.prototype.filter.call(grid.children, function (c) { return c.nodeType === 1; });
     if (!items.length) return;
+    if (isMobile) {
+      // na mobilu jsou položky pod sebou — každá jede na vlastní trigger (jinak se to kouše)
+      items.forEach(function (item) {
+        gsap.from(item, {
+          opacity: 0, y: 22, duration: 0.55, ease: "power2.out",
+          clearProps: "opacity,transform",
+          scrollTrigger: { trigger: item, start: "top 94%", once: true }
+        });
+      });
+      return;
+    }
     gsap.from(items, {
       opacity: 0, y: 28, duration: 0.7, stagger: 0.09, ease: "power2.out",
       clearProps: "opacity,transform",
       scrollTrigger: { trigger: grid, start: "top 88%", once: true }
     });
   });
+
+  /* ---------- 3d. Služby na mobilu — text karty se odkrývá, když je karta ve viewportu ---------- */
+  if (isMobile) {
+    gsap.utils.toArray(".service-card").forEach(function (card) {
+      ScrollTrigger.create({
+        trigger: card,
+        start: "top 62%",
+        end: "bottom 30%",
+        toggleClass: { targets: card, className: "in-view" }
+      });
+    });
+  }
 
   /* ---------- 3b. Načítací lišta mezi kroky — každá sekce .how se .step dětmi ---------- */
   document.querySelectorAll(".how").forEach(function (section) {

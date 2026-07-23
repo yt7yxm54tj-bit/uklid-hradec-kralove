@@ -84,6 +84,7 @@ if (leadForm) {
 // Brand dekor: bubliny do hero sekcí a patičky
 function addBubbles(el, specs) {
   if (!el) return;
+  el.classList.add('has-bubs');
   specs.forEach(function (s) {
     var b = document.createElement('div');
     b.className = 'bub' + (s.light ? ' bub--light' : '');

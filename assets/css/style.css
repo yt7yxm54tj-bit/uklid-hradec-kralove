@@ -28,7 +28,8 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: linear-gradient(var(--white) 50%, var(--dark) 50%); }
+body { overflow-x: clip; }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -214,18 +215,28 @@ section { position: relative; }
 .footer-social a { color: var(--text-light); font-size: 13px; }
 .footer-social a:hover { color: var(--white); }
 
-/* ---------- FAQ ---------- */
+/* ---------- FAQ — samostatné karty ---------- */
 /* FAQ nemá vlastní horní padding — mezeru dodává předchozí sekce (1:1 s wireframem) */
 .faq-section { padding: 0 0 96px; }
 .faq-list {
   max-width: 900px;
   margin: 36px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
+  border-radius: 14px;
+  transition: border-color .25s ease, box-shadow .25s ease, background .25s ease;
 }
-.faq-item + .faq-item { border-top: 1px solid var(--border); }
+.faq-item:hover { border-color: rgba(47, 143, 166, .45); box-shadow: 0 8px 22px rgba(11, 48, 73, .07); }
+.faq-item.open {
+  border-color: var(--teal);
+  background: #F6FBFC;
+  box-shadow: 0 14px 32px rgba(11, 48, 73, .09);
+}
 .faq-q {
   width: 100%;
   display: flex;
@@ -235,7 +246,7 @@ section { position: relative; }
   border: none;
   cursor: pointer;
   font-family: inherit;
-  padding: 40px 24px;
+  padding: 24px;
   font-size: 15px;
   font-weight: 600;
   color: var(--dark);
@@ -243,14 +254,26 @@ section { position: relative; }
   gap: 16px;
 }
 .faq-q .faq-icon {
-  font-size: 22px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--sky, #D6ECF2);
+  background: #E3F2F6;
+  color: var(--teal);
+  font-size: 19px;
   font-weight: 400;
-  color: var(--text-light);
   line-height: 1;
-  transition: transform .2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .25s ease, background .25s ease, color .25s ease;
   flex-shrink: 0;
 }
-.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+  background: var(--teal);
+  color: var(--white);
+}
 .faq-a {
   max-height: 0;
   overflow: hidden;
@@ -447,6 +470,23 @@ section { position: relative; }
 .uhero:not(.uhero--media) h1,
 .uhero:not(.uhero--media) .uh-sub { margin-left: auto; margin-right: auto; }
 
+/* ---------- Právní stránky ---------- */
+.legal-page { padding: 64px 0 96px; }
+.legal-content { max-width: 760px; margin: 0 auto; font-size: 15px; line-height: 1.7; color: var(--text-body); }
+.legal-content .legal-meta {
+  font-size: 13px;
+  color: var(--text-light);
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.legal-content h2 { font-size: 19px; font-weight: 700; color: var(--text); letter-spacing: -.01em; margin: 34px 0 10px; }
+.legal-content p { margin-top: 10px; }
+.legal-content ul { margin: 10px 0 0 2px; }
+.legal-content li { margin-top: 8px; padding-left: 22px; position: relative; }
+.legal-content li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+.legal-content a { color: var(--blue); font-weight: 600; }
+@media (max-width: 820px) { .legal-page { padding: 44px 0 64px; } }
+
 /* ---------- Obecné gridy ---------- */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
@@ -470,7 +510,8 @@ section { position: relative; }
 
 @media (max-width: 820px) {
   /* Mobilní header: vlevo jen jméno, vpravo jen tři čárky */
-  .main-nav, .header-phone, .header-right .btn { display: none; }
+  .main-nav, .header-right .btn { display: none; }
+  .header-phone { font-size: 14px; }
   .logo { font-size: 15px; white-space: nowrap; }
   .site-header { height: 64px; }
   .site-header .container { padding: 0 16px; gap: 10px; }
@@ -534,6 +575,7 @@ section { position: relative; }
   .site-footer .footer-top { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; gap: 12px; }
   .faq-q { padding: 24px 20px; }
+  .foot-wave { height: 30px; }
   /* Bubliny v patičce na malém displeji ruší — pryč */
   .site-footer .bub { display: none; }
   /* CTA karta na mobilu */

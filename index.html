@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <style>
     /* ---------- Hero — video přes horní polovinu stránky ---------- */
     .hero {
@@ -156,9 +158,15 @@
     .service-card:hover .sc-content p,
     .service-card:hover .sc-content .more { opacity: 1; }
     @media (hover: none) {
-      /* dotyková zařízení: obsah rovnou viditelný */
+      /* dotyková zařízení: bez animací vše viditelné; s animacemi se text odkrývá při scrollu */
       .sc-content { transform: none; }
       .sc-content p, .sc-content .more { opacity: 1; }
+      body.anim-on .sc-content { transform: translateY(58px); transition: transform .45s cubic-bezier(.22,.61,.36,1); }
+      body.anim-on .sc-content p,
+      body.anim-on .sc-content .more { opacity: 0; transition: opacity .35s ease .1s; }
+      body.anim-on .service-card.in-view .sc-content { transform: translateY(0); }
+      body.anim-on .service-card.in-view .sc-content p,
+      body.anim-on .service-card.in-view .sc-content .more { opacity: 1; }
     }
 
     /* ---------- Jak to funguje ---------- */
@@ -605,9 +613,9 @@
           <h4>Podpora</h4>
           <ul>
             <li><a href="index.html#faq">Časté dotazy</a></li>
-            <li><a href="#">Obchodní podmínky</a></li>
-            <li><a href="#">Ochrana osobních údajů</a></li>
-            <li><a href="#">Reklamační řád</a></li>
+            <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
+            <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
+            <li><a href="reklamacni-rad.html">Reklamační řád</a></li>
           </ul>
         </div>
       </div>
