@@ -212,7 +212,9 @@ if (siteFooter) {
   if (!aboveBg || aboveBg === 'rgba(0, 0, 0, 0)') aboveBg = '#ffffff';
   var roundWrap = document.createElement('div');
   roundWrap.className = 'footer-round-wrap';
-  roundWrap.style.background = aboveBg;
+  // barvu předchozí sekce natíráme jen v horní zóně vlny — celoplošné pozadí
+  // vykukovalo na iOS jako bílá vlasová linka pod patičkou
+  roundWrap.style.background = 'linear-gradient(' + aboveBg + ', ' + aboveBg + ') top / 100% 64px no-repeat';
   siteFooter.parentNode.insertBefore(roundWrap, siteFooter);
   roundWrap.appendChild(siteFooter);
   var waveNS = 'http://www.w3.org/2000/svg';
