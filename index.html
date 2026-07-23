@@ -52,7 +52,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(11, 48, 73, .62);
+      background: linear-gradient(90deg, rgba(11,48,73,.62) 0%, rgba(11,48,73,.42) 55%, rgba(11,48,73,.32) 100%);
     }
     .hero .container { position: relative; z-index: 2; width: 100%; }
     .hero-badge {
@@ -206,7 +206,7 @@
     .testimonial-head .name { font-size: 14px; font-weight: 600; color: var(--text); }
     .testimonial-head .meta { font-size: 12px; color: var(--text-light); margin-top: 2px; }
     .testimonial .quote { font-size: 14px; color: var(--text-body); margin-top: 16px; }
-    .testimonial .price { font-size: 13px; font-weight: 600; color: var(--blue); margin-top: 14px; }
+    .testimonial .price { font-size: 13px; font-weight: 600; color: var(--petrol-dark); margin-top: 14px; }
 
     /* ---------- Srovnání ---------- */
     .compare { padding: 96px 0; }
@@ -558,12 +558,12 @@
           <div class="faq-a"><p>Ano, máme pojištění odpovědnosti za škodu do 5 mil. Kč. Případnou škodu řešíme rychle a bez průtahů.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Jsou v ceně nějaké skryté poplatky?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Ne. Cena, kterou dostanete v nabídce, je konečná — včetně chemie a dopravy po Hradci Králové a okolí.</p></div>
+          <button class="faq-q">V jakých lokalitách uklízíte?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>V Hradci Králové a okolí do 20 km. Pokud si nejste jistí, jestli k vám dojedeme, napište nám — ozveme se do 24 hodin.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Co když bude úklid delší nebo kratší?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Účtujeme podle skutečně odpracovaného času. Pokud úklid skončí dřív, platíte méně; případné prodloužení vždy předem odsouhlasíme.</p></div>
+          <button class="faq-q">Musím být doma během úklidu?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Nemusíte — stačí nás pustit dovnitř a po úklidu si výsledek zkontrolujete. Předání klíčů je na domluvě a vše kryje naše pojištění.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q">Účtujete storno poplatky při zrušení?<span class="faq-icon">+</span></button>
@@ -628,8 +628,8 @@
       <div class="footer-bottom">
         <span>© Úklid Hradec Králové 2026</span>
         <div class="footer-social">
-          <a href="#">Facebook</a>
-          <a href="#">Instagram</a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.3-1.4 1.5-1.4h1.3V5.5c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v2.5H8.9V14h2.3v7h2.3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/></svg></a>
         </div>
       </div>
     </div>

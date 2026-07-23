@@ -8,6 +8,7 @@
   /* Barvy — vzorkované 1:1 z wireframu */
   --blue: #177A8D;          /* akcent akcí: CTA, odkazy, focus (brand petrol) */
   --blue-hover: #12657A;
+  --petrol-dark: #14707F;   /* petrol pro malý text na tónovaných podkladech (AA) */
   --navy: #0B3049;          /* brand navy — tabulka, avatary, hero overlay */
   --dark: #0B3049;          /* tmavé sekce (čísla, footer) — jedna navy rodina */
   --teal: #2F8FA6;          /* náš sloupec ve srovnání */
@@ -130,7 +131,7 @@ section { position: relative; }
   font-weight: 600;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--blue);
   margin-bottom: 10px;
 }
 .section-head h1,
@@ -374,7 +375,7 @@ section { position: relative; }
 .compare-row:nth-child(odd):not(.compare-head) { background: var(--bg-zebra); }
 .compare-row:nth-child(even):not(.compare-head) { background: var(--white); }
 .compare-row .col-us {
-  color: var(--teal);
+  color: var(--petrol-dark);
   font-weight: 600;
   font-size: 15px;
   background: rgba(47, 143, 166, .10);
@@ -460,7 +461,7 @@ section { position: relative; }
   display: block;
   font-size: 13px;
   font-weight: 600;
-  color: var(--teal);
+  color: var(--blue);
   letter-spacing: .06em;
   text-transform: uppercase;
 }
@@ -499,7 +500,7 @@ section { position: relative; }
 .legal-content p { margin-top: 10px; }
 .legal-content ul { margin: 10px 0 0 2px; }
 .legal-content li { margin-top: 8px; padding-left: 22px; position: relative; }
-.legal-content li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+.legal-content li::before { content: '✓'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
 .legal-content a { color: var(--blue); font-weight: 600; }
 @media (max-width: 820px) { .legal-page { padding: 44px 0 64px; } }
 
@@ -628,7 +629,7 @@ section { position: relative; }
     content: attr(data-label);
     font-size: 12px;
     font-weight: 500;
-    color: var(--text-light);
+    color: #475569;
     flex-shrink: 0;
   }
   .compare-row .col-us {
@@ -637,7 +638,7 @@ section { position: relative; }
     padding-left: 12px;
     padding-right: 12px;
   }
-  .compare-row .col-us::before { color: var(--teal); font-weight: 700; }
+  .compare-row .col-us::before { color: var(--navy); font-weight: 700; }
 }
 
 /* ============================================================
@@ -695,8 +696,8 @@ section { position: relative; }
   transition: transform .25s cubic-bezier(.34,1.56,.64,1);
   width: 26px; height: 26px;
   border-radius: 50%;
-  background: #E4F3EB;
-  color: #1F7A4D;
+  background: var(--chip);
+  color: var(--blue);
   display: flex; align-items: center; justify-content: center;
   font-size: 13px;
   flex-shrink: 0;
@@ -887,5 +888,69 @@ section .handnote p {
 .split-media img,
 .about-photo img,
 .story-photo img {
-  filter: saturate(.82) contrast(1.04);
+  filter: saturate(.9) contrast(1.04);
+}
+
+/* ---------- Footer social — stejná ikonová kolečka jako na kontaktu ---------- */
+.footer-social a {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  transition: background .15s ease, color .15s ease;
+}
+.footer-social a:hover { background: var(--blue); color: var(--white); }
+.footer-social a svg { width: 15px; height: 15px; display: block; }
+
+/* ---------- Tým — jednotný grade tří různých stock stylů ---------- */
+.person-photo { position: relative; }
+.person-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(47,143,166,.14);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+.person-photo img { filter: saturate(.72) contrast(.98); }
+/* třetí portrét (vínový svetr + teplé bokeh) potřebuje silnější srovnání do palety */
+.person:nth-child(3) .person-photo img { filter: saturate(.34) contrast(.98); }
+.person:nth-child(3) .person-photo::after { background: rgba(47,143,166,.30); }
+
+/* teplá fotka „Náš příběh" (chodba s vozíkem) — srovnat do palety */
+.story-img img { filter: saturate(.6) contrast(.98); }
+
+/* ---------- Poukazy — motivové dlaždice v komponentovém jazyce ---------- */
+.motif-card {
+  background: var(--bg-light);
+  border-radius: var(--radius-card);
+  padding: 14px 14px 16px;
+  margin: 0;
+}
+.motif-card { position: relative; }
+.motif-card img { filter: saturate(.5) contrast(.95); }
+.motif-card::before {
+  content: '';
+  position: absolute;
+  top: 14px; left: 14px; right: 14px;
+  height: 190px;
+  border-radius: 8px;
+  background: rgba(23,122,141,.12);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1;
+}
+.motif-card figcaption {
+  display: inline-flex;
+  margin-top: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--chip);
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 600;
 }

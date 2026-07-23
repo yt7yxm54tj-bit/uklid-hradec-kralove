@@ -146,11 +146,16 @@
         gsap.set(num, { backgroundColor: "#CBD5E1", scale: 0.85 });
         tl.to(num, { backgroundColor: "#177A8D", scale: 1, duration: 0.25, ease: "back.out(2)" });
       }
-      tl.from(rest, { opacity: 0, y: 14, duration: 0.3, stagger: 0.06 }, "<0.05");
+      // texty kroků jedou once (mimo scrub) — při scrollu zpět nemizí
+      gsap.from(rest, {
+        opacity: 0, y: 14, duration: 0.45, stagger: 0.06, ease: "power2.out",
+        clearProps: "opacity,transform",
+        scrollTrigger: { trigger: step, start: "top 88%", once: true }
+      });
       if (segFills[i]) {
         tl.to(segFills[i], vertical
           ? { scaleY: 1, duration: 0.5, ease: "none" }
-          : { scaleX: 1, duration: 0.5, ease: "none" });
+          : { scaleX: 1, duration: 0.5, ease: "none" }, "<0.2");
       }
     });
   });
