@@ -334,6 +334,44 @@ section { position: relative; }
 .compare-row .col-other { color: var(--text-muted); }
 .compare-row .cross { color: var(--text-light); }
 
+/* ---------- Sjednocený hero podstránek (.uhero) ---------- */
+.uhero {
+  background: linear-gradient(180deg, #EAF3F8 0%, #FFFFFF 100%);
+  padding: 72px 0 64px;
+  overflow: hidden;
+}
+.uhero .container { display: grid; grid-template-columns: 1fr; gap: 56px; align-items: center; }
+.uhero--media .container { grid-template-columns: 1.05fr .95fr; }
+.uhero .uh-eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--teal);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.uhero h1 {
+  margin-top: 12px;
+  font-size: clamp(30px, 3.4vw, 40px);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -.02em;
+  line-height: 1.15;
+  max-width: 640px;
+}
+.uhero .uh-sub { margin-top: 16px; font-size: 15px; line-height: 1.6; color: var(--text-muted); max-width: 560px; }
+.uhero .uh-text .btn { margin-top: 26px; }
+.uhero .uh-media img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 48px rgba(11, 48, 73, .14);
+}
+.uhero:not(.uhero--media) .uh-text { text-align: center; margin: 0 auto; max-width: 640px; }
+.uhero:not(.uhero--media) h1,
+.uhero:not(.uhero--media) .uh-sub { margin-left: auto; margin-right: auto; }
+
 /* ---------- Obecné gridy ---------- */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
@@ -421,6 +459,16 @@ section { position: relative; }
   .site-footer .footer-top { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; gap: 12px; }
   .faq-q { padding: 24px 20px; }
+  /* Sjednocený hero podstránek na mobilu */
+  .uhero { padding: 44px 0 40px; }
+  .uhero .container, .uhero--media .container { grid-template-columns: 1fr; gap: 26px; }
+  .uhero h1 { font-size: clamp(27px, 7.6vw, 33px); }
+  .uhero .uh-media img { height: 230px; }
+  /* „Jak to funguje" na mobilu = timeline: kolečko vlevo, text odsazený, lišta v levém sloupci */
+  .how .step { padding-left: 58px; min-height: 68px; }
+  .how .step .step-num { position: absolute; left: 0; top: 0; }
+  .how .step h3 { margin-top: 0; padding-top: 7px; }
+  .how-seg--v { left: 17px; top: 44px; height: calc(100% - 22px); }
   /* Srovnávací tabulka na mobilu: žádný skrytý scroll — řádky se rozloží do bloků */
   .compare-row { display: block; min-height: 0; padding: 6px 0 12px; }
   .compare-row.compare-head { display: none; }

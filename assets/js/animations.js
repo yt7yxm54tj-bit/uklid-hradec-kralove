@@ -20,8 +20,7 @@
   /* ---------- 1. Hero entrance — stagger badge → h1 → sub → CTA ---------- */
   var heroItems = gsap.utils.toArray(
     ".hero .hero-badge, .hero h1, .hero .hero-sub, .hero .hero-btns, " +
-    ".page-hero .hero-badge, .page-hero h1, .page-hero .sub, .page-hero .hero-btns, " +
-    ".page-hero .breadcrumbs, .page-hero p"
+    ".uhero .uh-eyebrow, .uhero h1, .uhero .uh-sub, .uhero .uh-text .btn, .uhero .uh-media"
   );
   if (heroItems.length) {
     gsap.from(heroItems, {
@@ -66,17 +65,21 @@
     });
   });
 
-  /* ---------- 3b. „Jak to funguje" — načítací lišta mezi kroky (scrub) ---------- */
-  var howGrid = document.querySelector(".how .grid-4");
-  var howSteps = gsap.utils.toArray(".how .step");
-  if (howGrid && howSteps.length) {
-    var howCols = getComputedStyle(howGrid).gridTemplateColumns.split(" ").length;
-    var howVertical = howCols === 1;
+  /* ---------- 3b. Načítací lišta mezi kroky — každá sekce .how se .step dětmi ---------- */
+  document.querySelectorAll(".how").forEach(function (section) {
+    var steps = gsap.utils.toArray(section.querySelectorAll(".step"));
+    if (!steps.length) return;
+    var container = steps[0].parentElement;
+    var cs = getComputedStyle(container);
+    var cols = cs.display.indexOf("grid") > -1
+      ? cs.gridTemplateColumns.split(" ").length
+      : steps.length;
+    var vertical = cols === 1;
     var segFills = [];
-    if (howVertical || howCols === howSteps.length) {
-      howSteps.slice(0, -1).forEach(function (step) {
+    if (vertical || cols === steps.length) {
+      steps.slice(0, -1).forEach(function (step) {
         var track = document.createElement("div");
-        track.className = "how-seg" + (howVertical ? " how-seg--v" : "");
+        track.className = "how-seg" + (vertical ? " how-seg--v" : "");
         var fill = document.createElement("div");
         fill.className = "how-seg-fill";
         track.appendChild(fill);
@@ -84,29 +87,29 @@
         segFills.push(fill);
       });
     }
-    var howTl = gsap.timeline({
+    var tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".how",
+        trigger: section,
         start: "top 72%",
-        end: howVertical ? "bottom 60%" : "center 38%",
+        end: vertical ? "bottom 60%" : "center 38%",
         scrub: 0.6
       }
     });
-    howSteps.forEach(function (step, i) {
+    steps.forEach(function (step, i) {
       var num = step.querySelector(".step-num");
       var rest = [step.querySelector("h3"), step.querySelector("p")].filter(Boolean);
       if (num) {
         gsap.set(num, { backgroundColor: "#CBD5E1", scale: 0.85 });
-        howTl.to(num, { backgroundColor: "#3B82F6", scale: 1, duration: 0.25, ease: "back.out(2)" });
+        tl.to(num, { backgroundColor: "#3B82F6", scale: 1, duration: 0.25, ease: "back.out(2)" });
       }
-      howTl.from(rest, { opacity: 0, y: 14, duration: 0.3, stagger: 0.06 }, "<0.05");
+      tl.from(rest, { opacity: 0, y: 14, duration: 0.3, stagger: 0.06 }, "<0.05");
       if (segFills[i]) {
-        howTl.to(segFills[i], howVertical
+        tl.to(segFills[i], vertical
           ? { scaleY: 1, duration: 0.5, ease: "none" }
           : { scaleX: 1, duration: 0.5, ease: "none" });
       }
     });
-  }
+  });
 
   /* ---------- 3c. Srovnávací tabulka — vystoupení ze stránky ---------- */
   gsap.utils.toArray(".compare-table").forEach(function (table) {
