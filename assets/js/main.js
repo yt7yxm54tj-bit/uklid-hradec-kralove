@@ -81,6 +81,12 @@ if (leadForm) {
   });
 }
 
+// Statický režim (QA screenshoty / reduced motion): dekorativní tahy dokreslené bez animace
+if (/[?&]noanim/.test(location.search) ||
+    (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+  document.documentElement.classList.add('no-anim');
+}
+
 // Brand dekor: bubliny do hero sekcí a patičky
 function addBubbles(el, specs) {
   if (!el) return;
@@ -133,6 +139,10 @@ document.querySelectorAll('.stats-section').forEach(function (sec) {
     { size: 30, pos: { bottom: '18%', left: '6%' }, light: true, delay: 1.8 }
   ]);
 });
+addBubbles(document.querySelector('.bento-hero'), [
+  { size: 120, pos: { bottom: '-38px', left: '40%' }, light: true },
+  { size: 44, pos: { top: '-14px', left: '52%' }, light: true, delay: 1.8 }
+]);
 
 // Tah štětcem pod klíčovými nadpisy (poslední slovo / fráze), kreslí se až ve viewportu
 var BRUSH_SVG = '<svg viewBox="0 0 320 18" preserveAspectRatio="none" aria-hidden="true"><path d="M4,12 C80,5 240,3 316,9"/></svg>';
@@ -160,8 +170,16 @@ if ('IntersectionObserver' in window) {
     });
   }, { threshold: .6 });
   document.querySelectorAll('.brush').forEach(function (b) { brushIO.observe(b); });
+  // doodle tahy (šipka k CTA, kroužek ceny) — kreslí se až ve viewportu
+  var doodleIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('go'); doodleIO.unobserve(e.target); }
+    });
+  }, { threshold: .4 });
+  document.querySelectorAll('.doodle').forEach(function (d) { doodleIO.observe(d); });
 } else {
   document.querySelectorAll('.brush').forEach(function (b) { b.classList.add('go'); });
+  document.querySelectorAll('.doodle').forEach(function (d) { d.classList.add('go'); });
 }
 
 // Vlnité okraje tmavé sekce „v číslech" (barvy dle sousedních sekcí)

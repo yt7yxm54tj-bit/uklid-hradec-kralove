@@ -56,7 +56,7 @@
   /* ---------- 3. Karty a grid položky — fade + slideUp se staggerem ---------- */
   var isMobile = window.matchMedia("(max-width: 820px)").matches;
   document.body.classList.add("anim-on");
-  gsap.utils.toArray(".grid-2, .grid-3, .grid-4, .stats-row, .faq-list").forEach(function (grid) {
+  gsap.utils.toArray(".grid-2, .grid-3, .grid-4, .stats-row, .faq-list, .bento, .t-layout").forEach(function (grid) {
     if (grid.closest(".how")) return; // „Jak to funguje" má vlastní scroll-scrub animaci
     var items = Array.prototype.filter.call(grid.children, function (c) { return c.nodeType === 1; });
     if (!items.length) return;
@@ -76,6 +76,22 @@
       clearProps: "opacity,transform",
       scrollTrigger: { trigger: grid, start: "top 88%", once: true }
     });
+  });
+
+  /* ---------- 3e. Bento pilulky — nalétnou s rotací (koncový stav = CSS transformy) ---------- */
+  gsap.utils.toArray(".bento-pills").forEach(function (wrap) {
+    var pills = gsap.utils.toArray(wrap.children);
+    if (!pills.length) return;
+    var rots = [-1.6, 1.2, -0.9];
+    var xs = isMobile ? [0, 0, 0] : [0, 16, 0]; // mobil: bez posunu, ať pilulka nepřetéká
+    gsap.fromTo(pills,
+      { autoAlpha: 0, y: 30, rotation: 0, x: 0 },
+      {
+        autoAlpha: 1, y: 0, duration: 0.7, ease: "back.out(1.6)", stagger: 0.12,
+        rotation: function (i) { return rots[i % 3]; },
+        x: function (i) { return xs[i % 3]; },
+        scrollTrigger: { trigger: wrap, start: "top 85%", once: true }
+      });
   });
 
   /* ---------- 3d. Služby na mobilu — text karty se odkrývá, když je karta ve viewportu ---------- */

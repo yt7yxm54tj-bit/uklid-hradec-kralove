@@ -7,7 +7,7 @@
   <meta name="description" content="Hloubkový úklid do posledního detailu — okna, čalounění, spotřebiče i spáry. Nabídka do 24 hodin, platba až po dokončení.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Caveat:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -104,7 +104,6 @@
 
     /* ---------- Co nabízíme ---------- */
     .features { padding: 88px 0; }
-    .features .grid-3 { margin-top: 44px; }
     .feature-card h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 12px; }
     .feature-card p { font-size: 13px; color: var(--text-muted); margin-top: 5px; }
 
@@ -287,35 +286,37 @@
       <div class="section-head">
         <span class="eyebrow">Co nabízíme</span>
         <h2>Proč zvolit Úklid Hradec Králové</h2>
-        <p class="sub">Šest důvodů, proč nám zákazníci v Hradci Králové a okolí důvěřují.</p>
+        <p class="sub">Důvody, proč nám zákazníci v Hradci Králové a okolí důvěřují.</p>
       </div>
-      <div class="grid-3">
-        <div class="card feature-card">
+      <div class="bento">
+        <div class="bento-hero">
+          <div>
+            <span class="bh-eyebrow">Naše záruka</span>
+            <h3>Garance spokojenosti</h3>
+            <p>Výsledek projdeme společně přímo na místě a platíte až ve chvíli, kdy jste spokojeni. Když něco nebude v pořádku, napravíme to zdarma.</p>
+          </div>
+          <div class="bento-pills">
+            <div class="bpill"><span class="bp-ico">✓</span>Kontrola výsledku s vámi</div>
+            <div class="bpill"><span class="bp-ico">✓</span>Platba až po dokončení</div>
+            <div class="bpill"><span class="bp-ico">✓</span>Nedostatky opravíme zdarma</div>
+          </div>
+        </div>
+        <div class="card feature-card b-w3">
           <div class="icon-chip">📋</div>
           <h3>Nabídka na míru</h3>
           <p>Cenu připravíme podle rozsahu a četnosti úklidu, včetně chemie.</p>
         </div>
-        <div class="card feature-card">
-          <div class="icon-chip">💳</div>
-          <h3>Platba po dokončení</h3>
-          <p>Platíte kartou nebo QR kódem až po odsouhlasení výsledku.</p>
-        </div>
-        <div class="card feature-card">
+        <div class="card feature-card b-w2">
           <div class="icon-chip">🧴</div>
           <h3>Vlastní úklidová chemie</h3>
           <p>Standardně vozíme profesionální prostředky, na přání použijeme vaše.</p>
         </div>
-        <div class="card feature-card">
-          <div class="icon-chip">⭐</div>
-          <h3>Garance spokojenosti</h3>
-          <p>Výsledek projdeme společně a případné nedostatky bezplatně napravíme.</p>
-        </div>
-        <div class="card feature-card">
+        <div class="card feature-card b-w2">
           <div class="icon-chip">🎓</div>
           <h3>Proškolený personál</h3>
           <p>Pracovníky vybíráme v několika kolech včetně praktické zkoušky.</p>
         </div>
-        <div class="card feature-card">
+        <div class="card feature-card b-w3">
           <div class="icon-chip">🛡️</div>
           <h3>Pojištění</h3>
           <p>Máme pojištění odpovědnosti za škodu do 5 mil. Kč.</p>
@@ -421,6 +422,10 @@
   <section class="cta-final">
     <div class="container">
       <h2>Poptejte hloubkový úklid ještě dnes</h2>
+      <svg class="doodle cta-arrow" viewBox="0 0 96 74" aria-hidden="true">
+        <path d="M10,8 C14,36 34,54 64,59"/>
+        <path d="M52,48 L66,60 L51,70"/>
+      </svg>
       <a href="kontakt.html" class="btn btn-white">Poptat úklid →</a>
     </div>
   </section>
