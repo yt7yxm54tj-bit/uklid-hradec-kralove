@@ -12,54 +12,6 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <style>
-    /* ---------- Hero — tmavá sekce, text + rámovaná fotka ---------- */
-    .page-hero {
-      background: var(--dark);
-      height: 496px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-    }
-    .hero-grid {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 64px;
-    }
-    .hero-text { max-width: 520px; }
-    .hero-rating {
-      display: block;
-      font-size: 14px;
-      font-weight: 500;
-      color: rgba(255,255,255,.75);
-    }
-    .page-hero h1 {
-      margin-top: 16px;
-      font-size: 38px;
-      line-height: 1.2;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: -.02em;
-    }
-    .page-hero .hero-sub {
-      margin-top: 16px;
-      font-size: 15px;
-      line-height: 1.6;
-      color: rgba(255,255,255,.75);
-      max-width: 480px;
-    }
-    .page-hero .btn { margin-top: 20px; }
-    .hero-photo {
-      width: 480px;
-      height: 320px;
-      flex-shrink: 0;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.15);
-      box-shadow: 0 24px 48px rgba(0,0,0,.35);
-    }
-    .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
-
     /* ---------- Co hloubkový úklid zahrnuje ---------- */
     .includes { padding: 64px 0; }
     .includes-grid { margin-top: 44px; gap: 24px 60px; }
@@ -154,11 +106,9 @@
 
     /* ---------- Responsive (mobil samostatně) ---------- */
     @media (max-width: 820px) {
-      .page-hero { height: auto; padding: 48px 0; }
+      .faq-section { padding: 0 0 64px; }
       .hero-grid { flex-direction: column; gap: 32px; }
       .hero-text { max-width: 100%; }
-      .page-hero h1 { font-size: 28px; }
-      .page-hero .hero-sub { max-width: 100%; }
       .hero-photo { width: 100%; height: auto; aspect-ratio: 3 / 2; }
       .includes { padding: 56px 0; }
       .includes-grid { gap: 32px; }
@@ -169,7 +119,7 @@
       .process-grid { gap: 32px; }
       .references { padding: 56px 0; }
       .references-grid { gap: 32px; }
-      .page-hero .btn, .cta-final .btn { min-height: 52px; padding: 16px 28px; }
+      .cta-final .btn { min-height: 52px; padding: 16px 28px; }
     }
   </style>
 </head>
@@ -302,22 +252,22 @@
           </div>
         </div>
         <div class="card feature-card b-w3">
-          <div class="icon-chip">📋</div>
+          <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
           <h3>Nabídka na míru</h3>
           <p>Cenu připravíme podle rozsahu a četnosti úklidu, včetně chemie.</p>
         </div>
         <div class="card feature-card b-w2">
-          <div class="icon-chip">🧴</div>
+          <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
           <h3>Vlastní úklidová chemie</h3>
           <p>Standardně vozíme profesionální prostředky, na přání použijeme vaše.</p>
         </div>
         <div class="card feature-card b-w2">
-          <div class="icon-chip">🎓</div>
+          <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5"/><path d="M22 9v5"/></svg></div>
           <h3>Proškolený personál</h3>
           <p>Pracovníky vybíráme v několika kolech včetně praktické zkoušky.</p>
         </div>
         <div class="card feature-card b-w3">
-          <div class="icon-chip">🛡️</div>
+          <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.4-3 8.3-7 9.5-4-1.2-7-5.1-7-9.5V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
           <h3>Pojištění</h3>
           <p>Máme pojištění odpovědnosti za škodu do 5 mil. Kč.</p>
         </div>

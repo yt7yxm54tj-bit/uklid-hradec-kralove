@@ -6,10 +6,10 @@
 
 :root {
   /* Barvy — vzorkované 1:1 z wireframu */
-  --blue: #3B82F6;          /* CTA + akcenty */
-  --blue-hover: #2E6FDE;
+  --blue: #177A8D;          /* akcent akcí: CTA, odkazy, focus (brand petrol) */
+  --blue-hover: #12657A;
   --navy: #0B3049;          /* brand navy — tabulka, avatary, hero overlay */
-  --dark: #1F2937;          /* tmavé sekce (čísla, footer) */
+  --dark: #0B3049;          /* tmavé sekce (čísla, footer) — jedna navy rodina */
   --teal: #2F8FA6;          /* náš sloupec ve srovnání */
   --text: #111827;          /* nadpisy */
   --text-body: #374151;     /* běžný text */
@@ -18,7 +18,9 @@
   --bg-light: #F8F9FA;      /* světlé sekce a karty */
   --bg-zebra: #F4F7F9;      /* zebra řádky tabulky */
   --border: #E5E7EB;
-  --chip: #EEF1FB;          /* pozadí ikonových koleček */
+  --chip: #E3F2F6;          /* pozadí ikonových koleček (teal tint) */
+  --sky: #EAF3F8;           /* světlé teal plochy (uhero, recenze, FAQ) */
+  --grad-dark: linear-gradient(115deg, #0B3049 0%, #14496B 60%, #1E6E82 125%);
   --white: #FFFFFF;
 
   --radius-card: 12px;
@@ -84,9 +86,9 @@ ul { list-style: none; }
 .btn:hover { transform: translateY(-2px); }
 .btn:active { transform: translateY(0); }
 .btn-primary { background: var(--blue); color: var(--white); }
-.btn-primary:hover { background: var(--blue-hover); box-shadow: 0 8px 20px rgba(59,130,246,.35); }
+.btn-primary:hover { background: var(--blue-hover); box-shadow: 0 8px 20px rgba(23,122,141,.32); }
 .btn-white { background: var(--white); color: var(--text); }
-.btn-white:hover { background: #F3F4F6; box-shadow: 0 8px 20px rgba(17,24,39,.15); }
+.btn-white:hover { background: #F3F4F6; box-shadow: 0 8px 20px rgba(11,48,73,.15); }
 .btn-outline-light {
   background: transparent;
   color: var(--white);
@@ -126,7 +128,9 @@ section { position: relative; }
   display: block;
   font-size: 13px;
   font-weight: 600;
-  color: var(--blue);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--teal);
   margin-bottom: 10px;
 }
 .section-head h1,
@@ -153,7 +157,7 @@ section { position: relative; }
 }
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 32px rgba(17,24,39,.10);
+  box-shadow: 0 14px 32px rgba(11,48,73,.10);
 }
 .icon-chip { transition: transform .3s cubic-bezier(.34,1.56,.64,1); }
 .card:hover .icon-chip { transform: scale(1.12) rotate(-4deg); }
@@ -192,11 +196,13 @@ section { position: relative; }
   height: 36px;
   border-radius: 50%;
   background: var(--chip);
+  color: var(--teal);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 16px;
 }
+.icon-chip svg { width: 19px; height: 19px; display: block; }
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--dark); color: var(--text-light); }
@@ -301,7 +307,7 @@ section { position: relative; }
 .cta-final .container {
   position: relative;
   width: calc(100% - 48px);
-  background: linear-gradient(120deg, var(--navy) 0%, #14496B 60%, var(--teal) 135%);
+  background: var(--grad-dark);
   border-radius: 28px;
   padding: 64px 48px;
   overflow: hidden;
@@ -562,7 +568,7 @@ section { position: relative; }
     transform: translateY(-8px);
     pointer-events: none;
     transition: opacity .25s ease, transform .3s cubic-bezier(.22,.61,.36,1);
-    box-shadow: 0 16px 32px rgba(17,24,39,.10);
+    box-shadow: 0 16px 32px rgba(11,48,73,.10);
   }
   .mobile-nav.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
   .mobile-nav a { display: block; padding: 13px 0; font-size: 16px; color: var(--text-body); border-bottom: 1px solid var(--bg-light); }
@@ -644,7 +650,7 @@ section { position: relative; }
   grid-column: span 5;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(115deg, #14384F 0%, #17465F 55%, #1E5D76 100%);
+  background: var(--grad-dark);
   border-radius: 20px;
   padding: 44px 48px;
   display: grid;
@@ -674,10 +680,10 @@ section { position: relative; }
   font-size: 15px;
   padding: 15px 20px;
   border-radius: 14px;
-  box-shadow: 0 12px 28px rgba(7,24,37,.32);
+  box-shadow: 0 12px 28px rgba(11,48,73,.32);
   transition: transform .25s cubic-bezier(.22,.61,.36,1), box-shadow .25s ease;
 }
-.bpill:hover { box-shadow: 0 18px 38px rgba(7,24,37,.42); }
+.bpill:hover { box-shadow: 0 18px 38px rgba(11,48,73,.42); }
 .bpill:nth-child(1):hover { transform: rotate(0deg) translateY(-3px); }
 .bpill:nth-child(2):hover { transform: rotate(0deg) translateX(16px) translateY(-3px); }
 .bpill:nth-child(3):hover { transform: rotate(0deg) translateY(-3px); }
@@ -729,7 +735,7 @@ section { position: relative; }
 }
 .t-layout .t-featured .quote {
   font-family: var(--font-display);
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.45;
   letter-spacing: -.01em;
@@ -811,7 +817,7 @@ section .handnote p {
 .field input:focus, .field textarea:focus {
   outline: none;
   border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(59,130,246,.14);
+  box-shadow: 0 0 0 3px rgba(23,122,141,.15);
 }
 .form-consent input[type="checkbox"] {
   appearance: none;
@@ -869,4 +875,17 @@ section .handnote p {
 .no-anim .brush svg path {
   stroke-dashoffset: 0 !important;
   animation: none !important;
+}
+
+/* ---------- Brand fototreatment — jednotná teplota stock fotek ---------- */
+.service-card img,
+.story-img img,
+.map-photo img,
+.person-photo img,
+.uh-media img,
+.situation-card img,
+.split-media img,
+.about-photo img,
+.story-photo img {
+  filter: saturate(.82) contrast(1.04);
 }

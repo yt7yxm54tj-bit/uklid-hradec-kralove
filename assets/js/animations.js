@@ -144,7 +144,7 @@
       var rest = [step.querySelector("h3"), step.querySelector("p")].filter(Boolean);
       if (num) {
         gsap.set(num, { backgroundColor: "#CBD5E1", scale: 0.85 });
-        tl.to(num, { backgroundColor: "#3B82F6", scale: 1, duration: 0.25, ease: "back.out(2)" });
+        tl.to(num, { backgroundColor: "#177A8D", scale: 1, duration: 0.25, ease: "back.out(2)" });
       }
       tl.from(rest, { opacity: 0, y: 14, duration: 0.3, stagger: 0.06 }, "<0.05");
       if (segFills[i]) {

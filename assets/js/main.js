@@ -158,7 +158,7 @@ function brushify(el, phrase) {
     + '<span class="brush">' + target + BRUSH_SVG + '</span>'
     + html.slice(idx + target.length);
 }
-brushify(document.querySelector('.features .section-head h2'), 'Hradecký Úklid');
+brushify(document.querySelector('.features .section-head h2'), 'Úklid Hradec Králové');
 brushify(document.querySelector('.stats-section h2'), 'v číslech');
 document.querySelectorAll('.cta-final h2').forEach(function (h) { brushify(h, 'ještě dnes'); });
 brushify(document.querySelector('.uhero h1'));
