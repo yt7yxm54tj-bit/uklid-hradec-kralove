@@ -334,6 +334,58 @@ section { position: relative; }
 .compare-row .col-other { color: var(--text-muted); }
 .compare-row .cross { color: var(--text-light); }
 
+/* ============================================================
+   Brand vizuál: bublinky + tah štětcem + vlnitá zaoblená patička
+   ============================================================ */
+/* Mýdlové bubliny (vkládá main.js) */
+.bub {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 30%, rgba(255, 255, 255, .85), rgba(47, 143, 166, .14) 60%, rgba(47, 143, 166, .26));
+  border: 1px solid rgba(47, 143, 166, .18);
+  pointer-events: none;
+  animation: bubfloat 7s ease-in-out infinite;
+  z-index: 1;
+}
+.bub--light {
+  background: radial-gradient(circle at 32% 30%, rgba(255, 255, 255, .35), rgba(214, 236, 242, .08) 62%, rgba(214, 236, 242, .16));
+  border-color: rgba(255, 255, 255, .25);
+}
+@keyframes bubfloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+
+/* Tah štětcem pod klíčovým slovem */
+.brush { position: relative; white-space: nowrap; }
+.brush svg { position: absolute; left: -2%; bottom: -8px; width: 104%; height: 18px; overflow: visible; }
+.brush svg path {
+  stroke: #7CC4D8;
+  stroke-width: 7;
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 340;
+  stroke-dashoffset: 340;
+  animation: brushdraw 1.1s ease forwards 1.2s;
+}
+@keyframes brushdraw { to { stroke-dashoffset: 0; } }
+
+/* Patička: vlnitý horní okraj + zaoblené rohy (wrapper vkládá main.js) */
+.footer-round-wrap { overflow: hidden; }
+.site-footer {
+  position: relative;
+  border-radius: 44px 44px 0 0;
+  overflow: hidden;
+}
+.foot-wave { display: block; width: 100%; height: 38px; }
+.site-footer .container { position: relative; z-index: 1; }
+.site-footer .bub { z-index: 0; opacity: .38; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bub { animation: none; }
+  .brush svg path { animation: none; stroke-dashoffset: 0; }
+}
+
 /* ---------- Sjednocený hero podstránek (.uhero) ---------- */
 .uhero {
   background: linear-gradient(180deg, #EAF3F8 0%, #FFFFFF 100%);

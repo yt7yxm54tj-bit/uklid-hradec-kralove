@@ -81,6 +81,58 @@ if (leadForm) {
   });
 }
 
+// Brand dekor: bubliny do hero sekcí a patičky
+function addBubbles(el, specs) {
+  if (!el) return;
+  specs.forEach(function (s) {
+    var b = document.createElement('div');
+    b.className = 'bub' + (s.light ? ' bub--light' : '');
+    b.style.width = s.size + 'px';
+    b.style.height = s.size + 'px';
+    for (var k in s.pos) b.style[k] = s.pos[k];
+    if (s.delay) b.style.animationDelay = s.delay + 's';
+    el.appendChild(b);
+  });
+}
+addBubbles(document.querySelector('.hero'), [
+  { size: 88, pos: { top: '18%', right: '12%' }, light: true },
+  { size: 40, pos: { top: '38%', right: '6%' }, light: true, delay: 1.6 },
+  { size: 26, pos: { top: '14%', right: '28%' }, light: true, delay: 3 },
+  { size: 56, pos: { bottom: '20%', right: '20%' }, light: true, delay: .8 }
+]);
+addBubbles(document.querySelector('.uhero'), [
+  { size: 84, pos: { top: '14%', right: '8%' } },
+  { size: 38, pos: { bottom: '18%', right: '3%' }, delay: 1.4 },
+  { size: 22, pos: { top: '58%', right: '16%' }, delay: 2.6 }
+]);
+addBubbles(document.querySelector('.site-footer'), [
+  { size: 110, pos: { top: '-30px', right: '-24px' }, light: true },
+  { size: 48, pos: { bottom: '14%', right: '12%' }, light: true, delay: 2 }
+]);
+
+// Patička: obal v barvě předchozí sekce + vlnitý horní okraj
+var siteFooter = document.querySelector('.site-footer');
+if (siteFooter) {
+  var prevSection = siteFooter.previousElementSibling;
+  var aboveBg = prevSection ? getComputedStyle(prevSection).backgroundColor : '#ffffff';
+  if (!aboveBg || aboveBg === 'rgba(0, 0, 0, 0)') aboveBg = '#ffffff';
+  var roundWrap = document.createElement('div');
+  roundWrap.className = 'footer-round-wrap';
+  roundWrap.style.background = aboveBg;
+  siteFooter.parentNode.insertBefore(roundWrap, siteFooter);
+  roundWrap.appendChild(siteFooter);
+  var waveNS = 'http://www.w3.org/2000/svg';
+  var wave = document.createElementNS(waveNS, 'svg');
+  wave.setAttribute('class', 'foot-wave');
+  wave.setAttribute('viewBox', '0 0 1440 38');
+  wave.setAttribute('preserveAspectRatio', 'none');
+  var path = document.createElementNS(waveNS, 'path');
+  path.setAttribute('d', 'M0,16 C240,38 480,0 720,12 C960,24 1200,36 1440,12 L1440,0 L0,0 Z');
+  path.setAttribute('fill', aboveBg);
+  wave.appendChild(path);
+  siteFooter.insertBefore(wave, siteFooter.firstChild);
+}
+
 // Transparentní navigace (homepage): po scrollu přejde do bílé
 var transparentHeader = document.querySelector('.site-header.transparent');
 if (transparentHeader) {
