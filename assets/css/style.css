@@ -263,16 +263,27 @@ section { position: relative; }
   max-width: 760px;
 }
 
-/* ---------- Závěrečná výzva (breather) ---------- */
-.cta-final { background: var(--blue); text-align: center; }
+/* ---------- Závěrečná výzva — plovoucí gradient karta ---------- */
+.cta-final { background: transparent; text-align: center; padding: 0 0 96px !important; }
+.cta-final .container {
+  position: relative;
+  width: calc(100% - 48px);
+  background: linear-gradient(120deg, var(--navy) 0%, #14496B 60%, var(--teal) 135%);
+  border-radius: 28px;
+  padding: 64px 48px;
+  overflow: hidden;
+  box-shadow: 0 26px 60px rgba(11, 48, 73, .22);
+}
 .cta-final h2 {
+  position: relative;
+  z-index: 1;
   font-size: 30px;
   font-weight: 700;
   color: var(--white);
   letter-spacing: -.02em;
 }
-.cta-final p { font-size: 14px; color: rgba(255,255,255,.85); margin-top: 14px; }
-.cta-final .btn { margin-top: 26px; }
+.cta-final p { position: relative; z-index: 1; font-size: 14px; color: rgba(255,255,255,.85); margin-top: 14px; }
+.cta-final .btn { position: relative; z-index: 1; margin-top: 26px; }
 
 /* ---------- Tmavá sekce s čísly (vycentrovaná) ---------- */
 .stats-section { background: var(--dark); padding: 72px 0; }
@@ -356,30 +367,42 @@ section { position: relative; }
   50% { transform: translateY(-16px); }
 }
 
-/* Tah štětcem pod klíčovým slovem */
+/* Tah štětcem pod klíčovým slovem (světlý podklad = teal, tmavý = světlá) */
 .brush { position: relative; white-space: nowrap; }
 .brush svg { position: absolute; left: -2%; bottom: -8px; width: 104%; height: 18px; overflow: visible; }
 .brush svg path {
-  stroke: #7CC4D8;
+  stroke: #2F8FA6;
   stroke-width: 7;
   fill: none;
   stroke-linecap: round;
   stroke-dasharray: 340;
   stroke-dashoffset: 340;
-  animation: brushdraw 1.1s ease forwards 1.2s;
 }
+.brush.go svg path { animation: brushdraw 1.1s ease forwards .35s; }
+.hero .brush.go svg path { animation-delay: 1.2s; }
+.hero .brush svg path,
+.cta-final .brush svg path,
+.stats-section .brush svg path { stroke: #7CC4D8; }
 @keyframes brushdraw { to { stroke-dashoffset: 0; } }
 
-/* Patička: vlnitý horní okraj + zaoblené rohy (wrapper vkládá main.js) */
+/* Sekce s bublinami (přidává main.js) */
+.has-bubs { position: relative; overflow: hidden; }
+
+/* Vlnité okraje tmavých sekcí (SVG vkládá main.js) */
+.sec-wave { position: absolute; left: 0; width: 100%; height: 34px; display: block; pointer-events: none; }
+.sec-wave--top { top: -1px; }
+.sec-wave--bottom { bottom: -1px; transform: scale(-1, -1); }
+
+/* Patička: jeden plynulý vlnitý tvar — vlna u krajů klesá dolů = zaoblené rohy */
 .footer-round-wrap { overflow: hidden; }
 .site-footer {
   position: relative;
-  border-radius: 44px 44px 0 0;
   overflow: hidden;
 }
-.foot-wave { display: block; width: 100%; height: 38px; }
+.foot-wave { display: block; width: 100%; height: 64px; position: relative; z-index: 2; }
 .site-footer .container { position: relative; z-index: 1; }
 .site-footer .bub { z-index: 0; opacity: .38; }
+.stats-section .bub { opacity: .3; }
 
 @media (prefers-reduced-motion: reduce) {
   .bub { animation: none; }
@@ -511,14 +534,25 @@ section { position: relative; }
   .site-footer .footer-top { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; gap: 12px; }
   .faq-q { padding: 24px 20px; }
+  /* Bubliny v patičce na malém displeji ruší — pryč */
+  .site-footer .bub { display: none; }
+  /* CTA karta na mobilu */
+  .cta-final { padding: 0 0 64px !important; }
+  .cta-final .container { width: calc(100% - 32px); padding: 44px 24px; }
   /* Sjednocený hero podstránek na mobilu */
   .uhero { padding: 44px 0 40px; }
   .uhero .container, .uhero--media .container { grid-template-columns: 1fr; gap: 26px; }
   .uhero h1 { font-size: clamp(27px, 7.6vw, 33px); }
   .uhero .uh-media img { height: 230px; }
   /* „Jak to funguje" na mobilu = timeline: kolečko vlevo, text odsazený, lišta v levém sloupci */
-  .how .step { padding-left: 58px; min-height: 68px; }
-  .how .step .step-num { position: absolute; left: 0; top: 0; }
+  .how .grid-2, .how .grid-3, .how .grid-4,
+  .how .steps-grid, .how .process-grid, .how .how-voucher-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .how .step { padding-left: 58px; min-height: 68px; text-align: left; }
+  .how .step .step-num { position: absolute; left: 0; top: 0; margin: 0; }
   .how .step h3 { margin-top: 0; padding-top: 7px; }
   .how-seg--v { left: 17px; top: 44px; height: calc(100% - 22px); }
   /* Srovnávací tabulka na mobilu: žádný skrytý scroll — řádky se rozloží do bloků */

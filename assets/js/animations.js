@@ -74,7 +74,8 @@
     var cols = cs.display.indexOf("grid") > -1
       ? cs.gridTemplateColumns.split(" ").length
       : steps.length;
-    var vertical = cols === 1;
+    // na mobilu VŽDY svislá lišta (kroky jdou pod sebe, lišta nesmí přes text)
+    var vertical = cols === 1 || window.matchMedia("(max-width: 820px)").matches;
     var segFills = [];
     if (vertical || cols === steps.length) {
       steps.slice(0, -1).forEach(function (step) {
