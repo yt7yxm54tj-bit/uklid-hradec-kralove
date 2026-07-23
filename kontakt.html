@@ -65,6 +65,8 @@
       flex-direction: column;
       gap: 18px;
     }
+    .form-trust { font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: .01em; }
+    .form-note { font-size: 12px; color: var(--text-muted); text-align: center; }
     .form-card h3 {
       font-size: 20px;
       font-weight: 700;
@@ -82,6 +84,7 @@
       margin-bottom: 6px;
     }
     .field input,
+    .field select,
     .field textarea {
       width: 100%;
       font-family: inherit;
@@ -92,7 +95,7 @@
       border-radius: 8px;
       padding: 11px 14px;
     }
-    .field input { height: 40px; }
+    .field input, .field select { height: 40px; }
     .field textarea { height: 96px; resize: none; }
     .field input::placeholder,
     .field textarea::placeholder { color: var(--text-light); }
@@ -185,8 +188,8 @@
             <span class="info-value">info@uklidhradec.cz</span>
           </div>
           <div class="info-row">
-            <span class="info-label">Provozní doba</span>
-            <span class="info-value">Po–Pá 7:00–18:00, So 8:00–12:00</span>
+            <span class="info-label">Telefonní linka</span>
+            <span class="info-value">Po–Pá 7:00–18:00, So 8:00–12:00 · úklidy provádíme 7 dní v týdnu</span>
           </div>
           <div class="info-row">
             <span class="info-label">Působnost</span>
@@ -205,6 +208,7 @@
 
         <div class="form-card">
           <h3>Nezávazná poptávka</h3>
+          <div class="form-trust">★ 4.8 hodnocení · Pojištění 5 mil. Kč · Platba po dokončení</div>
           <form id="lead-form" action="#" novalidate>
             <input type="text" name="hpname" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;overflow:hidden" aria-hidden="true">
             <div class="form-row-two">
@@ -222,8 +226,16 @@
               <input type="email" id="email" name="email">
             </div>
             <div class="field">
-              <label for="type">Typ úklidu (domácnost, kancelář, po stavbě...)</label>
-              <input type="text" id="type" name="type">
+              <label for="type">Typ úklidu</label>
+              <select id="type" name="type">
+                <option value="">Vyberte…</option>
+                <option>Úklid domácnosti</option>
+                <option>Hloubkový úklid</option>
+                <option>Úklid firmy / kanceláře</option>
+                <option>Úklid po stavbě</option>
+                <option>Dárkový poukaz</option>
+                <option>Jiné</option>
+              </select>
             </div>
             <div class="field">
               <label for="message">Zpráva</label>
@@ -234,6 +246,7 @@
               <span>Souhlasím se zpracováním osobních údajů</span>
             </label>
             <button type="submit" class="btn btn-primary">Odeslat poptávku</button>
+            <p class="form-note">Ozveme se do 2 hodin v pracovní dny. Přesnou cenu dostanete do 24 hodin. Poptávka je nezávazná.</p>
             <p class="form-status" hidden></p>
           </form>
         </div>
