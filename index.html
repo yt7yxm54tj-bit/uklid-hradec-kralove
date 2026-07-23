@@ -82,23 +82,18 @@
     }
     .hero .hero-btns { margin-top: 32px; display: flex; gap: 18px; }
 
-    /* ---------- Trust bar — vystouplá karta mezi hero a další sekcí ---------- */
-    .trust-bar { position: relative; z-index: 5; }
+    /* ---------- Trust bar — vycentrovaný mezi koncem videa a další sekcí ---------- */
+    .trust-bar { padding: 64px 0; }
     .trust-bar .container {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 54px;
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: 0 22px 54px rgba(11, 48, 73, .16), 0 4px 14px rgba(11, 48, 73, .07);
-      margin-top: -44px;
-      padding: 30px 44px;
     }
     .trust-bar span { font-size: 17px; font-weight: 700; color: var(--text); white-space: nowrap; }
 
     /* ---------- Feature grid ---------- */
-    .features { padding: 96px 0; }
+    .features { padding: 0 0 96px; }
     .features .grid-3 { margin-top: 44px; }
     .feature-card h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 12px; }
     .feature-card p { font-size: 13px; color: var(--text-muted); margin-top: 5px; }
@@ -219,17 +214,16 @@
       .hero .hero-sub { font-size: 16px; margin-top: 22px; }
       .hero .hero-btns { flex-direction: column; align-items: stretch; gap: 12px; margin-top: 30px; }
       .hero .hero-btns .btn { min-height: 54px; padding: 16px 28px; width: 100%; }
+      .trust-bar { padding: 40px 0; }
       .trust-bar .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 18px 12px;
-        margin: -40px 16px 0;
-        padding: 24px 16px;
         text-align: center;
       }
       .trust-bar span { font-size: 14px; white-space: normal; }
       .trust-bar span:last-child { grid-column: 1 / -1; }
-      .features { padding: 64px 0; }
+      .features { padding: 0 0 64px; }
       .services { padding: 0 0 64px; }
       .how { padding: 56px 0; }
       .testimonials { padding: 64px 0; }
