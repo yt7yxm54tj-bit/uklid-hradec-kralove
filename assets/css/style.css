@@ -515,7 +515,7 @@ section { position: relative; }
   .logo { font-size: 15px; white-space: nowrap; }
   .site-header { height: 64px; }
   .site-header .container { padding: 0 16px; gap: 10px; }
-  .header-right { gap: 0; }
+  .header-right { gap: 14px; }
   .nav-toggle {
     display: flex;
     flex-direction: column;
