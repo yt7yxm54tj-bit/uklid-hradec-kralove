@@ -220,7 +220,7 @@
         <a href="kontakt.html">Kontakt</a>
       </nav>
       <div class="header-right">
-        <span class="header-phone">+420 xxx xxx xxx</span>
+        <a href="tel:+420777123456" class="header-phone">+420 777 123 456</a>
         <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
         <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
@@ -233,6 +233,7 @@
       <a href="cenik.html">Ceník</a>
       <a href="o-nas.html">O nás</a>
       <a href="kontakt.html">Kontakt</a>
+      <a href="kontakt.html" class="mobile-cta">Nezávazná poptávka</a>
     </nav>
   </header>
 
@@ -281,7 +282,8 @@
 
         <div class="form-card">
           <h3>Nezávazná poptávka</h3>
-          <form action="#">
+          <form id="lead-form" action="#" novalidate>
+            <input type="text" name="hpname" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;overflow:hidden" aria-hidden="true">
             <div class="form-row-two">
               <div class="field">
                 <label for="name">Jméno a příjmení</label>
@@ -309,6 +311,7 @@
               <span>Souhlasím se zpracováním osobních údajů</span>
             </label>
             <button type="submit" class="btn btn-primary">Odeslat poptávku</button>
+            <p class="form-status" hidden></p>
           </form>
         </div>
       </div>
@@ -325,6 +328,7 @@
       <div class="map-photo">
         <img src="assets/img/hradec-namesti.jpg" alt="Ulrichovo náměstí v Hradci Králové — sídlo firmy">
       </div>
+      <a class="btn btn-primary map-open" href="https://mapy.cz/zakladni?q=Ulrichovo%20n%C3%A1m%C4%9Bst%C3%AD%20810%2C%20Hradec%20Kr%C3%A1lov%C3%A9" target="_blank" rel="noopener">Otevřít v mapách →</a>
     </div>
   </section>
 
@@ -415,6 +419,10 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
 </body>
 </html>

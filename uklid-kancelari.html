@@ -130,7 +130,7 @@
         <a href="kontakt.html">Kontakt</a>
       </nav>
       <div class="header-right">
-        <span class="header-phone">+420 xxx xxx xxx</span>
+        <a href="tel:+420777123456" class="header-phone">+420 777 123 456</a>
         <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
         <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
@@ -143,6 +143,7 @@
       <a href="cenik.html">Ceník</a>
       <a href="o-nas.html">O nás</a>
       <a href="kontakt.html">Kontakt</a>
+      <a href="kontakt.html" class="mobile-cta">Nezávazná poptávka</a>
     </nav>
   </header>
 
@@ -243,7 +244,7 @@
       <div class="leader-row">
         <div class="leader-avatar"><img src="assets/img/o-nas-team-marek-novak.jpeg" alt="Marek Novák — jednatel a zakladatel"></div>
         <div>
-          <p class="leader-quote">„Firemním klientům garantujeme stejnou péči o detail, jakou bychom čekali sami — diskrétnost, spolehlivost a jasně dané podmínky spolupráce."</p>
+          <p class="leader-quote">„Firemním klientům garantujeme stejnou péči o detail, jakou bychom čekali sami — diskrétnost, spolehlivost a jasně dané podmínky spolupráce.“</p>
           <p class="leader-name">Marek Novák — jednatel a zakladatel, Úklid Hradec Králové</p>
         </div>
       </div>
@@ -261,17 +262,17 @@
         <div class="ref-card">
           <h3>Hotel Nové Adalbertinum</h3>
           <p class="ref-meta">Denní úklid společných prostor, 3 roky spolupráce</p>
-          <p class="ref-quote">„Spolehlivost, na kterou se dá vždy spolehnout."</p>
+          <p class="ref-quote">„Spolehlivost, na kterou se dá vždy spolehnout.“</p>
         </div>
         <div class="ref-card">
           <h3>Coworking Vlnovka</h3>
           <p class="ref-meta">Týdenní úklid kanceláří pro 40 lidí</p>
-          <p class="ref-quote">„Diskrétní tým a bezproblémová komunikace."</p>
+          <p class="ref-quote">„Diskrétní tým a bezproblémová komunikace.“</p>
         </div>
         <div class="ref-card">
           <h3>Autosalon Klika</h3>
           <p class="ref-meta">Hloubkový úklid showroomu 1× měsíčně</p>
-          <p class="ref-quote">„Prostory vždy vypadají jako nové."</p>
+          <p class="ref-quote">„Prostory vždy vypadají jako nové.“</p>
         </div>
       </div>
     </div>
@@ -313,37 +314,39 @@
         <h2>Srovnání s konkurencí</h2>
         <p class="sub">Proč zvolit místní tým místo velké platformy nebo práce „na doporučení".</p>
       </div>
+      <div class="compare-scroll">
       <div class="compare-table">
         <div class="compare-row compare-head">
           <div></div>
-          <div class="col-us">Úklid Hradec Králové</div>
+          <div class="col-us" data-label="Úklid Hradec Králové">Úklid Hradec Králové</div>
           <div>Velká platforma</div>
           <div>Na doporučení</div>
         </div>
         <div class="compare-row">
           <div>Pojištění odpovědnosti</div>
-          <div class="col-us">✓ 5 mil. Kč</div>
-          <div class="col-other"><span class="cross">✗</span> Neznámé</div>
-          <div class="col-other"><span class="cross">✗</span> Žádné</div>
+          <div class="col-us" data-label="Úklid Hradec Králové">✓ 5 mil. Kč</div>
+          <div class="col-other" data-label="Velká platforma"><span class="cross">✗</span> Neznámé</div>
+          <div class="col-other" data-label="Na doporučení"><span class="cross">✗</span> Žádné</div>
         </div>
         <div class="compare-row">
           <div>Proškolený tým</div>
-          <div class="col-us">✓ Ano, vlastní</div>
-          <div class="col-other">Různá kvalita</div>
-          <div class="col-other"><span class="cross">✗</span> Neznámá</div>
+          <div class="col-us" data-label="Úklid Hradec Králové">✓ Ano, vlastní</div>
+          <div class="col-other" data-label="Velká platforma">Různá kvalita</div>
+          <div class="col-other" data-label="Na doporučení"><span class="cross">✗</span> Neznámá</div>
         </div>
         <div class="compare-row">
           <div>Hodnocení</div>
-          <div class="col-us">★ 4.8</div>
-          <div class="col-other">★ 4.3</div>
-          <div class="col-other"><span class="cross">✗</span> Nemá</div>
+          <div class="col-us" data-label="Úklid Hradec Králové">★ 4.8</div>
+          <div class="col-other" data-label="Velká platforma">★ 4.3</div>
+          <div class="col-other" data-label="Na doporučení"><span class="cross">✗</span> Nemá</div>
         </div>
         <div class="compare-row">
           <div>Cena za hodinu</div>
-          <div class="col-us">✓ Transparentní</div>
-          <div class="col-other"><span class="cross">✗</span> Skryté poplatky</div>
-          <div class="col-other">Individuální</div>
+          <div class="col-us" data-label="Úklid Hradec Králové">✓ Transparentní</div>
+          <div class="col-other" data-label="Velká platforma"><span class="cross">✗</span> Skryté poplatky</div>
+          <div class="col-other" data-label="Na doporučení">Individuální</div>
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -438,6 +441,10 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
 </body>
 </html>
