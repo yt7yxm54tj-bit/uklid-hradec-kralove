@@ -1,5 +1,5 @@
 /* ============================================================
-   Úklid Hradec Králové — animační vrstva (GSAP)
+   Hradecký úklid — animační vrstva (GSAP)
    Vzory převzaté ze šablony makléře (sablona-makler/app.js):
    hero stagger, line-mask reveal nadpisů, fade+slideUp karet,
    count-up čísel (trust bar + stats). Vše once, s fallbackem.
