@@ -92,6 +92,9 @@
       color: var(--text-muted);
     }
 
+    /* ---------- Srovnání s konkurencí ---------- */
+    .compare { padding: 88px 0 96px; }
+
     /* ---------- Závěrečná výzva ---------- */
     .cta-final .btn { margin-top: 26px; }
 
@@ -106,6 +109,7 @@
       .reference-images { grid-template-columns: 1fr; gap: 12px; }
       .reference-images img { height: 220px; }
       .reference-pair + .reference-pair { margin-top: 48px; }
+      .compare { padding: 64px 0; }
       .faq-section { padding: 0 0 56px; }
     }
   </style>
@@ -272,6 +276,50 @@
           <img src="assets/img/reference-kancelar-po.jpg" alt="Kancelářské prostory po rekonstrukci, centrum HK: po úklidu">
         </div>
         <p class="reference-caption">Kancelářské prostory po rekonstrukci, centrum HK (před → po)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Srovnání s konkurencí ============ -->
+  <section class="compare">
+    <div class="container">
+      <div class="section-head">
+        <h2>Proč na úklid po stavbě nestačí parta s kýblem</h2>
+        <p class="sub">Stavební prach a zbytky malty potřebují jiné vybavení a jiný postup než běžný úklid.</p>
+      </div>
+      <div class="compare-scroll">
+      <div class="compare-table">
+        <div class="compare-row compare-head">
+          <div></div>
+          <div class="col-us" data-label="Hradecký úklid">Hradecký úklid</div>
+          <div>Stavební firma (úklid v ceně)</div>
+          <div>Brigádníci</div>
+        </div>
+        <div class="compare-row">
+          <div>Průmyslové vybavení</div>
+          <div class="col-us" data-label="Hradecký úklid">✓ Vysavače na stavební prach a podlahové mycí stroje</div>
+          <div class="col-other" data-label="Stavební firma (úklid v ceně)"><span class="cross">✗</span> Jen základní</div>
+          <div class="col-other" data-label="Brigádníci"><span class="cross">✗</span> Nemají</div>
+        </div>
+        <div class="compare-row">
+          <div>Jemný úklid do detailu</div>
+          <div class="col-us" data-label="Hradecký úklid">✓ Včetně oken, spár a fólií</div>
+          <div class="col-other" data-label="Stavební firma (úklid v ceně)"><span class="cross">✗</span> Jen hrubý úklid</div>
+          <div class="col-other" data-label="Brigádníci">Různé</div>
+        </div>
+        <div class="compare-row">
+          <div>Termín podle kolaudace</div>
+          <div class="col-us" data-label="Hradecký úklid">✓ Držíme domluvený termín</div>
+          <div class="col-other" data-label="Stavební firma (úklid v ceně)"><span class="cross">✗</span> Podle stavby</div>
+          <div class="col-other" data-label="Brigádníci">Nejisté</div>
+        </div>
+        <div class="compare-row">
+          <div>Cena předem</div>
+          <div class="col-us" data-label="Hradecký úklid">✓ Kalkulace do 48 hodin</div>
+          <div class="col-other" data-label="Stavební firma (úklid v ceně)"><span class="cross">✗</span> Skrytá v rozpočtu</div>
+          <div class="col-other" data-label="Brigádníci">Individuální</div>
+        </div>
+      </div>
       </div>
     </div>
   </section>
