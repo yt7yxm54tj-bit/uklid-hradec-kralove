@@ -58,13 +58,22 @@
     .hero-badge {
       display: inline-flex;
       align-items: center;
-      padding: 8px 16px;
+      gap: 8px;
+      padding: 10px 20px;
       border-radius: 999px;
-      background: rgba(255,255,255,.16);
-      color: var(--white);
+      background: var(--white);
+      color: var(--navy);
       font-size: 13px;
-      font-weight: 600;
-      backdrop-filter: blur(4px);
+      font-weight: 700;
+      box-shadow: 0 8px 22px rgba(11,48,73,.22);
+    }
+    .hero-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--blue);
+      flex-shrink: 0;
     }
     .hero h1 {
       margin-top: 22px;
@@ -220,15 +229,14 @@
       .hero .hero-sub { font-size: 16px; margin-top: 22px; }
       .hero .hero-btns { flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 30px; }
       .hero .hero-btns .btn { min-height: 52px; padding: 16px 28px; width: auto; }
-      .trust-bar { padding: 40px 0; }
+      .trust-bar { padding: 36px 0; }
       .trust-bar .container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px 12px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px 10px;
         text-align: center;
       }
-      .trust-bar span { font-size: 14px; white-space: normal; }
-      .trust-bar span:last-child { grid-column: 1 / -1; }
+      .trust-bar span { font-size: 12.5px; white-space: normal; line-height: 1.3; }
       .features { padding: 0 0 64px; }
       .services { padding: 0 0 64px; }
       .how { padding: 56px 0; }
@@ -278,11 +286,10 @@
     </video>
     <div class="container">
       <span class="hero-badge">500+ dokončených úklidů</span>
-      <h1>Uklidíme váš domov i firmu. Platíte, <span class="brush">až když jste spokojeni<svg viewBox="0 0 320 18" preserveAspectRatio="none" aria-hidden="true"><path d="M4,12 C80,5 240,3 316,9"/></svg></span>.</h1>
+      <h1>Uklidíme váš domov i firmu. Platíte, <span class="brush">až když jste spokojeni<svg viewBox="0 0 320 18" preserveAspectRatio="none" aria-hidden="true"><path d="M4,13 C90,15.5 205,11.5 266,7 C280,6 300,4 316,2"/></svg></span>.</h1>
       <p class="hero-sub">Domácnosti, firmy i úklid po stavbě v Hradci Králové a okolí. Proškolený místní tým, pojištění do 5 mil. Kč a nabídka pro vás do 48 hodin.</p>
       <div class="hero-btns">
         <a href="kontakt.html" class="btn btn-primary">Zjistit cenu →</a>
-        <a href="tel:+420777123456" class="btn btn-outline-light">Zavolat nám</a>
       </div>
     </div>
   </section>
@@ -290,51 +297,50 @@
   <!-- ============ Trust bar ============ -->
   <div class="trust-bar">
     <div class="container">
-      <span>100 % spokojených zákazníků</span>
       <span>500+ dokončených úklidů</span>
-      <span>Pojištění do 5 mil. Kč</span>
-      <span>Proškolený vlastní tým</span>
-      <span>7 dní v týdnu</span>
+      <span>7 let zkušeností</span>
+      <span>100 % spokojených zákazníků</span>
     </div>
   </div>
 
   <!-- ============ Feature grid ============ -->
-  <section class="features">
+  <section class="features" id="home-features">
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Co získáte</span>
         <h2>Proč zvolit Hradecký úklid</h2>
         <p class="sub">Co tím získáte vy a proč se k nám lidé z Hradce vracejí.</p>
       </div>
-      <div class="bento">
+      <div class="bento" id="home-bento">
         <div class="bento-hero">
           <div>
-            <span class="bh-eyebrow">Vaše jistota</span>
-            <h3>Garance spokojenosti</h3>
-            <p>Výsledek projdeme společně přímo na místě a platíte až ve chvíli, kdy jste spokojeni. Když něco nebude v pořádku, napravíme to zdarma.</p>
+            <span class="bh-eyebrow">Spolupráce krok za krokem</span>
+            <h3>Jak spolupráce probíhá</h3>
+            <p>Od první zprávy po hotový úklid vás provedeme čtyřmi jasnými kroky, žádná zdlouhavá administrativa.</p>
           </div>
           <div class="bento-pills">
-            <div class="bpill"><span class="bp-ico">✓</span>Kontrola výsledku s vámi</div>
-            <div class="bpill"><span class="bp-ico">✓</span>Platba až po dokončení</div>
-            <div class="bpill"><span class="bp-ico">✓</span>Nedostatky opravíme zdarma</div>
+            <div class="bpill"><span class="bp-ico">1</span>Odešlete poptávku</div>
+            <div class="bpill"><span class="bp-ico">2</span>Osobní návštěva nebo posouzení podle videa</div>
+            <div class="bpill"><span class="bp-ico">3</span>Stanovíme cenu i časovou náročnost</div>
+            <div class="bpill"><span class="bp-ico">4</span>Proběhne úklid</div>
           </div>
         </div>
-        <div class="card feature-card b-w3">
+        <div class="card feature-card">
           <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
           <h3>Nabídka na míru</h3>
           <p>Zaplatíte přesně za váš rozsah a četnost. Kalkulaci dostanete do 48 hodin, včetně chemie.</p>
         </div>
-        <div class="card feature-card b-w2">
+        <div class="card feature-card">
           <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
           <h3>Vlastní úklidová chemie</h3>
-          <p>Nemusíte nic chystat, profesionální prostředky vozíme s sebou. Chcete vaše? Použijeme je.</p>
+          <p>Nemusíte nic chystat, profesionální prostředky i pomůcky vozíme s sebou. Chcete vaše vlastní? Bez problému je použijeme.</p>
         </div>
-        <div class="card feature-card b-w2">
+        <div class="card feature-card">
           <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5"/><path d="M22 9v5"/></svg></div>
           <h3>Proškolený personál</h3>
-          <p>K vám domů i do firmy jde jen člověk, který prošel několika koly výběru a praktickou zkouškou.</p>
+          <p>K vám domů i do firmy jde jen člověk, který prošel výběrovým řízením a praktickou zkouškou přímo u zákazníka.</p>
         </div>
-        <div class="card feature-card b-w3">
+        <div class="card feature-card" style="display:none">
           <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.4-3 8.3-7 9.5-4-1.2-7-5.1-7-9.5V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
           <h3>Pojištění</h3>
           <p>Vaše prostory kryje pojištění do 5 mil. Kč. Případnou škodu řešíme my, ne vy.</p>
@@ -469,7 +475,7 @@
   </section>
 
   <!-- ============ Čísla o firmě ============ -->
-  <section class="stats-section">
+  <section class="stats-section" id="home-stats">
     <div class="container">
       <h2>Hradecký úklid v číslech</h2>
       <div class="stats-row">
@@ -478,20 +484,12 @@
           <div class="stat-label">dokončených úklidů</div>
         </div>
         <div class="stat">
-          <div class="stat-num">18</div>
-          <div class="stat-label">proškolených hospodyň</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">100 %</div>
-          <div class="stat-label">spokojených zákazníků</div>
-        </div>
-        <div class="stat">
           <div class="stat-num">7 let</div>
           <div class="stat-label">zkušeností v oboru</div>
         </div>
         <div class="stat">
-          <div class="stat-num">7 dní</div>
-          <div class="stat-label">v týdnu k dispozici</div>
+          <div class="stat-num">100 %</div>
+          <div class="stat-label">spokojených zákazníků</div>
         </div>
       </div>
     </div>
@@ -541,6 +539,19 @@
     </div>
   </section>
 
+  <!-- ============ Dárkový poukaz ============ -->
+  <section class="gift-banner">
+    <div class="container">
+      <div class="gift-banner-inner">
+        <span class="gift-banner-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 9h18M12 9v12"/><path d="M12 9C9.5 9 7 8 7 5.8 7 4.3 8.3 3.2 9.6 3.9 11 4.6 12 6.6 12 9zm0 0c2.5 0 5-1 5-3.2C17 4.3 15.7 3.2 14.4 3.9 13 4.6 12 6.6 12 9z"/></svg>
+        </span>
+        <span class="gift-banner-text">Darujte úklid jako poukaz. Ideální dárek pro rodinu i firemní partnery.</span>
+        <a href="poukazy.html" class="btn btn-primary gift-banner-btn">Dárkové poukazy →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ Časté dotazy ============ -->
   <section class="faq-section">
     <div class="container">
@@ -579,15 +590,18 @@
 
   <!-- ============ Závěrečná výzva ============ -->
   <!-- ============ Kdo k vám přijde ============ -->
-  <section class="hp-about">
+  <section class="hp-about hp-about--plain" id="home-about">
     <div class="container">
-      <div class="hp-about-card">
-        <img src="assets/img/o-nas-team-marie-coufalova.jpeg" alt="Marie Coufalová, vedoucí provozu">
-        <div>
-          <p class="hp-about-quote">„Úklid je o důvěře. Vážíme si každé domácnosti, do které nás pustíte.“</p>
+      <div class="hp-about-layout">
+        <img class="hp-about-photo" src="assets/img/o-nas-team-marie-coufalova.jpeg" alt="Marie Coufalová, vedoucí provozu">
+        <div class="hp-about-body">
+          <div class="section-head">
+            <span class="eyebrow">Kdo k vám přijde</span>
+            <h2>Za úklidem stojí konkrétní lidé, ne anonymní firma</h2>
+          </div>
+          <p class="hp-about-text">Provoz vede Marie osobně, každou zakázku má pod kontrolou od poptávky až po předání. Každá hospodyně u nás prošla několika koly výběru a praktickou zkouškou, takže víte, koho pouštíte domů.</p>
           <div class="handsign"><span class="sig">Marie Coufalová</span><span class="sig-role">vedoucí provozu</span></div>
-          <p class="hp-about-text">Každá hospodyně u nás projde několika koly výběru a praktickou zkouškou. K vám domů jde jen člověk, za kterého osobně ručíme.</p>
-          <a href="o-nas.html" class="hp-about-link">Poznejte celý tým →</a>
+          <a href="o-nas.html" class="btn btn-primary hp-about-cta">Celý tým →</a>
         </div>
       </div>
     </div>
@@ -597,9 +611,9 @@
     <div class="container">
       <h2>Poptejte úklid ještě dnes</h2>
       <p>Nezávazná nabídka do 48 hodin. Platíte až po úklidu, který si sami zkontrolujete.</p>
-      <svg class="doodle cta-arrow" viewBox="0 0 96 74" aria-hidden="true">
-        <path d="M10,8 C14,36 34,54 64,59"/>
-        <path d="M52,48 L66,60 L51,70"/>
+      <svg class="doodle cta-arrow cta-arrow-v2" viewBox="0 0 90 90" aria-hidden="true">
+        <path d="M12,10 C10,42 30,66 58,72"/>
+        <path d="M46,68 L60,74 L50,84"/>
       </svg>
       <a href="kontakt.html" class="btn btn-white">Zjistit cenu →</a>
       <span class="cta-note">Zdarma · bez závazku · odpověď do 48 hodin · <a href="tel:+420777123456">+420 777 123 456</a></span>
@@ -607,12 +621,16 @@
   </section>
 
   <!-- ============ Footer ============ -->
-  <footer class="site-footer">
+  <footer class="site-footer" id="home-footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
           <div class="logo">Hradecký úklid</div>
           <p>Profesionální úklidové služby pro domácnosti i firmy v Hradci Králové a okolí.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.3-1.4 1.5-1.4h1.3V5.5c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v2.5H8.9V14h2.3v7h2.3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/></svg></a>
+          </div>
         </div>
         <div class="footer-col">
           <h4>Služby</h4>
@@ -632,20 +650,13 @@
             <li><a href="poukazy.html">Poukazy na úklid</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Dokumenty</h4>
-          <ul>
-            <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
-            <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
-            <li><a href="reklamacni-rad.html">Reklamační řád</a></li>
-          </ul>
-        </div>
       </div>
       <div class="footer-bottom">
         <span>© Hradecký úklid 2026</span>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.3-1.4 1.5-1.4h1.3V5.5c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v2.5H8.9V14h2.3v7h2.3z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/></svg></a>
+        <div class="footer-legal">
+          <a href="obchodni-podminky.html">Obchodní podmínky</a>
+          <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
+          <a href="reklamacni-rad.html">Reklamační řád</a>
         </div>
       </div>
     </div>

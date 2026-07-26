@@ -102,50 +102,44 @@ function addBubbles(el, specs) {
   });
 }
 addBubbles(document.querySelector('.hero'), [
-  { size: 88, pos: { top: '18%', right: '12%' }, light: true },
-  { size: 40, pos: { top: '38%', right: '6%' }, light: true, delay: 1.6 },
-  { size: 26, pos: { top: '14%', right: '28%' }, light: true, delay: 3 },
-  { size: 56, pos: { bottom: '20%', right: '20%' }, light: true, delay: .8 }
+  { size: 78, pos: { top: '18%', right: '12%' }, light: true },
+  { size: 34, pos: { top: '38%', right: '6%' }, light: true, delay: 1.6 },
+  { size: 48, pos: { bottom: '20%', right: '20%' }, light: true, delay: .8 }
 ]);
 addBubbles(document.querySelector('.uhero'), [
-  { size: 84, pos: { top: '14%', right: '8%' } },
-  { size: 38, pos: { bottom: '18%', right: '3%' }, delay: 1.4 },
-  { size: 22, pos: { top: '58%', right: '16%' }, delay: 2.6 },
-  { size: 30, pos: { top: '20%', left: '4%' }, delay: 2 }
+  { size: 72, pos: { top: '14%', right: '8%' } },
+  { size: 30, pos: { bottom: '18%', right: '3%' }, delay: 1.4 },
+  { size: 24, pos: { top: '20%', left: '4%' }, delay: 2 }
 ]);
 addBubbles(document.querySelector('.site-footer'), [
-  { size: 110, pos: { top: '72px', right: '-24px' }, light: true },
-  { size: 48, pos: { bottom: '14%', right: '12%' }, light: true, delay: 2 }
+  { size: 96, pos: { top: '72px', right: '-24px' }, light: true },
+  { size: 40, pos: { bottom: '14%', right: '12%' }, light: true, delay: 2 }
 ]);
 // další sekce — decentně po krajích
 addBubbles(document.querySelector('.features'), [
-  { size: 54, pos: { top: '10%', right: '-14px' }, delay: 1 },
-  { size: 26, pos: { bottom: '16%', left: '-6px' }, delay: 2.4 }
+  { size: 46, pos: { top: '10%', right: '-14px' }, delay: 1 }
 ]);
 addBubbles(document.querySelector('.faq-section'), [
-  { size: 44, pos: { top: '22%', left: '-10px' }, delay: .6 },
-  { size: 28, pos: { bottom: '10%', right: '-6px' }, delay: 2 }
+  { size: 38, pos: { top: '22%', left: '-10px' }, delay: .6 }
 ]);
 document.querySelectorAll('.cta-final .container').forEach(function (card) {
   addBubbles(card, [
-    { size: 96, pos: { top: '-26px', left: '-28px' }, light: true },
-    { size: 42, pos: { bottom: '12%', right: '6%' }, light: true, delay: 1.5 },
-    { size: 24, pos: { top: '30%', right: '14%' }, light: true, delay: 3 }
+    { size: 84, pos: { top: '-26px', left: '-28px' }, light: true },
+    { size: 36, pos: { bottom: '12%', right: '6%' }, light: true, delay: 1.5 }
   ]);
 });
 document.querySelectorAll('.stats-section').forEach(function (sec) {
   addBubbles(sec, [
-    { size: 70, pos: { top: '12%', right: '4%' }, light: true },
-    { size: 30, pos: { bottom: '18%', left: '6%' }, light: true, delay: 1.8 }
+    { size: 60, pos: { top: '12%', right: '4%' }, light: true },
+    { size: 26, pos: { bottom: '18%', left: '6%' }, light: true, delay: 1.8 }
   ]);
 });
 addBubbles(document.querySelector('.bento-hero'), [
-  { size: 120, pos: { bottom: '-38px', left: '40%' }, light: true },
-  { size: 44, pos: { top: '-14px', left: '52%' }, light: true, delay: 1.8 }
+  { size: 100, pos: { bottom: '-38px', left: '40%' }, light: true }
 ]);
 
 // Tah štětcem pod klíčovými nadpisy (poslední slovo / fráze), kreslí se až ve viewportu
-var BRUSH_SVG = '<svg viewBox="0 0 320 18" preserveAspectRatio="none" aria-hidden="true"><path d="M4,12 C80,5 240,3 316,9"/></svg>';
+var BRUSH_SVG = '<svg viewBox="0 0 320 18" preserveAspectRatio="none" aria-hidden="true"><path d="M4,13 C90,15.5 205,11.5 266,7 C280,6 300,4 316,2"/></svg>';
 function brushify(el, phrase) {
   if (!el || el.querySelector('.brush')) return;
   var html = el.innerHTML;

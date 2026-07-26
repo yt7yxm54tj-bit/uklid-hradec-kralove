@@ -12,15 +12,43 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <style>
-    /* ---------- Co hloubkový úklid zahrnuje ---------- */
-    .includes { padding: 64px 0; }
-    .includes-grid { margin-top: 44px; gap: 24px 60px; }
-    .includes-col h3 {
-      font-size: 16px;
+    /* ---------- Co hloubkový úklid obsahuje (výrazná sekce, 3 sloupce) ---------- */
+    .deep-scope { padding: 96px 0; background: var(--bg-light); }
+    .deep-scope-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 44px;
+    }
+    .deep-scope-col {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 32px 28px;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .deep-scope-col:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(11,48,73,.1);
+    }
+    .dsc-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #E3F2F6;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .deep-scope-col h3 {
+      font-size: 18px;
       font-weight: 700;
       color: var(--text);
+      margin-bottom: 16px;
     }
-    .check-list { margin-top: 30px; }
+    .check-list { margin-top: 0; }
     .check-list li {
       display: flex;
       align-items: center;
@@ -38,7 +66,7 @@
     }
 
     /* ---------- Kdy hloubkový úklid využít ---------- */
-    .situations { background: var(--bg-light); padding: 88px 0; }
+    .situations { padding: 88px 0; }
     .situations .section-head { max-width: none; }
     .situations-grid { margin-top: 40px; }
     .situation-card img {
@@ -111,8 +139,8 @@
       .hero-grid { flex-direction: column; gap: 32px; }
       .hero-text { max-width: 100%; }
       .hero-photo { width: 100%; height: auto; aspect-ratio: 3 / 2; }
-      .includes { padding: 56px 0; }
-      .includes-grid { gap: 32px; }
+      .deep-scope { padding: 56px 0; }
+      .deep-scope-grid { grid-template-columns: 1fr; gap: 20px; }
       .situations { padding: 56px 0; }
       .situations-grid { gap: 32px; }
       .features { padding: 56px 0; }
@@ -172,36 +200,43 @@
     </div>
   </section>
 
-  <!-- ============ Co hloubkový úklid zahrnuje ============ -->
-  <section class="includes">
+  <!-- ============ Co hloubkový úklid obsahuje ============ -->
+  <section class="deep-scope">
     <div class="container">
       <div class="section-head">
-        <h2>Co hloubkový úklid zahrnuje</h2>
-        <p class="sub">Jdeme do hloubky tam, kam se běžný úklid nedostane.</p>
+        <span class="eyebrow">Rozsah prací</span>
+        <h2>Co hloubkový úklid obsahuje</h2>
+        <p class="sub">Jdeme do míst, na která běžný úklid nestíhá, a řešíme je do posledního detailu.</p>
       </div>
-      <div class="grid-3 includes-grid">
-        <div class="includes-col">
-          <h3>Okna a rámy</h3>
+      <div class="deep-scope-grid">
+        <div class="deep-scope-col">
+          <div class="dsc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg></div>
+          <h3>Kuchyň a spotřebiče</h3>
           <ul class="check-list">
-            <li><span class="dot"></span>Mytí oken z obou stran</li>
-            <li><span class="dot"></span>Čištění rámů a parapetů</li>
-            <li><span class="dot"></span>Umytí žaluzií a rolet</li>
+            <li><span class="dot"></span>Vnitřek trouby včetně mřížek</li>
+            <li><span class="dot"></span>Lednice zevnitř, police i těsnění</li>
+            <li><span class="dot"></span>Odmaštění digestoře a filtru</li>
+            <li><span class="dot"></span>Obklady a spáry za linkou</li>
           </ul>
         </div>
-        <div class="includes-col">
-          <h3>Čalounění a textil</h3>
+        <div class="deep-scope-col">
+          <div class="dsc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
+          <h3>Koupelna a spáry</h3>
           <ul class="check-list">
-            <li><span class="dot"></span>Vyčištění sedaček a křesel</li>
-            <li><span class="dot"></span>Praní záclon na přání</li>
-            <li><span class="dot"></span>Vyluxování matrací</li>
+            <li><span class="dot"></span>Odstranění zaschlého vodního kamene</li>
+            <li><span class="dot"></span>Vyčištění spár mezi obklady</li>
+            <li><span class="dot"></span>Sprchový kout do posledního rohu</li>
+            <li><span class="dot"></span>Baterie, sifony a odtoky</li>
           </ul>
         </div>
-        <div class="includes-col">
-          <h3>Spotřebiče a spáry</h3>
+        <div class="deep-scope-col">
+          <div class="dsc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18M5 12v6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-6M7 12V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v5"/></svg></div>
+          <h3>Nábytek a textilie</h3>
           <ul class="check-list">
-            <li><span class="dot"></span>Vnitřek trouby a lednice</li>
-            <li><span class="dot"></span>Odmaštění digestoře</li>
-            <li><span class="dot"></span>Vyčištění spár a koutů</li>
+            <li><span class="dot"></span>Extrakční čištění čalounění</li>
+            <li><span class="dot"></span>Hloubkové vyprání koberců</li>
+            <li><span class="dot"></span>Vyluxování a osvěžení matrací</li>
+            <li><span class="dot"></span>Okna včetně rámů a parapetů</li>
           </ul>
         </div>
       </div>
@@ -212,7 +247,9 @@
   <section class="situations">
     <div class="container">
       <div class="section-head">
-        <h2>Kdy hloubkový úklid využít</h2>
+        <span class="eyebrow">Ideální chvíle</span>
+        <h2>Kdy se hloubkový úklid hodí</h2>
+        <p class="sub">Doplňte běžný úklid o hloubkové čištění přesně v těchto situacích.</p>
       </div>
       <div class="grid-3 situations-grid">
         <div class="situation-card">
@@ -221,59 +258,59 @@
           <p>Předáte byt bez strachu o kauci, do posledního rohu.</p>
         </div>
         <div class="situation-card">
-          <img src="assets/img/hloubkovy-situace-jarni-uklid.jpg" alt="Jarní úklid">
-          <h3>Jarní úklid</h3>
-          <p>Zima z oken, koberců i čalounění zmizí za jediný den.</p>
+          <img src="assets/img/hloubkovy-situace-jarni-uklid.jpg" alt="Jarní úklid po zimě, úleva pro alergiky">
+          <h3>Jaro, zima a alergie</h3>
+          <p>Prach, pyl a zimní špína zmizí z koberců, čalounění i oken. Úleva i pro alergiky.</p>
         </div>
         <div class="situation-card">
-          <img src="assets/img/hloubkovy-situace-pred-svatky.jpg" alt="Před svátky">
-          <h3>Před svátky</h3>
-          <p>Hosté můžou přijít. Troubu ani stříbro drhnout nemusíte.</p>
+          <img src="assets/img/hloubkovy-situace-pred-svatky.jpg" alt="Před svátky a po nemoci">
+          <h3>Před svátky i po nemoci</h3>
+          <p>Důkladná dezinfekce povrchů, než přijdou hosté, nebo než se vrátíte do běžného rytmu.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ Co nabízíme ============ -->
+  <!-- ============ Co získáte navíc ============ -->
   <section class="features">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Co získáte</span>
-        <h2>Proč zvolit Hradecký úklid</h2>
-        <p class="sub">Co tím získáte vy a proč se k nám lidé z Hradce vracejí.</p>
+        <span class="eyebrow">Rozdíl oproti běžnému úklidu</span>
+        <h2>Co dostanete navíc u hloubkového úklidu</h2>
+        <p class="sub">Jiná technika, jiná chemie a víc času na místa, kam běžný úklid nedosáhne.</p>
       </div>
       <div class="bento">
         <div class="bento-hero">
           <div>
             <span class="bh-eyebrow">Vaše jistota</span>
-            <h3>Garance spokojenosti</h3>
-            <p>Výsledek projdeme společně přímo na místě a platíte až ve chvíli, kdy jste spokojeni. Když něco nebude v pořádku, napravíme to zdarma.</p>
+            <h3>Kontrola do posledního detailu</h3>
+            <p>Po hloubkovém úklidu projdeme společně troubu, sprchový kout i čalounění a platíte, až budete stoprocentně spokojeni. Platíte až za výsledek, který si sami zkontrolujete.</p>
           </div>
           <div class="bento-pills">
-            <div class="bpill"><span class="bp-ico">✓</span>Kontrola výsledku s vámi</div>
+            <div class="bpill"><span class="bp-ico">✓</span>Kontrola místnost po místnosti</div>
             <div class="bpill"><span class="bp-ico">✓</span>Platba až po dokončení</div>
-            <div class="bpill"><span class="bp-ico">✓</span>Nedostatky opravíme zdarma</div>
+            <div class="bpill"><span class="bp-ico">✓</span>Nabídka do 48 hodin</div>
           </div>
         </div>
         <div class="card feature-card b-w3">
           <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
-          <h3>Nabídka na míru</h3>
-          <p>Zaplatíte přesně za váš rozsah a četnost. Kalkulaci dostanete do 48 hodin, včetně chemie.</p>
+          <h3>Extrakční technika</h3>
+          <p>Na čalounění, koberce i matrace používáme profesionální extrakční čističe, ne jen vysavač.</p>
         </div>
         <div class="card feature-card b-w2">
           <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
-          <h3>Vlastní úklidová chemie</h3>
-          <p>Nemusíte nic chystat, profesionální prostředky vozíme s sebou. Chcete vaše? Použijeme je.</p>
+          <h3>Chemie na zaschlé nečistoty</h3>
+          <p>Vodní kámen, zapečenou mastnotu i usazený prach řešíme prostředky, které v drogerii nekoupíte.</p>
         </div>
         <div class="card feature-card b-w2">
           <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5"/><path d="M22 9v5"/></svg></div>
-          <h3>Proškolený personál</h3>
-          <p>K vám domů i do firmy jde jen člověk, který prošel několika koly výběru a praktickou zkouškou.</p>
+          <h3>Rozsah podle vašeho bytu</h3>
+          <p>Neplatíte paušál. Nabídka odpovídá tomu, co skutečně potřebujete umýt.</p>
         </div>
-        <div class="card feature-card b-w3">
+        <div class="card feature-card b-w3" style="display:none">
           <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.4-3 8.3-7 9.5-4-1.2-7-5.1-7-9.5V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
-          <h3>Pojištění</h3>
-          <p>Vaše prostory kryje pojištění do 5 mil. Kč. Případnou škodu řešíme my, ne vy.</p>
+          <h3>Pojištění na celý zásah</h3>
+          <p>I při hloubkovém čištění nábytku a oken kryje vaše vybavení naše pojištění do 5 mil. Kč.</p>
         </div>
       </div>
     </div>
@@ -387,12 +424,16 @@
   </section>
 
   <!-- ============ Footer ============ -->
-  <footer class="site-footer">
+  <footer class="site-footer" id="home-footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
           <div class="logo">Hradecký úklid</div>
           <p>Profesionální úklidové služby pro domácnosti i firmy v Hradci Králové a okolí.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.3-1.4 1.5-1.4h1.3V5.5c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v2.5H8.9V14h2.3v7h2.3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/></svg></a>
+          </div>
         </div>
         <div class="footer-col">
           <h4>Služby</h4>
@@ -412,20 +453,13 @@
             <li><a href="poukazy.html">Poukazy na úklid</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Dokumenty</h4>
-          <ul>
-            <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
-            <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
-            <li><a href="reklamacni-rad.html">Reklamační řád</a></li>
-          </ul>
-        </div>
       </div>
       <div class="footer-bottom">
         <span>© Hradecký úklid 2026</span>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.3-1.4 1.5-1.4h1.3V5.5c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v2.5H8.9V14h2.3v7h2.3z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/></svg></a>
+        <div class="footer-legal">
+          <a href="obchodni-podminky.html">Obchodní podmínky</a>
+          <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
+          <a href="reklamacni-rad.html">Reklamační řád</a>
         </div>
       </div>
     </div>

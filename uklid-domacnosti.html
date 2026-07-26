@@ -43,6 +43,36 @@
     .feature-card h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 12px; }
     .feature-card p { font-size: 13px; color: var(--text-muted); margin-top: 5px; }
 
+    /* ---------- Karty: srovnat výšku + jemné natočení pro živější vzhled ---------- */
+    .bento > .feature-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: transform .25s ease;
+    }
+    .bento > .feature-card:nth-child(2), .bento > .feature-card:nth-child(4) { transform: rotate(-1.5deg); }
+    .bento > .feature-card:nth-child(3), .bento > .feature-card:nth-child(5) { transform: rotate(1.2deg); }
+    .bento > .feature-card:hover { transform: rotate(0deg); }
+
+    .t-side .testimonial {
+      display: flex;
+      flex-direction: column;
+      transition: transform .25s ease;
+    }
+    .t-side .testimonial:nth-child(1) { transform: rotate(-1.5deg); }
+    .t-side .testimonial:nth-child(2) { transform: rotate(1.2deg); }
+    .t-side .testimonial:hover { transform: rotate(0deg); }
+
+    /* ---------- Co u vás obvykle uklízíme (unikátní sekce pro domácnosti) ---------- */
+    .rooms-section { padding: 96px 0; }
+    .rooms-section .grid-4 { margin-top: 40px; }
+    .room-col h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
     /* ---------- Jednorázový vs. pravidelný úklid ---------- */
     .plans-section { background: var(--bg-light); padding: 96px 0; }
     .plans-row { display: flex; gap: 24px; margin-top: 40px; }
@@ -114,7 +144,12 @@
 
       .how { padding: 56px 0; }
 
+      .rooms-section { padding: 64px 0; }
+
       .testimonials { padding: 64px 0; }
+
+      .bento > .feature-card,
+      .t-side .testimonial { transform: none !important; }
 
       .faq-section { padding: 0 0 64px; }
       .cta-final .btn { min-height: 52px; padding: 16px 28px; }
@@ -205,51 +240,6 @@
     </div>
   </section>
 
-  <!-- ============ Co nabízíme ============ -->
-  <section class="features">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Co získáte</span>
-        <h2>Proč nám domácnosti důvěřují</h2>
-        <p class="sub">Co dostanete navíc, když nám svěříte svůj domov.</p>
-      </div>
-      <div class="bento">
-        <div class="bento-hero">
-          <div>
-            <span class="bh-eyebrow">Vaše jistota</span>
-            <h3>Garance spokojenosti</h3>
-            <p>Po každém úklidu projdete výsledek přímo s vaší hospodyní a platíte, až když jste spokojeni. Když něco nebude v pořádku, napravíme to zdarma.</p>
-          </div>
-          <div class="bento-pills">
-            <div class="bpill"><span class="bp-ico">✓</span>Kontrola s vaší hospodyní</div>
-            <div class="bpill"><span class="bp-ico">✓</span>Platba až po dokončení</div>
-            <div class="bpill"><span class="bp-ico">✓</span>Nedostatky opravíme zdarma</div>
-          </div>
-        </div>
-        <div class="card feature-card b-w3">
-          <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
-          <h3>Stálá hospodyně</h3>
-          <p>Na každý úklid k vám jezdí stejná proškolená hospodyně, která zná vaši domácnost i vaše zvyky.</p>
-        </div>
-        <div class="card feature-card b-w2">
-          <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
-          <h3>Šetrná chemie</h3>
-          <p>Používáme prostředky bezpečné pro děti i mazlíčky. Preferujete vlastní? Použijeme vaše.</p>
-        </div>
-        <div class="card feature-card b-w2">
-          <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5"/><path d="M22 9v5"/></svg></div>
-          <h3>Frekvence podle vás</h3>
-          <p>Týdně, jednou za 14 dní, nebo jen jednorázově. Režim kdykoliv změníte jednou zprávou.</p>
-        </div>
-        <div class="card feature-card b-w3">
-          <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.4-3 8.3-7 9.5-4-1.2-7-5.1-7-9.5V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
-          <h3>Pojištění</h3>
-          <p>Vaše vybavení kryje naše pojištění odpovědnosti do 5 mil. Kč.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ Jednorázový, nebo pravidelný úklid? ============ -->
   <section class="plans-section">
     <div class="container">
@@ -274,12 +264,12 @@
     </div>
   </section>
 
-  <!-- ============ Jak to funguje ============ -->
+  <!-- ============ Průběh objednávky ============ -->
   <section class="how">
     <div class="container">
       <div class="section-head">
-        <h2>Jak to funguje</h2>
-        <p class="sub">Od poptávky po čistý domov ve čtyřech krocích.</p>
+        <h2>Od poptávky k uklizenému bytu</h2>
+        <p class="sub">Domluva bez papírování, ve čtyřech krocích.</p>
       </div>
       <div class="grid-4">
         <div class="step">
@@ -306,12 +296,104 @@
     </div>
   </section>
 
+  <!-- ============ Co u vás obvykle uklízíme (unikátní sekce pro domácnosti) ============ -->
+  <section class="rooms-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Místnost po místnosti</span>
+        <h2>Co u vás obvykle uklízíme</h2>
+        <p class="sub">Přehled prací, které hospodyně řeší v jednotlivých místnostech vaší domácnosti.</p>
+      </div>
+      <div class="grid-4">
+        <div class="room-col">
+          <h3>Kuchyň</h3>
+          <ul class="check-list">
+            <li><span class="dot"></span>Mytí pracovní desky a dřezu</li>
+            <li><span class="dot"></span>Otření spotřebičů zvenčí</li>
+            <li><span class="dot"></span>Vyluxování a mytí podlahy</li>
+            <li><span class="dot"></span>Vynesení odpadků</li>
+          </ul>
+        </div>
+        <div class="room-col">
+          <h3>Koupelna</h3>
+          <ul class="check-list">
+            <li><span class="dot"></span>Dezinfekce vany, sprchy a WC</li>
+            <li><span class="dot"></span>Odstranění vodního kamene</li>
+            <li><span class="dot"></span>Leštění zrcadel a baterie</li>
+            <li><span class="dot"></span>Výměna ručníků na přání</li>
+          </ul>
+        </div>
+        <div class="room-col">
+          <h3>Ložnice</h3>
+          <ul class="check-list">
+            <li><span class="dot"></span>Utření prachu na všech plochách</li>
+            <li><span class="dot"></span>Ustlání a povlečení na přání</li>
+            <li><span class="dot"></span>Vysátí koberce i pod postelí</li>
+          </ul>
+        </div>
+        <div class="room-col">
+          <h3>Obývák</h3>
+          <ul class="check-list">
+            <li><span class="dot"></span>Utření prachu a nábytku</li>
+            <li><span class="dot"></span>Vysátí koberce a čalounění</li>
+            <li><span class="dot"></span>Leštění skleněných ploch</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Co nabízíme ============ -->
+  <section class="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Vaše výhody</span>
+        <h2>Proč nám domácnosti důvěřují</h2>
+        <p class="sub">Co dostanete navíc, když nám svěříte svůj domov.</p>
+      </div>
+      <div class="bento">
+        <div class="bento-hero">
+          <div>
+            <span class="bh-eyebrow">Vaše jistota</span>
+            <h3>Garance spokojenosti</h3>
+            <p>Po každém úklidu projdete výsledek přímo s vaší hospodyní a platíte, až když jste spokojeni. Když něco nebude v pořádku, napravíme to zdarma.</p>
+          </div>
+          <div class="bento-pills">
+            <div class="bpill"><span class="bp-ico">✓</span>Kontrola s vaší hospodyní</div>
+            <div class="bpill"><span class="bp-ico">✓</span>Platba až po dokončení</div>
+            <div class="bpill"><span class="bp-ico">✓</span>Nabídka do 48 hodin</div>
+          </div>
+        </div>
+        <div class="card feature-card b-w3">
+          <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
+          <h3>Stálá hospodyně</h3>
+          <p>Na každý úklid k vám jezdí stejná proškolená hospodyně, která zná vaši domácnost i vaše zvyky.</p>
+        </div>
+        <div class="card feature-card b-w2">
+          <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
+          <h3>Šetrná chemie</h3>
+          <p>Používáme prostředky bezpečné pro děti i mazlíčky. Preferujete vlastní? Použijeme vaše.</p>
+        </div>
+        <div class="card feature-card b-w2">
+          <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5"/><path d="M22 9v5"/></svg></div>
+          <h3>Frekvence podle vás</h3>
+          <p>Týdně, jednou za 14 dní, nebo jen jednorázově. Režim kdykoliv změníte jednou zprávou.</p>
+        </div>
+        <div class="card feature-card b-w3" style="display:none">
+          <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.4-3 8.3-7 9.5-4-1.2-7-5.1-7-9.5V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Pojištění</h3>
+          <p>Vaše vybavení kryje naše pojištění odpovědnosti do 5 mil. Kč.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ Reference klientů ============ -->
   <section class="testimonials">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Reference</span>
-        <h2>Co říkají vaši sousedé z Hradce</h2>
+        <span class="eyebrow">Zkušenosti domácností</span>
+        <h2>Co o nás říkají obyvatelé Hradce</h2>
         <p class="sub">Skutečné příběhy domácností z Hradce a okolí.</p>
       </div>
       <div class="t-layout">
@@ -407,12 +489,16 @@
   </section>
 
   <!-- ============ Footer ============ -->
-  <footer class="site-footer">
+  <footer class="site-footer" id="home-footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
           <div class="logo">Hradecký úklid</div>
           <p>Profesionální úklidové služby pro domácnosti i firmy v Hradci Králové a okolí.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.3-1.4 1.5-1.4h1.3V5.5c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v2.5H8.9V14h2.3v7h2.3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/></svg></a>
+          </div>
         </div>
         <div class="footer-col">
           <h4>Služby</h4>
@@ -432,20 +518,13 @@
             <li><a href="poukazy.html">Poukazy na úklid</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Dokumenty</h4>
-          <ul>
-            <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
-            <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
-            <li><a href="reklamacni-rad.html">Reklamační řád</a></li>
-          </ul>
-        </div>
       </div>
       <div class="footer-bottom">
         <span>© Hradecký úklid 2026</span>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.3-1.4 1.5-1.4h1.3V5.5c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v2.5H8.9V14h2.3v7h2.3z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/></svg></a>
+        <div class="footer-legal">
+          <a href="obchodni-podminky.html">Obchodní podmínky</a>
+          <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
+          <a href="reklamacni-rad.html">Reklamační řád</a>
         </div>
       </div>
     </div>

@@ -82,14 +82,14 @@
   gsap.utils.toArray(".bento-pills").forEach(function (wrap) {
     var pills = gsap.utils.toArray(wrap.children);
     if (!pills.length) return;
-    var rots = [-1.6, 1.2, -0.9];
-    var xs = isMobile ? [0, 0, 0] : [0, 16, 0]; // mobil: bez posunu, ať pilulka nepřetéká
+    var rots = [-1.6, 1.2, -0.9, 1];
+    var xs = isMobile ? [0, 0, 0, 0] : [0, 16, 0, 8]; // mobil: bez posunu, ať pilulka nepřetéká
     gsap.fromTo(pills,
       { autoAlpha: 0, y: 30, rotation: 0, x: 0 },
       {
         autoAlpha: 1, y: 0, duration: 0.7, ease: "back.out(1.6)", stagger: 0.12,
-        rotation: function (i) { return rots[i % 3]; },
-        x: function (i) { return xs[i % 3]; },
+        rotation: function (i) { return rots[i % 4]; },
+        x: function (i) { return xs[i % 4]; },
         scrollTrigger: { trigger: wrap, start: "top 85%", once: true },
         // po doletu předat transform zpět CSS (nth-child rotace), ať funguje :hover
         onComplete: function () { gsap.set(pills, { clearProps: "transform,visibility,opacity" }); }

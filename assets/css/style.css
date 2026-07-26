@@ -392,15 +392,17 @@ section { position: relative; }
 .bub {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle at 32% 30%, rgba(255, 255, 255, .85), rgba(47, 143, 166, .14) 60%, rgba(47, 143, 166, .26));
-  border: 1px solid rgba(47, 143, 166, .18);
+  background: radial-gradient(circle at 32% 30%, rgba(255, 255, 255, .55), rgba(47, 143, 166, .09) 60%, rgba(47, 143, 166, .16));
+  border: 1px solid rgba(47, 143, 166, .12);
+  opacity: .6;
   pointer-events: none;
   animation: bubfloat 7s ease-in-out infinite;
   z-index: 1;
 }
 .bub--light {
-  background: radial-gradient(circle at 32% 30%, rgba(255, 255, 255, .35), rgba(214, 236, 242, .08) 62%, rgba(214, 236, 242, .16));
-  border-color: rgba(255, 255, 255, .25);
+  background: radial-gradient(circle at 32% 30%, rgba(255, 255, 255, .22), rgba(214, 236, 242, .05) 62%, rgba(214, 236, 242, .1));
+  border-color: rgba(255, 255, 255, .18);
+  opacity: .55;
 }
 @keyframes bubfloat {
   0%, 100% { transform: translateY(0); }
@@ -409,10 +411,10 @@ section { position: relative; }
 
 /* Tah štětcem pod klíčovým slovem (světlý podklad = teal, tmavý = světlá) */
 .brush { position: relative; white-space: nowrap; }
-.brush svg { position: absolute; left: -2%; bottom: -8px; width: 104%; height: 18px; overflow: visible; }
+.brush svg { position: absolute; left: -2%; bottom: -7px; width: 104%; height: 18px; overflow: visible; }
 .brush svg path {
   stroke: #2F8FA6;
-  stroke-width: 7;
+  stroke-width: 5.5;
   fill: none;
   stroke-linecap: round;
   stroke-dasharray: 340;
@@ -1030,4 +1032,131 @@ section .handnote p {
 @media (max-width: 820px) {
   .voucher-teaser { padding: 0 0 64px; }
   .vt-card { flex-direction: column; align-items: flex-start; gap: 16px; padding: 24px 22px; }
+}
+
+/* ============================================================
+   Homepage-only úpravy (klientský feedback 07/2026) — vše
+   scopováno přes #home-* ID, aby se nedotklo ostatních stránek,
+   které sdílejí stejné třídy (.features, .bento, .stats-section,
+   .site-footer…) a upravují je paralelní agenti.
+   ============================================================ */
+
+/* ---------- Feature ikony bez kolečka, větší SVG ---------- */
+#home-features .icon-chip {
+  width: auto;
+  height: auto;
+  background: none;
+  color: var(--blue);
+}
+#home-features .icon-chip svg { width: 32px; height: 32px; }
+#home-features .card:hover .icon-chip { transform: scale(1.08); }
+
+/* ---------- Bento garancí: 3 sloupce místo 5 (dlaždice Pojištění skrytá) ---------- */
+#home-bento { grid-template-columns: repeat(3, 1fr); }
+#home-bento .bento-hero { grid-column: span 3; }
+#home-bento .bp-ico { font-size: 14px; font-weight: 700; }
+.bpill:nth-child(4) { transform: rotate(1deg) translateX(8px); }
+.bpill:nth-child(4):hover { transform: rotate(0deg) translateX(8px) translateY(-3px); }
+@media (max-width: 820px) {
+  #home-bento { grid-template-columns: 1fr; }
+  #home-bento .bento-hero { grid-column: span 1; }
+  .bpill:nth-child(4) { transform: rotate(1deg); }
+  .bpill:nth-child(4):hover { transform: rotate(0deg) translateY(-3px); }
+}
+
+/* ---------- Stats: 3 hodnoty, rovnoměrně i na mobilu ---------- */
+#home-stats .stats-row { flex-wrap: nowrap; gap: 20px; }
+#home-stats .stat { flex: 1 1 0; }
+@media (max-width: 820px) {
+  #home-stats .stats-row { flex-wrap: nowrap; gap: 12px; }
+  #home-stats .stat { flex: 1 1 0; min-width: 0; }
+  #home-stats .stat-num { font-size: 26px; }
+  #home-stats .stat-label { font-size: 11.5px; }
+}
+
+/* ---------- HP o Marii: bez kartového pozadí, klasický section-head, větší foto ---------- */
+.hp-about--plain { background: none; }
+.hp-about-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.hp-about-photo {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: 50% 18%;
+  border-radius: 16px;
+  filter: saturate(.72) contrast(.98);
+}
+.hp-about-body .section-head { max-width: none; }
+.hp-about-body .hp-about-text { margin-top: 16px; max-width: 56ch; }
+.hp-about-body .handsign { margin-top: 16px; }
+.hp-about-cta { margin-top: 22px; }
+@media (max-width: 820px) {
+  .hp-about-layout { grid-template-columns: 1fr; gap: 24px; }
+  .hp-about-photo { height: 300px; }
+}
+
+/* ---------- CTA šipka v2: čistý oblouk s hrotem, jemné plavání ---------- */
+.cta-arrow-v2 { width: 78px; height: 78px; }
+.cta-arrow-v2 path { stroke: rgba(255,255,255,.85); stroke-width: 2.5px; }
+.cta-arrow-v2.go { animation: ctaArrowFloat 3.2s ease-in-out 1.6s infinite; }
+@keyframes ctaArrowFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+.no-anim .cta-arrow-v2 { animation: none !important; transform: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .cta-arrow-v2.go { animation: none; }
+}
+
+/* ---------- Dárkový poukaz — decentní pásek mezi referencemi a FAQ ---------- */
+.gift-banner { padding: 0 0 64px; }
+.gift-banner-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--sky);
+  border-radius: 16px;
+  padding: 20px 28px;
+}
+.gift-banner-ico {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.gift-banner-ico svg { width: 20px; height: 20px; }
+.gift-banner-text { flex: 1; font-size: 14px; font-weight: 600; color: var(--text); }
+.gift-banner-btn { flex-shrink: 0; }
+@media (max-width: 820px) {
+  .gift-banner { padding: 0 0 48px; }
+  .gift-banner-inner { flex-direction: column; align-items: flex-start; gap: 14px; padding: 22px 20px; }
+  .gift-banner-btn { width: 100%; justify-content: center; }
+}
+
+/* ---------- Patička homepage: social pod logem, spodní řádek = copyright + právní odkazy ---------- */
+#home-footer .footer-top { grid-template-columns: 280px repeat(2, auto); }
+#home-footer .footer-social { margin-top: 20px; gap: 18px; }
+#home-footer .footer-social a {
+  width: auto;
+  height: auto;
+  background: none;
+  color: rgba(255,255,255,.75);
+}
+#home-footer .footer-social a:hover { background: none; color: var(--white); }
+#home-footer .footer-social a svg { width: 28px; height: 28px; }
+#home-footer .footer-legal { display: flex; gap: 20px; flex-wrap: wrap; }
+#home-footer .footer-legal a { font-size: 12px; color: var(--text-light); transition: color .15s ease; }
+#home-footer .footer-legal a:hover { color: var(--white); }
+@media (max-width: 820px) {
+  #home-footer .footer-top { grid-template-columns: 1fr; }
+  #home-footer .footer-legal { gap: 14px 18px; }
 }
