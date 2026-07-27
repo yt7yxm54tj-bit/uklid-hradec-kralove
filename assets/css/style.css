@@ -410,21 +410,19 @@ section { position: relative; }
 
 /* Tah štětcem pod klíčovým slovem (světlý podklad = teal, tmavý = světlá) */
 .brush { position: relative; white-space: nowrap; }
-.brush svg { position: absolute; left: -2%; bottom: -7px; width: 104%; height: 18px; overflow: visible; }
-.brush svg path {
-  stroke: #2F8FA6;
-  stroke-width: 5.5;
-  fill: none;
-  stroke-linecap: round;
-  stroke-dasharray: 340;
-  stroke-dashoffset: 340;
+.brush svg {
+  position: absolute; left: -2%; bottom: -8px; width: 104%; height: 16px;
+  overflow: visible;
+  clip-path: inset(0 100% 0 0);
 }
-.brush.go svg path { animation: brushdraw 1.1s ease forwards .35s; }
-.hero .brush.go svg path { animation-delay: 1.2s; }
+.brush svg path { fill: #2F8FA6; stroke: none; }
+.brush.go svg { animation: brushwipe 1s cubic-bezier(.4,0,.2,1) forwards .35s; }
+.hero .brush.go svg { animation-delay: 1.2s; }
 .hero .brush svg path,
 .cta-final .brush svg path,
-.stats-section .brush svg path { stroke: #7CC4D8; }
-@keyframes brushdraw { to { stroke-dashoffset: 0; } }
+.stats-section .brush svg path { fill: #7CC4D8; }
+@keyframes brushwipe { to { clip-path: inset(0 -6% 0 0); } }
+.no-anim .brush svg { clip-path: none !important; animation: none !important; }
 
 /* Sekce s bublinami (přidává main.js) */
 .has-bubs { position: relative; overflow: hidden; }
@@ -447,7 +445,7 @@ section { position: relative; }
 
 @media (prefers-reduced-motion: reduce) {
   .bub { animation: none; }
-  .brush svg path { animation: none; stroke-dashoffset: 0; }
+  .brush svg { animation: none; clip-path: none; }
 }
 
 /* ---------- Sjednocený hero podstránek (.uhero) ---------- */

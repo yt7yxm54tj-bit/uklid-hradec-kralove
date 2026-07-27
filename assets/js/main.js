@@ -139,7 +139,7 @@ addBubbles(document.querySelector('.bento-hero'), [
 ]);
 
 // Tah štětcem pod klíčovými nadpisy (poslední slovo / fráze), kreslí se až ve viewportu
-var BRUSH_SVG = '<svg viewBox="0 0 320 18" preserveAspectRatio="none" aria-hidden="true"><path d="M4,13 C90,15.5 205,11.5 266,7 C280,6 300,4 316,2"/></svg>';
+var BRUSH_SVG = '<svg viewBox="0 0 320 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2,10 C80,13 205,10.5 262,6.6 C292,4.6 307,4.1 318,3.9 C307,4.9 292,5.8 262,8.2 C205,12 80,15.5 2,15 Z"/></svg>';
 function brushify(el, phrase) {
   if (!el || el.querySelector('.brush')) return;
   var html = el.innerHTML;

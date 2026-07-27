@@ -443,6 +443,29 @@
       .faq-section { padding: 0 0 64px; }
       .cta-final .btn { min-height: 52px; padding: 16px 28px; }
     }
+
+    /* ---------- Reference domácností: navy zaoblený pás (zafixováno) ---------- */
+    .ref-navy-section { padding: 96px 0 120px; }
+    .ref-navy-band {
+      margin-top: 44px;
+      background: var(--navy);
+      border-radius: 28px;
+      padding: 52px 48px;
+      box-shadow: 0 26px 60px rgba(11, 48, 73, .18);
+    }
+    .ref-navy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    .ref-navy-item { display: flex; flex-direction: column; }
+    .ref-qmark { width: 30px; height: auto; fill: var(--teal); opacity: .9; margin-bottom: 14px; }
+    .ref-navy-item .ref-text { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,.92); }
+    .ref-navy-item .ref-foot { margin-top: 20px; }
+    .ref-navy-item .ref-name { display: block; font-size: 14px; font-weight: 700; color: var(--white); }
+    .ref-navy-item .ref-loc { display: block; font-size: 12.5px; color: rgba(255,255,255,.55); margin-top: 2px; }
+    .ref-navy-item .ref-price { display: inline-block; margin-top: 12px; font-size: 12.5px; font-weight: 700; color: var(--white); background: rgba(255,255,255,.12); border-radius: 999px; padding: 4px 12px; }
+    @media (max-width: 820px) {
+      .ref-navy-section { padding: 56px 0 72px; }
+      .ref-navy-band { padding: 32px 22px; border-radius: 20px; }
+      .ref-navy-grid { grid-template-columns: 1fr; gap: 30px; }
+    }
   </style>
 </head>
 <body>
@@ -681,275 +704,18 @@
   </section>
 
   <!-- ============ Reference klientů (10 přepínatelných variant) ============ -->
-  <div class="var-group" data-key="dom-reference">
-
-    <div class="ref-switcher">
-      <button type="button" class="ref-switcher-prev" aria-label="Předchozí styl">‹</button>
-      <span class="ref-switcher-mid">
-        <span>Styl</span>
-        <span class="ref-switcher-count">1/10</span>
-        <span>:</span>
-        <span class="ref-switcher-name">Čisté karty</span>
-      </span>
-      <button type="button" class="ref-switcher-next" aria-label="Další styl">›</button>
-    </div>
-
-    <!-- 1. Čisté karty -->
-    <section class="var-item ref-v1" data-vname="Čisté karty">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow ref-eyebrow">Zkušenosti domácností</span>
-          <h2>Co o nás říkají domácnosti</h2>
-          <p class="sub">Skutečné ohlasy klientů z Hradce a okolí, tak jak nám je posílají.</p>
-        </div>
-        <div class="ref-cards">
-          <div class="ref-card">
-            <div class="ref-quote-mark">“</div>
-            <p class="ref-text">Každý týden stejná hospodyně, nemusím nic vysvětlovat. Domluva vždy blesková.</p>
-            <div class="ref-foot">
-              <span class="ref-init">L</span>
-              <div class="ref-foot-meta">
-                <span class="ref-name">Lucie M.</span>
-                <span class="ref-loc">Byt 3+kk, Slezské Předměstí</span>
-              </div>
-            </div>
-            <span class="ref-price">Cena úklidu: 1 600 Kč</span>
-          </div>
-          <div class="ref-card">
-            <div class="ref-quote-mark">“</div>
-            <p class="ref-text">Dům jednou za 14 dní a o víkendy máme zase pro sebe. Nejlepší letošní rozhodnutí.</p>
-            <div class="ref-foot">
-              <span class="ref-init">PJ</span>
-              <div class="ref-foot-meta">
-                <span class="ref-name">Pavel a Jitka S.</span>
-                <span class="ref-loc">Rodinný dům 150 m², Kukleny</span>
-              </div>
-            </div>
-            <span class="ref-price">Cena úklidu: 3 200 Kč</span>
-          </div>
-          <div class="ref-card">
-            <div class="ref-quote-mark">“</div>
-            <p class="ref-text">Hospodyně zvládne úklid, i když má malá spí. Tiše, rychle a do detailu. Neměnila bych.</p>
-            <div class="ref-foot">
-              <span class="ref-init">M</span>
-              <div class="ref-foot-meta">
-                <span class="ref-name">Martina P.</span>
-                <span class="ref-loc">Byt 2+kk, Moravské Předměstí</span>
-              </div>
-            </div>
-            <span class="ref-price">Cena úklidu: 1 400 Kč</span>
-          </div>
-        </div>
+  <!-- Reference domácností — navy pás -->
+  <section class="ref-navy-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow ref-eyebrow">Zkušenosti domácností</span>
+        <h2>Co nám domácnosti píší</h2>
+        <p class="sub">Bez okras, přesně tak, jak nám to napsaly.</p>
       </div>
-    </section>
-
-    <!-- 2. Jeden velký citát -->
-    <section class="var-item ref-v2" data-vname="Jeden velký citát">
-      <div class="container">
-        <div class="section-head centered">
-          <span class="eyebrow ref-eyebrow">Zkušenosti domácností</span>
-          <h2>Jedna zpráva, která říká vše</h2>
-          <p class="sub">A další dvě, které dokazují, že to není náhoda.</p>
-        </div>
-        <div class="ref-main">
-          <div class="ref-quote-mark">“</div>
-          <p class="ref-main-text">Každý týden stejná hospodyně, nemusím nic vysvětlovat. Domluva vždy blesková.</p>
-          <div class="ref-main-foot">
-            <span class="ref-init">L</span>
-            <div class="ref-foot-meta">
-              <span class="ref-name">Lucie M.</span>
-              <span class="ref-loc">Byt 3+kk, Slezské Předměstí</span>
-            </div>
-            <span class="ref-price">1 600 Kč</span>
-          </div>
-        </div>
-        <div class="ref-mini-row">
-          <div class="ref-mini">
-            <p class="ref-mini-text">Dům jednou za 14 dní, víkendy máme zase pro sebe.</p>
-            <span class="ref-name">Pavel a Jitka S. · Kukleny</span>
-            <span class="ref-price">3 200 Kč</span>
-          </div>
-          <div class="ref-mini">
-            <p class="ref-mini-text">Hospodyně uklidí tiše, rychle a do detailu, i když malá spí.</p>
-            <span class="ref-name">Martina P. · Moravské Předměstí</span>
-            <span class="ref-price">1 400 Kč</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. Polaroidy -->
-    <section class="var-item ref-v3" data-vname="Polaroidy">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow ref-eyebrow">Zkušenosti domácností</span>
-          <h2>Vzkazy od domácností, jak přišly</h2>
-          <p class="sub">Pár vět, na kterých si vážíme každého slova.</p>
-        </div>
-        <div class="ref-polaroids">
-          <div class="ref-polaroid">
-            <span class="ref-tape"></span>
-            <div class="ref-photo-body"><p class="ref-text">Každý týden stejná hospodyně, nemusím nic vysvětlovat. Domluva vždy blesková.</p></div>
-            <div class="ref-sig">Lucie</div>
-            <div class="ref-foot">
-              <span class="ref-loc">Byt 3+kk, Slezské Předměstí</span>
-              <span class="ref-price">1 600 Kč</span>
-            </div>
-          </div>
-          <div class="ref-polaroid">
-            <span class="ref-tape"></span>
-            <div class="ref-photo-body"><p class="ref-text">Dům jednou za 14 dní a o víkendy máme zase pro sebe.</p></div>
-            <div class="ref-sig">Pavel a Jitka</div>
-            <div class="ref-foot">
-              <span class="ref-loc">Rodinný dům, Kukleny</span>
-              <span class="ref-price">3 200 Kč</span>
-            </div>
-          </div>
-          <div class="ref-polaroid">
-            <span class="ref-tape"></span>
-            <div class="ref-photo-body"><p class="ref-text">Hospodyně zvládne úklid, i když má malá spí. Tiše a do detailu.</p></div>
-            <div class="ref-sig">Martina</div>
-            <div class="ref-foot">
-              <span class="ref-loc">Byt 2+kk, Moravské Předměstí</span>
-              <span class="ref-price">1 400 Kč</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Řádky s iniciálami -->
-    <section class="var-item ref-v4" data-vname="Řádky s iniciálami">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow ref-eyebrow">Zkušenosti domácností</span>
-          <h2>Reference po jedné větě</h2>
-          <p class="sub">Stručně a k věci, přesně jak nám to klienti popisují.</p>
-        </div>
-        <div class="ref-rows">
-          <div class="ref-row">
-            <span class="ref-row-init">L</span>
-            <div class="ref-row-body">
-              <p class="ref-text">Každý týden stejná hospodyně, nemusím nic vysvětlovat. Domluva vždy blesková.</p>
-              <span class="ref-name">Lucie M.<span class="ref-loc">Byt 3+kk, Slezské Předměstí</span></span>
-            </div>
-            <span class="ref-row-price ref-price">1 600 Kč</span>
-          </div>
-          <div class="ref-row">
-            <span class="ref-row-init">PJ</span>
-            <div class="ref-row-body">
-              <p class="ref-text">Dům jednou za 14 dní a o víkendy máme zase pro sebe. Nejlepší letošní rozhodnutí.</p>
-              <span class="ref-name">Pavel a Jitka S.<span class="ref-loc">Rodinný dům 150 m², Kukleny</span></span>
-            </div>
-            <span class="ref-row-price ref-price">3 200 Kč</span>
-          </div>
-          <div class="ref-row">
-            <span class="ref-row-init">M</span>
-            <div class="ref-row-body">
-              <p class="ref-text">Hospodyně zvládne úklid, i když má malá spí. Tiše, rychle a do detailu.</p>
-              <span class="ref-name">Martina P.<span class="ref-loc">Byt 2+kk, Moravské Předměstí</span></span>
-            </div>
-            <span class="ref-row-price ref-price">1 400 Kč</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. Offset grid -->
-    <section class="var-item ref-v5" data-vname="Offset grid">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow ref-eyebrow">Zkušenosti domácností</span>
-          <h2>Reference, co mluví za vše</h2>
-          <p class="sub">Tři domácnosti, tři různé úklidy, jedna spokojenost.</p>
-        </div>
-        <div class="ref-offset">
-          <div class="ref-card">
-            <p class="ref-text">Každý týden stejná hospodyně, nemusím nic vysvětlovat. Domluva vždy blesková.</p>
-            <div class="ref-foot">
-              <span class="ref-name">Lucie M.</span>
-              <span class="ref-loc">Byt 3+kk, Slezské Předměstí</span>
-              <span class="ref-price">1 600 Kč</span>
-            </div>
-          </div>
-          <div class="ref-card ref-petrol">
-            <p class="ref-text">Dům jednou za 14 dní a o víkendy máme zase pro sebe. Nejlepší letošní rozhodnutí.</p>
-            <div class="ref-foot">
-              <span class="ref-name">Pavel a Jitka S.</span>
-              <span class="ref-loc">Rodinný dům 150 m², Kukleny</span>
-              <span class="ref-price">3 200 Kč</span>
-            </div>
-          </div>
-          <div class="ref-card">
-            <p class="ref-text">Hospodyně zvládne úklid, i když má malá spí. Tiše, rychle a do detailu.</p>
-            <div class="ref-foot">
-              <span class="ref-name">Martina P.</span>
-              <span class="ref-loc">Byt 2+kk, Moravské Předměstí</span>
-              <span class="ref-price">1 400 Kč</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. Timeline -->
-    <section class="var-item ref-v6" data-vname="Timeline">
-      <div class="container">
-        <div class="section-head centered">
-          <span class="eyebrow ref-eyebrow">Zkušenosti domácností</span>
-          <h2>Cesta ke spokojené domácnosti</h2>
-          <p class="sub">Tři reference, tři situace, stejný výsledek.</p>
-        </div>
-        <div class="ref-tl">
-          <span class="ref-tl-line"></span>
-          <span class="ref-tl-dot d1"></span>
-          <span class="ref-tl-dot d2"></span>
-          <span class="ref-tl-dot d3"></span>
-          <div class="ref-tl-q q1">
-            <p class="ref-text">Každý týden stejná hospodyně, nemusím nic vysvětlovat. Domluva vždy blesková.</p>
-            <div class="ref-foot">
-              <div class="ref-foot-meta">
-                <span class="ref-name">Lucie M.</span>
-                <span class="ref-loc">Byt 3+kk, Slezské Předměstí</span>
-              </div>
-              <span class="ref-price">1 600 Kč</span>
-            </div>
-          </div>
-          <div class="ref-tl-q q2">
-            <p class="ref-text">Dům jednou za 14 dní a o víkendy máme zase pro sebe. Nejlepší letošní rozhodnutí.</p>
-            <div class="ref-foot">
-              <span class="ref-price">3 200 Kč</span>
-              <div class="ref-foot-meta">
-                <span class="ref-name">Pavel a Jitka S.</span>
-                <span class="ref-loc">Rodinný dům 150 m², Kukleny</span>
-              </div>
-            </div>
-          </div>
-          <div class="ref-tl-q q3">
-            <p class="ref-text">Hospodyně zvládne úklid, i když má malá spí. Tiše, rychle a do detailu.</p>
-            <div class="ref-foot">
-              <div class="ref-foot-meta">
-                <span class="ref-name">Martina P.</span>
-                <span class="ref-loc">Byt 2+kk, Moravské Předměstí</span>
-              </div>
-              <span class="ref-price">1 400 Kč</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. Navy pás -->
-    <section class="var-item ref-v7" data-vname="Navy pás">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow ref-eyebrow">Zkušenosti domácností</span>
-          <h2>Co nám domácnosti píší</h2>
-          <p class="sub">Bez okras, přesně tak, jak nám to napsaly.</p>
-        </div>
+      <div class="ref-navy-band">
         <div class="ref-navy-grid">
           <div class="ref-navy-item">
-            <div class="ref-quote-mark">“</div>
+            <svg class="ref-qmark" viewBox="0 0 32 24" aria-hidden="true"><path d="M13 4c-5 0-9 4-9 9v7h8v-8H8c0-3 2-5 5-5V4zm15 0c-5 0-9 4-9 9v7h8v-8h-4c0-3 2-5 5-5V4z"/></svg>
             <p class="ref-text">Každý týden stejná hospodyně, nemusím nic vysvětlovat. Domluva vždy blesková.</p>
             <div class="ref-foot">
               <span class="ref-name">Lucie M.</span>
@@ -958,7 +724,7 @@
             </div>
           </div>
           <div class="ref-navy-item">
-            <div class="ref-quote-mark">“</div>
+            <svg class="ref-qmark" viewBox="0 0 32 24" aria-hidden="true"><path d="M13 4c-5 0-9 4-9 9v7h8v-8H8c0-3 2-5 5-5V4zm15 0c-5 0-9 4-9 9v7h8v-8h-4c0-3 2-5 5-5V4z"/></svg>
             <p class="ref-text">Dům jednou za 14 dní a o víkendy máme zase pro sebe. Nejlepší letošní rozhodnutí.</p>
             <div class="ref-foot">
               <span class="ref-name">Pavel a Jitka S.</span>
@@ -967,7 +733,7 @@
             </div>
           </div>
           <div class="ref-navy-item">
-            <div class="ref-quote-mark">“</div>
+            <svg class="ref-qmark" viewBox="0 0 32 24" aria-hidden="true"><path d="M13 4c-5 0-9 4-9 9v7h8v-8H8c0-3 2-5 5-5V4zm15 0c-5 0-9 4-9 9v7h8v-8h-4c0-3 2-5 5-5V4z"/></svg>
             <p class="ref-text">Hospodyně zvládne úklid, i když má malá spí. Tiše, rychle a do detailu.</p>
             <div class="ref-foot">
               <span class="ref-name">Martina P.</span>
@@ -977,125 +743,8 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- 8. Foto + citáty -->
-    <section class="var-item ref-v8" data-vname="Foto + citáty">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow ref-eyebrow">Zkušenosti domácností</span>
-          <h2>Domácnosti, které nám důvěřují</h2>
-          <p class="sub">Reálné byty a domy, které pravidelně uklízíme.</p>
-        </div>
-        <div class="ref-photo-split">
-          <div class="ref-photo">
-            <img src="assets/img/case-byt-slezske-predmesti.jpg" alt="Uklizený byt na Slezském Předměstí">
-          </div>
-          <div class="ref-photo-list">
-            <div class="ref-photo-item">
-              <p class="ref-text">Každý týden stejná hospodyně, nemusím nic vysvětlovat. Domluva vždy blesková.</p>
-              <div class="ref-foot">
-                <span class="ref-name">Lucie M.</span>
-                <span class="ref-loc">Byt 3+kk, Slezské Předměstí</span>
-                <span class="ref-price">1 600 Kč</span>
-              </div>
-            </div>
-            <div class="ref-photo-item">
-              <p class="ref-text">Dům jednou za 14 dní a o víkendy máme zase pro sebe. Nejlepší letošní rozhodnutí.</p>
-              <div class="ref-foot">
-                <span class="ref-name">Pavel a Jitka S.</span>
-                <span class="ref-loc">Rodinný dům 150 m², Kukleny</span>
-                <span class="ref-price">3 200 Kč</span>
-              </div>
-            </div>
-            <div class="ref-photo-item">
-              <p class="ref-text">Hospodyně zvládne úklid, i když má malá spí. Tiše, rychle a do detailu.</p>
-              <div class="ref-foot">
-                <span class="ref-name">Martina P.</span>
-                <span class="ref-loc">Byt 2+kk, Moravské Předměstí</span>
-                <span class="ref-price">1 400 Kč</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 9. Big numbers -->
-    <section class="var-item ref-v9" data-vname="Big numbers">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow ref-eyebrow">Zkušenosti domácností</span>
-          <h2>Kolik stojí spokojenost</h2>
-          <p class="sub">Konkrétní ceny a reference domácností, které je platí.</p>
-        </div>
-        <div class="ref-numbers">
-          <div class="ref-num-col">
-            <div class="ref-big-price">1 600 Kč</div>
-            <p class="ref-text">Každý týden stejná hospodyně, nemusím nic vysvětlovat. Domluva vždy blesková.</p>
-            <div class="ref-foot">
-              <span class="ref-name">Lucie M.</span>
-              <span class="ref-loc">Byt 3+kk, Slezské Předměstí</span>
-            </div>
-          </div>
-          <div class="ref-num-col">
-            <div class="ref-big-price">3 200 Kč</div>
-            <p class="ref-text">Dům jednou za 14 dní a o víkendy máme zase pro sebe. Nejlepší letošní rozhodnutí.</p>
-            <div class="ref-foot">
-              <span class="ref-name">Pavel a Jitka S.</span>
-              <span class="ref-loc">Rodinný dům 150 m², Kukleny</span>
-            </div>
-          </div>
-          <div class="ref-num-col">
-            <div class="ref-big-price">1 400 Kč</div>
-            <p class="ref-text">Hospodyně zvládne úklid, i když má malá spí. Tiše, rychle a do detailu.</p>
-            <div class="ref-foot">
-              <span class="ref-name">Martina P.</span>
-              <span class="ref-loc">Byt 2+kk, Moravské Předměstí</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 10. Rukopisné lístky -->
-    <section class="var-item ref-v10" data-vname="Rukopisné lístky">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow ref-eyebrow">Zkušenosti domácností</span>
-          <h2>Pár řádků od spokojených domácností</h2>
-          <p class="sub">Vzkazy tak, jak by je klienti napsali na lístek.</p>
-        </div>
-        <div class="ref-notes">
-          <div class="ref-note">
-            <p class="ref-note-text">Každý týden stejná hospodyně, nemusím nic vysvětlovat. Domluva vždy blesková.</p>
-            <div class="ref-note-foot">
-              <span class="ref-name">Lucie M.</span>
-              <span class="ref-loc">Byt 3+kk, Slezské Předměstí</span>
-              <span class="ref-price">1 600 Kč</span>
-            </div>
-          </div>
-          <div class="ref-note">
-            <p class="ref-note-text">Dům jednou za 14 dní a o víkendy máme zase pro sebe. Nejlepší letošní rozhodnutí.</p>
-            <div class="ref-note-foot">
-              <span class="ref-name">Pavel a Jitka S.</span>
-              <span class="ref-loc">Rodinný dům 150 m², Kukleny</span>
-              <span class="ref-price">3 200 Kč</span>
-            </div>
-          </div>
-          <div class="ref-note">
-            <p class="ref-note-text">Hospodyně zvládne úklid, i když má malá spí. Tiše, rychle a do detailu.</p>
-            <div class="ref-note-foot">
-              <span class="ref-name">Martina P.</span>
-              <span class="ref-loc">Byt 2+kk, Moravské Předměstí</span>
-              <span class="ref-price">1 400 Kč</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div>
+    </div>
+  </section>
 
   <!-- ============ Čísla o firmě ============ -->
 <!-- ============ Časté dotazy ============ -->
@@ -1195,44 +844,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/animations.js"></script>
-  <script>
-    (function () {
-      var KEY = 'dom-reference';
-      var group = document.querySelector('.var-group[data-key="' + KEY + '"]');
-      if (!group) return;
-      var items = Array.prototype.slice.call(group.children).filter(function (el) {
-        return el.classList.contains('var-item');
-      });
-      var total = items.length;
-      if (!total) return;
-      var countEl = group.querySelector('.ref-switcher-count');
-      var nameEl = group.querySelector('.ref-switcher-name');
-      var prevBtn = group.querySelector('.ref-switcher-prev');
-      var nextBtn = group.querySelector('.ref-switcher-next');
-
-      var stored = parseInt(localStorage.getItem(KEY), 10);
-      var idx = (isNaN(stored) || stored < 0 || stored >= total) ? 0 : stored;
-
-      function render() {
-        items.forEach(function (it, i) {
-          it.classList.toggle('is-active', i === idx);
-        });
-        if (countEl) countEl.textContent = (idx + 1) + '/' + total;
-        if (nameEl) nameEl.textContent = items[idx].getAttribute('data-vname') || '';
-        try { localStorage.setItem(KEY, idx); } catch (e) {}
-      }
-
-      if (prevBtn) prevBtn.addEventListener('click', function () {
-        idx = (idx - 1 + total) % total;
-        render();
-      });
-      if (nextBtn) nextBtn.addEventListener('click', function () {
-        idx = (idx + 1) % total;
-        render();
-      });
-
-      render();
-    })();
-  </script>
+  <!-- switcher odstraněn: zafixována varianta Navy pás -->
 </body>
 </html>
