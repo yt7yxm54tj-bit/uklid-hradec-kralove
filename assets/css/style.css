@@ -114,6 +114,7 @@ ul { list-style: none; }
   gap: 24px;
 }
 .logo { font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: -.01em; }
+.logo-accent { color: var(--blue); }
 .main-nav { display: flex; gap: 26px; }
 .main-nav a { font-size: 14px; color: var(--text-body); transition: color .15s ease; }
 .main-nav a:hover { color: var(--blue); }
@@ -214,6 +215,7 @@ section { position: relative; }
   padding: 64px 0 40px;
 }
 .footer-brand .logo { color: var(--white); font-size: 16px; }
+.footer-brand .logo-accent { color: #7CC4D8; }
 .footer-brand p { font-size: 13px; margin-top: 12px; max-width: 260px; line-height: 1.55; }
 .footer-col h4 { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 14px; }
 .footer-col ul li { margin-bottom: 12px; }
