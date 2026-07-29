@@ -215,19 +215,21 @@
     .process { background: var(--bg-light); padding: 76px 0; }
     .process-grid { max-width: 1024px; margin: 40px auto 0; }
     .step-num {
-      width: 36px;
-      height: 36px;
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
       background: var(--blue);
       color: var(--white);
-      font-size: 15px;
+      font-size: 18px;
       font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: 0 4px 12px rgba(23,122,141,.22);
     }
-    .step h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 12px; }
+    .step h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 14px; }
     .step p { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+    .process .how-seg { top: 22px; left: 58px; width: calc(100% - 46px); }
 
     /* ---------- Reference s cenami ---------- */
     .references { padding: 76px 0; }
@@ -269,6 +271,10 @@
       .features { padding: 56px 0; }
       .process { padding: 56px 0; }
       .process-grid { gap: 32px; }
+      .process .step { padding-left: 62px; min-height: 68px; }
+      .process .step .step-num { position: absolute; left: 0; top: 0; margin: 0; }
+      .process .step h3 { margin-top: 0; padding-top: 10px; }
+      .process .how-seg--v { left: 22px; top: 54px; }
       .references { padding: 56px 0; }
       .references-grid { gap: 32px; }
       .cta-final .btn { min-height: 52px; padding: 16px 28px; }
