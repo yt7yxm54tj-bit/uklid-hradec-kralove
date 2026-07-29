@@ -64,7 +64,7 @@ if (leadForm) {
         status.hidden = false;
         if (res.ok) {
           status.className = 'form-status ok';
-          status.textContent = 'Děkujeme! Poptávka odeslána — ozveme se do 24 hodin.';
+          status.textContent = 'Děkujeme! Poptávka odeslána. Ozveme se do 48 hodin.';
           leadForm.reset();
           submitBtn.textContent = 'Odesláno ✓';
         } else {
