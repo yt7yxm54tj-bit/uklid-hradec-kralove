@@ -98,11 +98,23 @@
     .trust-bar { padding: 64px 0; }
     .trust-bar .container {
       display: flex;
-      align-items: center;
+      align-items: stretch;
       justify-content: center;
-      gap: 54px;
+      gap: 0;
     }
-    .trust-bar span { font-size: 16px; font-weight: 700; color: var(--text); white-space: nowrap; }
+    .tb-item { text-align: center; padding: 0 54px; }
+    .tb-item + .tb-item { border-left: 1px solid var(--border); }
+    .tb-num {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -.02em;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+    .tb-label { display: block; font-size: 13.5px; color: var(--text-muted); margin-top: 6px; }
 
     /* ---------- Feature grid ---------- */
     .features { padding: 0 0 96px; }
@@ -178,23 +190,63 @@
       body.anim-on .service-card.in-view .sc-content .more { opacity: 1; }
     }
 
-    /* ---------- Jak to funguje ---------- */
-    .how { background: var(--bg-light); padding: 80px 0; }
-    .how .grid-4 { margin-top: 44px; }
-    .step-num {
-      width: 36px;
-      height: 36px;
+    /* ---------- Jak to funguje — vertikální timeline s fotkami ---------- */
+    .howv { background: var(--bg-light); padding: 80px 0; }
+    .howv-track { position: relative; max-width: 980px; margin: 40px auto 0; }
+    .howv-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 40px 0;
+    }
+    .howv-text { grid-column: 1; grid-row: 1; padding-right: 84px; }
+    .howv-media { grid-column: 2; grid-row: 1; padding-left: 84px; }
+    .howv-step--flip .howv-text { grid-column: 2; padding-right: 0; padding-left: 84px; }
+    .howv-step--flip .howv-media { grid-column: 1; padding-left: 0; padding-right: 84px; }
+    .howv-text h3 { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--text); }
+    .howv-text p { font-size: 15px; line-height: 1.6; color: var(--text-muted); margin-top: 10px; max-width: 40ch; }
+    .howv-media img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 16px 40px rgba(11,48,73,.12);
+      filter: saturate(.9) contrast(1.04);
+    }
+    .howv-dot {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background: var(--blue);
+      background: var(--blue); /* výchozí = dokreslený stav (noanim/reduced-motion) */
       color: var(--white);
-      font-size: 15px;
+      font-family: var(--font-display);
+      font-size: 16px;
       font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 2;
     }
-    .step h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 12px; }
-    .step p { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+    /* segment = šedá kolejnice + teal výplň; spojuje střed kroku se středem dalšího */
+    .howv-seg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 100%;
+      width: 3px;
+      margin-left: -1.5px;
+      border-radius: 2px;
+      background: #E2E8F0;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .howv-seg i { display: block; width: 100%; height: 100%; background: var(--blue); }
 
     /* ---------- Reference ---------- */
     .testimonials { padding: 96px 0; }
@@ -230,17 +282,27 @@
       .hero .hero-sub { font-size: 16px; margin-top: 22px; }
       .hero .hero-btns { flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 30px; }
       .hero .hero-btns .btn { min-height: 52px; padding: 16px 28px; width: auto; }
-      .trust-bar { padding: 36px 0; }
+      .trust-bar { padding: 40px 0; }
       .trust-bar .container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 16px 10px;
+        gap: 16px 0;
         text-align: center;
       }
-      .trust-bar span { font-size: 12.5px; white-space: normal; line-height: 1.3; }
+      .tb-item { padding: 0 8px; }
+      .tb-num { font-size: 24px; }
+      .tb-label { font-size: 11.5px; line-height: 1.3; margin-top: 4px; }
       .features { padding: 0 0 64px; }
       .services { padding: 0 0 64px; }
-      .how { padding: 56px 0; }
+      .howv { padding: 56px 0; }
+      .howv-track { margin-top: 28px; }
+      .howv-step { grid-template-columns: 1fr; align-items: start; padding: 0 0 40px 56px; }
+      .howv-text, .howv-media,
+      .howv-step--flip .howv-text, .howv-step--flip .howv-media { grid-column: 1; grid-row: auto; padding: 0; }
+      .howv-media { margin-top: 14px; }
+      .howv-media img { height: 200px; }
+      .howv-dot { left: 20px; top: 0; transform: translate(-50%, 0); width: 36px; height: 36px; font-size: 15px; }
+      .howv-seg { left: 20px; top: 40px; height: calc(100% - 40px); }
       .testimonials { padding: 64px 0; }
       .compare { padding: 64px 0; }
       .faq-section { padding: 0 0 64px; }
@@ -298,9 +360,9 @@
   <!-- ============ Trust bar ============ -->
   <div class="trust-bar">
     <div class="container">
-      <span>500+ dokončených úklidů</span>
-      <span>7 let zkušeností</span>
-      <span>100 % spokojených zákazníků</span>
+      <div class="tb-item"><span class="tb-num">500+</span><span class="tb-label">dokončených úklidů</span></div>
+      <div class="tb-item"><span class="tb-num">7+</span><span class="tb-label">let zkušeností</span></div>
+      <div class="tb-item"><span class="tb-num">100 %</span><span class="tb-label">spokojených zákazníků</span></div>
     </div>
   </div>
 
@@ -394,34 +456,49 @@
     </div>
   </section>
 
-  <!-- ============ Jak to funguje ============ -->
-  <section class="how">
+  <!-- ============ Jak to funguje — vertikální timeline s fotkami (jen HP) ============ -->
+  <section class="howv" id="home-how">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head centered">
         <h2>Jak to funguje</h2>
         <p class="sub">Od poptávky po čistý domov ve čtyřech krocích.</p>
       </div>
-      <div class="grid-4">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h3>Poptávka</h3>
-          <p>Vyplníte krátký formulář nebo zavoláte.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>Nacenění</h3>
-          <p>Do 48 hodin vám pošleme přesnou cenu.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>Termín</h3>
-          <p>Domluvíme termín, který vám vyhovuje.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <h3>Úklid</h3>
-          <p>Proškolený tým odvede práci, vy platíte až po dokončení.</p>
-        </div>
+      <div class="howv-track">
+        <article class="howv-step">
+          <span class="howv-dot">1</span>
+          <span class="howv-seg" aria-hidden="true"><i></i></span>
+          <div class="howv-text">
+            <h3>Poptávka</h3>
+            <p>Vyplníte krátký formulář nebo rovnou zavoláte. V pracovní dny se ozveme do 2 hodin.</p>
+          </div>
+          <div class="howv-media"><img src="assets/img/case-byt-slezske-predmesti.jpg" alt="Byt připravený na úklid" loading="lazy"></div>
+        </article>
+        <article class="howv-step howv-step--flip">
+          <span class="howv-dot">2</span>
+          <span class="howv-seg" aria-hidden="true"><i></i></span>
+          <div class="howv-text">
+            <h3>Nacenění</h3>
+            <p>Do 48 hodin pošleme přesnou cenu. Podle potřeby se zastavíme osobně, nebo stačí krátké video z telefonu.</p>
+          </div>
+          <div class="howv-media"><img src="assets/img/hradec-namesti.jpg" alt="Hradec Králové — jsme místní, dojedeme k vám" loading="lazy"></div>
+        </article>
+        <article class="howv-step">
+          <span class="howv-dot">3</span>
+          <span class="howv-seg" aria-hidden="true"><i></i></span>
+          <div class="howv-text">
+            <h3>Termín</h3>
+            <p>Domluvíme termín, který sedí vám. Přijedeme přesně a s vlastním vybavením i chemií.</p>
+          </div>
+          <div class="howv-media"><img src="assets/img/o-nas-hero-tym.jpeg" alt="Tým Hradeckého úklidu vyráží na zakázku" loading="lazy"></div>
+        </article>
+        <article class="howv-step howv-step--flip">
+          <span class="howv-dot">4</span>
+          <div class="howv-text">
+            <h3>Úklid</h3>
+            <p>Proškolený tým odvede práci. Vy si výsledek zkontrolujete a platíte až potom.</p>
+          </div>
+          <div class="howv-media"><img src="assets/img/hloubkovy-reference-byt-nhk.jpg" alt="Uklizený obývací pokoj po dokončení" loading="lazy"></div>
+        </article>
       </div>
     </div>
   </section>
@@ -485,12 +562,30 @@
           <div class="stat-label">dokončených úklidů</div>
         </div>
         <div class="stat">
-          <div class="stat-num">7 let</div>
+          <div class="stat-num">7+ let</div>
           <div class="stat-label">zkušeností v oboru</div>
         </div>
         <div class="stat">
           <div class="stat-num">100 %</div>
           <div class="stat-label">spokojených zákazníků</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Kdo k vám přijde ============ -->
+  <section class="hp-about hp-about--plain hp-about--center" id="home-about">
+    <div class="container">
+      <div class="hp-about-layout">
+        <img class="hp-about-photo" src="assets/img/o-nas-team-marie-coufalova.jpeg" alt="Marie Coufalová, vedoucí provozu">
+        <div class="hp-about-body">
+          <div class="section-head centered">
+            <span class="eyebrow">Kdo k vám přijde</span>
+            <h2>Za úklidem stojí konkrétní lidé, ne anonymní firma</h2>
+          </div>
+          <p class="hp-about-text">Provoz vede Marie osobně, každou zakázku má pod kontrolou od poptávky až po předání. Každá hospodyně u nás prošla několika koly výběru a praktickou zkouškou, takže víte, koho pouštíte domů.</p>
+          <div class="handsign"><span class="sig">Marie Coufalová</span><span class="sig-role">vedoucí provozu</span></div>
+          <a href="o-nas.html" class="btn btn-primary hp-about-cta">Celý tým →</a>
         </div>
       </div>
     </div>
@@ -541,14 +636,22 @@
   </section>
 
   <!-- ============ Dárkový poukaz ============ -->
-  <section class="gift-banner">
+  <section class="gift-card-section">
     <div class="container">
-      <div class="gift-banner-inner">
-        <span class="gift-banner-ico" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 9h18M12 9v12"/><path d="M12 9C9.5 9 7 8 7 5.8 7 4.3 8.3 3.2 9.6 3.9 11 4.6 12 6.6 12 9zm0 0c2.5 0 5-1 5-3.2C17 4.3 15.7 3.2 14.4 3.9 13 4.6 12 6.6 12 9z"/></svg>
+      <div class="gift-card">
+        <span class="gc-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 9h18M12 9v12"/><path d="M12 9C9.5 9 7 8 7 5.8 7 4.3 8.3 3.2 9.6 3.9 11 4.6 12 6.6 12 9zm0 0c2.5 0 5-1 5-3.2C17 4.3 15.7 3.2 14.4 3.9 13 4.6 12 6.6 12 9z"/></svg>
+          Hodnota podle vás
         </span>
-        <span class="gift-banner-text">Darujte úklid jako poukaz. Ideální dárek pro rodinu i firemní partnery.</span>
-        <a href="poukazy.html" class="btn btn-primary gift-banner-btn">Dárkové poukazy →</a>
+        <div class="gc-body">
+          <span class="gc-eyebrow">Dárkový poukaz</span>
+          <h2>Darujte čistý domov</h2>
+          <p>Poukaz na úklid v hodnotě, jakou si vyberete. Pošleme ho do 24 hodin, platí 12 měsíců a termín si obdarovaný domluví, až se mu to bude hodit. Vy jen vyberete motiv, zbytek zařídíme.</p>
+          <a href="poukazy.html" class="btn btn-white gc-btn">Dárkové poukazy →</a>
+        </div>
+        <div class="gc-visual">
+          <img src="assets/img/poukaz-motiv-univerzalni.jpg" alt="Dárkový poukaz na úklid">
+        </div>
       </div>
     </div>
   </section>
@@ -590,24 +693,6 @@
   </section>
 
   <!-- ============ Závěrečná výzva ============ -->
-  <!-- ============ Kdo k vám přijde ============ -->
-  <section class="hp-about hp-about--plain" id="home-about">
-    <div class="container">
-      <div class="hp-about-layout">
-        <img class="hp-about-photo" src="assets/img/o-nas-team-marie-coufalova.jpeg" alt="Marie Coufalová, vedoucí provozu">
-        <div class="hp-about-body">
-          <div class="section-head">
-            <span class="eyebrow">Kdo k vám přijde</span>
-            <h2>Za úklidem stojí konkrétní lidé, ne anonymní firma</h2>
-          </div>
-          <p class="hp-about-text">Provoz vede Marie osobně, každou zakázku má pod kontrolou od poptávky až po předání. Každá hospodyně u nás prošla několika koly výběru a praktickou zkouškou, takže víte, koho pouštíte domů.</p>
-          <div class="handsign"><span class="sig">Marie Coufalová</span><span class="sig-role">vedoucí provozu</span></div>
-          <a href="o-nas.html" class="btn btn-primary hp-about-cta">Celý tým →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="cta-final">
     <div class="container">
       <h2>Poptejte úklid ještě dnes</h2>

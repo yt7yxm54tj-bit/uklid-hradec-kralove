@@ -31,7 +31,7 @@
     .info-row .info-label {
       display: block;
       font-size: 13px;
-      color: var(--text-light);
+      color: var(--text-muted);
     }
     .info-row .info-value {
       display: block;
@@ -107,6 +107,99 @@
       color: var(--text-muted);
     }
 
+    /* ---------- Přepínač podoby formuláře + průvodce (wizard) ---------- */
+    .form-mode {
+      display: flex;
+      background: var(--sky);
+      border-radius: 999px;
+      padding: 4px;
+      gap: 4px;
+    }
+    .fm-btn {
+      flex: 1;
+      border: 0;
+      background: none;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-body);
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background .2s ease, color .2s ease, box-shadow .2s ease;
+    }
+    .fm-btn.active {
+      background: var(--white);
+      color: var(--petrol-dark);
+      box-shadow: 0 2px 8px rgba(11,48,73,.10);
+    }
+    #lead-wizard { display: flex; flex-direction: column; gap: 18px; }
+    .wiz-progress { display: flex; align-items: center; gap: 8px; padding: 2px 4px; }
+    .wp-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #CBD5E1;
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background .3s ease;
+    }
+    .wp-dot.active, .wp-dot.done { background: var(--blue); }
+    .wp-line { flex: 1; height: 3px; border-radius: 2px; background: #E2E8F0; overflow: hidden; }
+    .wp-line i { display: block; width: 100%; height: 100%; background: var(--blue); transform: scaleX(0); transform-origin: left; transition: transform .4s ease; }
+    .wp-line.done i { transform: scaleX(1); }
+    .wiz-q { font-size: 15px; font-weight: 700; color: var(--text); }
+    .wiz-step { display: flex; flex-direction: column; gap: 16px; }
+    .wiz-step { animation: wizIn .32s ease; }
+    @keyframes wizIn { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: none; } }
+    .no-anim .wiz-step { animation: none; }
+    .wiz-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .wiz-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 14px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      transition: border-color .2s ease, background .2s ease, transform .2s ease;
+    }
+    .wiz-card:hover { transform: translateY(-2px); border-color: #BFDCE4; }
+    .wiz-card input { position: absolute; opacity: 0; pointer-events: none; }
+    .wiz-card svg { width: 22px; height: 22px; color: var(--blue); flex-shrink: 0; }
+    .wiz-card:has(input:checked) { border-color: var(--blue); background: #F6FBFC; box-shadow: 0 0 0 1px var(--blue); }
+    .field-label { display: block; font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .field label em { font-style: normal; font-weight: 400; color: var(--text-muted); }
+    .wiz-pills { display: flex; gap: 10px; }
+    .wiz-pill { flex: 1; cursor: pointer; }
+    .wiz-pill input { position: absolute; opacity: 0; pointer-events: none; }
+    .wiz-pill span {
+      display: block;
+      text-align: center;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: border-color .2s ease, color .2s ease, background .2s ease;
+    }
+    .wiz-pill input:checked + span { border-color: var(--blue); color: var(--petrol-dark); background: #F6FBFC; box-shadow: 0 0 0 1px var(--blue); }
+    .wiz-nav { display: flex; gap: 12px; }
+    .wiz-nav .wiz-back { background: none; border: 1px solid var(--border); color: var(--text-muted); }
+    .wiz-nav .wiz-back:hover { border-color: var(--text-light); color: var(--text); }
+    .wiz-nav .wiz-next, .wiz-nav .wiz-submit { flex: 1; justify-content: center; }
+
     /* ---------- Mapa a sídlo firmy ---------- */
     .map-section { padding: 0 0 72px; }
     .map-photo {
@@ -126,6 +219,8 @@
       .contact-info { flex-basis: auto; }
       .form-card { flex-basis: auto; }
       .form-row-two { flex-direction: column; gap: 18px; }
+      .wiz-cards { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .wiz-card { font-size: 12.5px; padding: 12px 10px; }
       .map-section { padding: 0 0 48px; }
       .map-photo img { height: 220px; }
       .map-photo iframe { height: 260px; }
@@ -192,7 +287,7 @@
             <span class="info-value"><a href="mailto:info@uklidhradec.cz">info@uklidhradec.cz</a></span>
           </div>
           <div class="info-row">
-            <span class="info-label">Telefonní linka</span>
+            <span class="info-label">Provozní doba linky</span>
             <span class="info-value">Po–Pá 7:00–18:00, So 8:00–12:00 · úklidy provádíme 7 dní v týdnu</span>
           </div>
           <div class="info-row">
@@ -213,7 +308,11 @@
         <div class="form-card">
           <h3>Chci úklid</h3>
           <div class="form-trust">Platba až po dokončení · Férové řešení případných škod</div>
-          <form id="lead-form" action="#" novalidate>
+          <div class="form-mode" role="tablist" aria-label="Podoba formuláře">
+            <button type="button" class="fm-btn active" data-mode="wizard" role="tab" aria-selected="true">Krok za krokem</button>
+            <button type="button" class="fm-btn" data-mode="classic" role="tab" aria-selected="false">Vše najednou</button>
+          </div>
+          <form id="lead-form" action="#" novalidate hidden>
             <input type="text" name="hpname" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;overflow:hidden" aria-hidden="true">
             <div class="form-row-two">
               <div class="field">
@@ -250,6 +349,78 @@
               <span>Souhlasím se zpracováním osobních údajů</span>
             </label>
             <button type="submit" class="btn btn-primary">Odeslat poptávku</button>
+            <p class="form-note">Ozveme se do 2 hodin v pracovní dny. Přesnou cenu dostanete do 48 hodin. Poptávka je nezávazná.</p>
+            <p class="form-status" hidden></p>
+          </form>
+
+          <form id="lead-wizard" action="#" novalidate>
+            <input type="text" name="hpname" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;overflow:hidden" aria-hidden="true">
+            <div class="wiz-progress" aria-hidden="true">
+              <span class="wp-dot active">1</span><span class="wp-line"><i></i></span>
+              <span class="wp-dot">2</span><span class="wp-line"><i></i></span>
+              <span class="wp-dot">3</span>
+            </div>
+            <div class="wiz-step" data-step="1">
+              <p class="wiz-q">Co potřebujete uklidit?</p>
+              <div class="wiz-cards">
+                <label class="wiz-card"><input type="radio" name="wtype" value="Úklid domácnosti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span>Domácnost</span></label>
+                <label class="wiz-card"><input type="radio" name="wtype" value="Hloubkový úklid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg><span>Hloubkový úklid</span></label>
+                <label class="wiz-card"><input type="radio" name="wtype" value="Úklid firmy / kanceláře"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/><path d="M10 21v-3h4v3"/></svg><span>Firma / kancelář</span></label>
+                <label class="wiz-card"><input type="radio" name="wtype" value="Úklid po stavbě"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="13" height="6" rx="1.2"/><path d="M16 7h4v4h-8v3"/><path d="M11 14v6"/></svg><span>Po stavbě</span></label>
+                <label class="wiz-card"><input type="radio" name="wtype" value="Dárkový poukaz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 9h18M12 9v12"/><path d="M12 9C9.5 9 7 8 7 5.8 7 4.3 8.3 3.2 9.6 3.9 11 4.6 12 6.6 12 9zm0 0c2.5 0 5-1 5-3.2C17 4.3 15.7 3.2 14.4 3.9 13 4.6 12 6.6 12 9z"/></svg><span>Dárkový poukaz</span></label>
+                <label class="wiz-card"><input type="radio" name="wtype" value="Jiné"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-8.5 8.5c-1.5 0-3-.4-4.2-1.1L3 21l1.6-5.3A8.5 8.5 0 1 1 21 12z"/><path d="M8.5 12h.01M12.5 12h.01M16.5 12h.01"/></svg><span>Něco jiného</span></label>
+              </div>
+            </div>
+            <div class="wiz-step" data-step="2" hidden>
+              <p class="wiz-q">Řekněte nám pár detailů</p>
+              <div class="field">
+                <label for="wsize">Přibližná velikost prostor</label>
+                <select id="wsize" name="wsize">
+                  <option>Do 50 m²</option>
+                  <option>50–100 m²</option>
+                  <option>100–200 m²</option>
+                  <option>Nad 200 m²</option>
+                  <option selected>Nevím / netýká se</option>
+                </select>
+              </div>
+              <div class="field">
+                <span class="field-label">Jak často?</span>
+                <div class="wiz-pills">
+                  <label class="wiz-pill"><input type="radio" name="wfreq" value="Jednorázově" checked><span>Jednorázově</span></label>
+                  <label class="wiz-pill"><input type="radio" name="wfreq" value="Pravidelně"><span>Pravidelně</span></label>
+                </div>
+              </div>
+              <div class="field">
+                <label for="wmessage">Chcete něco doplnit? <em>(nepovinné)</em></label>
+                <textarea id="wmessage" name="wmessage" placeholder="Např. dvě koupelny, pes v bytě, klíče u sousedky…"></textarea>
+              </div>
+            </div>
+            <div class="wiz-step" data-step="3" hidden>
+              <p class="wiz-q">Kam vám máme poslat cenu?</p>
+              <div class="form-row-two">
+                <div class="field">
+                  <label for="wname">Jméno a příjmení</label>
+                  <input type="text" id="wname" name="wname">
+                </div>
+                <div class="field">
+                  <label for="wphone">Telefon</label>
+                  <input type="tel" id="wphone" name="wphone">
+                </div>
+              </div>
+              <div class="field">
+                <label for="wemail">E-mail</label>
+                <input type="email" id="wemail" name="wemail">
+              </div>
+              <label class="form-consent">
+                <input type="checkbox" name="wconsent">
+                <span>Souhlasím se zpracováním osobních údajů</span>
+              </label>
+            </div>
+            <div class="wiz-nav">
+              <button type="button" class="btn wiz-back" hidden>← Zpět</button>
+              <button type="button" class="btn btn-primary wiz-next">Pokračovat →</button>
+              <button type="submit" class="btn btn-primary wiz-submit" hidden>Odeslat poptávku</button>
+            </div>
             <p class="form-note">Ozveme se do 2 hodin v pracovní dny. Přesnou cenu dostanete do 48 hodin. Poptávka je nezávazná.</p>
             <p class="form-status" hidden></p>
           </form>

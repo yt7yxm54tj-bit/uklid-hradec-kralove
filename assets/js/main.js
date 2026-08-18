@@ -33,7 +33,38 @@ if (toggle && mobileNav) {
   });
 }
 
-// Poptávkový formulář → /api/lead (Telegram notifikace)
+// Poptávkové formuláře → /api/lead (Telegram notifikace) — sdílený submit pro klasický i wizard
+function showFormErr(status, msg) {
+  status.hidden = false;
+  status.className = 'form-status err';
+  status.textContent = msg;
+}
+function submitLead(data, status, submitBtn, onOk) {
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Odesílám…';
+  fetch('/api/lead', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+    .then(function (res) {
+      status.hidden = false;
+      if (res.ok) {
+        status.className = 'form-status ok';
+        status.textContent = 'Děkujeme! Poptávka odeslána. Ozveme se do 48 hodin.';
+        submitBtn.textContent = 'Odesláno ✓';
+        if (onOk) onOk();
+      } else {
+        throw new Error(res.j && res.j.error);
+      }
+    })
+    .catch(function (err) {
+      showFormErr(status, (err && err.message) || 'Odeslání se nepovedlo. Zavolejte nám prosím.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Odeslat poptávku';
+    });
+}
+
 var leadForm = document.getElementById('lead-form');
 if (leadForm) {
   leadForm.addEventListener('submit', function (e) {
@@ -42,43 +73,107 @@ if (leadForm) {
     var submitBtn = leadForm.querySelector('button[type="submit"]');
     var data = Object.fromEntries(new FormData(leadForm));
     if (!data.name || !data.name.trim() || !data.email || data.email.indexOf('@') === -1) {
-      status.hidden = false;
-      status.className = 'form-status err';
-      status.textContent = 'Vyplňte prosím jméno a platný e-mail.';
+      showFormErr(status, 'Vyplňte prosím jméno a platný e-mail.');
       return;
     }
     if (!leadForm.querySelector('[name="consent"]').checked) {
-      status.hidden = false;
-      status.className = 'form-status err';
-      status.textContent = 'Potvrďte prosím souhlas se zpracováním osobních údajů.';
+      showFormErr(status, 'Potvrďte prosím souhlas se zpracováním osobních údajů.');
       return;
     }
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Odesílám…';
-    fetch('/api/lead', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
-      .then(function (res) {
-        status.hidden = false;
-        if (res.ok) {
-          status.className = 'form-status ok';
-          status.textContent = 'Děkujeme! Poptávka odeslána. Ozveme se do 48 hodin.';
-          leadForm.reset();
-          submitBtn.textContent = 'Odesláno ✓';
-        } else {
-          throw new Error(res.j && res.j.error);
-        }
-      })
-      .catch(function (err) {
-        status.hidden = false;
-        status.className = 'form-status err';
-        status.textContent = (err && err.message) || 'Odeslání se nepovedlo. Zavolejte nám prosím.';
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Odeslat poptávku';
-      });
+    submitLead(data, status, submitBtn, function () { leadForm.reset(); });
   });
+}
+
+// Wizard „krok za krokem" + přepínač podoby formuláře (kontakt.html)
+var wizard = document.getElementById('lead-wizard');
+if (wizard) {
+  var wizSteps = wizard.querySelectorAll('.wiz-step');
+  var wpDots = wizard.querySelectorAll('.wp-dot');
+  var wpLines = wizard.querySelectorAll('.wp-line');
+  var backBtn = wizard.querySelector('.wiz-back');
+  var nextBtn = wizard.querySelector('.wiz-next');
+  var wizSubmit = wizard.querySelector('.wiz-submit');
+  var wizStatus = wizard.querySelector('.form-status');
+  var wizStep = 1;
+
+  function showWizStep(n) {
+    wizStep = n;
+    wizSteps.forEach(function (s) { s.hidden = +s.dataset.step !== n; });
+    wpDots.forEach(function (d, i) {
+      d.classList.toggle('active', i + 1 === n);
+      d.classList.toggle('done', i + 1 < n);
+    });
+    wpLines.forEach(function (l, i) { l.classList.toggle('done', i + 1 < n); });
+    backBtn.hidden = n === 1;
+    nextBtn.hidden = n === 3;
+    wizSubmit.hidden = n !== 3;
+    wizStatus.hidden = true;
+  }
+
+  function validateWizStep(n) {
+    if (n === 1 && !wizard.querySelector('[name="wtype"]:checked')) {
+      showFormErr(wizStatus, 'Vyberte prosím, co potřebujete uklidit.');
+      return false;
+    }
+    return true;
+  }
+
+  nextBtn.addEventListener('click', function () {
+    if (validateWizStep(wizStep)) showWizStep(wizStep + 1);
+  });
+  backBtn.addEventListener('click', function () { showWizStep(wizStep - 1); });
+  // výběr typu v 1. kroku posune dál sám (krátká pauza, ať je vidět zaškrtnutí)
+  wizard.querySelectorAll('[name="wtype"]').forEach(function (r) {
+    r.addEventListener('change', function () {
+      if (wizStep === 1) setTimeout(function () { showWizStep(2); }, 220);
+    });
+  });
+
+  wizard.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = Object.fromEntries(new FormData(wizard));
+    if (!f.wname || !f.wname.trim() || !f.wemail || f.wemail.indexOf('@') === -1) {
+      showFormErr(wizStatus, 'Vyplňte prosím jméno a platný e-mail.');
+      return;
+    }
+    if (!wizard.querySelector('[name="wconsent"]').checked) {
+      showFormErr(wizStatus, 'Potvrďte prosím souhlas se zpracováním osobních údajů.');
+      return;
+    }
+    var extra = '[Velikost: ' + (f.wsize || '—') + ' · Frekvence: ' + (f.wfreq || '—') + ']';
+    var data = {
+      hpname: f.hpname || '',
+      name: f.wname,
+      phone: f.wphone || '',
+      email: f.wemail,
+      type: f.wtype || '',
+      message: extra + (f.wmessage && f.wmessage.trim() ? '\n' + f.wmessage.trim() : ''),
+      consent: 'on'
+    };
+    submitLead(data, wizStatus, wizSubmit, function () {
+      wizard.reset();
+      showWizStep(1);
+      wizStatus.hidden = false;
+      wizStatus.className = 'form-status ok';
+      wizStatus.textContent = 'Děkujeme! Poptávka odeslána. Ozveme se do 48 hodin.';
+    });
+  });
+
+  // segmented control: průvodce ↔ klasický formulář
+  document.querySelectorAll('.form-mode .fm-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var mode = btn.dataset.mode;
+      document.querySelectorAll('.form-mode .fm-btn').forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', String(on));
+      });
+      wizard.hidden = mode !== 'wizard';
+      if (leadForm) leadForm.hidden = mode !== 'classic';
+    });
+  });
+
+  showWizStep(1);
 }
 
 // Statický režim (QA screenshoty / reduced motion): dekorativní tahy dokreslené bez animace
@@ -86,6 +181,36 @@ if (/[?&]noanim/.test(location.search) ||
     (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
   document.documentElement.classList.add('no-anim');
 }
+
+// Přepínač bublinek vlevo nahoře (u loga) — stav drží localStorage, platí pro celý web
+var BUBS_KEY = 'hu-bubbles';
+var bubsOn = true;
+try { bubsOn = localStorage.getItem(BUBS_KEY) !== 'off'; } catch (e) {}
+document.documentElement.classList.toggle('bubs-off', !bubsOn);
+(function () {
+  var logo = document.querySelector('.site-header .container .logo');
+  if (!logo) return;
+  // logo + přepínač do jedné flex skupiny, ať space-between v headeru zůstane na 3 dětech
+  var group = document.createElement('div');
+  group.className = 'logo-group';
+  logo.parentNode.insertBefore(group, logo);
+  group.appendChild(logo);
+  var bt = document.createElement('button');
+  bt.type = 'button';
+  bt.className = 'bub-toggle';
+  bt.setAttribute('role', 'switch');
+  bt.setAttribute('aria-checked', String(bubsOn));
+  bt.setAttribute('aria-label', 'Bublinky na pozadí');
+  bt.title = 'Bublinky na pozadí';
+  bt.innerHTML = '<span class="bt-knob"></span>';
+  group.appendChild(bt);
+  bt.addEventListener('click', function () {
+    bubsOn = !bubsOn;
+    document.documentElement.classList.toggle('bubs-off', !bubsOn);
+    bt.setAttribute('aria-checked', String(bubsOn));
+    try { localStorage.setItem(BUBS_KEY, bubsOn ? 'on' : 'off'); } catch (e) {}
+  });
+})();
 
 // Brand dekor: bubliny do hero sekcí a patičky
 function addBubbles(el, specs) {
@@ -137,6 +262,17 @@ document.querySelectorAll('.stats-section').forEach(function (sec) {
 addBubbles(document.querySelector('.bento-hero'), [
   { size: 100, pos: { bottom: '-38px', left: '40%' }, light: true }
 ]);
+addBubbles(document.querySelector('.gift-card'), [
+  { size: 88, pos: { top: '-30px', right: '18%' }, light: true },
+  { size: 34, pos: { bottom: '10%', left: '44%' }, light: true, delay: 1.2 }
+]);
+
+// Poukazová karta: světlá srovnávací varianta přes ?voucher=light (Eda si vybírá)
+if (/[?&]voucher=light/.test(location.search)) {
+  document.querySelectorAll('.gift-card-section').forEach(function (s) {
+    s.classList.add('gift-card--light');
+  });
+}
 
 // Tah štětcem pod klíčovými nadpisy (poslední slovo / fráze), kreslí se až ve viewportu
 var BRUSH_SVG = '<svg viewBox="0 0 320 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2,10 C80,13 205,10.5 262,6.6 C292,4.6 307,4.1 318,3.9 C307,4.9 292,5.8 262,8.2 C205,12 80,15.5 2,15 Z"/></svg>';

@@ -78,20 +78,16 @@
     });
   });
 
-  /* ---------- 3e. Bento pilulky — nalétnou s rotací (koncový stav = CSS transformy) ---------- */
+  /* ---------- 3e. Bento pilulky — nalétnou zespodu se staggerem ---------- */
   gsap.utils.toArray(".bento-pills").forEach(function (wrap) {
     var pills = gsap.utils.toArray(wrap.children);
     if (!pills.length) return;
-    var rots = [-1.6, 1.2, -0.9, 1];
-    var xs = isMobile ? [0, 0, 0, 0] : [0, 16, 0, 8]; // mobil: bez posunu, ať pilulka nepřetéká
     gsap.fromTo(pills,
-      { autoAlpha: 0, y: 30, rotation: 0, x: 0 },
+      { autoAlpha: 0, y: 30 },
       {
         autoAlpha: 1, y: 0, duration: 0.7, ease: "back.out(1.6)", stagger: 0.12,
-        rotation: function (i) { return rots[i % 4]; },
-        x: function (i) { return xs[i % 4]; },
         scrollTrigger: { trigger: wrap, start: "top 85%", once: true },
-        // po doletu předat transform zpět CSS (nth-child rotace), ať funguje :hover
+        // po doletu předat transform zpět CSS, ať funguje :hover lift
         onComplete: function () { gsap.set(pills, { clearProps: "transform,visibility,opacity" }); }
       });
   });
@@ -160,8 +156,37 @@
     });
   });
 
-  /* ---------- 3c. Srovnávací tabulka — vystoupení ze stránky ---------- */
-  gsap.utils.toArray(".compare-table").forEach(function (table) {
+  /* ---------- 3f. Vertikální „Jak to funguje" (HP) — scrub: tečky se aktivují, segmenty se plní ---------- */
+  document.querySelectorAll(".howv").forEach(function (section) {
+    var vDots = gsap.utils.toArray(section.querySelectorAll(".howv-dot"));
+    var vSegs = gsap.utils.toArray(section.querySelectorAll(".howv-seg i"));
+    if (!vDots.length) return;
+    gsap.set(vDots, { backgroundColor: "#CBD5E1", scale: 0.85 });
+    gsap.set(vSegs, { scaleY: 0, transformOrigin: "top center" });
+    var vtl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section.querySelector(".howv-track"),
+        start: "top 70%",
+        end: "bottom 60%",
+        scrub: 0.6
+      }
+    });
+    vDots.forEach(function (dot, i) {
+      vtl.to(dot, { backgroundColor: "#177A8D", scale: 1, duration: 0.25, ease: "back.out(2)" });
+      if (vSegs[i]) vtl.to(vSegs[i], { scaleY: 1, duration: 0.5, ease: "none" }, "<0.2");
+    });
+    // texty a fotky jedou once mimo scrub (při scrollu zpět nemizí)
+    gsap.utils.toArray(section.querySelectorAll(".howv-step")).forEach(function (stp) {
+      gsap.from(stp.querySelectorAll(".howv-text > *, .howv-media"), {
+        opacity: 0, y: 18, duration: 0.5, stagger: 0.07, ease: "power2.out",
+        clearProps: "opacity,transform",
+        scrollTrigger: { trigger: stp, start: "top 85%", once: true }
+      });
+    });
+  });
+
+  /* ---------- 3c. Srovnávací tabulka + poukazová karta — vystoupení ze stránky ---------- */
+  gsap.utils.toArray(".compare-table, .gift-card").forEach(function (table) {
     gsap.from(table, {
       opacity: 0, y: 44, scale: 0.96, duration: 0.9, ease: "power2.out",
       clearProps: "opacity,transform",
@@ -170,7 +195,7 @@
   });
 
   /* ---------- 4. Trust bar — postupné naskakování položek ---------- */
-  var trustItems = gsap.utils.toArray(".trust-bar span");
+  var trustItems = gsap.utils.toArray(".trust-bar .tb-item");
   if (trustItems.length) {
     gsap.from(trustItems, {
       opacity: 0, y: 14, duration: 0.55, stagger: 0.12, ease: "power2.out",
@@ -206,7 +231,7 @@
       }
     });
   }
-  gsap.utils.toArray(".stat-num, .trust-bar span").forEach(countUp);
+  gsap.utils.toArray(".stat-num, .trust-bar .tb-num").forEach(countUp);
 
   /* ---------- 6. Fotky v obsahových sekcích — jemný fade ---------- */
   gsap.utils.toArray(".split-media img, .about-photo img, .map-photo img, .story-photo img").forEach(function (img) {
