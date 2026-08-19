@@ -78,18 +78,25 @@
     });
   });
 
-  /* ---------- 3e. Bento pilulky — nalétnou zespodu se staggerem ---------- */
-  gsap.utils.toArray(".bento-pills").forEach(function (wrap) {
-    var pills = gsap.utils.toArray(wrap.children);
-    if (!pills.length) return;
-    gsap.fromTo(pills,
-      { autoAlpha: 0, y: 30 },
-      {
-        autoAlpha: 1, y: 0, duration: 0.7, ease: "back.out(1.6)", stagger: 0.12,
-        scrollTrigger: { trigger: wrap, start: "top 85%", once: true },
-        // po doletu předat transform zpět CSS, ať funguje :hover lift
-        onComplete: function () { gsap.set(pills, { clearProps: "transform,visibility,opacity" }); }
-      });
+  /* ---------- 3e. Mini timeline v bento dlaždici — stejná mechanika jako .howv ---------- */
+  gsap.utils.toArray(".bento-mini").forEach(function (wrap) {
+    var mDots = gsap.utils.toArray(wrap.querySelectorAll(".bmini-dot"));
+    var mSegs = gsap.utils.toArray(wrap.querySelectorAll(".bmini-seg i"));
+    var mTexts = gsap.utils.toArray(wrap.querySelectorAll(".bmini-text"));
+    if (!mDots.length) return;
+    gsap.set(mSegs, { scaleY: 0, transformOrigin: "top center" });
+    gsap.set(mDots, { autoAlpha: 0, scale: 0.7 });
+    var mtl = gsap.timeline({ scrollTrigger: { trigger: wrap, start: "top 80%", once: true } });
+    mDots.forEach(function (dot, i) {
+      mtl.to(dot, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "back.out(2)" });
+      if (mTexts[i]) {
+        mtl.from(mTexts[i], {
+          autoAlpha: 0, y: 10, duration: 0.35, ease: "power2.out",
+          clearProps: "opacity,transform,visibility"
+        }, "<0.05");
+      }
+      if (mSegs[i]) mtl.to(mSegs[i], { scaleY: 1, duration: 0.35, ease: "none" }, "<0.15");
+    });
   });
 
   /* ---------- 3d. Služby na mobilu — text karty se odkrývá, když je karta ve viewportu ---------- */

@@ -41,7 +41,8 @@
     .site-header.transparent:not(.scrolled) .logo-accent { color: #7CC4D8; }
     .site-header.transparent:not(.scrolled) .main-nav a:hover { color: rgba(255,255,255,.75); }
     .site-header.transparent:not(.scrolled) .nav-toggle span { background: var(--white); }
-    .site-header.transparent.scrolled { box-shadow: 0 2px 12px rgba(11,48,73,.06); }
+    /* po scrollu drží header jen jemný stín — linka nad trust barem působila jako oddělovač */
+    .site-header.transparent.scrolled { box-shadow: 0 2px 12px rgba(11,48,73,.06); border-bottom-color: transparent; }
     .hero video {
       position: absolute;
       inset: 0;
@@ -101,6 +102,7 @@
       grid-template-columns: repeat(3, 1fr);
       align-items: center;
       gap: 24px;
+      max-width: 1020px;
     }
     .tb-item { text-align: center; }
     .tb-item:first-child { justify-self: start; text-align: left; }
@@ -376,16 +378,31 @@
       </div>
       <div class="bento" id="home-bento">
         <div class="bento-hero">
-          <div>
+          <div class="bh-head">
             <span class="bh-eyebrow">Spolupráce krok za krokem</span>
             <h3>Jak spolupráce probíhá</h3>
             <p>Od první zprávy po hotový úklid vás provedeme čtyřmi jasnými kroky, žádná zdlouhavá administrativa.</p>
           </div>
-          <div class="bento-pills">
-            <div class="bpill"><span class="bp-ico">1</span>Odešlete poptávku</div>
-            <div class="bpill"><span class="bp-ico">2</span>Osobní návštěva nebo posouzení podle videa</div>
-            <div class="bpill"><span class="bp-ico">3</span>Stanovíme cenu i časovou náročnost</div>
-            <div class="bpill"><span class="bp-ico">4</span>Proběhne úklid</div>
+          <div class="bento-mini">
+            <div class="bmini-step">
+              <span class="bmini-dot">1</span>
+              <span class="bmini-seg" aria-hidden="true"><i></i></span>
+              <span class="bmini-text">Odešlete poptávku</span>
+            </div>
+            <div class="bmini-step bmini-step--flip">
+              <span class="bmini-dot">2</span>
+              <span class="bmini-seg" aria-hidden="true"><i></i></span>
+              <span class="bmini-text">Osobní návštěva nebo posouzení podle videa</span>
+            </div>
+            <div class="bmini-step">
+              <span class="bmini-dot">3</span>
+              <span class="bmini-seg" aria-hidden="true"><i></i></span>
+              <span class="bmini-text">Stanovíme cenu i časovou náročnost</span>
+            </div>
+            <div class="bmini-step bmini-step--flip">
+              <span class="bmini-dot">4</span>
+              <span class="bmini-text">Proběhne úklid</span>
+            </div>
           </div>
         </div>
         <div class="card feature-card">
