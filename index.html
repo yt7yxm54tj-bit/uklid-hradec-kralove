@@ -97,13 +97,14 @@
     /* ---------- Trust bar — vycentrovaný mezi koncem videa a další sekcí ---------- */
     .trust-bar { padding: 64px 0; }
     .trust-bar .container {
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-      gap: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      gap: 24px;
     }
-    .tb-item { text-align: center; padding: 0 54px; }
-    .tb-item + .tb-item { border-left: 1px solid var(--border); }
+    .tb-item { text-align: center; }
+    .tb-item:first-child { justify-self: start; text-align: left; }
+    .tb-item:last-child { justify-self: end; text-align: right; }
     .tb-num {
       display: block;
       font-family: var(--font-display);
@@ -283,13 +284,12 @@
       .hero .hero-btns { flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 30px; }
       .hero .hero-btns .btn { min-height: 52px; padding: 16px 28px; width: auto; }
       .trust-bar { padding: 40px 0; }
-      .trust-bar .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px 0;
+      .trust-bar .container { gap: 16px 0; }
+      .tb-item, .tb-item:first-child, .tb-item:last-child {
+        justify-self: center;
         text-align: center;
+        padding: 0 6px;
       }
-      .tb-item { padding: 0 8px; }
       .tb-num { font-size: 24px; }
       .tb-label { font-size: 11.5px; line-height: 1.3; margin-top: 4px; }
       .features { padding: 0 0 64px; }

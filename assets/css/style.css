@@ -710,38 +710,26 @@ html.bubs-off .bt-knob { transform: translateX(0); }
 }
 .bento-hero h3 { font-size: 30px; font-weight: 700; color: var(--white); letter-spacing: -.01em; line-height: 1.15; }
 .bento-hero > div > p { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,.82); margin-top: 14px; max-width: 46ch; }
-.bento-pills { display: flex; flex-direction: column; gap: 14px; position: relative; z-index: 1; }
+.bento-pills { display: flex; flex-direction: column; gap: 6px; position: relative; z-index: 1; }
 .bpill {
   display: flex;
   align-items: center;
-  gap: 12px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.16);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  gap: 14px;
   color: rgba(255,255,255,.94);
   font-weight: 600;
   font-size: 15px;
-  padding: 15px 20px;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.18);
-  transition: transform .25s cubic-bezier(.22,.61,.36,1), background .25s ease, box-shadow .25s ease;
+  padding: 9px 0;
+  transition: transform .25s cubic-bezier(.22,.61,.36,1), color .25s ease;
 }
-.bpill:hover {
-  background: rgba(255,255,255,.13);
-  box-shadow: 0 14px 32px rgba(0,0,0,.24);
-  transform: translateY(-3px);
-}
+.bpill:hover { color: var(--white); transform: translateX(3px); }
 .bpill:hover .bp-ico { transform: scale(1.18); }
 .bp-ico {
   transition: transform .25s cubic-bezier(.34,1.56,.64,1);
-  width: 26px; height: 26px;
-  border-radius: 50%;
-  background: rgba(23,122,141,.45);
-  color: #A8DCE8;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 13px;
+  color: #7CC4D8;
+  font-size: 15px;
+  font-weight: 700;
   flex-shrink: 0;
+  min-width: 16px;
 }
 .bento .b-w3 { grid-column: span 3; }
 .bento .b-w2 { grid-column: span 2; }
@@ -1072,7 +1060,7 @@ section .handnote p {
 /* ---------- Bento garancí: 3 sloupce místo 5 (dlaždice Pojištění skrytá) ---------- */
 #home-bento { grid-template-columns: repeat(3, 1fr); }
 #home-bento .bento-hero { grid-column: span 3; }
-#home-bento .bp-ico { font-size: 14px; font-weight: 700; }
+#home-bento .bp-ico { font-size: 15px; font-weight: 700; }
 @media (max-width: 820px) {
   #home-bento { grid-template-columns: 1fr; }
   #home-bento .bento-hero { grid-column: span 1; }
@@ -1113,7 +1101,7 @@ section .handnote p {
   .hp-about-photo { height: 300px; }
 }
 /* centrovaná varianta — kruhové foto nahoře, text pod ním */
-.hp-about--center { padding: 0 0 96px; }
+.hp-about--center { padding: 88px 0 96px; }
 .hp-about--center .hp-about-layout {
   grid-template-columns: 1fr;
   gap: 28px;
@@ -1132,7 +1120,7 @@ section .handnote p {
 .hp-about--center .hp-about-text { margin: 16px auto 0; }
 .hp-about--center .handsign { justify-content: center; align-items: center; }
 @media (max-width: 820px) {
-  .hp-about--center { padding: 0 0 64px; }
+  .hp-about--center { padding: 56px 0 64px; }
   .hp-about--center .hp-about-photo { width: 150px; height: 150px; }
 }
 
