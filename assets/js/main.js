@@ -267,12 +267,16 @@ addBubbles(document.querySelector('.gift-card'), [
   { size: 34, pos: { bottom: '10%', left: '44%' }, light: true, delay: 1.2 }
 ]);
 
-// Poukazová karta: světlá srovnávací varianta přes ?voucher=light (Eda si vybírá)
-if (/[?&]voucher=light/.test(location.search)) {
-  document.querySelectorAll('.gift-card-section').forEach(function (s) {
-    s.classList.add('gift-card--light');
+// DOČASNÉ: přepínač variant poukazu přímo na stránce (Eda si vybírá) — po rozhodnutí smazat
+document.querySelectorAll('.gc-variant-switch .gcv-btn').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var section = btn.closest('.gift-card-section');
+    section.classList.toggle('gift-card--light', btn.dataset.variant === 'light');
+    section.querySelectorAll('.gcv-btn').forEach(function (b) {
+      b.classList.toggle('active', b === btn);
+    });
   });
-}
+});
 
 // Tah štětcem pod klíčovými nadpisy (poslední slovo / fráze), kreslí se až ve viewportu
 var BRUSH_SVG = '<svg viewBox="0 0 320 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2,10 C80,13 205,10.5 262,6.6 C292,4.6 307,4.1 318,3.9 C307,4.9 292,5.8 262,8.2 C205,12 80,15.5 2,15 Z"/></svg>';
