@@ -23,12 +23,12 @@
     }
     .plan-card h3 { font-size: 16px; font-weight: 700; color: var(--text); }
     .plan-card .plan-price { font-size: 22px; font-weight: 700; color: var(--blue); margin-top: 12px; }
-    .plan-card p { font-size: 13px; color: var(--text-muted); margin-top: 14px; }
+    .plan-card p { font-size: 13px; color: var(--text-body); margin-top: 14px; }
     .plan-card .btn-sm { margin-top: 20px; padding: 10px 20px; font-size: 14px; }
     .plan-highlight { background: rgba(23,122,141,.07); border-color: var(--blue); }
 
     /* ---------- Co cena zahrnuje ---------- */
-    .price-includes { padding: 0 0 96px; }
+    .price-includes { padding: 0 0 40px; }
     .checks-row {
       display: flex;
       justify-content: center;
@@ -87,7 +87,7 @@
   <!-- ============ Header ============ -->
   <header class="site-header">
     <div class="container">
-      <a href="index.html" class="logo">Hradecký <span class="logo-accent">úklid</span></a>
+      <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 92 56" aria-hidden="true" focusable="false"><defs><mask id="lmMaskH"><circle cx="28" cy="28" r="26" fill="#fff"/><circle cx="64" cy="28" r="26" fill="#fff"/><path transform="translate(5.41,38.2) scale(0.02900,-0.02900)" d="M67.5 0V706H225V0ZM505 0V706H662.5V0ZM161.5 295V430.5H556.5V295Z" fill="#000"/><path transform="translate(65.82,38.2) scale(0.02900,-0.02900)" d="M352.15806451612906 -11Q265.31612903225806 -11 198.84677419354838 26.224789915966387Q132.3774193548387 63.44957983193277 94.68870967741935 128.76050420168067Q57 194.07142857142856 57 277.5V706H214.5V269Q214.5 226.518779342723 232.73420074349443 195.70187793427232Q250.96840148698885 164.8849765258216 282.2592936802974 148.44248826291079Q313.5501858736059 132 352.07992565055764 132Q391.5 132 421.7298657718121 148.42924528301887Q451.9597315436242 164.85849056603774 469.4798657718121 195.4009433962264Q487 225.94339622641508 487 268V706H645V276.5Q645 193.04852320675104 607.8023255813953 128.25949367088606Q570.6046511627907 63.470464135021096 504.80232558139534 26.235232067510548Q439 -11 352.15806451612906 -11ZM279.0 760.5 229 834 388 983 472.0 864.5Z" fill="#000"/></mask></defs><g mask="url(#lmMaskH)"><circle class="lm-c1" cx="28" cy="28" r="26"/><circle class="lm-c2" cx="64" cy="28" r="26"/><path class="lm-mix" d="M46.0,9.24 A26,26 0 0 1 46.0,46.76 A26,26 0 0 1 46.0,9.24 Z"/></g></svg><span class="logo-text">Hradecký <span class="logo-accent">úklid</span></span></a>
       <nav class="main-nav">
         <a href="uklid-domacnosti.html">Domácnosti</a>
         <a href="hloubkovy-uklid.html">Hloubkový úklid</a>
@@ -181,7 +181,7 @@
   <section class="price-stories">
     <div class="container">
       <div class="section-head">
-        <h2>Příběhy klientů s cenou</h2>
+        <h2>Kolik zaplatili ostatní</h2>
         <p class="sub">Reálné příklady, kolik úklid vyšel a co všechno zahrnoval.</p>
       </div>
       <div class="grid-3 stories-row">
@@ -231,7 +231,7 @@
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-q">Jak se počítá výsledná cena?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Z hodinové sazby a rozsahu úklidu. Do 48 hodin od poptávky dostanete přesnou kalkulaci zdarma. Víte tedy, kolik zaplatíte, ještě než se objednáte.</p></div>
+          <div class="faq-a"><p>Z hodinové sazby a rozsahu úklidu. Do 48 hodin od poptávky dostanete přesnou kalkulaci zdarma. Víte tedy, kolik zaplatíte, ještě než si úklid objednáte.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q">Platí se něco předem?<span class="faq-icon">+</span></button>
@@ -243,7 +243,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-q">Co když bude úklid delší nebo kratší?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Účtujeme podle skutečně odpracovaného času. Pokud úklid skončí dřív, platíte méně; případné prodloužení vždy předem odsouhlasíme.</p></div>
+          <div class="faq-a"><p>Účtujeme podle skutečně odpracovaného času. Pokud úklid skončí dřív, platíte méně. Případné prodloužení s vámi vždy předem odsouhlasíme.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q">Jak můžu zaplatit?<span class="faq-icon">+</span></button>
@@ -267,7 +267,7 @@
         <path d="M52,48 L66,60 L51,70"/>
       </svg>
       <a href="kontakt.html" class="btn btn-white">Zjistit cenu →</a>
-      <span class="cta-note">Zdarma · bez závazku · odpověď do 48 hodin · <a href="tel:+420777123456">+420 777 123 456</a></span>
+      <span class="cta-note">Zdarma · bez závazku · odpověď do 48 hodin · <span style="white-space:nowrap"><a href="tel:+420777123456">+420 777 123 456</a></span></span>
     </div>
   </section>
 
@@ -276,8 +276,8 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="logo">Hradecký <span class="logo-accent">úklid</span></div>
-          <p>Profesionální úklidové služby pro domácnosti i firmy v Hradci Králové a okolí.</p>
+          <div class="logo"><svg class="logo-mark" viewBox="0 0 92 56" aria-hidden="true" focusable="false"><defs><mask id="lmMaskF"><circle cx="28" cy="28" r="26" fill="#fff"/><circle cx="64" cy="28" r="26" fill="#fff"/><path transform="translate(5.41,38.2) scale(0.02900,-0.02900)" d="M67.5 0V706H225V0ZM505 0V706H662.5V0ZM161.5 295V430.5H556.5V295Z" fill="#000"/><path transform="translate(65.82,38.2) scale(0.02900,-0.02900)" d="M352.15806451612906 -11Q265.31612903225806 -11 198.84677419354838 26.224789915966387Q132.3774193548387 63.44957983193277 94.68870967741935 128.76050420168067Q57 194.07142857142856 57 277.5V706H214.5V269Q214.5 226.518779342723 232.73420074349443 195.70187793427232Q250.96840148698885 164.8849765258216 282.2592936802974 148.44248826291079Q313.5501858736059 132 352.07992565055764 132Q391.5 132 421.7298657718121 148.42924528301887Q451.9597315436242 164.85849056603774 469.4798657718121 195.4009433962264Q487 225.94339622641508 487 268V706H645V276.5Q645 193.04852320675104 607.8023255813953 128.25949367088606Q570.6046511627907 63.470464135021096 504.80232558139534 26.235232067510548Q439 -11 352.15806451612906 -11ZM279.0 760.5 229 834 388 983 472.0 864.5Z" fill="#000"/></mask></defs><g mask="url(#lmMaskF)"><circle class="lm-c1" cx="28" cy="28" r="26"/><circle class="lm-c2" cx="64" cy="28" r="26"/><path class="lm-mix" d="M46.0,9.24 A26,26 0 0 1 46.0,46.76 A26,26 0 0 1 46.0,9.24 Z"/></g></svg><span class="logo-text">Hradecký <span class="logo-accent">úklid</span></span></div>
+          <p>Uklízíme domácnosti i firmy v Hradci Králové a okolí do 20 km.</p>
           <div class="footer-social">
             <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.3-1.4 1.5-1.4h1.3V5.5c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v2.5H8.9V14h2.3v7h2.3z"/></svg></a>
             <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/></svg></a>

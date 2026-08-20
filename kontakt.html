@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt | Hradecký úklid</title>
-  <meta name="description" content="Spojte se s námi. Odpovídáme do 2 hodin v pracovní dny. Poradíme, spočítáme cenu a domluvíme termín úklidu v Hradci Králové a okolí.">
+  <meta name="description" content="Zavolejte nebo napište. Odpovídáme do 2 hodin v pracovní dny. Poradíme, spočítáme cenu a domluvíme termín úklidu v Hradci Králové a okolí.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Caveat:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -202,6 +202,8 @@
 
     /* ---------- Mapa a sídlo firmy ---------- */
     .map-section { padding: 0 0 72px; }
+    /* drží stejnou mřížku jako kontaktní blok výš (1004 px) */
+    .map-section .container > * { max-width: 1004px; margin-left: auto; margin-right: auto; }
     .map-photo {
       margin-top: 28px;
       border-radius: 16px;
@@ -213,6 +215,12 @@
     .info-value a:hover { color: var(--blue-hover); }
 
     /* ---------- Responsive ---------- */
+    /* tablet pásmo: 560px formulář + 380px info se do 1024 nevejde */
+    @media (max-width: 1120px) and (min-width: 821px) {
+      .contact-grid { gap: 36px; }
+      .contact-info { flex: 0 0 300px; }
+      .form-card { flex: 1; min-width: 0; }
+    }
     @media (max-width: 820px) {
       .contact-section { padding: 48px 0; }
       .contact-grid { flex-direction: column; gap: 48px; }
@@ -221,6 +229,7 @@
       .form-row-two { flex-direction: column; gap: 18px; }
       .wiz-cards { grid-template-columns: 1fr 1fr; gap: 8px; }
       .wiz-card { font-size: 12.5px; padding: 12px 10px; }
+      .fm-btn { font-size: 12px; padding: 8px 8px; white-space: nowrap; }
       .map-section { padding: 0 0 48px; }
       .map-photo img { height: 220px; }
       .map-photo iframe { height: 260px; }
@@ -232,7 +241,7 @@
   <!-- ============ Header ============ -->
   <header class="site-header">
     <div class="container">
-      <a href="index.html" class="logo">Hradecký <span class="logo-accent">úklid</span></a>
+      <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 92 56" aria-hidden="true" focusable="false"><defs><mask id="lmMaskH"><circle cx="28" cy="28" r="26" fill="#fff"/><circle cx="64" cy="28" r="26" fill="#fff"/><path transform="translate(5.41,38.2) scale(0.02900,-0.02900)" d="M67.5 0V706H225V0ZM505 0V706H662.5V0ZM161.5 295V430.5H556.5V295Z" fill="#000"/><path transform="translate(65.82,38.2) scale(0.02900,-0.02900)" d="M352.15806451612906 -11Q265.31612903225806 -11 198.84677419354838 26.224789915966387Q132.3774193548387 63.44957983193277 94.68870967741935 128.76050420168067Q57 194.07142857142856 57 277.5V706H214.5V269Q214.5 226.518779342723 232.73420074349443 195.70187793427232Q250.96840148698885 164.8849765258216 282.2592936802974 148.44248826291079Q313.5501858736059 132 352.07992565055764 132Q391.5 132 421.7298657718121 148.42924528301887Q451.9597315436242 164.85849056603774 469.4798657718121 195.4009433962264Q487 225.94339622641508 487 268V706H645V276.5Q645 193.04852320675104 607.8023255813953 128.25949367088606Q570.6046511627907 63.470464135021096 504.80232558139534 26.235232067510548Q439 -11 352.15806451612906 -11ZM279.0 760.5 229 834 388 983 472.0 864.5Z" fill="#000"/></mask></defs><g mask="url(#lmMaskH)"><circle class="lm-c1" cx="28" cy="28" r="26"/><circle class="lm-c2" cx="64" cy="28" r="26"/><path class="lm-mix" d="M46.0,9.24 A26,26 0 0 1 46.0,46.76 A26,26 0 0 1 46.0,9.24 Z"/></g></svg><span class="logo-text">Hradecký <span class="logo-accent">úklid</span></span></a>
       <nav class="main-nav">
         <a href="uklid-domacnosti.html">Domácnosti</a>
         <a href="hloubkovy-uklid.html">Hloubkový úklid</a>
@@ -265,7 +274,7 @@
     <div class="container">
       <div class="uh-text">
         <span class="uh-eyebrow">Kontakt</span>
-        <h1>Spojte se s námi</h1>
+        <h1>Zavolejte nebo napište</h1>
         <p class="uh-sub">Odpovídáme do 2 hodin v pracovní dny. Poradíme, spočítáme cenu a domluvíme termín.</p>
       </div>
     </div>
@@ -288,7 +297,7 @@
           </div>
           <div class="info-row">
             <span class="info-label">Provozní doba linky</span>
-            <span class="info-value">Po–Pá 7:00–18:00, So 8:00–12:00 · úklidy provádíme 7 dní v týdnu</span>
+            <span class="info-value">Po–Pá 7:00–18:00, So 8:00–12:00 · uklízíme 7 dní v týdnu</span>
           </div>
           <div class="info-row">
             <span class="info-label">Působnost</span>
@@ -448,8 +457,8 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="logo">Hradecký <span class="logo-accent">úklid</span></div>
-          <p>Profesionální úklidové služby pro domácnosti i firmy v Hradci Králové a okolí.</p>
+          <div class="logo"><svg class="logo-mark" viewBox="0 0 92 56" aria-hidden="true" focusable="false"><defs><mask id="lmMaskF"><circle cx="28" cy="28" r="26" fill="#fff"/><circle cx="64" cy="28" r="26" fill="#fff"/><path transform="translate(5.41,38.2) scale(0.02900,-0.02900)" d="M67.5 0V706H225V0ZM505 0V706H662.5V0ZM161.5 295V430.5H556.5V295Z" fill="#000"/><path transform="translate(65.82,38.2) scale(0.02900,-0.02900)" d="M352.15806451612906 -11Q265.31612903225806 -11 198.84677419354838 26.224789915966387Q132.3774193548387 63.44957983193277 94.68870967741935 128.76050420168067Q57 194.07142857142856 57 277.5V706H214.5V269Q214.5 226.518779342723 232.73420074349443 195.70187793427232Q250.96840148698885 164.8849765258216 282.2592936802974 148.44248826291079Q313.5501858736059 132 352.07992565055764 132Q391.5 132 421.7298657718121 148.42924528301887Q451.9597315436242 164.85849056603774 469.4798657718121 195.4009433962264Q487 225.94339622641508 487 268V706H645V276.5Q645 193.04852320675104 607.8023255813953 128.25949367088606Q570.6046511627907 63.470464135021096 504.80232558139534 26.235232067510548Q439 -11 352.15806451612906 -11ZM279.0 760.5 229 834 388 983 472.0 864.5Z" fill="#000"/></mask></defs><g mask="url(#lmMaskF)"><circle class="lm-c1" cx="28" cy="28" r="26"/><circle class="lm-c2" cx="64" cy="28" r="26"/><path class="lm-mix" d="M46.0,9.24 A26,26 0 0 1 46.0,46.76 A26,26 0 0 1 46.0,9.24 Z"/></g></svg><span class="logo-text">Hradecký <span class="logo-accent">úklid</span></span></div>
+          <p>Uklízíme domácnosti i firmy v Hradci Králové a okolí do 20 km.</p>
           <div class="footer-social">
             <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.3-1.4 1.5-1.4h1.3V5.5c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v2.5H8.9V14h2.3v7h2.3z"/></svg></a>
             <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/></svg></a>

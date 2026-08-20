@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hradecký úklid | Profesionální úklid vašich prostor</title>
-  <meta name="description" content="Profesionální úklid domácností, kanceláří i úklid po stavbě v Hradci Králové. Spolehlivý proškolený tým, transparentní ceny a nabídka do 48 hodin.">
+  <meta name="description" content="Úklid domácností, kanceláří i po stavbě v Hradci Králové a okolí. Proškolený místní tým, vlastní chemie a vybavení, nacenění do 48 hodin. Platíte až po úklidu.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Caveat:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -39,6 +39,9 @@
     .site-header.transparent:not(.scrolled) .main-nav a,
     .site-header.transparent:not(.scrolled) .header-phone { color: var(--white); }
     .site-header.transparent:not(.scrolled) .logo-accent { color: #7CC4D8; }
+    .site-header.transparent:not(.scrolled) .lm-c1 { fill: #EAF3F8; }
+    .site-header.transparent:not(.scrolled) .lm-c2 { fill: #7CC4D8; }
+    .site-header.transparent:not(.scrolled) .lm-mix { fill: #B9E0EC; }
     .site-header.transparent:not(.scrolled) .main-nav a:hover { color: rgba(255,255,255,.75); }
     .site-header.transparent:not(.scrolled) .nav-toggle span { background: var(--white); }
     /* po scrollu drží header jen jemný stín — linka nad trust barem působila jako oddělovač */
@@ -316,7 +319,7 @@
   <!-- ============ Header (transparentní nahoře, bílý po scrollu) ============ -->
   <header class="site-header transparent">
     <div class="container">
-      <a href="index.html" class="logo">Hradecký <span class="logo-accent">úklid</span></a>
+      <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 92 56" aria-hidden="true" focusable="false"><defs><mask id="lmMaskH"><circle cx="28" cy="28" r="26" fill="#fff"/><circle cx="64" cy="28" r="26" fill="#fff"/><path transform="translate(5.41,38.2) scale(0.02900,-0.02900)" d="M67.5 0V706H225V0ZM505 0V706H662.5V0ZM161.5 295V430.5H556.5V295Z" fill="#000"/><path transform="translate(65.82,38.2) scale(0.02900,-0.02900)" d="M352.15806451612906 -11Q265.31612903225806 -11 198.84677419354838 26.224789915966387Q132.3774193548387 63.44957983193277 94.68870967741935 128.76050420168067Q57 194.07142857142856 57 277.5V706H214.5V269Q214.5 226.518779342723 232.73420074349443 195.70187793427232Q250.96840148698885 164.8849765258216 282.2592936802974 148.44248826291079Q313.5501858736059 132 352.07992565055764 132Q391.5 132 421.7298657718121 148.42924528301887Q451.9597315436242 164.85849056603774 469.4798657718121 195.4009433962264Q487 225.94339622641508 487 268V706H645V276.5Q645 193.04852320675104 607.8023255813953 128.25949367088606Q570.6046511627907 63.470464135021096 504.80232558139534 26.235232067510548Q439 -11 352.15806451612906 -11ZM279.0 760.5 229 834 388 983 472.0 864.5Z" fill="#000"/></mask></defs><g mask="url(#lmMaskH)"><circle class="lm-c1" cx="28" cy="28" r="26"/><circle class="lm-c2" cx="64" cy="28" r="26"/><path class="lm-mix" d="M46.0,9.24 A26,26 0 0 1 46.0,46.76 A26,26 0 0 1 46.0,9.24 Z"/></g></svg><span class="logo-text">Hradecký <span class="logo-accent">úklid</span></span></a>
       <nav class="main-nav">
         <a href="uklid-domacnosti.html">Domácnosti</a>
         <a href="hloubkovy-uklid.html">Hloubkový úklid</a>
@@ -352,7 +355,7 @@
     <div class="container">
       <span class="hero-badge">500+ dokončených úklidů</span>
       <h1>Uklidíme váš domov i firmu. Platíte, <span class="brush">až když jste spokojeni<svg viewBox="0 0 320 18" preserveAspectRatio="none" aria-hidden="true"><path d="M4,13 C90,15.5 205,11.5 266,7 C280,6 300,4 316,2"/></svg></span>.</h1>
-      <p class="hero-sub">Domácnosti, firmy i úklid po stavbě v Hradci Králové a okolí. Proškolený místní tým, vlastní profesionální vybavení a nabídka pro vás do 48 hodin.</p>
+      <p class="hero-sub">Domácnosti, firmy i úklid po stavbě v Hradci Králové a okolí. Proškolený místní tým, vlastní profesionální vybavení a nacenění do 48 hodin.</p>
       <div class="hero-btns">
         <a href="kontakt.html" class="btn btn-primary">Zjistit cenu →</a>
       </div>
@@ -374,7 +377,7 @@
       <div class="section-head">
         <span class="eyebrow">Co získáte</span>
         <h2>Proč zvolit Hradecký úklid</h2>
-        <p class="sub">Co tím získáte vy a proč se k nám lidé z Hradce vracejí.</p>
+        <p class="sub">Co u nás dostanete a proč se lidé z Hradce vracejí.</p>
       </div>
       <div class="bento" id="home-bento">
         <div class="bento-hero">
@@ -408,12 +411,12 @@
         <div class="card feature-card">
           <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
           <h3>Nabídka na míru</h3>
-          <p>Zaplatíte přesně za váš rozsah a četnost. Kalkulaci dostanete do 48 hodin, včetně chemie.</p>
+          <p>Platíte jen za rozsah a četnost, které si domluvíme. Kalkulaci dostanete do 48 hodin a cena už zahrnuje chemii.</p>
         </div>
         <div class="card feature-card">
           <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
           <h3>Vlastní úklidová chemie</h3>
-          <p>Nemusíte nic chystat, profesionální prostředky i pomůcky vozíme s sebou. Chcete vaše vlastní? Bez problému je použijeme.</p>
+          <p>Nemusíte nic chystat, profesionální prostředky i pomůcky vozíme s sebou. Chcete své vlastní? Bez problému je použijeme.</p>
         </div>
         <div class="card feature-card">
           <div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5"/><path d="M22 9v5"/></svg></div>
@@ -497,7 +500,7 @@
             <h3>Nacenění</h3>
             <p>Do 48 hodin pošleme přesnou cenu. Podle potřeby se zastavíme osobně, nebo stačí krátké video z telefonu.</p>
           </div>
-          <div class="howv-media"><img src="assets/img/hradec-namesti.jpg" alt="Hradec Králové — jsme místní, dojedeme k vám" loading="lazy"></div>
+          <div class="howv-media"><img src="assets/img/hradec-namesti.jpg" alt="Náměstí v Hradci Králové" loading="lazy"></div>
         </article>
         <article class="howv-step">
           <span class="howv-dot">3</span>
@@ -526,7 +529,7 @@
       <div class="section-head">
         <span class="eyebrow">Reference</span>
         <h2>Co říkají vaši sousedé z Hradce</h2>
-        <p class="sub">Skutečné příběhy lidí, kteří k nám pouštějí uklízet svůj domov i kancelář.</p>
+        <p class="sub">Hodnocení lidí, kteří nás pouštějí k sobě domů i do firmy. U každého uvádíme i cenu úklidu.</p>
       </div>
       <div class="t-layout">
         <div class="card testimonial t-featured">
@@ -625,7 +628,7 @@
         </div>
         <div class="compare-row">
           <div>Vlastní vybavení a chemie</div>
-          <div class="col-us" data-label="Hradecký úklid">✓ Profesionální</div>
+          <div class="col-us" data-label="Hradecký úklid">✓ Vlastní profi vybavení</div>
           <div class="col-other" data-label="Velká platforma">Různé</div>
           <div class="col-other" data-label="Na doporučení"><span class="cross">✗</span> Vlastní klienta</div>
         </div>
@@ -637,13 +640,13 @@
         </div>
         <div class="compare-row">
           <div>Spokojenost zákazníků</div>
-          <div class="col-us" data-label="Hradecký úklid">100 %</div>
+          <div class="col-us" data-label="Hradecký úklid">✓ 100 %</div>
           <div class="col-other" data-label="Velká platforma">Různá</div>
-          <div class="col-other" data-label="Na doporučení"><span class="cross">✗</span> Nemá</div>
+          <div class="col-other" data-label="Na doporučení"><span class="cross">✗</span> Neověřená</div>
         </div>
         <div class="compare-row">
           <div>Cena za hodinu</div>
-          <div class="col-us" data-label="Hradecký úklid">✓ Transparentní</div>
+          <div class="col-us" data-label="Hradecký úklid">✓ Veřejný ceník</div>
           <div class="col-other" data-label="Velká platforma"><span class="cross">✗</span> Skryté poplatky</div>
           <div class="col-other" data-label="Na doporučení">Individuální</div>
         </div>
@@ -670,11 +673,6 @@
           <img src="assets/img/poukaz-motiv-univerzalni.jpg" alt="Dárkový poukaz na úklid">
         </div>
       </div>
-      <!-- DOČASNÉ: přepínač variant pro Edův výběr — po rozhodnutí smazat -->
-      <div class="gc-variant-switch" aria-hidden="true">
-        <button type="button" class="gcv-btn active" data-variant="dark">A · Tmavá</button>
-        <button type="button" class="gcv-btn" data-variant="light">B · Světlá</button>
-      </div>
     </div>
   </section>
 
@@ -683,7 +681,7 @@
     <div class="container">
       <div class="section-head centered">
         <h2>Časté dotazy</h2>
-        <p class="sub">Odpovědi na nejčastější otázky k objednávce, platbě a bezpečnosti.</p>
+        <p class="sub">Objednávka, platba, klíče i storno. Když odpověď nenajdete, zavolejte nám.</p>
       </div>
       <div class="faq-list">
         <div class="faq-item">
@@ -724,7 +722,7 @@
         <path d="M52,48 L66,60 L51,70"/>
       </svg>
       <a href="kontakt.html" class="btn btn-white">Zjistit cenu →</a>
-      <span class="cta-note">Zdarma · bez závazku · odpověď do 48 hodin · <a href="tel:+420777123456">+420 777 123 456</a></span>
+      <span class="cta-note">Zdarma · bez závazku · nacenění do 48 hodin · <span style="white-space:nowrap"><a href="tel:+420777123456">+420 777 123 456</a></span></span>
     </div>
   </section>
 
@@ -733,8 +731,8 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="logo">Hradecký <span class="logo-accent">úklid</span></div>
-          <p>Profesionální úklidové služby pro domácnosti i firmy v Hradci Králové a okolí.</p>
+          <div class="logo"><svg class="logo-mark" viewBox="0 0 92 56" aria-hidden="true" focusable="false"><defs><mask id="lmMaskF"><circle cx="28" cy="28" r="26" fill="#fff"/><circle cx="64" cy="28" r="26" fill="#fff"/><path transform="translate(5.41,38.2) scale(0.02900,-0.02900)" d="M67.5 0V706H225V0ZM505 0V706H662.5V0ZM161.5 295V430.5H556.5V295Z" fill="#000"/><path transform="translate(65.82,38.2) scale(0.02900,-0.02900)" d="M352.15806451612906 -11Q265.31612903225806 -11 198.84677419354838 26.224789915966387Q132.3774193548387 63.44957983193277 94.68870967741935 128.76050420168067Q57 194.07142857142856 57 277.5V706H214.5V269Q214.5 226.518779342723 232.73420074349443 195.70187793427232Q250.96840148698885 164.8849765258216 282.2592936802974 148.44248826291079Q313.5501858736059 132 352.07992565055764 132Q391.5 132 421.7298657718121 148.42924528301887Q451.9597315436242 164.85849056603774 469.4798657718121 195.4009433962264Q487 225.94339622641508 487 268V706H645V276.5Q645 193.04852320675104 607.8023255813953 128.25949367088606Q570.6046511627907 63.470464135021096 504.80232558139534 26.235232067510548Q439 -11 352.15806451612906 -11ZM279.0 760.5 229 834 388 983 472.0 864.5Z" fill="#000"/></mask></defs><g mask="url(#lmMaskF)"><circle class="lm-c1" cx="28" cy="28" r="26"/><circle class="lm-c2" cx="64" cy="28" r="26"/><path class="lm-mix" d="M46.0,9.24 A26,26 0 0 1 46.0,46.76 A26,26 0 0 1 46.0,9.24 Z"/></g></svg><span class="logo-text">Hradecký <span class="logo-accent">úklid</span></span></div>
+          <p>Uklízíme domácnosti i firmy v Hradci Králové a okolí do 20 km.</p>
           <div class="footer-social">
             <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.3-1.4 1.5-1.4h1.3V5.5c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v2.5H8.9V14h2.3v7h2.3z"/></svg></a>
             <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/></svg></a>
