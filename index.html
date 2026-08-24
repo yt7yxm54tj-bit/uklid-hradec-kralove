@@ -46,8 +46,15 @@
     .site-header.transparent:not(.scrolled) .nav-toggle span { background: var(--white); }
     /* po scrollu drží header jen jemný stín — linka nad trust barem působila jako oddělovač */
     .site-header.transparent.scrolled { box-shadow: 0 2px 12px rgba(11,48,73,.06); border-bottom-color: transparent; }
-    .hero {
+    .hero { background: #123047; }
+    /* První snímek videa jako samostatná vrstva — vidět je vždy, dokud video nejede.
+       Video se přes ně jen prolíná, takže při zablokovaném autoplay není co ukazovat. */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
       background: #123047 url('assets/img/hero-poster-v4.jpg') center/cover no-repeat;
+      will-change: transform;
     }
     .hero video {
       position: absolute;
@@ -55,9 +62,14 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      /* Klíčové: dokud video reálně nejede, je celý element neviditelný —
+         Safari tak nemá kam vykreslit své play tlačítko (žije v shadow DOM videa). */
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .7s ease;
     }
-    /* Safari u zablokovaného autoplay vykreslí přes video své play tlačítko —
-       nechceme ho, pod videem je stejně první snímek jako pozadí */
+    .hero.hero--playing video { opacity: 1; }
+    /* záložna, kdyby některá verze Safari přesto něco vykreslila */
     .hero video::-webkit-media-controls,
     .hero video::-webkit-media-controls-start-playback-button,
     .hero video::-webkit-media-controls-panel,
@@ -67,16 +79,16 @@
       opacity: 0 !important;
     }
     /* když prohlížeč autoplay odmítne (Safari v režimu nízké spotřeby),
-       ať hero není mrtvý: poster se pomalu přibližuje */
+       ať hero není mrtvý: první snímek se pomalu přibližuje */
     @keyframes heroKenBurns {
       from { transform: scale(1); }
       to   { transform: scale(1.09); }
     }
-    .hero.hero--static video {
+    .hero:not(.hero--playing)::before {
       animation: heroKenBurns 18s ease-in-out infinite alternate;
     }
     @media (prefers-reduced-motion: reduce) {
-      .hero.hero--static video { animation: none; }
+      .hero:not(.hero--playing)::before { animation: none; }
     }
     .hero::after {
       content: '';

@@ -354,27 +354,42 @@ if (transparentHeader) {
 }
 
 // Autoplay pojistka: Safari umí muted autoplay odmítnout (režim nízké spotřeby,
-// nastavení „Automatické přehrávání"). Zkoušíme opakovaně a když neuspějeme,
-// zapneme na hero pomalý Ken Burns, aby stránka nevypadala mrtvě.
+// nastavení „Automatické přehrávání"). Video je defaultně průhledné — vidět je
+// první snímek jako pozadí hero sekce. Teprve když video prokazatelně běží
+// (posouvá se currentTime), prolneme ho navrch. Tím se nikdy neukáže play
+// tlačítko, které si Safari kreslí do shadow DOM zablokovaného videa.
 (function () {
   var v = document.querySelector('.hero video');
   if (!v) return;
   var hero = v.closest('.hero');
-  var tries = 0;
-  function markStatic(on) { if (hero) hero.classList.toggle('hero--static', !!on); }
-  function nudge() {
-    tries++;
-    var p = v.play();
-    if (p && p.catch) {
-      p.then(function () { markStatic(false); })
-       .catch(function () { if (tries > 1) markStatic(true); });
-    }
+  var last = -1;
+
+  function markPlaying(on) { if (hero) hero.classList.toggle('hero--playing', !!on); }
+
+  function reallyPlaying() {
+    return !v.paused && !v.ended && v.readyState >= 3 && v.currentTime > 0;
   }
+
+  function nudge() {
+    var p = v.play();
+    if (p && p.catch) p.catch(function () { markPlaying(false); });
+  }
+
+  // jediný zdroj pravdy: posouvá se čas? → video jede, jinak zůstává statický snímek
+  setInterval(function () {
+    var t = v.currentTime;
+    markPlaying(reallyPlaying() && t !== last);
+    last = t;
+    if (v.paused) nudge();
+  }, 700);
+
   if (v.readyState >= 2) nudge();
   ['loadeddata', 'canplay', 'canplaythrough'].forEach(function (e) {
     v.addEventListener(e, function () { if (v.paused) nudge(); });
   });
-  v.addEventListener('playing', function () { markStatic(false); });
+  ['pause', 'ended', 'error', 'stalled', 'emptied'].forEach(function (e) {
+    v.addEventListener(e, function () { markPlaying(false); });
+  });
   // jakákoli interakce = user gesture, Safari pak přehrání povolí
   ['pointerdown', 'touchstart', 'click', 'keydown', 'scroll'].forEach(function (e) {
     (e === 'scroll' ? window : document).addEventListener(e, function () {
@@ -384,5 +399,4 @@ if (transparentHeader) {
   document.addEventListener('visibilitychange', function () {
     if (!document.hidden && v.paused) nudge();
   });
-  setTimeout(function () { if (v.paused || v.currentTime === 0) { nudge(); markStatic(true); } }, 1500);
 })();
