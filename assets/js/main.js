@@ -363,7 +363,10 @@ if (transparentHeader) {
     if (p && p.catch) p.catch(function () {});
   }
   if (v.paused) nudge();
-  ['touchstart', 'click', 'scroll'].forEach(function (evt) {
-    window.addEventListener(evt, function () { if (v.paused) nudge(); }, { passive: true, once: true });
+  v.addEventListener('loadeddata', function () { if (v.paused) nudge(); });
+  // user gesture v Safari = dotek/klik (scroll se nepočítá, ale zkusíme i tak)
+  ['pointerdown', 'touchstart', 'click', 'scroll', 'visibilitychange'].forEach(function (evt) {
+    var target = evt === 'visibilitychange' ? document : window;
+    target.addEventListener(evt, function () { if (v.paused) nudge(); }, { passive: true });
   });
 })();
