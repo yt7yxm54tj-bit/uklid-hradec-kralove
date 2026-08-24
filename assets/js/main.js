@@ -355,3 +355,18 @@ if (transparentHeader) {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 }
+
+// Autoplay pojistka: Safari (Low Power Mode / Stop Media with Auto-Play) občas
+// zablokuje i muted autoplay — zkusíme play() a případně počkáme na první dotek.
+(function () {
+  var v = document.querySelector('.hero video');
+  if (!v) return;
+  function nudge() {
+    var p = v.play();
+    if (p && p.catch) p.catch(function () {});
+  }
+  if (v.paused) nudge();
+  ['touchstart', 'click', 'scroll'].forEach(function (evt) {
+    window.addEventListener(evt, function () { if (v.paused) nudge(); }, { passive: true, once: true });
+  });
+})();
