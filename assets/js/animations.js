@@ -78,91 +78,6 @@
     });
   });
 
-  /* ---------- 3e. Mini timeline v bento dlaždici — stejná mechanika jako .howv ---------- */
-  gsap.utils.toArray(".bento-mini").forEach(function (wrap) {
-    var mDots = gsap.utils.toArray(wrap.querySelectorAll(".bmini-dot"));
-    var mSegs = gsap.utils.toArray(wrap.querySelectorAll(".bmini-seg i"));
-    var mTexts = gsap.utils.toArray(wrap.querySelectorAll(".bmini-text"));
-    if (!mDots.length) return;
-    gsap.set(mSegs, { scaleY: 0, transformOrigin: "top center" });
-    gsap.set(mDots, { autoAlpha: 0, scale: 0.7 });
-    var mtl = gsap.timeline({ scrollTrigger: { trigger: wrap, start: "top 80%", once: true } });
-    mDots.forEach(function (dot, i) {
-      mtl.to(dot, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "back.out(2)" });
-      if (mTexts[i]) {
-        mtl.from(mTexts[i], {
-          autoAlpha: 0, y: 10, duration: 0.35, ease: "power2.out",
-          clearProps: "opacity,transform,visibility"
-        }, "<0.05");
-      }
-      if (mSegs[i]) mtl.to(mSegs[i], { scaleY: 1, duration: 0.35, ease: "none" }, "<0.15");
-    });
-  });
-
-  /* ---------- 3d. Služby na mobilu — text karty se odkrývá, když je karta ve viewportu ---------- */
-  if (isMobile) {
-    gsap.utils.toArray(".service-card").forEach(function (card) {
-      ScrollTrigger.create({
-        trigger: card,
-        start: "top 62%",
-        end: "bottom 30%",
-        toggleClass: { targets: card, className: "in-view" }
-      });
-    });
-  }
-
-  /* ---------- 3b. Načítací lišta mezi kroky — každá sekce .how se .step dětmi ---------- */
-  document.querySelectorAll(".how").forEach(function (section) {
-    var steps = gsap.utils.toArray(section.querySelectorAll(".step"));
-    if (!steps.length) return;
-    var container = steps[0].parentElement;
-    var cs = getComputedStyle(container);
-    var cols = cs.display.indexOf("grid") > -1
-      ? cs.gridTemplateColumns.split(" ").length
-      : steps.length;
-    // na mobilu VŽDY svislá lišta (kroky jdou pod sebe, lišta nesmí přes text)
-    var vertical = cols === 1 || window.matchMedia("(max-width: 820px)").matches;
-    var segFills = [];
-    if (vertical || cols === steps.length) {
-      steps.slice(0, -1).forEach(function (step) {
-        var track = document.createElement("div");
-        track.className = "how-seg" + (vertical ? " how-seg--v" : "");
-        var fill = document.createElement("div");
-        fill.className = "how-seg-fill";
-        track.appendChild(fill);
-        step.appendChild(track);
-        segFills.push(fill);
-      });
-    }
-    var tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: "top 72%",
-        end: vertical ? "bottom 60%" : "center 38%",
-        scrub: 0.6
-      }
-    });
-    steps.forEach(function (step, i) {
-      var num = step.querySelector(".step-num");
-      var rest = [step.querySelector("h3"), step.querySelector("p")].filter(Boolean);
-      if (num) {
-        gsap.set(num, { backgroundColor: "#CBD5E1", scale: 0.85 });
-        tl.to(num, { backgroundColor: "#177A8D", scale: 1, duration: 0.25, ease: "back.out(2)" });
-      }
-      // texty kroků jedou once (mimo scrub) — při scrollu zpět nemizí
-      gsap.from(rest, {
-        opacity: 0, y: 14, duration: 0.45, stagger: 0.06, ease: "power2.out",
-        clearProps: "opacity,transform",
-        scrollTrigger: { trigger: step, start: "top 88%", once: true }
-      });
-      if (segFills[i]) {
-        tl.to(segFills[i], vertical
-          ? { scaleY: 1, duration: 0.5, ease: "none" }
-          : { scaleX: 1, duration: 0.5, ease: "none" }, "<0.2");
-      }
-    });
-  });
-
   /* ---------- 3f. Vertikální „Jak to funguje" (HP) — scrub: tečky se aktivují, segmenty se plní ---------- */
   document.querySelectorAll(".howv").forEach(function (section) {
     var vDots = gsap.utils.toArray(section.querySelectorAll(".howv-dot"));
@@ -238,7 +153,7 @@
       }
     });
   }
-  gsap.utils.toArray(".stat-num, .trust-bar .tb-num").forEach(countUp);
+  gsap.utils.toArray(".stat-num, .trust-bar .tb-num, .fc-sat-num").forEach(countUp);
 
   /* ---------- 6. Fotky v obsahových sekcích — jemný fade ---------- */
   gsap.utils.toArray(".split-media img, .about-photo img, .map-photo img, .story-photo img").forEach(function (img) {
