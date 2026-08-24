@@ -255,10 +255,6 @@ document.querySelectorAll('.stats-section').forEach(function (sec) {
     { size: 26, pos: { bottom: '18%', left: '6%' }, light: true, delay: 1.8 }
   ]);
 });
-addBubbles(document.querySelector('.fc-sat'), [
-  { size: 84, pos: { bottom: '-30px', right: '-18px' }, light: true },
-  { size: 30, pos: { top: '16%', right: '14%' }, light: true, delay: 1.4 }
-]);
 
 
 // Tah štětcem pod klíčovými nadpisy (poslední slovo / fráze), kreslí se až ve viewportu

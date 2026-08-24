@@ -153,7 +153,7 @@
       }
     });
   }
-  gsap.utils.toArray(".stat-num, .trust-bar .tb-num, .fc-sat-num").forEach(countUp);
+  gsap.utils.toArray(".stat-num, .trust-bar .tb-num").forEach(countUp);
 
   /* ---------- 6. Fotky v obsahových sekcích — jemný fade ---------- */
   gsap.utils.toArray(".split-media img, .about-photo img, .map-photo img, .story-photo img").forEach(function (img) {
