@@ -46,12 +46,25 @@
     .site-header.transparent:not(.scrolled) .nav-toggle span { background: var(--white); }
     /* po scrollu drží header jen jemný stín — linka nad trust barem působila jako oddělovač */
     .site-header.transparent.scrolled { box-shadow: 0 2px 12px rgba(11,48,73,.06); border-bottom-color: transparent; }
+    .hero {
+      background: #123047 url('assets/img/hero-poster-v4.jpg') center/cover no-repeat;
+    }
     .hero video {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    /* Safari u zablokovaného autoplay vykreslí přes video své play tlačítko —
+       nechceme ho, pod videem je stejně první snímek jako pozadí */
+    .hero video::-webkit-media-controls,
+    .hero video::-webkit-media-controls-start-playback-button,
+    .hero video::-webkit-media-controls-panel,
+    .hero video::-webkit-media-controls-overlay-play-button {
+      display: none !important;
+      -webkit-appearance: none;
+      opacity: 0 !important;
     }
     /* když prohlížeč autoplay odmítne (Safari v režimu nízké spotřeby),
        ať hero není mrtvý: poster se pomalu přibližuje */
@@ -661,7 +674,7 @@
 
   <!-- ============ Hero — video full-bleed ============ -->
   <section class="hero">
-    <video src="assets/video/hero-v3.mp4" poster="assets/img/hero-poster.jpg"
+    <video src="assets/video/hero-v4.mp4" poster="assets/img/hero-poster-v4.jpg"
            autoplay muted loop playsinline preload="auto"
            disablepictureinpicture disableremoteplayback
            x-webkit-airplay="deny" aria-hidden="true"></video>
