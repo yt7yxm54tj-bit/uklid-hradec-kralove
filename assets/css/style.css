@@ -433,9 +433,8 @@ section { position: relative; }
 /* [hidden] musí vyhrát i nad author display pravidly (wizard kroky, přepínané formuláře) */
 [hidden] { display: none !important; }
 
-/* Přepínač bublinek v headeru (vkládá main.js) — bublinka jezdí ve switchi */
+/* Přepínač bublinek v patičce (vkládá main.js) — bublinka jezdí ve switchi */
 html.bubs-off .bub { display: none; }
-.logo-group { display: flex; align-items: center; gap: 14px; min-width: 0; }
 .bub-toggle {
   position: relative;
   width: 40px;
@@ -450,7 +449,6 @@ html.bubs-off .bub { display: none; }
   flex-shrink: 0;
   transition: background .25s ease, border-color .25s ease;
 }
-.bub-toggle::after { content: ''; position: absolute; inset: -11px; } /* 44px tap target */
 html.bubs-off .bub-toggle { background: #CBD5E1; }
 .bt-knob {
   width: 16px;
@@ -462,12 +460,46 @@ html.bubs-off .bub-toggle { background: #CBD5E1; }
   transition: transform .25s cubic-bezier(.22,.61,.36,1);
 }
 html.bubs-off .bt-knob { transform: translateX(0); }
-.site-header.transparent:not(.scrolled) .bub-toggle { border-color: rgba(255,255,255,.4); }
-@media (max-width: 820px) {
-  .bub-toggle { width: 34px; height: 19px; }
-  .bt-knob { width: 13px; height: 13px; transform: translateX(15px); }
-  html.bubs-off .bt-knob { transform: translateX(0); }
+/* v patičce: switch + popisek na jednom řádku, tmavý podklad */
+.footer-brand .bub-toggle {
+  margin-top: 22px;
+  width: auto;
+  height: auto;
+  gap: 10px;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--text-light);
 }
+.footer-brand .bub-toggle:hover { color: var(--white); }
+.footer-brand .bt-knob {
+  flex-shrink: 0;
+  width: 40px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--blue);
+  border: 1px solid rgba(255,255,255,.22);
+  box-shadow: none;
+  transform: none;
+  position: relative;
+  transition: background .25s ease;
+}
+.footer-brand .bt-knob::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 30%, rgba(255,255,255,.95), rgba(255,255,255,.5) 58%, rgba(255,255,255,.24));
+  transform: translateX(18px);
+  transition: transform .25s cubic-bezier(.22,.61,.36,1);
+}
+html.bubs-off .footer-brand .bt-knob { background: rgba(255,255,255,.22); }
+html.bubs-off .footer-brand .bt-knob::before { transform: translateX(0); }
+.bt-label { font-size: 12.5px; font-weight: 500; white-space: nowrap; }
+
 
 /* Tah štětcem pod klíčovým slovem (světlý podklad = teal, tmavý = světlá) */
 .brush { position: relative; white-space: nowrap; }
@@ -592,11 +624,9 @@ html.bubs-off .bt-knob { transform: translateX(0); }
 @media (max-width: 820px) {
   /* Mobilní header: vlevo jméno, vpravo telefon + tři čárky (přepínač bublin schovaný, koliduje s telefonem) */
   .main-nav, .header-right .btn { display: none; }
-  .bub-toggle { display: none; }
   .header-phone { font-size: 13px; }
   .logo { font-size: 15px; white-space: nowrap; gap: 8px; }
   .logo-mark { height: 26px; }
-  .logo-group { gap: 0; }
   .site-header { height: 64px; }
   .site-header .container { padding: 0 16px; gap: 10px; }
   .header-right { gap: 14px; }

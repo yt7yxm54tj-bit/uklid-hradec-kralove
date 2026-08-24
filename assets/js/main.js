@@ -182,19 +182,15 @@ if (/[?&]noanim/.test(location.search) ||
   document.documentElement.classList.add('no-anim');
 }
 
-// Přepínač bublinek vlevo nahoře (u loga) — stav drží localStorage, platí pro celý web
+// Přepínač bublinek v patičce — stav drží localStorage, platí pro celý web
 var BUBS_KEY = 'hu-bubbles';
 var bubsOn = true;
 try { bubsOn = localStorage.getItem(BUBS_KEY) !== 'off'; } catch (e) {}
 document.documentElement.classList.toggle('bubs-off', !bubsOn);
 (function () {
-  var logo = document.querySelector('.site-header .container .logo');
-  if (!logo) return;
-  // logo + přepínač do jedné flex skupiny, ať space-between v headeru zůstane na 3 dětech
-  var group = document.createElement('div');
-  group.className = 'logo-group';
-  logo.parentNode.insertBefore(group, logo);
-  group.appendChild(logo);
+  // přepínač žije v patičce (v headeru kolidoval s telefonem na mobilu)
+  var host = document.querySelector('.footer-brand');
+  if (!host) return;
   var bt = document.createElement('button');
   bt.type = 'button';
   bt.className = 'bub-toggle';
@@ -202,8 +198,8 @@ document.documentElement.classList.toggle('bubs-off', !bubsOn);
   bt.setAttribute('aria-checked', String(bubsOn));
   bt.setAttribute('aria-label', 'Bublinky na pozadí');
   bt.title = 'Bublinky na pozadí';
-  bt.innerHTML = '<span class="bt-knob"></span>';
-  group.appendChild(bt);
+  bt.innerHTML = '<span class="bt-knob"></span><span class="bt-label">Bublinky na pozadí</span>';
+  host.appendChild(bt);
   bt.addEventListener('click', function () {
     bubsOn = !bubsOn;
     document.documentElement.classList.toggle('bubs-off', !bubsOn);
