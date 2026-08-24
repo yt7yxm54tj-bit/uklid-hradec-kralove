@@ -53,6 +53,18 @@
       height: 100%;
       object-fit: cover;
     }
+    /* když prohlížeč autoplay odmítne (Safari v režimu nízké spotřeby),
+       ať hero není mrtvý: poster se pomalu přibližuje */
+    @keyframes heroKenBurns {
+      from { transform: scale(1); }
+      to   { transform: scale(1.09); }
+    }
+    .hero.hero--static video {
+      animation: heroKenBurns 18s ease-in-out infinite alternate;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero.hero--static video { animation: none; }
+    }
     .hero::after {
       content: '';
       position: absolute;
@@ -347,11 +359,11 @@
     .fc-cert:hover .fc-seal { transform: rotate(6deg) scale(1.05); }
 
     /* --- 4) 100 % spokojenost (tmavý akcent) --- */
-    #home-bento { grid-template-columns: repeat(2, 1fr); }
-    #home-bento .fc-bottle { grid-column: 1 / span 2; grid-row: 1; }
+    #home-bento { grid-template-columns: repeat(3, 1fr); }
+    #home-bento .fc-bottle { grid-column: 1 / span 3; grid-row: 1; }
     #home-bento .fc-bottle .fc-label { max-width: none; }
-    #home-bento .fc-calc { grid-column: 1; grid-row: 2; }
-    #home-bento .fc-cert { grid-column: 2; grid-row: 2; }
+    #home-bento .fc-calc { grid-column: 1 / span 2; grid-row: 2; }
+    #home-bento .fc-cert { grid-column: 3; grid-row: 2; }
 
     @media (max-width: 820px) {
       .fun-card { min-height: 0; }
@@ -649,9 +661,10 @@
 
   <!-- ============ Hero — video full-bleed ============ -->
   <section class="hero">
-    <video autoplay muted loop playsinline poster="assets/img/hero-poster.jpg">
-      <source src="assets/video/hero-v2.mp4" type="video/mp4">
-    </video>
+    <video src="assets/video/hero-v3.mp4" poster="assets/img/hero-poster.jpg"
+           autoplay muted loop playsinline preload="auto"
+           disablepictureinpicture disableremoteplayback
+           x-webkit-airplay="deny" aria-hidden="true"></video>
     <div class="container">
       <span class="hero-badge">500+ dokončených úklidů</span>
       <h1>Uklidíme váš domov i firmu. Platíte, <span class="brush">až když jste spokojeni<svg viewBox="0 0 320 18" preserveAspectRatio="none" aria-hidden="true"><path d="M4,13 C90,15.5 205,11.5 266,7 C280,6 300,4 316,2"/></svg></span>.</h1>

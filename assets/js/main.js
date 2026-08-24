@@ -353,20 +353,36 @@ if (transparentHeader) {
   onScroll();
 }
 
-// Autoplay pojistka: Safari (Low Power Mode / Stop Media with Auto-Play) občas
-// zablokuje i muted autoplay — zkusíme play() a případně počkáme na první dotek.
+// Autoplay pojistka: Safari umí muted autoplay odmítnout (režim nízké spotřeby,
+// nastavení „Automatické přehrávání"). Zkoušíme opakovaně a když neuspějeme,
+// zapneme na hero pomalý Ken Burns, aby stránka nevypadala mrtvě.
 (function () {
   var v = document.querySelector('.hero video');
   if (!v) return;
+  var hero = v.closest('.hero');
+  var tries = 0;
+  function markStatic(on) { if (hero) hero.classList.toggle('hero--static', !!on); }
   function nudge() {
+    tries++;
     var p = v.play();
-    if (p && p.catch) p.catch(function () {});
+    if (p && p.catch) {
+      p.then(function () { markStatic(false); })
+       .catch(function () { if (tries > 1) markStatic(true); });
+    }
   }
-  if (v.paused) nudge();
-  v.addEventListener('loadeddata', function () { if (v.paused) nudge(); });
-  // user gesture v Safari = dotek/klik (scroll se nepočítá, ale zkusíme i tak)
-  ['pointerdown', 'touchstart', 'click', 'scroll', 'visibilitychange'].forEach(function (evt) {
-    var target = evt === 'visibilitychange' ? document : window;
-    target.addEventListener(evt, function () { if (v.paused) nudge(); }, { passive: true });
+  if (v.readyState >= 2) nudge();
+  ['loadeddata', 'canplay', 'canplaythrough'].forEach(function (e) {
+    v.addEventListener(e, function () { if (v.paused) nudge(); });
   });
+  v.addEventListener('playing', function () { markStatic(false); });
+  // jakákoli interakce = user gesture, Safari pak přehrání povolí
+  ['pointerdown', 'touchstart', 'click', 'keydown', 'scroll'].forEach(function (e) {
+    (e === 'scroll' ? window : document).addEventListener(e, function () {
+      if (v.paused) nudge();
+    }, { passive: true });
+  });
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden && v.paused) nudge();
+  });
+  setTimeout(function () { if (v.paused || v.currentTime === 0) { nudge(); markStatic(true); } }, 1500);
 })();
