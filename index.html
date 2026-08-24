@@ -297,20 +297,20 @@
     /* mop + kýbl (SVG) — pravá strana chemie karty */
     .fc-mop {
       width: 132px;
-      height: auto;
+      /* výška natvrdo (poměr viewBoxu 140:152) — Safari umí u SVG ve flex kontejneru
+         spočítat height:auto špatně a přepočítá ji až při reflow (třeba při hoveru) */
+      height: 143px;
       flex-shrink: 0;
       align-self: flex-end;
       margin: 0 8px 4px 16px;
       overflow: visible;
     }
-    .fc-mop .fm-stick,
-    .fc-mop .fm-yarn,
-    .fc-mop .fm-collar,
-    .fc-mop .fm-strands { transform-origin: 100px 100px; transition: transform .4s cubic-bezier(.22,.61,.36,1); }
-    .fc-bottle:hover .fc-mop .fm-stick,
-    .fc-bottle:hover .fc-mop .fm-yarn,
-    .fc-bottle:hover .fc-mop .fm-collar,
-    .fc-bottle:hover .fc-mop .fm-strands { transform: rotate(-7deg); }
+    .fc-mop .fm-head {
+      transform-box: view-box;          /* origin počítat ze soustavy viewBoxu, ne z bboxu prvku */
+      transform-origin: 100px 100px;
+      transition: transform .4s cubic-bezier(.22,.61,.36,1);
+    }
+    .fc-bottle:hover .fc-mop .fm-head { transform: rotate(-7deg); }
     .fc-drop {
       position: absolute;
       border-radius: 50%;
@@ -409,6 +409,7 @@
         position: absolute;
         right: 6px; bottom: -10px;
         width: 112px;
+        height: 122px;
         opacity: .38;
         z-index: 0;
         margin: 0;
@@ -452,13 +453,11 @@
       .fc-seal { width: 54px; height: 54px; }
       .fc-cert:hover .fc-seal, .fc-bottle:hover .fc-spray { transform: none; }
       .fc-calc:hover .fc-machine { transform: rotate(-6deg); }
-      .fc-bottle:hover .fc-mop .fm-stick, .fc-bottle:hover .fc-mop .fm-yarn,
-      .fc-bottle:hover .fc-mop .fm-collar, .fc-bottle:hover .fc-mop .fm-strands { transform: none; }
+      .fc-bottle:hover .fc-mop .fm-head { transform: none; }
     }
     @media (prefers-reduced-motion: reduce) {
       .fc-cert:hover .fc-seal, .fc-calc:hover .fc-machine, .fc-bottle:hover .fc-spray { transform: none; }
-      .fc-bottle:hover .fc-mop .fm-stick, .fc-bottle:hover .fc-mop .fm-yarn,
-      .fc-bottle:hover .fc-mop .fm-collar, .fc-bottle:hover .fc-mop .fm-strands { transform: none; }
+      .fc-bottle:hover .fc-mop .fm-head { transform: none; }
     }
 
     .feature-card h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 12px; }
@@ -735,12 +734,16 @@
             <path class="fm-ear" d="M16,90 Q50,56 84,90" fill="none" stroke="#1D4E6B" stroke-width="4" stroke-linecap="round"/>
             <path class="fm-bucket" d="M10,86 H90 L80,144 Q79,148 75,148 H25 Q21,148 20,144 Z" fill="#0B3049"/>
             <path class="fm-water" d="M12,96 H88 L86,108 H14 Z" fill="#3FA3B8"/>
-            <!-- mop: násada, objímka, chomáč -->
-            <path class="fm-stick" d="M112,10 L100,96" stroke="#C99A62" stroke-width="7" stroke-linecap="round" fill="none"/>
-            <rect class="fm-collar" x="88" y="92" width="24" height="10" rx="3" fill="#1D4E6B" transform="rotate(-8 100 97)"/>
-            <path class="fm-yarn" d="M91,101 L111,101 L124,140 C121,147 115,147 112,141 C109,147 103,148 100,141 C97,147 91,148 88,141 C85,147 79,146 78,139 Z" fill="#2F8FA6"/>
-            <g class="fm-strands" stroke="#1E7A8C" stroke-width="2" stroke-linecap="round" opacity=".55">
-              <path d="M97,106 L92,138"/><path d="M104,106 L104,139"/><path d="M110,106 L116,137"/>
+            <!-- mop: násada, objímka, chomáč — jedna skupina, ať se naklání vcelku.
+                 Objímka má náklon zapečený v souřadnicích: transform atribut na SVG
+                 prvku Safari kombinuje s CSS transform-origin a rozhodí ho. -->
+            <g class="fm-head">
+              <path class="fm-stick" d="M112,10 L100,96" stroke="#C99A62" stroke-width="7" stroke-linecap="round" fill="none"/>
+              <path class="fm-collar" d="M87.4,93.7 L111.2,90.4 L112.6,100.3 L88.8,103.6 Z" fill="#1D4E6B" stroke="#1D4E6B" stroke-width="2.5" stroke-linejoin="round"/>
+              <path class="fm-yarn" d="M91,101 L111,101 L124,140 C121,147 115,147 112,141 C109,147 103,148 100,141 C97,147 91,148 88,141 C85,147 79,146 78,139 Z" fill="#2F8FA6"/>
+              <g class="fm-strands" stroke="#1E7A8C" stroke-width="2" stroke-linecap="round" opacity=".55">
+                <path d="M97,106 L92,138"/><path d="M104,106 L104,139"/><path d="M110,106 L116,137"/>
+              </g>
             </g>
           </svg>
           <span class="fc-drop fc-drop--a" aria-hidden="true"></span>
