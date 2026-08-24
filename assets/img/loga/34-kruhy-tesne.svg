@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 116" width="220" height="116" role="img" aria-label="Hradecký úklid">
+  <defs>
+    <mask id="m34">
+      <circle class="maskbit" cx="88" cy="46" r="34" fill="#fff"/>
+      <circle class="maskbit" cx="130" cy="46" r="34" fill="#fff"/>
+      <text class="maskbit" x="74" y="60" text-anchor="middle" font-family="Outfit, sans-serif" font-size="36" font-weight="700" fill="#000">H</text>
+      <text class="maskbit" x="144" y="60" text-anchor="middle" font-family="Outfit, sans-serif" font-size="36" font-weight="700" fill="#000">Ú</text>
+    </mask>
+  </defs>
+  <!-- kolečka blíž u sebe: monogram drží pohromadě jako jeden tvar -->
+  <g mask="url(#m34)">
+    <circle cx="88" cy="46" r="34" fill="#0B3049"/>
+    <circle cx="130" cy="46" r="34" fill="#177A8D"/>
+    <path d="M109,19.32 A34,34 0 0 1 109,72.68 A34,34 0 0 1 109,19.32 Z" fill="#3FA3B8"/>
+  </g>
+  <text x="110" y="106" text-anchor="middle" font-family="Outfit, sans-serif" font-size="17" font-weight="500" fill="#0B3049" letter-spacing="2.2">hradecký úklid</text>
+</svg>

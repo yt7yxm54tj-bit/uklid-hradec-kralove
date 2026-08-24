@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="300" height="64" role="img" aria-label="Hradecký úklid">
+  <defs>
+  </defs>
+  <!-- H složené z cihel: cihla je stavební jednotka písma, ne výplňový vzor -->
+  <g fill="#0B3049">
+    <rect x="12" y="12" width="10" height="9" rx="1.8"/>
+    <rect x="46" y="12" width="10" height="9" rx="1.8"/>
+    <rect x="12" y="23" width="10" height="9" rx="1.8"/>
+    <rect x="46" y="23" width="10" height="9" rx="1.8"/>
+    <rect x="12" y="45" width="10" height="9" rx="1.8"/>
+    <rect x="46" y="45" width="10" height="9" rx="1.8"/>
+    <rect x="12" y="34" width="10" height="9" rx="1.8"/>
+    <rect x="46" y="34" width="10" height="9" rx="1.8"/>
+  </g>
+  <!-- příčka H = jedna teal cihla, která právě zapadla na místo -->
+  <rect x="24" y="28" width="20" height="9" rx="1.8" fill="#177A8D"/>
+  <text x="76" y="42" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="30" font-weight="600" fill="#0B3049" letter-spacing="-0.6">Hradecký</text>
+  <text x="218" y="42" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="30" font-weight="700" fill="#177A8D" letter-spacing="-0.6">úklid</text>
+</svg>

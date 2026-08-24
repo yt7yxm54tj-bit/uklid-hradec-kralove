@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Hradecký úklid">
+  <rect class="plate" width="64" height="64" rx="15" fill="#0B3049"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M52,20 C45,25 39,28 33,32" stroke="#7CC4D8" stroke-width="5"/>
+    <path d="M14,14 C21,19 26,24 29,30" stroke="#7CC4D8" stroke-width="5"/>
+    <path d="M29,30 C34,38 34,45 32,52" stroke="#EAF3F8" stroke-width="9"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="300" height="64" role="img" aria-label="Hradecký úklid">
+  <defs>
+  </defs>
+  <!-- mřížka oken: jedno je právě hotové a proto úplně čiré -->
+  <g fill="#0B3049">
+    <rect x="11" y="11" width="12" height="12" rx="2"/>
+    <rect x="26" y="11" width="12" height="12" rx="2"/>
+    <rect x="41" y="11" width="12" height="12" rx="2"/>
+    <rect x="11" y="26" width="12" height="12" rx="2"/>
+    <rect x="41" y="26" width="12" height="12" rx="2"/>
+    <rect x="11" y="41" width="12" height="12" rx="2"/>
+    <rect x="26" y="41" width="12" height="12" rx="2"/>
+    <rect x="41" y="41" width="12" height="12" rx="2"/>
+  </g>
+  <rect x="26" y="26" width="12" height="12" rx="2" fill="none" stroke="#177A8D" stroke-width="2.2"/>
+  <path d="M29,35 L35,29" stroke="#177A8D" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="76" y="42" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="30" font-weight="600" fill="#0B3049" letter-spacing="-0.6">Hradecký</text>
+  <text x="218" y="42" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="30" font-weight="700" fill="#177A8D" letter-spacing="-0.6">úklid</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 70" width="300" height="70" role="img" aria-label="Hradecký úklid">
+  <defs>
+  </defs>
+  <!-- vše malými, extra kulaté, čárka nad ú je mini stěrka -->
+  <text x="8" y="48" font-family="Baloo 2, sans-serif" font-size="40" font-weight="600" fill="#0B3049" letter-spacing="-0.5">hradecký</text>
+  <text x="196" y="48" font-family="Baloo 2, sans-serif" font-size="40" font-weight="800" fill="#177A8D" letter-spacing="-0.5">uklid</text>
+  <g transform="translate(198,10) rotate(-22)">
+    <rect x="0" y="0" width="20" height="5" rx="2.5" fill="#177A8D"/>
+  </g>
+</svg>

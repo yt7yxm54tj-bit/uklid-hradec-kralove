@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 90" width="280" height="90" role="img" aria-label="Hradecký úklid">
+  <defs>
+  </defs>
+  <!-- Caveat: podpis od ruky, jako by to napsala Marie na vzkaz na lince -->
+  <text x="10" y="52" font-family="Caveat, cursive" font-size="52" font-weight="700" fill="#0B3049">Hradecký</text>
+  <text x="150" y="76" font-family="Caveat, cursive" font-size="52" font-weight="700" fill="#177A8D">úklid</text>
+  <path d="M152,84 C176,79 210,80 240,83" fill="none" stroke="#177A8D" stroke-width="3.4" stroke-linecap="round"/>
+</svg>

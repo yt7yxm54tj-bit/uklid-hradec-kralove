@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" width="320" height="72" role="img" aria-label="Hradecký úklid">
+  <defs>
+    <linearGradient id="ocista" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0B3049" stop-opacity=".28"/>
+      <stop offset="38%" stop-color="#0B3049" stop-opacity=".34"/>
+      <stop offset="52%" stop-color="#0B3049" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0B3049" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <!-- levá půlka ještě zašlá, pravá čistá; teal tah je místo, kde stěrka právě je -->
+  <text x="4" y="48" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="38" font-weight="700" fill="url(#ocista)" letter-spacing="-0.9">Hradecký úklid</text>
+  <path d="M148,10 L138,62" stroke="#177A8D" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+</svg>

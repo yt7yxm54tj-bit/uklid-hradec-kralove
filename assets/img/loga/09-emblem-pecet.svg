@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="140" height="140" role="img" aria-label="Hradecký úklid, Hradec Králové">
+  <defs>
+    <path id="obvod-horni" d="M70,70 m-52,0 a52,52 0 1 1 104,0" fill="none"/>
+    <path id="obvod-dolni" d="M70,70 m52,0 a52,52 0 0 1 -104,0" fill="none"/>
+  </defs>
+  <!-- pečeť: důvěryhodnost servisní firmy, funguje jako razítko i samolepka na dodávku -->
+  <circle cx="70" cy="70" r="66" fill="none" stroke="#0B3049" stroke-width="3"/>
+  <circle cx="70" cy="70" r="59" fill="none" stroke="#177A8D" stroke-width="1.5"/>
+  <text font-family="Bricolage Grotesque, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#0B3049" letter-spacing="2.6">
+    <textPath href="#obvod-horni" startOffset="50%" text-anchor="middle">HRADECKÝ ÚKLID</textPath>
+  </text>
+  <text font-family="Bricolage Grotesque, Inter, sans-serif" font-size="9.5" font-weight="600" fill="#177A8D" letter-spacing="2.4">
+    <textPath href="#obvod-dolni" startOffset="50%" text-anchor="middle">HRADEC KRÁLOVÉ</textPath>
+  </text>
+  <g transform="translate(70,72) scale(0.78) translate(-32,-32)">
+    <path d="M10,27 A6,6 0 0 1 22,27 L22,55 L10,55 Z" fill="#0B3049"/>
+    <path d="M26,27 A6,6 0 0 1 38,27 L38,55 L26,55 Z" fill="#0B3049"/>
+    <path d="M42,15 A6,6 0 0 1 54,15 L54,55 L42,55 Z" fill="#177A8D"/>
+  </g>
+</svg>

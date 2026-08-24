@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width="240" height="100" role="img" aria-label="Hradecký úklid">
+  <defs>
+  </defs>
+  <!-- Righteous: retro blok jako z cedule na dodávce -->
+  <rect class="plate" x="6" y="8" width="228" height="52" rx="10" fill="#0B3049"/>
+  <text x="120" y="48" text-anchor="middle" font-family="Righteous, sans-serif" font-size="34" fill="#EAF3F8" letter-spacing="0.5">HRADECKÝ</text>
+  <text x="120" y="90" text-anchor="middle" font-family="Righteous, sans-serif" font-size="34" fill="#177A8D" letter-spacing="6">ÚKLID</text>
+</svg>

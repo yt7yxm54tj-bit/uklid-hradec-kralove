@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 132" width="200" height="132" role="img" aria-label="Hradecký úklid">
+  <defs>
+  </defs>
+  <!-- tentýž motiv v pohybu: tři šikmé tahy stěrkou -->
+  <g stroke-width="11" stroke-linecap="round" fill="none">
+    <path d="M72,58 L78,26" stroke="#0B3049"/>
+    <path d="M94,58 L100,26" stroke="#0B3049"/>
+    <path d="M116,58 L122,16" stroke="#177A8D"/>
+  </g>
+  <text x="100" y="98" text-anchor="middle" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="27" font-weight="600" fill="#0B3049" letter-spacing="-0.5">Hradecký</text>
+  <text x="100" y="124" text-anchor="middle" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="27" font-weight="700" fill="#177A8D" letter-spacing="-0.5">úklid</text>
+</svg>

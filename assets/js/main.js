@@ -200,6 +200,14 @@ document.documentElement.classList.toggle('bubs-off', !bubsOn);
   bt.title = 'Bublinky na pozadí';
   bt.innerHTML = '<span class="bt-knob"></span><span class="bt-label">Bublinky na pozadí</span>';
   host.appendChild(bt);
+
+  // interní odkaz na přehled návrhů loga — hned pod přepínačem
+  var lg = document.createElement('a');
+  lg.className = 'foot-link';
+  lg.href = 'loga.html';
+  lg.rel = 'nofollow';
+  lg.textContent = 'Návrhy loga';
+  host.appendChild(lg);
   bt.addEventListener('click', function () {
     bubsOn = !bubsOn;
     document.documentElement.classList.toggle('bubs-off', !bubsOn);

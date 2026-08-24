@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 88" width="260" height="88" role="img" aria-label="Hradecký úklid">
+  <defs>
+  </defs>
+  <!-- Baloo 2: tučná a kulatá, malá písmena v kolečku působí kamarádsky -->
+  <circle class="plate" cx="38" cy="44" r="32" fill="#0B3049"/>
+  <text x="38" y="60" text-anchor="middle" font-family="Baloo 2, sans-serif" font-size="42" font-weight="800" fill="#EAF3F8" letter-spacing="-1">hú</text>
+  <text x="82" y="42" font-family="Baloo 2, sans-serif" font-size="30" font-weight="700" fill="#0B3049">hradecký</text>
+  <text x="82" y="70" font-family="Baloo 2, sans-serif" font-size="30" font-weight="700" fill="#177A8D">úklid</text>
+</svg>

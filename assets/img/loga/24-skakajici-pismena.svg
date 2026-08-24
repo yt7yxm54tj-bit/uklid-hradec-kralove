@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 84" width="320" height="84" role="img" aria-label="Hradecký úklid">
+  <defs>
+  </defs>
+  <!-- Poppins: písmena poskakují po základní lince, ú vyskočilo nejvýš -->
+  <text font-family="Poppins, sans-serif" font-size="36" font-weight="700" fill="#0B3049" letter-spacing="-0.5">
+    <tspan x="8" y="56">H</tspan><tspan dy="-5">r</tspan><tspan dy="5">a</tspan><tspan dy="-4">d</tspan><tspan dy="4">e</tspan><tspan dy="-6">c</tspan><tspan dy="6">k</tspan><tspan dy="-3">ý</tspan>
+  </text>
+  <text font-family="Poppins, sans-serif" font-size="36" font-weight="700" fill="#177A8D" letter-spacing="-0.5">
+    <tspan x="198" y="48">ú</tspan><tspan dy="8">k</tspan><tspan dy="-7">l</tspan><tspan dy="5">i</tspan><tspan dy="-4">d</tspan>
+  </text>
+</svg>

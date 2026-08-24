@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Hradecký úklid">
+  <!-- app ikona / razítko: G v negativu na navy podkladu -->
+  <rect class="plate" width="64" height="64" rx="15" fill="#0B3049"/>
+  <g fill="none" stroke="#7CC4D8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M45,22.5 A16.5,16.5 0 1 0 45,42.7 L45,32.6 L36.5,32.6"/>
+  </g>
+</svg>

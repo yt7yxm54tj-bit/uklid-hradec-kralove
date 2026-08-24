@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 110" width="200" height="110" role="img" aria-label="Hradecký úklid">
+  <defs>
+  </defs>
+  <!-- Fredoka: kulatá, přátelská. H a Ú sdílejí prostor, čárka nad Ú je teal -->
+  <text x="100" y="66" text-anchor="middle" font-family="Fredoka, sans-serif" font-size="72" font-weight="700" fill="#0B3049" letter-spacing="-6">HÚ</text>
+  <text x="100" y="96" text-anchor="middle" font-family="Fredoka, sans-serif" font-size="16" font-weight="500" fill="#177A8D" letter-spacing="3.4">HRADECKÝ ÚKLID</text>
+</svg>

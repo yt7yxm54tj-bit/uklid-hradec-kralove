@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 116" width="220" height="116" role="img" aria-label="Hradecký úklid">
+  <defs>
+  </defs>
+  <!-- dvě kolečka, co se překrývají: H a Ú se do sebe opírají jako dva lidi v týmu -->
+  <circle class="plate" cx="82" cy="46" r="34" fill="#0B3049"/>
+  <circle class="plate" cx="136" cy="46" r="34" fill="#177A8D" opacity=".9"/>
+  <text x="66" y="60" text-anchor="middle" font-family="Outfit, sans-serif" font-size="38" font-weight="700" fill="#EAF3F8">H</text>
+  <text x="152" y="60" text-anchor="middle" font-family="Outfit, sans-serif" font-size="38" font-weight="700" fill="#EAF3F8">Ú</text>
+  <text x="110" y="106" text-anchor="middle" font-family="Outfit, sans-serif" font-size="17" font-weight="500" fill="#0B3049" letter-spacing="2.2">hradecký úklid</text>
+</svg>

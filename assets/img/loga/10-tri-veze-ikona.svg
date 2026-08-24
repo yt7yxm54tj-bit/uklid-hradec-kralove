@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Hradecký úklid">
+  <!-- ikonová verze směru „tři věže" — favicon, app ikona, avatar -->
+  <rect class="plate" width="64" height="64" rx="15" fill="#0B3049"/>
+  <path d="M13,29 A5.5,5.5 0 0 1 24,29 L24,52 L13,52 Z" fill="#EAF3F8"/>
+  <path d="M27.5,29 A5.5,5.5 0 0 1 38.5,29 L38.5,52 L27.5,52 Z" fill="#EAF3F8"/>
+  <path d="M42,18 A5.5,5.5 0 0 1 53,18 L53,52 L42,52 Z" fill="#7CC4D8"/>
+</svg>

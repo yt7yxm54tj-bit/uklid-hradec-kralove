@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 76" width="300" height="76" role="img" aria-label="Hradecký úklid">
+  <defs>
+  </defs>
+  <!-- dva světy v jednom nápisu: technické Space Grotesk a rozšafný rukopis Kalam -->
+  <text x="8" y="46" font-family="Space Grotesk, sans-serif" font-size="30" font-weight="400" fill="#0B3049" letter-spacing="4">HRADECKÝ</text>
+  <text x="202" y="54" font-family="Kalam, cursive" font-size="44" font-weight="700" fill="#177A8D">úklid</text>
+</svg>

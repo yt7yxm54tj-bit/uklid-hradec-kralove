@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80" role="img" aria-label="Hradecký úklid">
+  <defs>
+  </defs>
+  <!-- Lilita One v mírném náklonu: nápis je v pohybu, jako by projížděl kolem -->
+  <g transform="rotate(-4 150 40)">
+    <text x="10" y="38" font-family="Lilita One, sans-serif" font-size="34" fill="#0B3049" letter-spacing="0.5">HRADECKÝ</text>
+    <text x="10" y="72" font-family="Lilita One, sans-serif" font-size="34" fill="#177A8D" letter-spacing="0.5">ÚKLID</text>
+    <path d="M118,62 C150,58 196,59 240,63" fill="none" stroke="#177A8D" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+  </g>
+</svg>

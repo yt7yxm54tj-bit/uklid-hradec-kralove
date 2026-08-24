@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 80" width="330" height="80" role="img" aria-label="Hradecký úklid">
+  <defs>
+    <mask id="m33">
+      <circle class="maskbit" cx="34" cy="40" r="26" fill="#fff"/>
+      <circle class="maskbit" cx="76" cy="40" r="26" fill="#fff"/>
+      <text class="maskbit" x="22" y="51" text-anchor="middle" font-family="Outfit, sans-serif" font-size="29" font-weight="700" fill="#000">H</text>
+      <text class="maskbit" x="88" y="51" text-anchor="middle" font-family="Outfit, sans-serif" font-size="29" font-weight="700" fill="#000">Ú</text>
+    </mask>
+  </defs>
+  <!-- vodorovný lockup do hlavičky webu a na dokumenty -->
+  <g mask="url(#m33)">
+    <circle cx="34" cy="40" r="26" fill="#0B3049"/>
+    <circle cx="76" cy="40" r="26" fill="#177A8D"/>
+    <path d="M55,24.65 A26,26 0 0 1 55,55.35 A26,26 0 0 1 55,24.65 Z" fill="#3FA3B8"/>
+  </g>
+  <text x="120" y="35" font-family="Outfit, sans-serif" font-size="26" font-weight="600" fill="#0B3049" letter-spacing="-0.2">hradecký</text>
+  <text x="120" y="63" font-family="Outfit, sans-serif" font-size="26" font-weight="700" fill="#177A8D" letter-spacing="-0.2">úklid</text>
+</svg>

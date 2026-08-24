@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Hradecký úklid">
+  <defs>
+    <mask id="skrab">
+      <rect class="maskbit" width="64" height="64" fill="#fff"/>
+      <!-- H a Ú vyškrábnuté z plochy: vidíte to, co po úklidu zbylo -->
+      <g class="maskbit" stroke="#000" stroke-width="6.5" stroke-linecap="round" fill="none">
+        <path class="maskbit" d="M18,19 L18,45"/>
+        <path class="maskbit" d="M30,19 L30,45"/>
+        <path class="maskbit" d="M18,32 L30,32"/>
+        <path class="maskbit" d="M40,19 L40,38 A6,6 0 0 0 52,38 L52,19"/>
+      </g>
+      <circle class="maskbit" cx="46" cy="12.5" r="2.6" fill="#000"/>
+    </mask>
+  </defs>
+  <rect class="plate plate--knock" width="64" height="64" rx="15" fill="#0B3049" mask="url(#skrab)"/>
+  <circle cx="46" cy="12.5" r="2.6" fill="#177A8D"/>
+</svg>

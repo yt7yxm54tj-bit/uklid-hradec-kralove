@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 88" width="240" height="88" role="img" aria-label="Hradecký úklid">
+  <defs>
+  </defs>
+  <text x="4" y="30" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="17" font-weight="600" fill="#177A8D" letter-spacing="5.4">HRADECKÝ</text>
+  <text x="0" y="76" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="52" font-weight="700" fill="#0B3049" letter-spacing="-1.4">ÚKLID</text>
+  <rect x="150" y="44" width="86" height="4" rx="2" fill="#177A8D"/>
+</svg>
