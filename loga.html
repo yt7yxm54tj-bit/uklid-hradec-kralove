@@ -60,6 +60,18 @@
     body.lg-dark .lg-stage svg .plate--knock { fill: rgba(255,255,255,.92); }
     body.lg-mono .lg-stage svg .plate--knock { fill: var(--navy); }
 
+    /* Značka v hlavičce a patičce: tahle stránka nenačítá premium.css,
+       tak sem patří jen ta část, bez které by se název slil do jednoho slova. */
+    .logo .brand-symbol { display: block; width: 46px; height: 46px; flex-shrink: 0; position: relative; overflow: hidden; }
+    /* D.png je široký lockup i s nápisem, hlavička z něj ukazuje jen symbol.
+       Výřez je ručně doladěný, stejné hodnoty jako v premium.css. */
+    .logo .brand-symbol img { position: absolute; max-width: none; width: 265%; left: -1%; top: -8%; height: auto; display: block; }
+    .logo .brand-name { font-family: var(--font-display); font-weight: 750; font-size: 19px; line-height: 1.03; letter-spacing: -.015em; color: var(--navy); }
+    .logo .brand-name > span { display: block; color: var(--blue); font-size: 18px; }
+    .footer-brand .logo .brand-name { color: var(--white); }
+    .footer-brand .logo .brand-name > span { color: #7CC4D8; }
+    .footer-brand .logo .brand-symbol { filter: brightness(0) invert(1); }
+
     /* --- kolo od GPT: rastrová loga --- */
     .lg-round, .lg-prompts { padding: 8px 0 0; }
     .lg-round-date { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); margin-top: 26px; }
