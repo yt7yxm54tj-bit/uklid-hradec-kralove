@@ -60,8 +60,51 @@
     body.lg-dark .lg-stage svg .plate--knock { fill: rgba(255,255,255,.92); }
     body.lg-mono .lg-stage svg .plate--knock { fill: var(--navy); }
 
+    /* --- kolo od GPT: rastrová loga --- */
+    .lg-round, .lg-prompts { padding: 8px 0 0; }
+    .lg-round-date { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); margin-top: 26px; }
+    .lg-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 14px; }
+    .lg-card { border: 1px solid var(--border); border-radius: 16px; background: var(--white); padding: 18px; display: flex; flex-direction: column; }
+    .lg-card h3 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--navy); margin-top: 4px; }
+    .lg-card .lg-stage { min-height: 150px; margin-top: 12px; }
+    .lg-stage--img img { max-width: 100%; max-height: 118px; object-fit: contain; display: block; }
+    .lg-swatches { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+    .lg-sw { display: flex; align-items: center; gap: 7px; font-size: 11.5px; color: var(--text-muted); }
+    .lg-sw i { width: 18px; height: 18px; border-radius: 5px; border: 1px solid rgba(11,48,73,.16); display: block; flex-shrink: 0; }
+    .lg-sw b { font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
+    .lg-sw.is-off b { color: #8A5A17; }
+    .lg-proof { display: flex; gap: 12px; margin-top: 14px; }
+    .lg-proof > div { flex: 1; border: 1px dashed var(--border); border-radius: 10px; padding: 10px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .lg-proof span { font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); }
+    .lg-proof img { width: 180px; max-width: 100%; height: 44px; object-fit: contain; }
+    .lg-proof .lg-on-dark { background: var(--navy); border-color: var(--navy); }
+    .lg-proof .lg-on-dark span { color: rgba(255,255,255,.72); }
+    .lg-proof .lg-on-dark img { filter: brightness(0) invert(1); }
+    .lg-meta { margin-top: 12px; font-size: 11.5px; color: var(--text-muted); }
+    body.lg-dark .lg-stage--img { background: var(--navy); border-color: rgba(255,255,255,.18); }
+    body.lg-dark .lg-stage--img img { filter: brightness(0) invert(1); }
+    body.lg-mono .lg-stage--img img { filter: brightness(0); }
+
+    /* --- prompty --- */
+    .lg-prompt { border: 1px solid var(--border); border-radius: 14px; background: var(--white); padding: 16px 18px; margin-top: 14px; }
+    .lg-prompt-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .lg-prompt h3 { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--navy); }
+    .lg-copy { border: 1px solid var(--border); background: var(--bg-light); border-radius: 999px; font: inherit; font-size: 12px; font-weight: 600; color: var(--navy); padding: 7px 14px; cursor: pointer; white-space: nowrap; }
+    .lg-copy:hover { background: #E3F2F6; }
+    .lg-prompt pre { margin-top: 10px; padding: 12px 14px; background: var(--bg-light); border-radius: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; line-height: 1.6; white-space: pre-wrap; color: #22333F; }
+    .lg-intro { font-size: 14px; line-height: 1.7; color: var(--text-muted); max-width: 72ch; }
+    .lg-intro h3 { font-family: var(--font-display); font-size: 16px; color: var(--navy); margin-top: 18px; }
+    .lg-intro li { margin-left: 18px; }
+
+    /* --- archiv --- */
+    .lg-archive { border-top: 1px solid var(--border); margin-top: 44px; }
+    .lg-archive > summary { cursor: pointer; padding: 22px 0; font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--navy); list-style: revert; }
+    .lg-archive > summary::marker { color: var(--blue); }
+
     @media (max-width: 820px) {
       .lg-hero { padding: 40px 0 4px; }
+      .lg-cards { grid-template-columns: 1fr; }
+      .lg-proof { flex-direction: column; }
       .lg-bar { top: 64px; }
       .lg-table thead { display: none; }
       .lg-table tr { display: grid; grid-template-columns: 40px 1fr; gap: 0 10px; padding: 16px; border-bottom: 1px solid var(--border); }
@@ -78,7 +121,7 @@
   <!-- ============ Header ============ -->
   <header class="site-header">
     <div class="container">
-      <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 83.98 56" aria-hidden="true" focusable="false"><defs><mask id="lmMaskH"><circle cx="28" cy="28" r="26" fill="#fff"/><circle cx="55.98" cy="28" r="26" fill="#fff"/><path transform="translate(6.91,38.2) scale(0.02900,-0.02900)" d="M67.5 0V706H225V0ZM505 0V706H662.5V0ZM161.5 295V430.5H556.5V295Z" fill="#000"/><path transform="translate(56.30,38.2) scale(0.02900,-0.02900)" d="M352.15806451612906 -11Q265.31612903225806 -11 198.84677419354838 26.224789915966387Q132.3774193548387 63.44957983193277 94.68870967741935 128.76050420168067Q57 194.07142857142856 57 277.5V706H214.5V269Q214.5 226.518779342723 232.73420074349443 195.70187793427232Q250.96840148698885 164.8849765258216 282.2592936802974 148.44248826291079Q313.5501858736059 132 352.07992565055764 132Q391.5 132 421.7298657718121 148.42924528301887Q451.9597315436242 164.85849056603774 469.4798657718121 195.4009433962264Q487 225.94339622641508 487 268V706H645V276.5Q645 193.04852320675104 607.8023255813953 128.25949367088606Q570.6046511627907 63.470464135021096 504.80232558139534 26.235232067510548Q439 -11 352.15806451612906 -11ZM279.0 760.5 229 834 388 983 472.0 864.5Z" fill="#000"/></mask></defs><g mask="url(#lmMaskH)"><circle class="lm-c1" cx="28" cy="28" r="26"/><circle class="lm-c2" cx="55.98" cy="28" r="26"/><path class="lm-mix" d="M41.99,6.08 A26,26 0 0 1 41.99,49.92 A26,26 0 0 1 41.99,6.08 Z"/></g></svg><span class="logo-text">Hradecký <span class="logo-accent">úklid</span></span></a>
+      <a href="index.html" class="logo" aria-label="Hradecký úklid, úvod"><span class="brand-symbol" data-mark="D"><img src="assets/img/logo-2026-09-08/D.png" alt="" width="60" height="60"></span><span class="brand-name">Hradecký<span>úklid</span></span></a>
       <nav class="main-nav">
         <a href="uklid-domacnosti.html">Domácnosti</a>
         <a href="hloubkovy-uklid.html">Hloubkový úklid</a>
@@ -109,7 +152,7 @@
     <div class="container">
       <span class="lg-eyebrow">Interní přehled</span>
       <h1>Návrhy loga</h1>
-      <p>Všech 35 návrhů ve čtyřech sadách, jak vznikaly za sebou. Ve třetím sloupci je vždy poznámka, proč návrh funguje nebo proč jsme ho zamítli. Podklad si přepni tlačítky níž. Logo musí obstát na světlém, na tmavém i v jedné barvě (razítko, faktura, gravírování).</p>
+      <p>Nahoře nejnovější kolo od GPT i s paletou vytaženou přímo z obrázků, pod tím prompty na další generování a úplně dole archiv vektorových návrhů. Podklad si přepni tlačítky níž. Logo musí obstát na světlém, na tmavém i v jedné barvě (razítko, faktura, gravírování).</p>
     </div>
   </section>
 
@@ -124,8 +167,34 @@
     </div>
   </div>
 
+  <div class="lg-round">
+    <div class="container">
+      <section class="lg-set">
+        <div class="lg-set-head">
+          <h2>Návrhy od GPT</h2>
+          <p>U každého je paleta vytažená přímo z obrázku, takže je vidět, kam se generátor od brandu odchýlil. Testy vpravo ukazují, jak návrh drží v reálné hlavičce a na tmavém podkladu.</p>
+        </div>
+        <div id="lgGpt"><p class="lg-note">Načítám návrhy…</p></div>
+      </section>
+    </div>
+  </div>
+
+  <div class="lg-prompts">
+    <div class="container">
+      <section class="lg-set">
+        <div class="lg-set-head">
+          <h2>Prompty pro GPT</h2>
+          <p>Zkopíruj, vlož do ChatGPT, výsledky stáhni do složky Stažené. Pak stačí říct „přidej nová loga“ a objeví se nahoře i s paletou.</p>
+        </div>
+        <div id="lgPrompts"><p class="lg-note">Načítám prompty…</p></div>
+      </section>
+    </div>
+  </div>
+
   <div class="lg-sets">
     <div class="container">
+      <details class="lg-archive">
+        <summary>Archiv: 35 vektorových návrhů z 08/2026</summary>
       <section class="lg-set">
         <div class="lg-set-head">
           <h2>Sada 1: první průzkum</h2>
@@ -496,6 +565,7 @@
           </table>
         </div>
       </section>
+      </details>
     </div>
   </div>
 
@@ -503,7 +573,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="logo"><svg class="logo-mark" viewBox="0 0 83.98 56" aria-hidden="true" focusable="false"><defs><mask id="lmMaskF"><circle cx="28" cy="28" r="26" fill="#fff"/><circle cx="55.98" cy="28" r="26" fill="#fff"/><path transform="translate(6.91,38.2) scale(0.02900,-0.02900)" d="M67.5 0V706H225V0ZM505 0V706H662.5V0ZM161.5 295V430.5H556.5V295Z" fill="#000"/><path transform="translate(56.30,38.2) scale(0.02900,-0.02900)" d="M352.15806451612906 -11Q265.31612903225806 -11 198.84677419354838 26.224789915966387Q132.3774193548387 63.44957983193277 94.68870967741935 128.76050420168067Q57 194.07142857142856 57 277.5V706H214.5V269Q214.5 226.518779342723 232.73420074349443 195.70187793427232Q250.96840148698885 164.8849765258216 282.2592936802974 148.44248826291079Q313.5501858736059 132 352.07992565055764 132Q391.5 132 421.7298657718121 148.42924528301887Q451.9597315436242 164.85849056603774 469.4798657718121 195.4009433962264Q487 225.94339622641508 487 268V706H645V276.5Q645 193.04852320675104 607.8023255813953 128.25949367088606Q570.6046511627907 63.470464135021096 504.80232558139534 26.235232067510548Q439 -11 352.15806451612906 -11ZM279.0 760.5 229 834 388 983 472.0 864.5Z" fill="#000"/></mask></defs><g mask="url(#lmMaskF)"><circle class="lm-c1" cx="28" cy="28" r="26"/><circle class="lm-c2" cx="55.98" cy="28" r="26"/><path class="lm-mix" d="M41.99,6.08 A26,26 0 0 1 41.99,49.92 A26,26 0 0 1 41.99,6.08 Z"/></g></svg><span class="logo-text">Hradecký <span class="logo-accent">úklid</span></span></div>
+          <div class="logo"><span class="brand-symbol" data-mark="D"><img src="assets/img/logo-2026-09-08/D.png" alt="" width="60" height="60"></span><span class="brand-name">Hradecký<span>úklid</span></span></div>
           <p>Uklízíme domácnosti i firmy v Hradci Králové a okolí do 20 km.</p>
           <div class="footer-social">
             <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.3-1.4 1.5-1.4h1.3V5.5c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v2.5H8.9V14h2.3v7h2.3z"/></svg></a>
@@ -566,6 +636,132 @@
         document.body.classList.remove('lg-dark', 'lg-mono');
         if (b.dataset.mode !== 'light') document.body.classList.add('lg-' + b.dataset.mode);
       });
+    })();
+  </script>
+
+  <script>
+    /* Kolo od GPT: karty se staví z assets/data/loga-gpt.json, aby přidání
+       dalšího kola neznamenalo sahat do HTML (viz 05 logo/import-loga.py). */
+    (function () {
+      var host = document.getElementById('lgGpt');
+      if (!host) return;
+
+      function esc(t) {
+        return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+        });
+      }
+
+      function swatch(c) {
+        var mimo = c.odchylka > 90;
+        return '<span class="lg-sw' + (mimo ? ' is-off' : '') + '" title="' +
+          (mimo ? 'daleko od brandové ' + esc(c.brand) : 'blízko brandové ' + esc(c.brand)) + '">' +
+          '<i style="background:' + esc(c.hex) + '"></i><b>' + esc(c.hex) + '</b> ' +
+          esc(c.podil) + ' %</span>';
+      }
+
+      function karta(it) {
+        var jmeno = it.nazev || it.puvodni || '';
+        var kod = it.kod ? 'Návrh ' + esc(it.kod) : 'Nový návrh';
+        var znacka = it.nasazene ? ' <span class="lg-badge">v provozu</span>' : '';
+        return '<article class="lg-card">' +
+          '<span class="lg-kind">' + kod + '</span>' +
+          '<h3>' + esc(jmeno) + znacka + '</h3>' +
+          '<div class="lg-stage lg-stage--img"><img src="' + esc(it.soubor) + '" alt="' + esc(jmeno) + '" loading="lazy"></div>' +
+          (it.popis ? '<p class="lg-note">' + esc(it.popis) + '</p>' : '') +
+          '<div class="lg-swatches">' + (it.paleta || []).map(swatch).join('') + '</div>' +
+          '<div class="lg-proof">' +
+            '<div><span>V hlavičce 180 px</span><img src="' + esc(it.soubor) + '" alt="" loading="lazy"></div>' +
+            '<div class="lg-on-dark"><span>Na tmavém</span><img src="' + esc(it.soubor) + '" alt="" loading="lazy"></div>' +
+          '</div>' +
+          '<p class="lg-meta">' + esc(it.sirka) + ' × ' + esc(it.vyska) + ' px · poměr ' + esc(it.pomer) +
+          ' · rastr PNG, ne vektor</p>' +
+          '</article>';
+      }
+
+      fetch('assets/data/loga-gpt.json')
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function (d) {
+          var html = (d.kola || []).map(function (k) {
+            return '<p class="lg-round-date">' + esc(k.datum) + ' · ' + esc(k.zdroj) + '</p>' +
+              (k.poznamka ? '<p class="lg-note">' + esc(k.poznamka) + '</p>' : '') +
+              '<div class="lg-cards">' + (k.polozky || []).map(karta).join('') + '</div>';
+          }).join('');
+          host.innerHTML = html || '<p class="lg-note">Zatím tu nic není.</p>';
+        })
+        .catch(function () {
+          host.innerHTML = '<p class="lg-note">Návrhy se nepodařilo načíst.</p>';
+        });
+    })();
+
+    /* Prompty: jeden zdroj pravdy je assets/data/prompty-loga.md, stránka
+       z něj udělá kopírovatelné bloky. */
+    (function () {
+      var host = document.getElementById('lgPrompts');
+      if (!host) return;
+
+      function esc(t) {
+        return String(t).replace(/[&<>"]/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+        });
+      }
+      function inline(t) {
+        return esc(t)
+          .replace(/`([^`]+)`/g, '<code>$1</code>')
+          .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+      }
+
+      fetch('assets/data/prompty-loga.md')
+        .then(function (r) { return r.ok ? r.text() : Promise.reject(r.status); })
+        .then(function (md) {
+          var sekce = [], akt = null;
+          md.split('\n').forEach(function (radek) {
+            if (radek.indexOf('## ') === 0) {
+              akt = { titul: radek.slice(3).trim(), radky: [] };
+              sekce.push(akt);
+            } else if (akt) {
+              akt.radky.push(radek);
+            }
+          });
+
+          var html = sekce.map(function (sek) {
+            var kopirovatelny = /^(P\d|Společná kostra)/.test(sek.titul);
+            if (kopirovatelny) {
+              var telo = [], ostatni = [], vFence = false;
+              sek.radky.forEach(function (r) {
+                if (r.indexOf('```') === 0) { vFence = !vFence; return; }
+                if (vFence) { telo.push(r); return; }
+                if (r.indexOf('> ') === 0) { telo.push(r.slice(2)); return; }
+                if (r.trim()) ostatni.push(r);
+              });
+              var text = telo.join('\n').trim();
+              return '<div class="lg-prompt">' +
+                '<div class="lg-prompt-head"><h3>' + esc(sek.titul) + '</h3>' +
+                '<button type="button" class="lg-copy" data-copy>Kopírovat</button></div>' +
+                '<pre>' + esc(text) + '</pre>' +
+                (ostatni.length ? '<p class="lg-note">' + inline(ostatni.join(' ')) + '</p>' : '') +
+                '</div>';
+            }
+            var body = sek.radky.filter(function (r) { return r.trim() && !/^-{3,}$/.test(r.trim()); })
+              .map(function (r) { return '<p>' + inline(r.replace(/^[-*]\s+/, '• ')) + '</p>'; })
+              .join('');
+            return '<div class="lg-intro"><h3>' + esc(sek.titul) + '</h3>' + body + '</div>';
+          }).join('');
+
+          host.innerHTML = html;
+          host.addEventListener('click', function (e) {
+            var b = e.target.closest('[data-copy]');
+            if (!b) return;
+            var pre = b.closest('.lg-prompt').querySelector('pre');
+            navigator.clipboard.writeText(pre.textContent).then(function () {
+              b.textContent = 'Zkopírováno';
+              setTimeout(function () { b.textContent = 'Kopírovat'; }, 1600);
+            }).catch(function () { b.textContent = 'Nejde zkopírovat'; });
+          });
+        })
+        .catch(function () {
+          host.innerHTML = '<p class="lg-note">Prompty se nepodařilo načíst.</p>';
+        });
     })();
   </script>
 </body>

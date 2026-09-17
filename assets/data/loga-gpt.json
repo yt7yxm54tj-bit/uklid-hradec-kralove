@@ -1,0 +1,215 @@
+{
+  "kola": [
+    {
+      "datum": "2026-09-08",
+      "zdroj": "GPT image gen (ChatGPT)",
+      "poznamka": "Rastrové PNG s alfou, ne vektor. Nápis vysázel generátor, odtud nevyrovnané mezery a měkká diakritika.",
+      "polozky": [
+        {
+          "kod": "A",
+          "nazev": "Dům se stěrkou",
+          "popis": "Střecha domu a tah stěrkou se spojují do jednoho otevřeného kruhu. Nejenergičtější z pětice. V malém se ale oba tvary slévají a okraje mají viditelné rastrové artefakty.",
+          "soubor": "assets/img/logo-2026-09-08/A.png",
+          "sirka": 2172,
+          "vyska": 724,
+          "pomer": 3.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 50.6,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006090",
+              "podil": 16.7,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#006078",
+              "podil": 13.8,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007890",
+              "podil": 8.5,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#0090F0",
+              "podil": 5.9,
+              "brand": "teal",
+              "odchylka": 88
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "B",
+          "nazev": "Monogram HÚ",
+          "popis": "Tahy písmene H tvoří rám okna, Ú je jeden zametací tah a čárka nad ním slouží jako jiskra. Nejblíž tomu, co máš dnes na webu, takže nejsnadnější evoluce místo revoluce.",
+          "soubor": "assets/img/logo-2026-09-08/B.png",
+          "sirka": 2172,
+          "vyska": 724,
+          "pomer": 3.0,
+          "paleta": [
+            {
+              "hex": "#001848",
+              "podil": 59.4,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 26.5,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#004878",
+              "podil": 11.6,
+              "brand": "navy",
+              "odchylka": 54
+            },
+            {
+              "hex": "#006090",
+              "podil": 1.5,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#003060",
+              "podil": 0.3,
+              "brand": "navy",
+              "odchylka": 25
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "C",
+          "nazev": "Pečeť čistoty",
+          "popis": "Smeták napříč kruhovým rámem, dvě jiskry vyříznuté do negativu. Nejrychleji sdělí, co firma dělá, a jako jediná z pětice drží i v malé hlavičce.",
+          "soubor": "assets/img/logo-2026-09-08/C.png",
+          "sirka": 1774,
+          "vyska": 887,
+          "pomer": 2.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 57.7,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#186090",
+              "podil": 33.9,
+              "brand": "petrol",
+              "odchylka": 26
+            },
+            {
+              "hex": "#187890",
+              "podil": 5.2,
+              "brand": "petrol",
+              "odchylka": 4
+            },
+            {
+              "hex": "#006090",
+              "podil": 2.4,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#186078",
+              "podil": 0.4,
+              "brand": "petrol",
+              "odchylka": 33
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "D",
+          "nazev": "Osobní péče (teď nasazené)",
+          "popis": "Silueta ženy myjící dvoutabulkové okno. Lidské a konkrétní, ale má ze všech nejvíc detailů. Na 32 px se postava rozpadá do skvrny a v jedné barvě se ztrácí ruka i hadr.",
+          "soubor": "assets/img/logo-2026-09-08/D.png",
+          "sirka": 1983,
+          "vyska": 793,
+          "pomer": 2.5,
+          "paleta": [
+            {
+              "hex": "#001848",
+              "podil": 74.0,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 16.0,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#004878",
+              "podil": 9.7,
+              "brand": "navy",
+              "odchylka": 54
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.2,
+              "brand": "navy",
+              "odchylka": 35
+            },
+            {
+              "hex": "#003048",
+              "podil": 0.1,
+              "brand": "navy",
+              "odchylka": 11
+            }
+          ],
+          "nasazene": true
+        },
+        {
+          "kod": "E",
+          "nazev": "Kapka a domov",
+          "popis": "Kapka vody se střechou vyříznutou uvnitř. Měkký, domácí pocit. Motiv kapky je v úklidu a instalatérství hodně obsazený, takže nejmíň odlišuje.",
+          "soubor": "assets/img/logo-2026-09-08/E.png",
+          "sirka": 2172,
+          "vyska": 724,
+          "pomer": 3.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 64.9,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 33.2,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#0078F0",
+              "podil": 1.2,
+              "brand": "teal",
+              "odchylka": 91
+            },
+            {
+              "hex": "#006090",
+              "podil": 0.7,
+              "brand": "petrol",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+# Prompty na loga pro GPT (Hradecký úklid, 09/2026)
+
+## Proč minulá várka dopadla, jak dopadla
+
+Každý prompt z 8. 9. nutil model udělat dvě práce najednou: vysázet „HRADECKÝ ÚKLID" včetně Ý a Ú **a** nakreslit značku. Generátor neumí kerning ani českou diakritiku, takže na písmo spálil kapacitu a značka zůstala přeplácaná ilustrace. Odtud ten pocit „hnusný".
+
+**Nové pravidlo: model kreslí jen symbol. Nápis vysázím skutečným fontem**, stejně jako u loga, které je dnes na webu. Je to zároveň jediná cesta k logu, které se dá zmenšit do hlavičky a otisknout v jedné barvě.
+
+## Jak to použít
+
+1. V ChatGPT jeď image gen (GPT Image).
+2. Začni promptem **P0 (průzkum)**, vrátí 2×2 mřížku čtyř různých směrů za cenu jedné generace.
+3. Co tě chytne, přegeneruj samostatně přes prompt daného motivu (P1–P8).
+4. Líbí se ti jeden kus? Pusť **P9 (variace)** s tím obrázkem jako referencí.
+5. Stáhni PNG do `~/Downloads` a napiš mi „**přidej nová loga**". Naimportuju je, vytáhnu z nich paletu a přidám na stránku s logy.
+
+## Společná kostra (BASE): nikdy ji neměň
+
+Tohle patří na **konec každého** promptu. Drží styl, barvy a hlavně vektorovatelnost: čím míň odstínů a čím tlustší tahy, tím líp se to pak překresluje do SVG.
+
+```
+Flat vector-style logo symbol only. No text, no letters, no words, no numbers, no slogans.
+Centered on a square canvas, the mark fills about 70% of the frame with generous even margins.
+Exactly two flat fill colors plus white negative space: deep navy #0B3049 and petrol teal #177A8D.
+Uniform thick strokes, closed simple shapes, geometric construction with rounded terminals,
+generous negative space. Must stay instantly readable at 32 pixels.
+No gradients, no shadows, no bevels, no glow, no texture, no outline frame around the whole mark,
+no background rectangle, no mockup, no drop shadow. Genuinely transparent background with real alpha.
+Playful and friendly but still professional. Not corporate clip-art, not a stock cleaning logo.
+```
+
+## Do promptu nikdy nedávej
+
+- **Cihly a cihlovou vazbu**: od 2023 na nich stojí identita FC Hradec Králové se stejným odůvodněním (Gočár, Salon republiky). Kolize.
+- **Tři věže nebo panorama města**: rešerše ukázala, že to čte jako equalizer (Deezer, SoundCloud) a shoduje se s tisíci stock skyline log.
+- **Text, nápis, jméno firmy**, viz výše.
+- **Reálné landmarky Hradce**: AI je udělá „skoro správně" a místní to poznají.
+
+---
+
+## P0: průzkum, 2×2 mřížka
+
+> Four different flat vector logo symbols for a Czech home cleaning company, arranged as a 2x2 grid, each quadrant a clearly distinct concept: (1) a window frame with one pane wiped clean, (2) a bucket with a mop leaning in it, (3) a single sweeping curved stroke with three trailing droplets, (4) two overlapping circles forming a soap-bubble monogram. Each quadrant must read as its own standalone mark, not variations of one idea.
+> `+ BASE`
+
+## P1: okno s jiskrou
+
+> A simple square window frame divided into two panes. A bold curved wipe arc crosses the lower pane, and the upper pane holds one crisp four-point shine. The wipe arc is petrol teal, the frame deep navy. The cleaned part of the glass is empty white negative space, the uncleaned part is a solid fill.
+> No human figure, no hands, no spray bottle, no curtains, no cityscape behind the window.
+> `+ BASE`
+
+## P2: kýbl s mopem jako postavička
+
+> A rounded bucket seen from the front, its water line drawn as a single upward curve so the bucket reads as a friendly smile. A mop leans out of it diagonally to the upper right, its head built from three broad rounded strands. Bucket navy, water line and mop head petrol teal.
+> No face, no eyes, no arms or legs, no bubbles floating around, no floor line.
+> `+ BASE`
+
+## P3: oblouk po stěrce
+
+> One bold confident curved sweep, like a squeegee stroke across glass, thick at the start and tapering at the end, with exactly three round droplets trailing off the tip in decreasing size. The sweep is the entire mark. Navy stroke, teal droplets.
+> No squeegee tool drawn, no window frame, no hand, no additional strokes, no circle around it.
+> `+ BASE`
+
+## P4: bublinový monogram HÚ
+
+> Two overlapping circles like soap bubbles. The letterforms H and Ú are cut out of the circles as negative space, so the shapes read as a monogram only on second look. The overlap of the two circles is a third lighter tone. Left circle navy, right circle petrol teal.
+> Keep the letter shapes geometric and heavy, no script, no outlines, no sparkle, no extra bubbles.
+> `+ BASE`
+>
+> *(Tenhle motiv drží linku na značku, kterou máš dnes na webu. Pokud chceš evoluci místo revoluce, jdi sem.)*
+
+## P5: dům, který se usmívá
+
+> A minimal house silhouette reduced to a roof and two walls. Under it, a single broad curved sweep forms both the ground and a smile. One four-point shine sits at the upper right of the roof. House navy, sweep teal.
+> No windows, no door, no chimney, no fence, no sun, no clouds.
+> `+ BASE`
+
+## P6: kapka s domovem uvnitř
+
+> A single bold water droplet. Inside it, a house roof is carved out as clean white negative space, so the home reads from within the drop. The lower third of the droplet is a flowing petrol teal facet, the rest navy.
+> No circle around it, no additional droplets, no equipment, no text, no waves.
+> `+ BASE`
+
+## P7: maskot ze stěrky
+
+> A friendly character built from pure geometry: a rounded droplet body holding a small squeegee diagonally, two dot eyes, no mouth. The squeegee handle is a single thick line with a rounded cap. Body teal, squeegee and eyes navy.
+> Keep it extremely simple, no arms with fingers, no legs, no smile line, no hat, no cartoon outline, no shading.
+> `+ BASE`
+
+## P8: pečeť se smetákem
+
+> A round badge: a heavy circular rim with one broad broom angled diagonally across the middle, its head built from three wide geometric shapes. Two small four-point shines are cut into the rim as negative space. Rim and handle navy, broom head petrol teal.
+> No text on the rim, no stars, no laurel, no ribbon, no house, no leaves.
+> `+ BASE`
+
+## P9: variace z vybraného kusu
+
+Nahraj vybraný obrázek jako referenci a pošli:
+
+> Using the attached image as the reference mark, generate six variations of this same symbol arranged in a 2x3 grid. Keep the core concept, the two-color palette and the flat vector construction identical. Vary only: stroke weight, how open or closed the silhouette is, the angle of the main element, and how much negative space the mark contains. Each variation must stay a single coherent mark that works at 32 pixels.
+> `+ BASE`
+
+## P10: když je značka hotová a chceš ji čistší
+
+> Using the attached image as the reference mark, redraw the same symbol with maximum geometric discipline: perfect circles, consistent stroke weight throughout, aligned angles at 45 and 90 degrees, and clean tangent joins between shapes. Preserve the concept, proportions and palette exactly. Remove every incidental detail that does not carry meaning.
+> `+ BASE`
+
+---
+
+## Co udělám já, až vybereš
+
+1. Symbol překreslím do **SVG** (vtracer na tvary, ruční dočištění kotev) , bez toho logo neobstojí v hlavičce ani v tisku.
+2. Přisadím nápis **skutečným fontem** z brandu, s pořádnou diakritikou a vyrovnáním.
+3. Vyrobím varianty: vodorovný lockup, stohovaný, samotná ikona, jednobarevná verze pro razítko.
+4. Otestuju na 32 px, na tmavém podkladu a v jedné barvě. Až tohle projde,, je to logo, ne obrázek.
+
+## Brand paleta (drž ji v každém promptu)
+
+| Role | Hex |
+|---|---|
+| Navy (hlavní) | `#0B3049` |
+| Petrol (akcent) | `#177A8D` |
+| Teal (světlejší akcent) | `#2F8FA6` |
+| Sky (podklady) | `#EAF3F8` |
+| Bílá | `#FFFFFF` |
