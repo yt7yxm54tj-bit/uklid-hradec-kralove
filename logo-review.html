@@ -649,15 +649,27 @@
       .faq-section { padding: 0 0 64px; }
     }
   </style>
-<meta name="robots" content="noindex,nofollow">
-<link rel="stylesheet" href="assets/css/premium.css?v=7">
-</head>
-<body class="premium-site page-index">
+<meta name="robots" content="noindex,nofollow"><style>
+/* Local logo comparison only. Original homepage and global CSS are unchanged. */
+.site-header.transparent:not(.scrolled){background:#0b3049}
+.service-card{background-color:#0b3049}
+.logo-review-img{display:block;width:220px;height:64px;object-fit:contain;object-position:left center}
+.site-header.transparent:not(.scrolled) .logo-review-img,.footer-brand .logo-review-img{filter:brightness(0) invert(1)}
+.logo-review-panel{position:fixed;right:16px;bottom:20px;z-index:10000;background:#fff;color:#0b3049;border:1px solid #b8cbd3;padding:12px;font:14px/1.4 Inter,Arial,sans-serif;max-width:calc(100vw - 32px)}
+.logo-review-panel summary{cursor:pointer;font-weight:700;min-height:28px}
+.logo-review-options{display:flex;gap:4px;flex-wrap:wrap;padding-top:10px}
+.logo-review-options button{font:inherit;min-height:44px;min-width:44px;background:#fff;color:#0b3049;border:1px solid #93aab6;cursor:pointer;padding:8px}
+.logo-review-options button[aria-pressed=true]{background:#0b3049;color:#fff}
+.logo-review-panel a{display:inline-block;color:#0b3049;padding-top:8px;text-decoration:underline}
+.logo-review-options button:focus-visible,.logo-review-panel summary:focus-visible{outline:3px solid #177a8d;outline-offset:3px}
+@media(max-width:767px){.logo-review-img{width:174px;height:51px}.logo-review-panel{bottom:76px;right:12px;padding:8px}.logo-review-panel:not([open]){font-size:12px}}
+</style></head>
+<body>
 
   <!-- ============ Header (transparentní nahoře, bílý po scrollu) ============ -->
   <header class="site-header transparent">
     <div class="container">
-      <a href="index.html" class="logo" aria-label="Hradecký úklid, úvod"><span class="brand-symbol" data-mark="D"><img src="assets/img/logo-2026-09-08/D.png" alt="" width="60" height="60"></span><span class="brand-name">Hradecký<span>úklid</span></span></a>
+      <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 83.98 56" aria-hidden="true" focusable="false"><defs><mask id="lmMaskH"><circle cx="28" cy="28" r="26" fill="#fff"/><circle cx="55.98" cy="28" r="26" fill="#fff"/><path transform="translate(6.91,38.2) scale(0.02900,-0.02900)" d="M67.5 0V706H225V0ZM505 0V706H662.5V0ZM161.5 295V430.5H556.5V295Z" fill="#000"/><path transform="translate(56.30,38.2) scale(0.02900,-0.02900)" d="M352.15806451612906 -11Q265.31612903225806 -11 198.84677419354838 26.224789915966387Q132.3774193548387 63.44957983193277 94.68870967741935 128.76050420168067Q57 194.07142857142856 57 277.5V706H214.5V269Q214.5 226.518779342723 232.73420074349443 195.70187793427232Q250.96840148698885 164.8849765258216 282.2592936802974 148.44248826291079Q313.5501858736059 132 352.07992565055764 132Q391.5 132 421.7298657718121 148.42924528301887Q451.9597315436242 164.85849056603774 469.4798657718121 195.4009433962264Q487 225.94339622641508 487 268V706H645V276.5Q645 193.04852320675104 607.8023255813953 128.25949367088606Q570.6046511627907 63.470464135021096 504.80232558139534 26.235232067510548Q439 -11 352.15806451612906 -11ZM279.0 760.5 229 834 388 983 472.0 864.5Z" fill="#000"/></mask></defs><g mask="url(#lmMaskH)"><circle class="lm-c1" cx="28" cy="28" r="26"/><circle class="lm-c2" cx="55.98" cy="28" r="26"/><path class="lm-mix" d="M41.99,6.08 A26,26 0 0 1 41.99,49.92 A26,26 0 0 1 41.99,6.08 Z"/></g></svg><span class="logo-text">Hradecký <span class="logo-accent">úklid</span></span></a>
       <nav class="main-nav">
         <a href="uklid-domacnosti.html">Domácnosti</a>
         <a href="hloubkovy-uklid.html">Hloubkový úklid</a>
@@ -687,23 +699,21 @@
 
   <!-- ============ Hero — video full-bleed ============ -->
   <section class="hero">
-<div class="hero-film">
     <video src="assets/video/hero-v4.mp4" poster="assets/img/hero-poster-v4.jpg"
            autoplay muted loop playsinline preload="auto"
            disablepictureinpicture disableremoteplayback
-           x-webkit-airplay="deny" aria-hidden="true"></video><div class="hero-note">Vy si užijte volno.</div></div>
+           x-webkit-airplay="deny" aria-hidden="true"></video>
     <div class="container">
       <span class="hero-badge">500+ dokončených úklidů</span>
-      <h1>Čistý domov.<br><span class="hero-word">Volnější den.</span></h1>
-      <p class="hero-sub">Uklízíme domácnosti i firmy v Hradci Králové a okolí. Přivezeme vlastní vybavení. Vy platíte, až když jste spokojeni.</p>
+      <h1>Uklidíme váš domov i firmu. Platíte, <span class="brush">až když jste spokojeni<svg viewBox="0 0 320 18" preserveAspectRatio="none" aria-hidden="true"><path d="M4,13 C90,15.5 205,11.5 266,7 C280,6 300,4 316,2"/></svg></span>.</h1>
+      <p class="hero-sub">Domácnosti, firmy i úklid po stavbě v Hradci Králové a okolí. Proškolený místní tým, vlastní profesionální vybavení a nacenění do 48 hodin.</p>
       <div class="hero-btns">
-        <a href="kontakt.html" class="btn btn-primary">Zjistit cenu →</a><span class="hero-assurance">Nacenění do 48 hodin</span>
+        <a href="kontakt.html" class="btn btn-primary">Zjistit cenu →</a>
       </div>
     </div>
   </section>
 
-  <div class="hero-brand-stamp" aria-hidden="true"><span class="brand-symbol" data-mark="D"><img data-brand-icon src="assets/img/logo-2026-09-08/D.png" alt="" width="88" height="88"></span><span>Tady bude čisto.</span></div>
-<!-- ============ Trust bar ============ -->
+  <!-- ============ Trust bar ============ -->
   <div class="trust-bar">
     <div class="container">
       <div class="tb-item"><span class="tb-num">500+</span><span class="tb-label">dokončených úklidů</span></div>
@@ -716,8 +726,9 @@
   <section class="features" id="home-features">
     <div class="container">
       <div class="section-head">
+        <span class="eyebrow">Co získáte</span>
         <h2>Proč zvolit Hradecký úklid</h2>
-        <p class="sub">Vybavení, cena i lidé. Všechno domluvíme předem.</p>
+        <p class="sub">Co u nás dostanete a proč se lidé z Hradce vracejí.</p>
       </div>
       <div class="bento" id="home-bento">
         <!-- Vlastní chemie = lahev s rozprašovačem, text na etiketě -->
@@ -729,8 +740,8 @@
             <span class="fc-body"><span class="fc-liquid"></span></span>
           </div>
           <div class="fc-label">
-            <h3>Vy nemusíte nic chystat.</h3>
-            <p>Prostředky i pomůcky přivezeme. Pokud raději používáte vlastní, stačí nám to říct.</p>
+            <h3>Vlastní úklidová chemie</h3>
+            <p>Nemusíte nic chystat, profesionální prostředky i pomůcky vozíme s sebou. Chcete své vlastní? Bez problému je použijeme.</p>
           </div>
           <svg class="fc-mop" viewBox="0 0 140 152" aria-hidden="true" focusable="false">
             <!-- kýbl -->
@@ -756,8 +767,8 @@
         <!-- Nabídka na míru = kalkulačka -->
         <article class="fun-card fc-calc">
           <div class="fc-label fc-label--top">
-            <h3>Cenu znáte předem.</h3>
-            <p>Nabídku podle rozsahu a četnosti úklidu dostanete do 48 hodin. Chemie je už v ceně.</p>
+            <h3>Nabídka na míru</h3>
+            <p>Platíte jen za rozsah a četnost, které si domluvíme. Kalkulaci dostanete do 48 hodin a cena už zahrnuje chemii.</p>
           </div>
           <div class="fc-machine" aria-hidden="true">
             <div class="fc-display"><span>na míru</span></div>
@@ -773,9 +784,9 @@
         <article class="fun-card fc-cert">
           <div class="fc-paper-sheet">
             <span class="fc-cert-eyebrow">Osvědčení</span>
-            <h3>Víte, koho pouštíte domů.</h3>
-            <p>Náš tým prochází výběrem i praktickou zkouškou úklidu. Do práce jde připravený.</p>
-            <span class="fc-cert-check"><svg class="status-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 4 4 8-9"/></svg> výběrové řízení i praktická zkouška</span>
+            <h3>Proškolený personál</h3>
+            <p>K vám domů i do firmy jde jen člověk, který prošel výběrovým řízením a praktickou zkouškou přímo u zákazníka.</p>
+            <span class="fc-cert-check">✓ výběrové řízení i praktická zkouška</span>
             <div class="fc-cert-foot">
               <span class="fc-sign">Marie Coufalová</span>
               <span class="fc-seal" aria-hidden="true">
@@ -889,6 +900,7 @@
   <section class="testimonials">
     <div class="container">
       <div class="section-head">
+        <span class="eyebrow">Reference</span>
         <h2>Co říkají vaši sousedé z Hradce</h2>
         <p class="sub">Hodnocení lidí, kteří nás pouštějí k sobě domů i do firmy. U každého uvádíme i cenu úklidu.</p>
       </div>
@@ -989,26 +1001,26 @@
         </div>
         <div class="compare-row">
           <div>Vlastní vybavení a chemie</div>
-          <div class="col-us" data-label="Hradecký úklid"><svg class="status-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 4 4 8-9"/></svg> Vlastní profi vybavení</div>
+          <div class="col-us" data-label="Hradecký úklid">✓ Vlastní profi vybavení</div>
           <div class="col-other" data-label="Velká platforma">Různé</div>
-          <div class="col-other" data-label="Na doporučení"><span class="cross"><svg class="status-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg></span> Vlastní klienta</div>
+          <div class="col-other" data-label="Na doporučení"><span class="cross">✗</span> Vlastní klienta</div>
         </div>
         <div class="compare-row">
           <div>Proškolený tým</div>
-          <div class="col-us" data-label="Hradecký úklid"><svg class="status-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 4 4 8-9"/></svg> Ano, vlastní tým</div>
+          <div class="col-us" data-label="Hradecký úklid">✓ Ano, vlastní tým</div>
           <div class="col-other" data-label="Velká platforma">Různá kvalita</div>
-          <div class="col-other" data-label="Na doporučení"><span class="cross"><svg class="status-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg></span> Neznámá</div>
+          <div class="col-other" data-label="Na doporučení"><span class="cross">✗</span> Neznámá</div>
         </div>
         <div class="compare-row">
           <div>Spokojenost zákazníků</div>
-          <div class="col-us" data-label="Hradecký úklid"><svg class="status-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 4 4 8-9"/></svg> 100 %</div>
+          <div class="col-us" data-label="Hradecký úklid">✓ 100 %</div>
           <div class="col-other" data-label="Velká platforma">Různá</div>
-          <div class="col-other" data-label="Na doporučení"><span class="cross"><svg class="status-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg></span> Neověřená</div>
+          <div class="col-other" data-label="Na doporučení"><span class="cross">✗</span> Neověřená</div>
         </div>
         <div class="compare-row">
           <div>Cena za hodinu</div>
-          <div class="col-us" data-label="Hradecký úklid"><svg class="status-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 4 4 8-9"/></svg> Veřejný ceník</div>
-          <div class="col-other" data-label="Velká platforma"><span class="cross"><svg class="status-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg></span> Skryté poplatky</div>
+          <div class="col-us" data-label="Hradecký úklid">✓ Veřejný ceník</div>
+          <div class="col-other" data-label="Velká platforma"><span class="cross">✗</span> Skryté poplatky</div>
           <div class="col-other" data-label="Na doporučení">Individuální</div>
         </div>
       </div>
@@ -1092,7 +1104,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="logo"><span class="brand-symbol" data-mark="D"><img src="assets/img/logo-2026-09-08/D.png" alt="" width="60" height="60"></span><span class="brand-name">Hradecký<span>úklid</span></span></div>
+          <div class="logo"><svg class="logo-mark" viewBox="0 0 83.98 56" aria-hidden="true" focusable="false"><defs><mask id="lmMaskF"><circle cx="28" cy="28" r="26" fill="#fff"/><circle cx="55.98" cy="28" r="26" fill="#fff"/><path transform="translate(6.91,38.2) scale(0.02900,-0.02900)" d="M67.5 0V706H225V0ZM505 0V706H662.5V0ZM161.5 295V430.5H556.5V295Z" fill="#000"/><path transform="translate(56.30,38.2) scale(0.02900,-0.02900)" d="M352.15806451612906 -11Q265.31612903225806 -11 198.84677419354838 26.224789915966387Q132.3774193548387 63.44957983193277 94.68870967741935 128.76050420168067Q57 194.07142857142856 57 277.5V706H214.5V269Q214.5 226.518779342723 232.73420074349443 195.70187793427232Q250.96840148698885 164.8849765258216 282.2592936802974 148.44248826291079Q313.5501858736059 132 352.07992565055764 132Q391.5 132 421.7298657718121 148.42924528301887Q451.9597315436242 164.85849056603774 469.4798657718121 195.4009433962264Q487 225.94339622641508 487 268V706H645V276.5Q645 193.04852320675104 607.8023255813953 128.25949367088606Q570.6046511627907 63.470464135021096 504.80232558139534 26.235232067510548Q439 -11 352.15806451612906 -11ZM279.0 760.5 229 834 388 983 472.0 864.5Z" fill="#000"/></mask></defs><g mask="url(#lmMaskF)"><circle class="lm-c1" cx="28" cy="28" r="26"/><circle class="lm-c2" cx="55.98" cy="28" r="26"/><path class="lm-mix" d="M41.99,6.08 A26,26 0 0 1 41.99,49.92 A26,26 0 0 1 41.99,6.08 Z"/></g></svg><span class="logo-text">Hradecký <span class="logo-accent">úklid</span></span></div>
           <p>Uklízíme domácnosti i firmy v Hradci Králové a okolí do 20 km.</p>
           <div class="footer-social">
             <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.3-1.4 1.5-1.4h1.3V5.5c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v2.5H8.9V14h2.3v7h2.3z"/></svg></a>
@@ -1132,9 +1144,26 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-  <script src="assets/js/main.js?v=6"></script>
-  <script src="assets/js/premium-motion.js?v=7"></script>
-<template id="original-brand"><svg class="logo-mark" viewBox="0 0 83.98 56" aria-hidden="true" focusable="false"><defs><mask id="lmMaskH"><circle cx="28" cy="28" r="26" fill="#fff"/><circle cx="55.98" cy="28" r="26" fill="#fff"/><path transform="translate(6.91,38.2) scale(0.02900,-0.02900)" d="M67.5 0V706H225V0ZM505 0V706H662.5V0ZM161.5 295V430.5H556.5V295Z" fill="#000"/><path transform="translate(56.30,38.2) scale(0.02900,-0.02900)" d="M352.15806451612906 -11Q265.31612903225806 -11 198.84677419354838 26.224789915966387Q132.3774193548387 63.44957983193277 94.68870967741935 128.76050420168067Q57 194.07142857142856 57 277.5V706H214.5V269Q214.5 226.518779342723 232.73420074349443 195.70187793427232Q250.96840148698885 164.8849765258216 282.2592936802974 148.44248826291079Q313.5501858736059 132 352.07992565055764 132Q391.5 132 421.7298657718121 148.42924528301887Q451.9597315436242 164.85849056603774 469.4798657718121 195.4009433962264Q487 225.94339622641508 487 268V706H645V276.5Q645 193.04852320675104 607.8023255813953 128.25949367088606Q570.6046511627907 63.470464135021096 504.80232558139534 26.235232067510548Q439 -11 352.15806451612906 -11ZM279.0 760.5 229 834 388 983 472.0 864.5Z" fill="#000"/></mask></defs><g mask="url(#lmMaskH)"><circle class="lm-c1" cx="28" cy="28" r="26"/><circle class="lm-c2" cx="55.98" cy="28" r="26"/><path class="lm-mix" d="M41.99,6.08 A26,26 0 0 1 41.99,49.92 A26,26 0 0 1 41.99,6.08 Z"/></g></svg><span class="logo-text">Hradecký <span class="logo-accent">úklid</span></span></template>
-<script defer src="assets/js/premium.js?v=4"></script>
-</body>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+<details class="logo-review-panel"><summary id="logo-selection">Náhled loga C</summary><div class="logo-review-options"><button type="button" data-logo-choice="A" aria-pressed="false">A</button><button type="button" data-logo-choice="B" aria-pressed="false">B</button><button type="button" data-logo-choice="C" aria-pressed="false">C</button><button type="button" data-logo-choice="D" aria-pressed="false">D</button><button type="button" data-logo-choice="E" aria-pressed="false">E</button><button type="button" data-logo-choice="original" aria-pressed="false">Původní</button></div><a href="logo-variants.html">Porovnat všech pět</a></details><script>
+(()=>{
+ const names={"A": "Dům se stěrkou", "B": "Monogram HÚ", "C": "Pečeť čistoty", "D": "Osobní péče", "E": "Kapka a domov"};
+ const logos=[...document.querySelectorAll('.site-header .logo,.footer-brand .logo')];
+ const originals=logos.map(el=>el.innerHTML);
+ const params=new URLSearchParams(location.search);
+ const buttons=[...document.querySelectorAll('[data-logo-choice]')];
+ function choose(choice){
+  if(!names[choice]&&choice!=='original')choice='C';
+  logos.forEach((el,i)=>{el.innerHTML=choice==='original'?originals[i]:`<img class="logo-review-img" src="assets/img/logo-2026-09-08/${choice}.png" alt="Hradecký úklid" width="220" height="64">`;});
+  buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.logoChoice===choice)));
+  document.getElementById('logo-selection').textContent=choice==='original'?'Původní logo':`${choice}: ${names[choice]}`;
+  const url=new URL(location.href);url.searchParams.set('logo',choice);history.replaceState(null,'',url);
+ }
+ buttons.forEach(b=>b.addEventListener('click',()=>choose(b.dataset.logoChoice)));
+ choose(params.get('logo')||'C');
+ const reduce=matchMedia('(prefers-reduced-motion: reduce)');
+ if(reduce.matches)document.querySelectorAll('video').forEach(v=>{v.removeAttribute('autoplay');v.pause();});
+})();
+</script></body>
 </html>

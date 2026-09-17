@@ -1,20 +1,42 @@
-// FAQ akordeon — zavřený stav = 1:1 s wireframem, klik rozbalí odpověď
-document.querySelectorAll('.faq-q').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    var item = btn.closest('.faq-item');
-    var answer = item.querySelector('.faq-a');
-    var isOpen = item.classList.contains('open');
-    // zavřít ostatní v rámci stejného seznamu
-    item.parentElement.querySelectorAll('.faq-item.open').forEach(function (other) {
-      other.classList.remove('open');
-      other.querySelector('.faq-a').style.maxHeight = null;
+// FAQ: smoothly interruptible height, with immediate reduced-motion state.
+(()=>{
+  const running=new WeakMap();
+  function setOpen(item, open){
+    const button=item.querySelector('.faq-q'), panel=item.querySelector('.faq-a');
+    const from=panel.getBoundingClientRect().height;
+    running.get(panel)?.cancel();
+    item.classList.toggle('open',open);
+    button.setAttribute('aria-expanded',String(open));
+    panel.inert=!open;
+    panel.style.height=open?'auto':'0px';
+    const to=open?panel.scrollHeight:0;
+    if(!panel.animate||matchMedia('(prefers-reduced-motion: reduce)').matches||new URLSearchParams(location.search).has('noanim'))return;
+    const animation=panel.animate([
+      {height:from+'px',opacity:from>0?1:0},
+      {height:to+'px',opacity:open?1:0}
+    ],{duration:260,easing:'cubic-bezier(.22,.61,.36,1)'});
+    running.set(panel,animation);
+    animation.onfinish=()=>running.delete(panel);
+  }
+  document.querySelectorAll('.faq-q').forEach((button,index)=>{
+    const item=button.closest('.faq-item'), panel=item.querySelector('.faq-a');
+    if(!panel)return;
+    panel.id=panel.id||'faq-answer-'+index;
+    button.setAttribute('aria-controls',panel.id);
+    const open=item.classList.contains('open');
+    button.setAttribute('aria-expanded',String(open));
+    panel.inert=!open;
+    panel.style.maxHeight='none';
+    panel.style.height=open?'auto':'0px';
+    button.addEventListener('click',()=>{
+      const open=!item.classList.contains('open');
+      item.parentElement.querySelectorAll('.faq-item.open').forEach(other=>{
+        if(other!==item)setOpen(other,false);
+      });
+      setOpen(item,open);
     });
-    if (!isOpen) {
-      item.classList.add('open');
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-    }
   });
-});
+})();
 
 // Mobilní menu — tři čárky ↔ X, zavření po kliku na odkaz
 var toggle = document.querySelector('.nav-toggle');
@@ -40,6 +62,11 @@ function showFormErr(status, msg) {
   status.textContent = msg;
 }
 function submitLead(data, status, submitBtn, onOk) {
+  if (document.body.dataset.preview === 'true') {
+    status.hidden = false; status.className = 'form-status';
+    status.textContent = 'Toto je náhled webu. Poptávka se nikam neodeslala.';
+    return;
+  }
   submitBtn.disabled = true;
   submitBtn.textContent = 'Odesílám…';
   fetch('/api/lead', {
@@ -355,7 +382,7 @@ if (siteFooter) {
 var transparentHeader = document.querySelector('.site-header.transparent');
 if (transparentHeader) {
   var onScroll = function () {
-    transparentHeader.classList.toggle('scrolled', window.scrollY > 30);
+    transparentHeader.classList.toggle('scrolled', window.scrollY > 8);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -369,8 +396,26 @@ if (transparentHeader) {
 (function () {
   var v = document.querySelector('.hero video');
   if (!v) return;
+  var motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   var hero = v.closest('.hero');
+  var inView = hero.getBoundingClientRect().bottom > 0 && hero.getBoundingClientRect().top < innerHeight;
   var last = -1;
+  function shouldPlay() { return inView && !document.hidden && !motionPreference.matches; }
+  function syncPlayback() {
+    if (shouldPlay()) { if (v.paused) nudge(); }
+    else { v.pause(); markPlaying(false); }
+  }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries) {
+      inView = entries[0].isIntersecting;
+      syncPlayback();
+    }, {threshold:0}).observe(hero);
+  } else {
+    window.addEventListener('scroll',function(){
+      var rect=hero.getBoundingClientRect();inView=rect.bottom>0 && rect.top<innerHeight;syncPlayback();
+    },{passive:true});
+  }
+  motionPreference.addEventListener('change',syncPlayback);
 
   function markPlaying(on) { if (hero) hero.classList.toggle('hero--playing', !!on); }
 
@@ -379,12 +424,14 @@ if (transparentHeader) {
   }
 
   function nudge() {
+    if (!shouldPlay()) return;
     var p = v.play();
     if (p && p.catch) p.catch(function () { markPlaying(false); });
   }
 
   // jediný zdroj pravdy: posouvá se čas? → video jede, jinak zůstává statický snímek
   setInterval(function () {
+    if (!shouldPlay()) { syncPlayback(); return; }
     var t = v.currentTime;
     markPlaying(reallyPlaying() && t !== last);
     last = t;
@@ -399,12 +446,11 @@ if (transparentHeader) {
     v.addEventListener(e, function () { markPlaying(false); });
   });
   // jakákoli interakce = user gesture, Safari pak přehrání povolí
-  ['pointerdown', 'touchstart', 'click', 'keydown', 'scroll'].forEach(function (e) {
+  ['pointerdown', 'touchstart', 'touchend', 'click', 'keydown', 'scroll'].forEach(function (e) {
     (e === 'scroll' ? window : document).addEventListener(e, function () {
       if (v.paused) nudge();
     }, { passive: true });
   });
-  document.addEventListener('visibilitychange', function () {
-    if (!document.hidden && v.paused) nudge();
-  });
+  document.addEventListener('visibilitychange', syncPlayback);
+  syncPlayback();
 })();
