@@ -93,6 +93,85 @@ Playful and friendly but still professional. Not corporate clip-art, not a stock
 > No text on the rim, no stars, no laurel, no ribbon, no house, no leaves.
 > `+ BASE`
 
+## Polopostava s nástrojem (E1 až E10)
+
+Styl, na který Eda ukázal: logo Elegantního mytí a naše současné okno. Společný jmenovatel není
+motiv, ale **ořez a kompozice**. Postava je vidět od pasu nahoru, ne celá. Nástroj je vystrčený od
+těla, takže akce je nepřehlédnutelná. V místě, kde nástroj pracuje, je malý shluk kapek nebo jedna
+jiskra. Celek je kompaktní a spíš na šířku, aby sedl vedle nápisu. Tím se to liší od sady F, kde
+byly celé postavy a kolem nich hodně prázdna.
+
+Tenhle odstavec patří ke každému promptu E1 až E10, hned před BASE:
+
+```
+A single worker shown from the waist up as a solid flat silhouette. No facial features, no fingers,
+no outlines around the body. Three-quarter or side view, caught mid-action, the tool held away from
+the body so the action is unmistakable. A small cluster of three or four droplets, or one four-point
+shine, marks the exact point where the tool meets the surface.
+The whole mark is compact and slightly wider than tall, so it can sit to the left of a wordmark.
+No ground plane, no room, no scenery beyond the single surface being cleaned.
+```
+
+## E1: stěrka na skle
+
+> The worker reaches across a tall pane of glass with a squeegee, pulling one clean stroke downward, the cleaned part of the glass left as empty negative space and the untouched part filled.
+> Navy figure, petrol teal glass, white cleaned area.
+> `+ POLOPOSTAVA + BASE`
+
+## E2: rozprašovač a hadr
+
+> The worker holds a spray bottle forward in one hand and a folded cloth in the other, a short burst of three droplets leaving the nozzle.
+> Navy figure, petrol teal bottle and droplets. No surface, no furniture.
+> `+ POLOPOSTAVA + BASE`
+
+## E3: mop přes tělo
+
+> The worker grips a mop handle diagonally across the body, the head of the mop low and wide, the shoulders turned into the push.
+> Navy figure, petrol teal mop head. No floor, no bucket.
+> `+ POLOPOSTAVA + BASE`
+
+## E4: hubice vysavače
+
+> The worker holds a vacuum wand angled down and forward, three small specks being drawn up into the nozzle.
+> Navy figure, petrol teal wand and specks. No vacuum body, no hose coil, no cable.
+> `+ POLOPOSTAVA + BASE`
+
+## E5: leštění dlaňí
+
+> The worker presses a folded cloth flat against a surface in front of them, arm extended, and one four-point shine sits where the cloth touches.
+> Navy figure, petrol teal cloth, white shine. No table, no mirror frame.
+> `+ POLOPOSTAVA + BASE`
+
+## E6: parní čistič
+
+> The worker holds a steam nozzle forward and slightly up, with one soft rounded puff of steam built from two overlapping shapes leaving the tip.
+> Navy figure, petrol teal steam. No cable, no machine, no floor.
+> `+ POLOPOSTAVA + BASE`
+
+## E7: kartáč na fasádu
+
+> The worker holds a long brush on a pole raised diagonally upward, the bristle head broad and flat, three droplets falling from it.
+> Navy figure, petrol teal brush head and droplets. No wall, no ladder, no building.
+> `+ POLOPOSTAVA + BASE`
+
+## E8: kýbl a hadr
+
+> The worker holds a bucket low in one hand and a raised cloth in the other, the cloth caught mid-wipe with one shine beside it.
+> Navy figure, petrol teal bucket and cloth.
+> `+ POLOPOSTAVA + BASE`
+
+## E9: dva v týmu
+
+> Two workers shown from the waist up, overlapping shoulder to shoulder, the front one holding a squeegee and the one behind holding a spray bottle, their silhouettes reading as one compact block.
+> Front figure navy, rear figure petrol teal. No circle around them, no background.
+> `+ POLOPOSTAVA + BASE`
+
+## E10: okno a jiskra
+
+> The worker wipes the lower half of a simple two-pane window frame with a cloth, the upper pane already clean and holding one four-point shine, the figure overlapping the frame from the left.
+> Navy figure and frame, petrol teal cloth, white clean glass.
+> `+ POLOPOSTAVA + BASE`
+
 ## V1: volný průběh
 
 Opak všeho výše. Žádná kostra, žádné zákazy, žádný popis motivu. GPT dostane jen to, kdo firma je,

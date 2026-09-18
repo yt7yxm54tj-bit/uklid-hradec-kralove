@@ -2,6 +2,433 @@
   "kola": [
     {
       "datum": "2026-09-18",
+      "zdroj": "GPT image gen, polopostava s nástrojem",
+      "poznamka": "Styl, na který Eda ukázal: logo Elegantního mytí a naše současné okno. Společné není téma, ale ořez. Postava od pasu nahoru, nástroj vystrčený od těla, malý shluk kapek nebo jiskra přesně tam, kde nástroj pracuje, a celek spíš na šířku, aby sedl vedle nápisu. Převzatý je jazyk kompozice, ne cizí značka.",
+      "polozky": [
+        {
+          "kod": "E1",
+          "nazev": "Stěrka na skle",
+          "popis": "Nejblíž obojímu, na co jsi ukázal. Tabule skla dává postavě oporu a rozděluje plochu na umytou a neumytou, takže značka ukazuje výsledek, ne jen činnost. Můj favorit ze sady.",
+          "soubor": "assets/img/loga-gpt/e1.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 47.6,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007878",
+              "podil": 39.8,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#006078",
+              "podil": 3.7,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007890",
+              "podil": 1.5,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#187878",
+              "podil": 0.7,
+              "brand": "petrol",
+              "odchylka": 21
+            }
+          ],
+          "nasazene": true
+        },
+        {
+          "kod": "E10",
+          "nazev": "Okno a jiskra",
+          "popis": "Tvůj současný motiv v čistší kresbě. Rám okna drží kompozici a postava do něj zasahuje zleva. Proti tomu, co je dnes na webu, je čitelnější a nemá zapečený nápis.",
+          "soubor": "assets/img/loga-gpt/e10.png",
+          "sirka": 1448,
+          "vyska": 1086,
+          "pomer": 1.33,
+          "paleta": [
+            {
+              "hex": "#001848",
+              "podil": 51.0,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#003048",
+              "podil": 31.3,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007878",
+              "podil": 5.3,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#006078",
+              "podil": 2.2,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#001830",
+              "podil": 1.7,
+              "brand": "navy",
+              "odchylka": 36
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "E4",
+          "nazev": "Hubice vysavače",
+          "popis": "Nejčistší silueta z desítky, nejmíň detailů, nejlíp se zmenší. Nevýhoda je, že vysavač mluví jen za jednu službu.",
+          "soubor": "assets/img/loga-gpt/e4.png",
+          "sirka": 1536,
+          "vyska": 1024,
+          "pomer": 1.5,
+          "paleta": [
+            {
+              "hex": "#001848",
+              "podil": 82.3,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 15.4,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#003048",
+              "podil": 1.2,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006090",
+              "podil": 0.8,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.2,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "E3",
+          "nazev": "Mop přes tělo",
+          "popis": "Nejvíc pohybu. Ramena zabraná do tlaku, mop široký, jiskry v místě práce. Pěkné, jen mop zabírá hodně plochy.",
+          "soubor": "assets/img/loga-gpt/e3.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 76.5,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006078",
+              "podil": 18.1,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#001848",
+              "podil": 3.3,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#003030",
+              "podil": 1.6,
+              "brand": "navy",
+              "odchylka": 27
+            },
+            {
+              "hex": "#001830",
+              "podil": 0.4,
+              "brand": "navy",
+              "odchylka": 36
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "E9",
+          "nazev": "Dva v týmu",
+          "popis": "Dvě polopostavy přes sebe, vepředu stěrka, vzadu rozprašovač. Říká „parta\", ale je to nejhustší kus sady a v malém splyne.",
+          "soubor": "assets/img/loga-gpt/e9.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 61.2,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006078",
+              "podil": 38.1,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#006090",
+              "podil": 0.3,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#001848",
+              "podil": 0.3,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.1,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "E8",
+          "nazev": "Kýbl a hadr",
+          "popis": "Kýbl dole, hadr nahoře, jiskra u hadru. Vyvážené a srozumitelné, jen o něco obyčejnější než E1.",
+          "soubor": "assets/img/loga-gpt/e8.png",
+          "sirka": 1536,
+          "vyska": 1024,
+          "pomer": 1.5,
+          "paleta": [
+            {
+              "hex": "#001848",
+              "podil": 73.3,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 23.5,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#003048",
+              "podil": 1.5,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006090",
+              "podil": 1.2,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.3,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "E7",
+          "nazev": "Kartáč na fasádu",
+          "popis": "Dobrá diagonála, ale hlava kartáče je proti postavě velká a kapky visí ve vzduchu bez plochy, ze které by stékaly.",
+          "soubor": "assets/img/loga-gpt/e7.png",
+          "sirka": 1536,
+          "vyska": 1024,
+          "pomer": 1.5,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 63.5,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006078",
+              "podil": 17.9,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#001848",
+              "podil": 17.3,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006090",
+              "podil": 1.0,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.1,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "E2",
+          "nazev": "Rozprašovač a hadr",
+          "popis": "Culík a zástěra čtou dobře, ale hadr v druhé ruce je beztvará skvrna. Chtělo by to přegenerovat s hadrem složeným do hranatého tvaru.",
+          "soubor": "assets/img/loga-gpt/e2.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 86.3,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007878",
+              "podil": 4.6,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#006078",
+              "podil": 4.0,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007890",
+              "podil": 2.6,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006090",
+              "podil": 2.3,
+              "brand": "petrol",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "E6",
+          "nazev": "Parní čistič",
+          "popis": "Obláček páry se čte spíš jako keř nebo strom než jako pára. Myšlenka dobrá, tvar neposlouchá.",
+          "soubor": "assets/img/loga-gpt/e6.png",
+          "sirka": 1536,
+          "vyska": 1024,
+          "pomer": 1.5,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 79.2,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 14.1,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#001848",
+              "podil": 4.9,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#007878",
+              "podil": 1.7,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#006078",
+              "podil": 0.1,
+              "brand": "petrol",
+              "odchylka": 41
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "E5",
+          "nazev": "Leštění dlaní",
+          "popis": "Ruka a hadr splývají do jednoho tvaru, který se dá číst všelijak. Nejslabší z desítky.",
+          "soubor": "assets/img/loga-gpt/e5.png",
+          "sirka": 1536,
+          "vyska": 1024,
+          "pomer": 1.5,
+          "paleta": [
+            {
+              "hex": "#001848",
+              "podil": 83.5,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 8.0,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#003048",
+              "podil": 6.6,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006090",
+              "podil": 1.2,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.2,
+              "brand": "navy",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        }
+      ]
+    },
+    {
+      "datum": "2026-09-18",
       "zdroj": "GPT image gen, volná ruka + jediná věta o člověku",
       "poznamka": "Stejný otevřený brief jako níž, plus jedna věta: logo musí obsahovat člověka. Nic dalšího. Model z toho udělal maskota v kruhovém odznaku, často s obličejem, rukavicemi, panoramatem Hradce a vymyšleným sloganem. Použitelné jsou ty, kde zůstal u siluety.",
       "polozky": [
