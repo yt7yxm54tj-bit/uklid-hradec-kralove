@@ -1,6 +1,746 @@
 {
   "kola": [
     {
+      "datum": "2026-09-18",
+      "zdroj": "GPT image gen podle našich promptů",
+      "poznamka": "Osm motivů podle promptů z téhle stránky. Model kreslil jen symbol, bez jediného písmene, proto na rozdíl od zářijové várky nic nedrmolí v diakritice.",
+      "polozky": [
+        {
+          "kod": "P4",
+          "nazev": "Bublinový monogram HÚ",
+          "popis": "Vytříbená verze toho, co máš dnes na webu: písmena jsou výřezy v kolečkách a průnik má vlastní světlejší tón. Evoluce místo revoluce, takže zákazník nepozná, že se něco měnilo.",
+          "soubor": "assets/img/loga-gpt/p4.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 40.9,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 23.0,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#30A8C0",
+              "podil": 17.5,
+              "brand": "teal",
+              "odchylka": 36
+            },
+            {
+              "hex": "#007878",
+              "podil": 17.4,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#001848",
+              "podil": 0.3,
+              "brand": "navy",
+              "odchylka": 26
+            }
+          ],
+          "nasazene": true
+        },
+        {
+          "kod": "P1",
+          "nazev": "Okno s jiskrou",
+          "popis": "Rám okna, spodní tabulka rozetřená jedním obloukem, jiskra v čisté části. Jednoznačně říká mytí oken, drží tvar i v malém. Pozor: v jednobarevné bílé verzi se celý tvar slije do plného čtverce (viz test na tmavém), takže by potřeboval obrácenou kresbu pro negativ.",
+          "soubor": "assets/img/loga-gpt/p1.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 70.7,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 13.8,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#001848",
+              "podil": 3.7,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#001830",
+              "podil": 2.0,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#486078",
+              "podil": 1.5,
+              "brand": "petrol",
+              "odchylka": 59
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "P8",
+          "nazev": "Pečeť se smetákem",
+          "popis": "Smeták napříč kruhem, jiskry vyříznuté do rámu. Nejklasičtější a nejbezpečnější volba, působí jako známka kvality.",
+          "soubor": "assets/img/loga-gpt/p8.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 73.3,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007878",
+              "podil": 21.0,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#006078",
+              "podil": 4.9,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.6,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#187890",
+              "podil": 0.2,
+              "brand": "petrol",
+              "odchylka": 4
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "P5",
+          "nazev": "Dům, který se usmívá",
+          "popis": "Obrys domu a pod ním jeden oblouk, který slouží jako zem i jako úsměv. Nejpřátelštější z osmi, ale dům v oboru používá kdekdo.",
+          "soubor": "assets/img/loga-gpt/p5.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 52.7,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 19.0,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#007878",
+              "podil": 15.5,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#006078",
+              "podil": 8.8,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#006090",
+              "podil": 4.0,
+              "brand": "petrol",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "P3",
+          "nazev": "Oblouk po stěrce",
+          "popis": "Jediný tah s třemi kapkami. Nejabstraktnější, hezky se zmenšuje, ale samo o sobě to úklid neřekne. Funguje jako doplňkový prvek, ne jako hlavní značka.",
+          "soubor": "assets/img/loga-gpt/p3.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 80.8,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006078",
+              "podil": 17.8,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#006090",
+              "podil": 1.4,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.1,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "P6",
+          "nazev": "Kapka s domovem uvnitř",
+          "popis": "Kapka se střechou vyříznutou uvnitř. Čisté provedení, jenže kapka je v úklidu a instalatérství obsazená, takže neodlišuje.",
+          "soubor": "assets/img/loga-gpt/p6.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 65.8,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007878",
+              "podil": 23.3,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#007890",
+              "podil": 8.1,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006078",
+              "podil": 1.7,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#006090",
+              "podil": 1.1,
+              "brand": "petrol",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "P2",
+          "nazev": "Kýbl s mopem",
+          "popis": "Poctivé a čitelné, ale je to nejobyčejnější možný piktogram oboru. Nikoho neurazí, nikoho si nezíská.",
+          "soubor": "assets/img/loga-gpt/p2.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 69.7,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006078",
+              "podil": 22.7,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#001848",
+              "podil": 5.2,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#001830",
+              "podil": 0.9,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#003030",
+              "podil": 0.6,
+              "brand": "navy",
+              "odchylka": 27
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "P7",
+          "nazev": "Maskot ze stěrky",
+          "popis": "Kapka s očima a stěrkou. Tvar se čte spíš jako obličej s nosem než jako postavička, tenhle směr bych opustil.",
+          "soubor": "assets/img/loga-gpt/p7.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#007890",
+              "podil": 86.5,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#003048",
+              "podil": 7.9,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#001830",
+              "podil": 2.3,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#001848",
+              "podil": 1.9,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 0.6,
+              "brand": "petrol",
+              "odchylka": 41
+            }
+          ],
+          "nasazene": false
+        }
+      ]
+    },
+    {
+      "datum": "2026-09-18",
+      "zdroj": "GPT image gen, koncepty vymyslel sám ChatGPT",
+      "poznamka": "ChatGPT dostal kontext značky (co firma dělá, komu, jaký má tón, co už existuje a co je zakázané) a vymyslel si deset vlastních směrů. Záměrně jdou mimo úklidová klišé, což je zároveň jejich riziko: část z nich bez vysvětlení neřekne, čím se firma živí.",
+      "polozky": [
+        {
+          "kod": "K10",
+          "nazev": "Otisk prstu",
+          "popis": "Tři tlusté oblouky jako rozevřený otisk. Nese myšlenku osobní odpovědnosti, je nejabstraktnější a nejlíp se zmenšuje. Pozor: otisk používá spousta značek stavějících na důvěře.",
+          "soubor": "assets/img/loga-gpt/k10.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 63.4,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007878",
+              "podil": 31.0,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#007890",
+              "podil": 4.7,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006078",
+              "podil": 0.9,
+              "brand": "petrol",
+              "odchylka": 41
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "K04",
+          "nazev": "Oblázek a odraz",
+          "popis": "Oblázek nad svým zrcadlením. Zachycuje ten moment, kdy povrch přestane být matný a začne odrážet. Nejoriginálnější z desítky, ale bez kontextu je to hádanka.",
+          "soubor": "assets/img/loga-gpt/k04.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 72.3,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006078",
+              "podil": 16.6,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007878",
+              "podil": 11.0,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.1,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#001848",
+              "podil": 0.0,
+              "brand": "navy",
+              "odchylka": 26
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "K03",
+          "nazev": "Klíč na polštářku",
+          "popis": "Klíč položený na polštáři. Vypráví o předání klíčů od bytu, což je přesně ta bariéra, kterou zákazník řeší. Detailnější, v malém bude potřeba zjednodušit.",
+          "soubor": "assets/img/loga-gpt/k03.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#007890",
+              "podil": 38.0,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#003048",
+              "podil": 35.8,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007878",
+              "podil": 26.2,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#006078",
+              "podil": 0.0,
+              "brand": "petrol",
+              "odchylka": 41
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "K07",
+          "nazev": "Bublina s úsměvem",
+          "popis": "Bublina s úsměvem v negativu. Sedí na slib platby až po spokojenosti, ale čte se to spíš jako chat nebo podpora než jako úklid.",
+          "soubor": "assets/img/loga-gpt/k07.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 46.3,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#187890",
+              "podil": 34.1,
+              "brand": "petrol",
+              "odchylka": 4
+            },
+            {
+              "hex": "#007890",
+              "podil": 16.8,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006078",
+              "podil": 0.4,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.3,
+              "brand": "navy",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "K01",
+          "nazev": "Otevřené dveře",
+          "popis": "Zárubeň s pootevřenými dveřmi. Jednoduché a vstřícné, motiv příchodu domů do hotového. V téhle generaci má rastrové artefakty ve výplni.",
+          "soubor": "assets/img/loga-gpt/k01.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 52.8,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006078",
+              "podil": 33.1,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007878",
+              "podil": 11.1,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#001848",
+              "podil": 2.6,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.4,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "K06",
+          "nazev": "Složená utěrka",
+          "popis": "Přeložený hadřík ze dvou ploch. Z konceptů nejblíž reálné práci, ale tvar je nejednoznačný, může se číst jako kniha nebo obálka.",
+          "soubor": "assets/img/loga-gpt/k06.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 52.6,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007878",
+              "podil": 23.6,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#006078",
+              "podil": 13.9,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007890",
+              "podil": 8.0,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006060",
+              "podil": 0.9,
+              "brand": "navy",
+              "odchylka": 54
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "K05",
+          "nazev": "Rozvázaný uzel",
+          "popis": "Šňůra rozvázaná do volné smyčky, starost, která spadla z hlavy. Hezký tvar, ale bez vysvětlení nedešifrovatelný.",
+          "soubor": "assets/img/loga-gpt/k05.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#187890",
+              "podil": 64.1,
+              "brand": "petrol",
+              "odchylka": 4
+            },
+            {
+              "hex": "#003048",
+              "podil": 35.7,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#187878",
+              "podil": 0.2,
+              "brand": "petrol",
+              "odchylka": 21
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "K02",
+          "nazev": "Večer zpátky",
+          "popis": "Křeslo s měsícem v opěradle. Prodává volný večer místo úklidu, jenže jako značka to říká nábytek nebo hotel.",
+          "soubor": "assets/img/loga-gpt/k02.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 49.2,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#187878",
+              "podil": 29.8,
+              "brand": "petrol",
+              "odchylka": 21
+            },
+            {
+              "hex": "#187890",
+              "podil": 18.8,
+              "brand": "petrol",
+              "odchylka": 4
+            },
+            {
+              "hex": "#007878",
+              "podil": 1.6,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.5,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "K09",
+          "nazev": "Doma v papučích",
+          "popis": "Dvě papuče. Milé a lidské, ale zákazník si pod tím představí obuv, ne úklidovou firmu.",
+          "soubor": "assets/img/loga-gpt/k09.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#007890",
+              "podil": 40.0,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#003048",
+              "podil": 28.4,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006078",
+              "podil": 16.3,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#187890",
+              "podil": 5.6,
+              "brand": "petrol",
+              "odchylka": 4
+            },
+            {
+              "hex": "#004860",
+              "podil": 4.0,
+              "brand": "navy",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "K08",
+          "nazev": "Vyhrnutý rukáv",
+          "popis": "Rukáv a ruka. Mělo to být o partě, co maká, ale čte se to jako podaná ruka k pozdravu.",
+          "soubor": "assets/img/loga-gpt/k08.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#007878",
+              "podil": 59.5,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#003048",
+              "podil": 35.5,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 4.9,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006078",
+              "podil": 0.1,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#001848",
+              "podil": 0.0,
+              "brand": "navy",
+              "odchylka": 26
+            }
+          ],
+          "nasazene": false
+        }
+      ]
+    },
+    {
       "datum": "2026-09-08",
       "zdroj": "GPT image gen (ChatGPT)",
       "poznamka": "Rastrové PNG s alfou, ne vektor. Nápis vysázel generátor, odtud nevyrovnané mezery a měkká diakritika.",
