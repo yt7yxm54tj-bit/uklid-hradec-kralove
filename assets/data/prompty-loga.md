@@ -93,6 +93,33 @@ Playful and friendly but still professional. Not corporate clip-art, not a stock
 > No text on the rim, no stars, no laurel, no ribbon, no house, no leaves.
 > `+ BASE`
 
+## V1: volný průběh
+
+Opak všeho výše. Žádná kostra, žádné zákazy, žádný popis motivu. GPT dostane jen to, kdo firma je,
+a všechno ostatní si rozhodne samo, včetně toho, jestli do značky dá nápis. Pouští se **desetkrát
+se stejným zadáním**, takže rozmanitost přichází od modelu, ne od nás.
+
+> Design a logo for this company.
+> Hradecký úklid is a cleaning company in Hradec Králové, Czech Republic. They clean homes and offices, do deep cleaning and post-construction cleanup. Seven years in business, over 500 jobs, a small local crew with their own equipment and their own cleaning products, and the customer only pays once they are satisfied.
+> Their colours are deep navy #0B3049 and petrol teal #177A8D.
+> Everything else is your call: what the mark shows, how it is composed, how simple or rich it is, whether it includes the name.
+> Transparent background.
+
+Tenhle prompt **nedostává BASE ani nic dalšího**. Když se do něj začnou dopisovat pravidla, přestane
+to být volný průběh a je to zase naše zadání.
+
+## V2: volný průběh s člověkem
+
+Totéž co V1, jen s jedinou větou navíc. Nic dalšího se nedospecifikovává schválně: co ten člověk
+dělá, jak vypadá a jak velkou část značky zabírá, si rozhoduje model.
+
+> Design a logo for this company.
+> Hradecký úklid is a cleaning company in Hradec Králové, Czech Republic. They clean homes and offices, do deep cleaning and post-construction cleanup. Seven years in business, over 500 jobs, a small local crew with their own equipment and their own cleaning products, and the customer only pays once they are satisfied.
+> Their colours are deep navy #0B3049 and petrol teal #177A8D.
+> The logo must include a person.
+> Everything else is your call: what the mark shows, how it is composed, how simple or rich it is, whether it includes the name.
+> Transparent background.
+
 ## Postava v akci (F1 až F10)
 
 Směr, který sedí na logo, co je dnes na webu: **panáček, který něco dělá**. Postava je vždycky plná

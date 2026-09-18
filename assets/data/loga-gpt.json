@@ -2,6 +2,842 @@
   "kola": [
     {
       "datum": "2026-09-18",
+      "zdroj": "GPT image gen, volná ruka + jediná věta o člověku",
+      "poznamka": "Stejný otevřený brief jako níž, plus jedna věta: logo musí obsahovat člověka. Nic dalšího. Model z toho udělal maskota v kruhovém odznaku, často s obličejem, rukavicemi, panoramatem Hradce a vymyšleným sloganem. Použitelné jsou ty, kde zůstal u siluety.",
+      "polozky": [
+        {
+          "kod": "V2-03",
+          "nazev": "Silueta s mopem",
+          "popis": "Nejlepší z volné sady s člověkem. Postava je silueta, ne portrét, takže drží i v malém a jde otisknout v jedné barvě.",
+          "soubor": "assets/img/loga-gpt/v2-03.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 58.0,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 38.0,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#001848",
+              "podil": 3.5,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#003048",
+              "podil": 0.2,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.2,
+              "brand": "navy",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": true
+        },
+        {
+          "kod": "V2-05",
+          "nazev": "Silueta s kartáčem",
+          "popis": "Druhá použitelná. Čistá silueta v kroku, nápis vysázený slušně. Na pozadí má ale věže Hradce, které bych vyhodil.",
+          "soubor": "assets/img/loga-gpt/v2-05.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 66.5,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 33.4,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.0,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006090",
+              "podil": 0.0,
+              "brand": "petrol",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V2-04",
+          "nazev": "Uklízečka se stěrkou",
+          "popis": "Přechod mezi siluetou a portrétem. Obličej už má rysy, což je první krok k tomu, že se to v hlavičce rozpadne.",
+          "soubor": "assets/img/loga-gpt/v2-04.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 63.8,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 31.3,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#001848",
+              "podil": 4.7,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#003048",
+              "podil": 0.2,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.1,
+              "brand": "navy",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V2-02",
+          "nazev": "Odznak s uklízečkou",
+          "popis": "Kruhový odznak, usmívající se postava, sprej. Vymyšlený slogan „Čistější domovy, lepší dny\" jsme nikdy nezadali.",
+          "soubor": "assets/img/loga-gpt/v2-02.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 46.6,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 18.3,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#F0A878",
+              "podil": 7.4,
+              "brand": "sky",
+              "odchylka": 148
+            },
+            {
+              "hex": "#007890",
+              "podil": 5.2,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#003048",
+              "podil": 3.8,
+              "brand": "navy",
+              "odchylka": 11
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V2-10",
+          "nazev": "Maskot s palcem nahoru",
+          "popis": "Typický maskot úklidové firmy. Hezky nakreslené, ale detailů je tolik, že z toho ve favikonu bude šmouha.",
+          "soubor": "assets/img/loga-gpt/v2-10.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 28.6,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#001848",
+              "podil": 13.1,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#007890",
+              "podil": 12.3,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#003048",
+              "podil": 8.6,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#F0C0A8",
+              "podil": 5.7,
+              "brand": "sky",
+              "odchylka": 95
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V2-07",
+          "nazev": "Portrét se sprejem",
+          "popis": "Obličej s rysy, rukavice, panorama města. Jako ilustrace fajn, jako značka nepoužitelné v jedné barvě.",
+          "soubor": "assets/img/loga-gpt/v2-07.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 50.5,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 12.7,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#006090",
+              "podil": 3.8,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#003048",
+              "podil": 2.8,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 2.6,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V2-09",
+          "nazev": "Uklízečka s vozíkem",
+          "popis": "Nejvíc detailů z celé sady. Vypadá to jako obrázek do letáku, ne jako logo.",
+          "soubor": "assets/img/loga-gpt/v2-09.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 30.7,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#007890",
+              "podil": 7.9,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#0090A8",
+              "podil": 7.0,
+              "brand": "petrol",
+              "odchylka": 42
+            },
+            {
+              "hex": "#F0C090",
+              "podil": 5.0,
+              "brand": "sky",
+              "odchylka": 116
+            },
+            {
+              "hex": "#003048",
+              "podil": 4.1,
+              "brand": "navy",
+              "odchylka": 11
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V2-08",
+          "nazev": "Portrét v kruhu",
+          "popis": "Stejný žánr jako 07, jen jiná poloha rukou. Ukazuje, jak moc se model opakuje, když ho nic nedrží.",
+          "soubor": "assets/img/loga-gpt/v2-08.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 52.2,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 21.1,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#F0C090",
+              "podil": 8.5,
+              "brand": "sky",
+              "odchylka": 116
+            },
+            {
+              "hex": "#007890",
+              "podil": 4.1,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#003048",
+              "podil": 2.9,
+              "brand": "navy",
+              "odchylka": 11
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V2-01",
+          "nazev": "Odznak s ikonami",
+          "popis": "Odznak s postavou, ikonami služeb a vymyšleným sloganem „Čisté pro lepší zítřky\". Tři vrstvy informací v logu jsou o dvě moc.",
+          "soubor": "assets/img/loga-gpt/v2-01.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 44.1,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#007890",
+              "podil": 5.3,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#003048",
+              "podil": 4.9,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#F0C090",
+              "podil": 4.3,
+              "brand": "sky",
+              "odchylka": 116
+            },
+            {
+              "hex": "#006078",
+              "podil": 2.9,
+              "brand": "petrol",
+              "odchylka": 41
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V2-06",
+          "nazev": "Uklízečka s domem",
+          "popis": "Poslední z portrétní řady. Milé, ale nerozeznatelné od stovek stejných log úklidových firem.",
+          "soubor": "assets/img/loga-gpt/v2-06.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 31.6,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 18.0,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#003048",
+              "podil": 5.4,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#F0A878",
+              "podil": 3.4,
+              "brand": "sky",
+              "odchylka": 148
+            },
+            {
+              "hex": "#D8D8D8",
+              "podil": 3.1,
+              "brand": "sky",
+              "odchylka": 46
+            }
+          ],
+          "nasazene": false
+        }
+      ]
+    },
+    {
+      "datum": "2026-09-18",
+      "zdroj": "GPT image gen, úplně volná ruka",
+      "poznamka": "Brief obsahoval jen to, kdo firma je a jaké má barvy. Žádná pravidla, žádné zákazy, ani zákaz textu. Desetkrát to samé zadání. Devět z deseti výsledků je stejná šablona: dům, vlna, jiskry a nápis. Čtyři si přimyslely slogan, který firma nikdy neřekla, a čtyři nakreslily skutečné hradecké věže.",
+      "polozky": [
+        {
+          "kod": "V1-03",
+          "nazev": "Dům s vlnou",
+          "popis": "Nejčistší z plně volné sady. Dům, jedna vlna, tři jiskry, slušně vysázený nápis. Zároveň přesně ta šablona, kterou má půlka oboru.",
+          "soubor": "assets/img/loga-gpt/v1-03.png",
+          "sirka": 1448,
+          "vyska": 1086,
+          "pomer": 1.33,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 50.1,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 49.7,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#006090",
+              "podil": 0.1,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#001848",
+              "podil": 0.0,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#003048",
+              "podil": 0.0,
+              "brand": "navy",
+              "odchylka": 11
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V1-05",
+          "nazev": "Dům s listem",
+          "popis": "Totéž plus lístek jako náznak ekologie, což firma netvrdí.",
+          "soubor": "assets/img/loga-gpt/v1-05.png",
+          "sirka": 1536,
+          "vyska": 1024,
+          "pomer": 1.5,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 44.6,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 20.1,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#004860",
+              "podil": 11.2,
+              "brand": "navy",
+              "odchylka": 35
+            },
+            {
+              "hex": "#003048",
+              "podil": 4.2,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 3.3,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V1-01",
+          "nazev": "Monogram HÚ v domě",
+          "popis": "Jediný z desítky, který zkusil monogram. Písmena v obrysu domu, nejblíž tomu, co máš dnes.",
+          "soubor": "assets/img/loga-gpt/v1-01.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#006078",
+              "podil": 49.4,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#001830",
+              "podil": 39.4,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#001848",
+              "podil": 10.4,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006090",
+              "podil": 0.7,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.1,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V1-04",
+          "nazev": "Dům a věže",
+          "popis": "Silueta hradeckých věží vedle domu. Reálné landmarky si AI vždycky domyslí skoro správně a místní to poznají.",
+          "soubor": "assets/img/loga-gpt/v1-04.png",
+          "sirka": 1536,
+          "vyska": 1024,
+          "pomer": 1.5,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 29.0,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#001848",
+              "podil": 27.1,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 25.6,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#003048",
+              "podil": 17.9,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#003030",
+              "podil": 0.3,
+              "brand": "navy",
+              "odchylka": 27
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V1-10",
+          "nazev": "Katedrála a střecha",
+          "popis": "Totéž, jen jsou věže výraznější. Riziko je stejné.",
+          "soubor": "assets/img/loga-gpt/v1-10.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 40.4,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 24.1,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#001848",
+              "podil": 10.9,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#003048",
+              "podil": 8.0,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 4.3,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V1-02",
+          "nazev": "Dům s panelákem",
+          "popis": "Domácnosti i firmy v jednom znaku. Slogan „Čistější pro lepší den\" si model vymyslel sám.",
+          "soubor": "assets/img/loga-gpt/v1-02.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 67.1,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 32.8,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#001848",
+              "podil": 0.0,
+              "brand": "navy",
+              "odchylka": 26
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V1-07",
+          "nazev": "Střecha a město",
+          "popis": "Další varianta téhož s vymyšleným sloganem „Čistější prostor, lepší den\".",
+          "soubor": "assets/img/loga-gpt/v1-07.png",
+          "sirka": 1536,
+          "vyska": 1024,
+          "pomer": 1.5,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 60.9,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#007890",
+              "podil": 15.0,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006078",
+              "podil": 14.0,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007878",
+              "podil": 7.8,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#187890",
+              "podil": 0.9,
+              "brand": "petrol",
+              "odchylka": 4
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V1-08",
+          "nazev": "Dům, mrakodrap, vlna",
+          "popis": "Třetí v řadě stejné kompozice, opět s vymyšleným sloganem.",
+          "soubor": "assets/img/loga-gpt/v1-08.png",
+          "sirka": 1536,
+          "vyska": 1024,
+          "pomer": 1.5,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 45.9,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 22.2,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#001848",
+              "podil": 13.4,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#004860",
+              "podil": 7.1,
+              "brand": "navy",
+              "odchylka": 35
+            },
+            {
+              "hex": "#003048",
+              "podil": 6.7,
+              "brand": "navy",
+              "odchylka": 11
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V1-09",
+          "nazev": "Střecha a věže",
+          "popis": "Stejná šablona počtvrté. Dobře ukazuje, jak úzké to pole bez zadání je.",
+          "soubor": "assets/img/loga-gpt/v1-09.png",
+          "sirka": 1536,
+          "vyska": 1024,
+          "pomer": 1.5,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 54.6,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#006078",
+              "podil": 25.1,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007890",
+              "podil": 6.0,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#1890A8",
+              "podil": 2.3,
+              "brand": "teal",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006090",
+              "podil": 1.9,
+              "brand": "petrol",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "V1-06",
+          "nazev": "Kurzíva a panorama",
+          "popis": "Nejvýraznější, ale kurzíva s panoramatem a jiskrami působí jako logo autolakovny.",
+          "soubor": "assets/img/loga-gpt/v1-06.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001830",
+              "podil": 27.4,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#001848",
+              "podil": 9.3,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 6.7,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#0090A8",
+              "podil": 6.2,
+              "brand": "petrol",
+              "odchylka": 42
+            },
+            {
+              "hex": "#007890",
+              "podil": 5.7,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        }
+      ]
+    },
+    {
+      "datum": "2026-09-18",
       "zdroj": "GPT image gen, postava v akci",
       "poznamka": "Deset scén, kde panáček něco dělá, ve stejném duchu jako logo na webu. Postava je vždy plná silueta bez obličeje a bez prstů, postava a nástroj tvoří jeden tvar. Štítek u prvního znamená doporučení, ne nasazení.",
       "polozky": [
