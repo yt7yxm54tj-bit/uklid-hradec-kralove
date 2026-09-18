@@ -2,6 +2,415 @@
   "kola": [
     {
       "datum": "2026-09-18",
+      "zdroj": "GPT image gen, recept návrhu D",
+      "poznamka": "Tentokrát jsem GPT neopisoval styl slovy, ale nahrál mu přímo návrh D a nechal ho napsat vlastní rozbor: jak je kreslená postava, že předměty jsou silné obrysy bez výplně, že jiskra je právě jedna a pod vším leží tyrkysová vlna. Pak deset variant podle toho rozboru, kde se mění jen činnost. Je to zároveň hotová sada ikon na jednotlivé služby, ne jen výběr loga.",
+      "polozky": [
+        {
+          "kod": "D1",
+          "nazev": "Zrcadlo",
+          "popis": "Kruh místo obdélníku dává značce jiný rytmus než současné okno a hadr s jiskrou sedí přesně doprostřed. Nejlíp vyvážený kus sady.",
+          "soubor": "assets/img/loga-gpt/d1.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001848",
+              "podil": 76.1,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 19.0,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#006090",
+              "podil": 2.6,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#007890",
+              "podil": 1.6,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#007878",
+              "podil": 0.3,
+              "brand": "petrol",
+              "odchylka": 31
+            }
+          ],
+          "nasazene": true
+        },
+        {
+          "kod": "D6",
+          "nazev": "Dveře",
+          "popis": "Vysoký obdélník s klikou drží postavu z pravé strany stejně, jako to dnes dělá okno. Nejblíž tomu, co máš nasazené, jen s jiným předmětem.",
+          "soubor": "assets/img/loga-gpt/d6.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 75.8,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 24.0,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006078",
+              "podil": 0.1,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.0,
+              "brand": "navy",
+              "odchylka": 35
+            },
+            {
+              "hex": "#004878",
+              "podil": 0.0,
+              "brand": "navy",
+              "odchylka": 54
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "D3",
+          "nazev": "Trouba",
+          "popis": "Čelo trouby s madlem je hezky čitelný obdélník a mluví za hloubkový úklid. Ovladače nahoře jsou první detail, který v malém zmizí.",
+          "soubor": "assets/img/loga-gpt/d3.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001848",
+              "podil": 76.1,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 20.0,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#003048",
+              "podil": 3.8,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.1,
+              "brand": "navy",
+              "odchylka": 35
+            },
+            {
+              "hex": "#006090",
+              "podil": 0.0,
+              "brand": "petrol",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "D2",
+          "nazev": "Kuchyňská linka",
+          "popis": "Vysoká baterie dává kompozici svislici, kterou ostatní kusy nemají. Linka pod postavou je ale tenká a v malém se ztratí.",
+          "soubor": "assets/img/loga-gpt/d2.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001848",
+              "podil": 68.7,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 23.1,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#003048",
+              "podil": 7.4,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007878",
+              "podil": 0.5,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.2,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "D8",
+          "nazev": "Vysavač",
+          "popis": "Jediný, kde je nástroj velký a předmět malý. Tělo vysavače dole vyvažuje postavu, funguje to překvapivě dobře.",
+          "soubor": "assets/img/loga-gpt/d8.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 71.4,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 26.0,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#003060",
+              "podil": 2.4,
+              "brand": "navy",
+              "odchylka": 25
+            },
+            {
+              "hex": "#006078",
+              "podil": 0.1,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.1,
+              "brand": "navy",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "D7",
+          "nazev": "Vytírá s kýblem",
+          "popis": "Kýbl vlevo, mop vpravo, jiskra u mopu. Čitelné, ale kýbl je nakreslený jako obrys bez výplně, takže působí prázdně.",
+          "soubor": "assets/img/loga-gpt/d7.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 75.3,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 21.9,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006090",
+              "podil": 2.8,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#006078",
+              "podil": 0.0,
+              "brand": "petrol",
+              "odchylka": 41
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "D4",
+          "nazev": "Sprchový kout",
+          "popis": "Sprchová hlavice a police jsou pěkný detail, jenže detailů je tu nejvíc z celé sady a v hlavičce splynou.",
+          "soubor": "assets/img/loga-gpt/d4.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 76.2,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 23.4,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006078",
+              "podil": 0.1,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#003060",
+              "podil": 0.1,
+              "brand": "navy",
+              "odchylka": 25
+            },
+            {
+              "hex": "#006090",
+              "podil": 0.1,
+              "brand": "petrol",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "D5",
+          "nazev": "Kancelářský stůl",
+          "popis": "Monitor a stůl říkají „firmy\", což je polovina jejich byznysu. Monitor je ale velký a postava se vedle něj ztrácí.",
+          "soubor": "assets/img/loga-gpt/d5.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 77.2,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 20.0,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#007878",
+              "podil": 1.7,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#006078",
+              "podil": 0.4,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#003060",
+              "podil": 0.3,
+              "brand": "navy",
+              "odchylka": 25
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "D9",
+          "nazev": "Police a prach",
+          "popis": "Kytka a knihy jsou milé, ale k úklidu nic nepřidávají a dělají z loga scénu místo značky.",
+          "soubor": "assets/img/loga-gpt/d9.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 75.3,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 23.9,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006078",
+              "podil": 0.2,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#006090",
+              "podil": 0.2,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.1,
+              "brand": "navy",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "D10",
+          "nazev": "Po stavbě",
+          "popis": "Široké koště a dveřní zárubeň za postavou. Zamýšlený úklid po stavbě, jenže bez suti to vypadá jako obyčejné zametání.",
+          "soubor": "assets/img/loga-gpt/d10.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 78.4,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 21.5,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#003060",
+              "podil": 0.0,
+              "brand": "navy",
+              "odchylka": 25
+            }
+          ],
+          "nasazene": false
+        }
+      ]
+    },
+    {
+      "datum": "2026-09-18",
       "zdroj": "GPT image gen, polopostava s nástrojem",
       "poznamka": "Styl, na který Eda ukázal: logo Elegantního mytí a naše současné okno. Společné není téma, ale ořez. Postava od pasu nahoru, nástroj vystrčený od těla, malý shluk kapek nebo jiskra přesně tam, kde nástroj pracuje, a celek spíš na šířku, aby sedl vedle nápisu. Převzatý je jazyk kompozice, ne cizí značka.",
       "polozky": [
