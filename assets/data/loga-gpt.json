@@ -2,6 +2,433 @@
   "kola": [
     {
       "datum": "2026-09-18",
+      "zdroj": "GPT image gen, postava v akci",
+      "poznamka": "Deset scén, kde panáček něco dělá, ve stejném duchu jako logo na webu. Postava je vždy plná silueta bez obličeje a bez prstů, postava a nástroj tvoří jeden tvar. Štítek u prvního znamená doporučení, ne nasazení.",
+      "polozky": [
+        {
+          "kod": "F2",
+          "nazev": "Vytírá mopem",
+          "popis": "Nejlepší z desítky. Postava se opírá do tahu a mop pokračuje do širokého oblouku, který zároveň slouží jako jediná zem, co značka potřebuje. Drží i v malém, protože je to jeden souvislý tvar.",
+          "soubor": "assets/img/loga-gpt/f2.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 78.4,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006078",
+              "podil": 17.1,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007890",
+              "podil": 2.5,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#007878",
+              "podil": 1.7,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#006090",
+              "podil": 0.2,
+              "brand": "petrol",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": true
+        },
+        {
+          "kod": "F3",
+          "nazev": "Vysává",
+          "popis": "Hadice nakreslená jako jedna čistá smyčka drží kompozici pohromadě. Druhá nejlepší po mopu, jen vysavač je o kus konkrétnější než smeták, takže značka míň pokrývá ostatní služby.",
+          "soubor": "assets/img/loga-gpt/f3.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 60.2,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007878",
+              "podil": 17.0,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#006078",
+              "podil": 9.2,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007890",
+              "podil": 7.2,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#001848",
+              "podil": 4.4,
+              "brand": "navy",
+              "odchylka": 26
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "F5",
+          "nazev": "Přichází s kýblem",
+          "popis": "Nejjednodušší a nejvíc „logo\" z celé sady. Postava v chůzi s kýblem, žádný povrch, žádná kulisa. Říká spíš „přijedeme\" než „uklidíme\", což může být výhoda.",
+          "soubor": "assets/img/loga-gpt/f5.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 84.9,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006078",
+              "podil": 8.4,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007878",
+              "podil": 6.0,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.7,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.0,
+              "brand": "navy",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "F1",
+          "nazev": "Myje okno",
+          "popis": "Nejblíž tomu, co máš dnes na webu, ale kreslené čistěji a bez nápisu. Postava je proti rámu okna dost malá, v hlavičce z ní bude drobek. Chtělo by to přiblížit.",
+          "soubor": "assets/img/loga-gpt/f1.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 93.1,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006078",
+              "podil": 6.0,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.4,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006090",
+              "podil": 0.4,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#004878",
+              "podil": 0.0,
+              "brand": "navy",
+              "odchylka": 54
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "F8",
+          "nazev": "Dvojice v týmu",
+          "popis": "Dva lidi, jeden s hadrem, druhý s mopem. Vypráví přesně to, co firma je: malá místní parta, ne franšíza. Zaplacená daň je hustota, na 32 px se dvě postavy slijí.",
+          "soubor": "assets/img/loga-gpt/f8.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#001848",
+              "podil": 47.8,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 44.3,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#001830",
+              "podil": 7.5,
+              "brand": "navy",
+              "odchylka": 36
+            },
+            {
+              "hex": "#003048",
+              "podil": 0.2,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.2,
+              "brand": "navy",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "F4",
+          "nazev": "Utírá desku",
+          "popis": "Záměr sedí, provedení ne. Postava se čte jako shrbená hromada a deska pod ní spíš jako koberec. Tenhle bych buď přegeneroval, nebo vypustil.",
+          "soubor": "assets/img/loga-gpt/f4.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 88.2,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 9.0,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#006078",
+              "podil": 0.9,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.7,
+              "brand": "navy",
+              "odchylka": 35
+            },
+            {
+              "hex": "#007878",
+              "podil": 0.6,
+              "brand": "petrol",
+              "odchylka": 31
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "F6",
+          "nazev": "Na štaflích",
+          "popis": "Hezký nápad, ale rovnováha postavy vypadá nejistě a štafle jsou tenká konstrukce, která v malém zmizí. Pro logo moc detailů.",
+          "soubor": "assets/img/loga-gpt/f6.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 88.5,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006078",
+              "podil": 8.6,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#006090",
+              "podil": 2.5,
+              "brand": "petrol",
+              "odchylka": 35
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.2,
+              "brand": "navy",
+              "odchylka": 35
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.1,
+              "brand": "petrol",
+              "odchylka": 23
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "F9",
+          "nazev": "Vytřepává utěrku",
+          "popis": "Utěrka je krásná křivka, jenže zabírá polovinu plochy a postava je proti ní nepatrná. Čte se to spíš jako vlajka nebo vlna než jako úklid.",
+          "soubor": "assets/img/loga-gpt/f9.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#186078",
+              "podil": 36.5,
+              "brand": "petrol",
+              "odchylka": 33
+            },
+            {
+              "hex": "#187878",
+              "podil": 27.8,
+              "brand": "petrol",
+              "odchylka": 21
+            },
+            {
+              "hex": "#001848",
+              "podil": 21.1,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 7.5,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#003048",
+              "podil": 7.1,
+              "brand": "navy",
+              "odchylka": 11
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "F7",
+          "nazev": "Leští zrcadlo",
+          "popis": "Odraz v zrcadle se nepovedl: obě siluety vypadají jako dva různí lidé, takže to působí, že si někdo podává ruku s někým za sklem. Myšlenka dobrá, výsledek matoucí.",
+          "soubor": "assets/img/loga-gpt/f7.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#007878",
+              "podil": 45.0,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#003048",
+              "podil": 34.5,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#007890",
+              "podil": 8.2,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#001848",
+              "podil": 4.7,
+              "brand": "navy",
+              "odchylka": 26
+            },
+            {
+              "hex": "#006078",
+              "podil": 1.6,
+              "brand": "petrol",
+              "odchylka": 41
+            }
+          ],
+          "nasazene": false
+        },
+        {
+          "kod": "F10",
+          "nazev": "Předává klíče",
+          "popis": "Klíč je nepoměrně velký a splývá s rukou, postava je strnulá. Ze všech deseti nejmíň ukazuje, že se něco dělá, což je přesně to, co na téhle sadě chceš.",
+          "soubor": "assets/img/loga-gpt/f10.png",
+          "sirka": 1254,
+          "vyska": 1254,
+          "pomer": 1.0,
+          "paleta": [
+            {
+              "hex": "#003048",
+              "podil": 85.1,
+              "brand": "navy",
+              "odchylka": 11
+            },
+            {
+              "hex": "#006078",
+              "podil": 13.7,
+              "brand": "petrol",
+              "odchylka": 41
+            },
+            {
+              "hex": "#007890",
+              "podil": 0.7,
+              "brand": "petrol",
+              "odchylka": 23
+            },
+            {
+              "hex": "#007878",
+              "podil": 0.3,
+              "brand": "petrol",
+              "odchylka": 31
+            },
+            {
+              "hex": "#004860",
+              "podil": 0.1,
+              "brand": "navy",
+              "odchylka": 35
+            }
+          ],
+          "nasazene": false
+        }
+      ]
+    },
+    {
+      "datum": "2026-09-18",
       "zdroj": "GPT image gen podle našich promptů",
       "poznamka": "Osm motivů podle promptů z téhle stránky. Model kreslil jen symbol, bez jediného písmene, proto na rozdíl od zářijové várky nic nedrmolí v diakritice.",
       "polozky": [

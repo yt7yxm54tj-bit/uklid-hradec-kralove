@@ -93,6 +93,81 @@ Playful and friendly but still professional. Not corporate clip-art, not a stock
 > No text on the rim, no stars, no laurel, no ribbon, no house, no leaves.
 > `+ BASE`
 
+## Postava v akci (F1 až F10)
+
+Směr, který sedí na logo, co je dnes na webu: **panáček, který něco dělá**. Postava je vždycky plná
+silueta bez obličeje, bez prstů, s tlustými zjednodušenými končetinami, zabraná uprostřed pohybu.
+Postava a nástroj musí dohromady tvořit jeden kompaktní tvar, ne scénku s kulisami.
+
+Tenhle odstavec patří ke každému promptu F1 až F10, hned před BASE:
+
+```
+A single human figure as a solid flat silhouette. No facial features, no fingers, no hair strands,
+no outlines around the body. Chunky simplified limbs, confident posture, caught mid-action.
+The figure and the tool read as one compact balanced mark, not as a scene with scenery.
+No ground plane, no room, no furniture beyond what the action needs.
+```
+
+## F1: myje okno
+
+> A figure seen from the side, reaching up and across a simple two-pane window frame with a squeegee, body leaning into the stroke, one four-point shine in the cleaned pane.
+> Navy figure and frame, petrol teal squeegee stroke. No bucket, no ladder, no spray bottle.
+> `+ POSTAVA + BASE`
+
+## F2: vytírá mopem
+
+> A figure bent forward pushing a mop away from the body, and the mop stroke continues into one wide sweeping arc that also serves as the only ground the mark needs.
+> Navy figure, petrol teal sweep. No bucket, no tiles, no splashes.
+> `+ POSTAVA + BASE`
+
+## F3: vysává
+
+> A figure walking forward with a vacuum cleaner, the hose drawn as one single clean loop that curves from the figure's hand down to the nozzle.
+> Navy figure, petrol teal hose and nozzle. No cable, no wheels detail, no dust cloud.
+> `+ POSTAVA + BASE`
+
+## F4: utírá desku
+
+> A figure leaning over a horizontal surface with a cloth in hand, the wipe drawn as one broad arc across the surface, the arc wider than the cloth itself.
+> Navy figure, petrol teal wipe arc. No table legs, no objects on the surface, no spray.
+> `+ POSTAVA + BASE`
+
+## F5: přichází s kýblem
+
+> A figure walking in profile carrying a bucket in one hand, slight forward lean, the free arm swinging, the bucket hanging low and heavy.
+> Navy figure, petrol teal bucket. No mop, no door, no path, no motion lines.
+> `+ POSTAVA + BASE`
+
+## F6: na štaflích
+
+> A figure standing on a low two-step stepladder, reaching up with a cloth toward a high corner, body stretched into a diagonal.
+> Navy figure and ladder, petrol teal cloth. No wall, no window, no ceiling, no tools on the ladder.
+> `+ POSTAVA + BASE`
+
+## F7: leští zrcadlo
+
+> A figure facing a tall rounded rectangle and polishing it, and inside that rectangle the same silhouette appears mirrored as clean negative space.
+> Navy figure, petrol teal frame, the reflection is white negative space. No frame ornament, no sparkle, no room behind.
+> `+ POSTAVA + BASE`
+
+## F8: dvojice v týmu
+
+> Two figures standing back to back, one holding a cloth raised, the other holding a mop lowered, their silhouettes together filling a rough circle.
+> One figure navy, the other petrol teal. No circle drawn around them, no third person, no equipment on the floor.
+> `+ POSTAVA + BASE`
+
+## F9: vytřepává utěrku
+
+> A figure holding one corner of a large cloth and snapping it, so the cloth whips into a single bold curved shape that fills the upper half of the mark.
+> Navy figure, petrol teal cloth. No dust particles, no window, no laundry line.
+> `+ POSTAVA + BASE`
+
+## F10: předává klíče
+
+> A figure standing upright, one arm extended forward offering a single chunky key, posture calm and finished, as if the work is done.
+> Navy figure, petrol teal key. No door, no keyring, no second hand receiving, no sparkle.
+> `+ POSTAVA + BASE`
+
 ## P9: variace z vybraného kusu
 
 Nahraj vybraný obrázek jako referenci a pošli:
