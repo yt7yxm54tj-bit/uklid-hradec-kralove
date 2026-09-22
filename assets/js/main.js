@@ -228,13 +228,16 @@ document.documentElement.classList.toggle('bubs-off', !bubsOn);
   bt.innerHTML = '<span class="bt-knob"></span><span class="bt-label">Bublinky na pozadí</span>';
   host.appendChild(bt);
 
-  // interní odkaz na přehled návrhů loga — hned pod přepínačem
+  // Odkaz na přehled návrhů loga patří dolů mezi právní odkazy,
+  // ne do brandového sloupce nad ně.
   var lg = document.createElement('a');
-  lg.className = 'foot-link';
+  lg.className = 'foot-logolink';
   lg.href = 'loga.html';
   lg.rel = 'nofollow';
   lg.textContent = 'Návrhy loga';
-  host.appendChild(lg);
+  var legal = document.querySelector('.footer-legal') ||
+              document.querySelector('.footer-bottom') || host;
+  legal.appendChild(lg);
   bt.addEventListener('click', function () {
     bubsOn = !bubsOn;
     document.documentElement.classList.toggle('bubs-off', !bubsOn);

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 150" role="img" aria-label="Hradecký úklid – sprej a hadr">
+  <title>Hradecký úklid – sprej a hadr</title>
+  <circle cx="89" cy="35" r="17" fill="#0B3049"/>
+  <path d="M58 112c1-33 17-56 40-59 25 5 42 26 44 59H58Z" fill="#0B3049"/>
+  <path d="M113 70 154 49" stroke="#0B3049" stroke-width="15" stroke-linecap="round"/>
+  <path d="M147 34h25l9 10v19h-34Z" fill="#177A8D"/>
+  <path d="M161 34v-9h21" fill="none" stroke="#177A8D" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="197" cy="47" r="4" fill="#177A8D"/><circle cx="211" cy="41" r="3" fill="#177A8D"/><circle cx="221" cy="35" r="2" fill="#177A8D"/>
+  <path d="M88 78 139 90" stroke="#0B3049" stroke-width="15" stroke-linecap="round"/>
+  <path d="M134 81l25 6-7 19-26-7Z" fill="#177A8D"/>
+  <text x="245" y="68" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="24" font-weight="650" fill="#0B3049">Hradecký</text>
+  <text x="245" y="96" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="24" font-weight="750" fill="#177A8D">úklid</text>
+</svg>

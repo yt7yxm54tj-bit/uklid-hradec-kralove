@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 150" role="img" aria-label="Hradecký úklid – vysavač v pohybu">
+  <title>Hradecký úklid – vysavač v pohybu</title>
+  <circle cx="86" cy="35" r="17" fill="#0B3049"/>
+  <path d="M53 112c2-32 16-54 38-59 26 5 43 28 44 59H53Z" fill="#0B3049"/>
+  <path d="M108 69 147 87" stroke="#0B3049" stroke-width="15" stroke-linecap="round"/>
+  <path d="M141 85 174 113" stroke="#177A8D" stroke-width="9" stroke-linecap="round"/>
+  <path d="M165 113h43" stroke="#177A8D" stroke-width="14" stroke-linecap="round"/>
+  <path d="M69 78c-16 8-20 28-7 38 17 13 45 5 51-13" fill="none" stroke="#177A8D" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="70" cy="112" r="15" fill="#177A8D"/><circle cx="70" cy="112" r="5" fill="#0B3049"/>
+  <path d="M222 88c5-5 10-8 16-10" fill="none" stroke="#177A8D" stroke-width="5" stroke-linecap="round"/>
+  <text x="260" y="68" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="24" font-weight="650" fill="#0B3049">Hradecký</text>
+  <text x="260" y="96" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="24" font-weight="750" fill="#177A8D">úklid</text>
+</svg>

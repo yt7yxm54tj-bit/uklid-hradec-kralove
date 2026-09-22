@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 401 150" role="img" aria-label="Hradecký úklid – stěrka na okně">
+  <title>Hradecký úklid – stěrka na okně</title>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="22" y="18" width="126" height="104" rx="12" stroke="#0B3049" stroke-width="10"/>
+    <path d="M85 18v104M22 70h126" stroke="#0B3049" stroke-width="7"/>
+    <path d="M86 112c18-18 31-40 39-67" stroke="#177A8D" stroke-width="12"/>
+    <path d="M119 46l27 8" stroke="#177A8D" stroke-width="10"/>
+  </g>
+  <path d="M181 104c0-20 11-38 29-48l23 11c10 10 16 24 16 37h-68Z" fill="#0B3049"/>
+  <circle cx="213" cy="42" r="16" fill="#0B3049"/>
+  <path d="M205 76 168 52" stroke="#0B3049" stroke-width="15" stroke-linecap="round"/>
+  <path d="M171 51 151 43" stroke="#177A8D" stroke-width="9" stroke-linecap="round"/>
+  <path d="M148 40l-12-6" stroke="#177A8D" stroke-width="12" stroke-linecap="round"/>
+  <path d="M160 21v16M152 29h16" stroke="#177A8D" stroke-width="5" stroke-linecap="round"/>
+  <text x="271" y="68" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="24" font-weight="650" fill="#0B3049">Hradecký</text>
+  <text x="271" y="96" font-family="Bricolage Grotesque, Inter, sans-serif" font-size="24" font-weight="750" fill="#177A8D">úklid</text>
+</svg>
