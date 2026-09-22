@@ -1,0 +1,482 @@
+{
+  "sady": [
+    {
+      "nazev": "Postava a předmět",
+      "polozky": [
+        {
+          "cislo": "01",
+          "nazev": "Zrcadlo",
+          "soubor": "assets/img/loga-gpt/d1.png",
+          "doporuceno": true
+        },
+        {
+          "cislo": "02",
+          "nazev": "Dveře",
+          "soubor": "assets/img/loga-gpt/d6.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "03",
+          "nazev": "Trouba",
+          "soubor": "assets/img/loga-gpt/d3.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "04",
+          "nazev": "Kuchyňská linka",
+          "soubor": "assets/img/loga-gpt/d2.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "05",
+          "nazev": "Vysavač",
+          "soubor": "assets/img/loga-gpt/d8.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "06",
+          "nazev": "Vytírá s kýblem",
+          "soubor": "assets/img/loga-gpt/d7.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "07",
+          "nazev": "Sprchový kout",
+          "soubor": "assets/img/loga-gpt/d4.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "08",
+          "nazev": "Kancelářský stůl",
+          "soubor": "assets/img/loga-gpt/d5.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "09",
+          "nazev": "Police a prach",
+          "soubor": "assets/img/loga-gpt/d9.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "10",
+          "nazev": "Po stavbě",
+          "soubor": "assets/img/loga-gpt/d10.png",
+          "doporuceno": false
+        }
+      ]
+    },
+    {
+      "nazev": "Polopostava s nástrojem",
+      "polozky": [
+        {
+          "cislo": "11",
+          "nazev": "Stěrka na skle",
+          "soubor": "assets/img/loga-gpt/e1.png",
+          "doporuceno": true
+        },
+        {
+          "cislo": "12",
+          "nazev": "Okno a jiskra",
+          "soubor": "assets/img/loga-gpt/e10.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "13",
+          "nazev": "Hubice vysavače",
+          "soubor": "assets/img/loga-gpt/e4.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "14",
+          "nazev": "Mop přes tělo",
+          "soubor": "assets/img/loga-gpt/e3.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "15",
+          "nazev": "Dva v týmu",
+          "soubor": "assets/img/loga-gpt/e9.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "16",
+          "nazev": "Kýbl a hadr",
+          "soubor": "assets/img/loga-gpt/e8.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "17",
+          "nazev": "Kartáč na fasádu",
+          "soubor": "assets/img/loga-gpt/e7.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "18",
+          "nazev": "Rozprašovač a hadr",
+          "soubor": "assets/img/loga-gpt/e2.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "19",
+          "nazev": "Parní čistič",
+          "soubor": "assets/img/loga-gpt/e6.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "20",
+          "nazev": "Leštění dlaní",
+          "soubor": "assets/img/loga-gpt/e5.png",
+          "doporuceno": false
+        }
+      ]
+    },
+    {
+      "nazev": "Značka s postavou",
+      "polozky": [
+        {
+          "cislo": "21",
+          "nazev": "Silueta s mopem",
+          "soubor": "assets/img/loga-gpt/v2-03.png",
+          "doporuceno": true
+        },
+        {
+          "cislo": "22",
+          "nazev": "Silueta s kartáčem",
+          "soubor": "assets/img/loga-gpt/v2-05.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "23",
+          "nazev": "Uklízečka se stěrkou",
+          "soubor": "assets/img/loga-gpt/v2-04.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "24",
+          "nazev": "Odznak s uklízečkou",
+          "soubor": "assets/img/loga-gpt/v2-02.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "25",
+          "nazev": "Maskot s palcem nahoru",
+          "soubor": "assets/img/loga-gpt/v2-10.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "26",
+          "nazev": "Portrét se sprejem",
+          "soubor": "assets/img/loga-gpt/v2-07.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "27",
+          "nazev": "Uklízečka s vozíkem",
+          "soubor": "assets/img/loga-gpt/v2-09.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "28",
+          "nazev": "Portrét v kruhu",
+          "soubor": "assets/img/loga-gpt/v2-08.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "29",
+          "nazev": "Odznak s ikonami",
+          "soubor": "assets/img/loga-gpt/v2-01.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "30",
+          "nazev": "Uklízečka s domem",
+          "soubor": "assets/img/loga-gpt/v2-06.png",
+          "doporuceno": false
+        }
+      ]
+    },
+    {
+      "nazev": "Klasické značky s názvem",
+      "polozky": [
+        {
+          "cislo": "31",
+          "nazev": "Dům s vlnou",
+          "soubor": "assets/img/loga-gpt/v1-03.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "32",
+          "nazev": "Dům s listem",
+          "soubor": "assets/img/loga-gpt/v1-05.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "33",
+          "nazev": "Monogram HÚ v domě",
+          "soubor": "assets/img/loga-gpt/v1-01.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "34",
+          "nazev": "Dům a věže",
+          "soubor": "assets/img/loga-gpt/v1-04.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "35",
+          "nazev": "Katedrála a střecha",
+          "soubor": "assets/img/loga-gpt/v1-10.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "36",
+          "nazev": "Dům s panelákem",
+          "soubor": "assets/img/loga-gpt/v1-02.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "37",
+          "nazev": "Střecha a město",
+          "soubor": "assets/img/loga-gpt/v1-07.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "38",
+          "nazev": "Dům, mrakodrap, vlna",
+          "soubor": "assets/img/loga-gpt/v1-08.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "39",
+          "nazev": "Střecha a věže",
+          "soubor": "assets/img/loga-gpt/v1-09.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "40",
+          "nazev": "Kurzíva a panorama",
+          "soubor": "assets/img/loga-gpt/v1-06.png",
+          "doporuceno": false
+        }
+      ]
+    },
+    {
+      "nazev": "Postava v akci",
+      "polozky": [
+        {
+          "cislo": "41",
+          "nazev": "Vytírá mopem",
+          "soubor": "assets/img/loga-gpt/f2.png",
+          "doporuceno": true
+        },
+        {
+          "cislo": "42",
+          "nazev": "Vysává",
+          "soubor": "assets/img/loga-gpt/f3.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "43",
+          "nazev": "Přichází s kýblem",
+          "soubor": "assets/img/loga-gpt/f5.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "44",
+          "nazev": "Myje okno",
+          "soubor": "assets/img/loga-gpt/f1.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "45",
+          "nazev": "Dvojice v týmu",
+          "soubor": "assets/img/loga-gpt/f8.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "46",
+          "nazev": "Utírá desku",
+          "soubor": "assets/img/loga-gpt/f4.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "47",
+          "nazev": "Na štaflích",
+          "soubor": "assets/img/loga-gpt/f6.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "48",
+          "nazev": "Vytřepává utěrku",
+          "soubor": "assets/img/loga-gpt/f9.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "49",
+          "nazev": "Leští zrcadlo",
+          "soubor": "assets/img/loga-gpt/f7.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "50",
+          "nazev": "Předává klíče",
+          "soubor": "assets/img/loga-gpt/f10.png",
+          "doporuceno": false
+        }
+      ]
+    },
+    {
+      "nazev": "Symboly bez postavy",
+      "polozky": [
+        {
+          "cislo": "51",
+          "nazev": "Bublinový monogram HÚ",
+          "soubor": "assets/img/loga-gpt/p4.png",
+          "doporuceno": true
+        },
+        {
+          "cislo": "52",
+          "nazev": "Okno s jiskrou",
+          "soubor": "assets/img/loga-gpt/p1.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "53",
+          "nazev": "Pečeť se smetákem",
+          "soubor": "assets/img/loga-gpt/p8.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "54",
+          "nazev": "Dům, který se usmívá",
+          "soubor": "assets/img/loga-gpt/p5.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "55",
+          "nazev": "Oblouk po stěrce",
+          "soubor": "assets/img/loga-gpt/p3.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "56",
+          "nazev": "Kapka s domovem uvnitř",
+          "soubor": "assets/img/loga-gpt/p6.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "57",
+          "nazev": "Kýbl s mopem",
+          "soubor": "assets/img/loga-gpt/p2.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "58",
+          "nazev": "Maskot ze stěrky",
+          "soubor": "assets/img/loga-gpt/p7.png",
+          "doporuceno": false
+        }
+      ]
+    },
+    {
+      "nazev": "Netradiční směry",
+      "polozky": [
+        {
+          "cislo": "59",
+          "nazev": "Otisk prstu",
+          "soubor": "assets/img/loga-gpt/k10.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "60",
+          "nazev": "Oblázek a odraz",
+          "soubor": "assets/img/loga-gpt/k04.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "61",
+          "nazev": "Klíč na polštářku",
+          "soubor": "assets/img/loga-gpt/k03.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "62",
+          "nazev": "Bublina s úsměvem",
+          "soubor": "assets/img/loga-gpt/k07.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "63",
+          "nazev": "Otevřené dveře",
+          "soubor": "assets/img/loga-gpt/k01.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "64",
+          "nazev": "Složená utěrka",
+          "soubor": "assets/img/loga-gpt/k06.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "65",
+          "nazev": "Rozvázaný uzel",
+          "soubor": "assets/img/loga-gpt/k05.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "66",
+          "nazev": "Večer zpátky",
+          "soubor": "assets/img/loga-gpt/k02.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "67",
+          "nazev": "Doma v papučích",
+          "soubor": "assets/img/loga-gpt/k09.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "68",
+          "nazev": "Vyhrnutý rukáv",
+          "soubor": "assets/img/loga-gpt/k08.png",
+          "doporuceno": false
+        }
+      ]
+    },
+    {
+      "nazev": "První návrhy",
+      "polozky": [
+        {
+          "cislo": "69",
+          "nazev": "Dům se stěrkou",
+          "soubor": "assets/img/logo-2026-09-08/A.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "70",
+          "nazev": "Monogram HÚ",
+          "soubor": "assets/img/logo-2026-09-08/B.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "71",
+          "nazev": "Pečeť čistoty",
+          "soubor": "assets/img/logo-2026-09-08/C.png",
+          "doporuceno": false
+        },
+        {
+          "cislo": "72",
+          "nazev": "Osobní péče (teď nasazené)",
+          "soubor": "assets/img/logo-2026-09-08/D.png",
+          "doporuceno": true
+        },
+        {
+          "cislo": "73",
+          "nazev": "Kapka a domov",
+          "soubor": "assets/img/logo-2026-09-08/E.png",
+          "doporuceno": false
+        }
+      ]
+    }
+  ]
+}
